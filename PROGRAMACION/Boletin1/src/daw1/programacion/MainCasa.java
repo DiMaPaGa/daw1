@@ -1,6 +1,6 @@
 package daw1.programacion;
 
-public class Main {
+public class MainCasa {
 
  public static void main(String[] args) {
 
