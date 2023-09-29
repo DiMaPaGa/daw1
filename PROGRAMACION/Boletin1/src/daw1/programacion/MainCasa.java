@@ -59,7 +59,7 @@ Añado un espacio al final de los dos primeros String.
  //4. Imprime tu edad.
 
      //De nuevo, puedo crear un System.out.print añadiendo un String con mi edad:
-     System.out.println("39");
+     System.out.println(39);
   /*o bien, crear una variable int denominada miEdad, a la que le añada mi edad como valor y luego
   llamarla:*/
 
@@ -68,8 +68,8 @@ Añado un espacio al final de los dos primeros String.
 
 //5. Imprime el primer digito de tu edad en una línea, y el segundo en otra.
 
-     System.out.println("3");
-     System.out.println("9");
+     System.out.println(3);
+     System.out.println(9);
 /*o bien, crear dos variables int denominada miEdadDecada y MiEdadUnidad, inicializarlas y luego
   llamarlas:*/
 
@@ -84,8 +84,8 @@ Añado un espacio al final de los dos primeros String.
 
 //Lo hago igual, solo que la primera llamada termina en print, quitando ln;
 
-     System.out.print("3");
-     System.out.println("9");
+     System.out.print(3);
+     System.out.println(9);
 
  //O de nuevo, hacerlo llamando a los valores de las variables miEdadDecada y miEdadUnidad;
 
@@ -119,21 +119,31 @@ J*/
 /*Además de lo contemplado en la actividad anterior, debo incorporar un espacio tras cada letra
  dentro del string*/
 
-     System.out.println("a ");
-     System.out.println("n ");
-     System.out.println("a ");
-     System.out.println("i ");
-     System.out.println("D ");
+     System.out.println("a\n");
+     System.out.println("n\n");
+     System.out.println("a\n");
+     System.out.println("i\n");
+     System.out.println("D\n");
 
 /*9. Imprime por pantalla tu nombre concatenándolo con tu edad, de forma que quede
 un espacio en blanco entre ambos.*/
 
+    System.out.println("Diana "+39);
+    System.out.println(miNombre+" "+39);
+
 /*10. Imprime por pantalla el número 3 concatenándolo con el número 7. Comprueba
 si tu compañero lo ha hecho igual que tú.*/
 
-/*11. Imprime por pantalla la cadena "Hola mundo" y a continuación, la cadena
+    System.out.println("3"+7);
+
+    /*11. Imprime por pantalla la cadena "Hola mundo" y a continuación, la cadena
 "Hola\nmundo". ¿Para qué sirve el '\n'? ¿Puede utilizarse varias veces seguidas?*/
 
+    System.out.println("Hola mundo");
+    System.out.println("Hola\nmundo");
+    System.out.println("Hola\n\nmundo");
+
+    //sirve para incorporar un salto de línea. Y se puede emplear varias veces de seguida.
 //12. ¿Para qué sirve el operador '+'?
   /* Puede tener dos usos: Para concatenar elementos o variables en el caso de que sean de diferente naturaleza
    (como por ejemplo, un String con un valor int), o bien, para sumar dos datos o variables inicializadas con datos
