@@ -1,11 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
 
-    package com.company;
-
-
+package daw1.programacion;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
