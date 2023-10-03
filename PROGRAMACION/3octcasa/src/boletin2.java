@@ -70,7 +70,7 @@ public class boletin2 {
         /*10. Cambiar la primera con el valor de la segunda multiplicado por dos, y volver a imprimir por pantalla
         el resultado de la comprobación anterior.*/
 
-        ejemplo=2*prueba;
+        ejemplo=(2*prueba);
         System.out.println(ejemplo);
         System.out.println(prueba);
         ejemploMayorPrueba= ejemplo>prueba;
