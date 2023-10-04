@@ -30,11 +30,11 @@ int entero=10;
     // 9. Imprímela por pantalla.
       System.out.println(entero);
     //10. Crea una segunda variable y asígnale el resultado de sumar una unidad a la primera.
-     float sumada= entero ++;
+     int sumada= (entero+1);
 
     // 11. Imprime las dos variables.
-      System.out.println(entero);
-      System.out.println(sumada);
+      System.out.println(entero + ","+sumada);
+
     //12. Divide la segunda entre dos.
     sumada /=2;
 
@@ -55,7 +55,7 @@ Desarrollar un algoritmo para calcular el área de un rectángulo, cuya fórmula
       float area= (base*altura);
 
       //4. Imprima por pantalla el área, utilizando una instrucción println.
-      System.out.println(area);
+      System.out.println("El área del rectángulo es: "+ area);
       //5. Tenga en cuenta que debe elegir el tipo adecuado para cada variable.
       /*EJERCICIO 3
       Desarrollar un algoritmo para convertir de euros a dólares teniendo en cuenta que un euro son  1.16 dólares. Para ello:*/
@@ -70,7 +70,7 @@ Desarrollar un algoritmo para calcular el área de un rectángulo, cuya fórmula
       float dolares;
       dolares= (euros*conversion);
       //5. Imprima por pantalla el resultado, utilizando una instrucción println.
-      System.out.println(dolares);
+      System.out.println(euros + " euros, son en total: " + dolares + " dólares.");
 
       /*EJERCICIO 4
       Modifique el ejercicio 2 para ahorrarnos la creación de la variable del área. Para ello: */
@@ -92,13 +92,13 @@ Desarrollar un algoritmo para calcular el área de un rectángulo, cuya fórmula
 
       System.out.println(valor);
      // 3. Incremente su valor 6 unidades con el operador de suma simplificada (+=).
-     valor +=3;
+     valor +=6;
       System.out.println(valor);
       // 4. Incremente su valor en una unidad utilizando el operador de incremento (++).
       valor ++;
       System.out.println(valor);
       // 5. Duplique su valor como desee.
-      valor *=2;
+      valor *=2; //variable=variable*2
       System.out.println(valor);
 
       //6. Utilice el operador módulo (%) para comprobar el resto de dividir la variable entre 2, imprimiendo por pantalla el resultado.
@@ -107,8 +107,10 @@ Desarrollar un algoritmo para calcular el área de un rectángulo, cuya fórmula
       System.out.println(valor);
 
       //7. ¿Cómo se puede comprobar si un número es par o impar?
+      //Si el resultado del operador anterior es = a 0, será que es par. Si es cualquier otro valor, es impar.
 
-     //boolean esPar= (valor%=2 && valor==0); Si valor es igual a 0
+     boolean esPar= (valor==0);
+      System.out.println(esPar);
 
 
 

@@ -65,7 +65,8 @@ public class boletin2 {
 
 
         boolean ejemploMayorPrueba = ejemplo>prueba;
-        System.out.println(ejemploMayorPrueba);
+       // System.out.println(ejemploMayorPrueba);
+        System.out.println(ejemplo>prueba);
 
         /*10. Cambiar la primera con el valor de la segunda multiplicado por dos, y volver a imprimir por pantalla
         el resultado de la comprobación anterior.*/
@@ -75,17 +76,22 @@ public class boletin2 {
         System.out.println(prueba);
         ejemploMayorPrueba= ejemplo>prueba;
 
-        System.out.println(ejemploMayorPrueba);
-
+        //System.out.println(ejemploMayorPrueba);
+        System.out.println(ejemplo>prueba);
 
        // 11. Imprimir por pantalla el resultado de comprobar si la primera es menor o igual que la segunda.
-        System.out.println(!ejemploMayorPrueba);
+        //System.out.println(!ejemploMayorPrueba);
+        System.out.println(ejemplo<=prueba);
 
 
         /*12. Repetir el ejercicio anterior pero almacenando el resultado de la comprobación
         en una variable, e imprimiendo después por pantalla dicha variable.*/
-        ejemploMayorPrueba=!ejemploMayorPrueba;
+        ejemploMayorPrueba= ejemplo>prueba;
         System.out.println(ejemploMayorPrueba);
+
+
+      // ejemploMayorPrueba=!ejemploMayorPrueba;
+       // System.out.println(ejemploMayorPrueba);
 
 
 
