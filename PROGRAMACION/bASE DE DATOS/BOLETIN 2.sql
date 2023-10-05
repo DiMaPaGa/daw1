@@ -6,4 +6,5 @@
 -- SELECT * FROM PRODUCTS where CategoryID=2 AND CategoryID=4;
 -- SELECT * FROM PRODUCTS where CategoryID=2 OR CategoryID=4;
 -- SELECT * FROM PRODUCTS where CategoryID IN(2,4);
-SELECT ProductID, ProductName, UnitPrice FROM products WHERE UnitPrice>100;
+-- SELECT ProductID, ProductName, UnitPrice FROM products WHERE UnitPrice>100;
+-- SELECT ProductID, ProductName, UnitPrice FROM northwind.products WHERE UnitPrice >100 AND UnitPrice <120 ;

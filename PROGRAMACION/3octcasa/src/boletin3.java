@@ -36,13 +36,14 @@ por pantalla.*/
         //por pantalla utilizando el método scanner.nextInt()*/
 //4.a Lee por pantalla una temperatura en grados Celsius e imprímela por pantalla.
        /* System.out.println("Indica tu temperatura");
-        float temperatura= scan.nextFloat();
-        System.out.println("Tu temperatura es  "+ temperatura);*/
+        float temperatura= scan.nextFloat();//tambien podría haber sido int
+        System.out.println("Tu temperatura es  "+ temperatura + grados Celsius);*/
 
 //4.b Repite pero imprimiendo por pantalla en grados Kelvin (hay que convertir).
-        /*System.out.println("Tu temperatura en grados Kelvin es  "+ (temperatura*273.15f));
-        //como sólo queremos que salga por pantalla, convierto el valor de temperatura multiplicando directamente
+        /*System.out.println("Tu temperatura en grados Kelvin es  "+ (temperatura+273.15f));
+        //como sólo queremos que salga por pantalla, convierto el valor de temperatura sumando directamente
         //por el convertidor a Kelvin =273.15)*/
+
 /*5. Crea un programa que calcule el área de un rectángulo (base x altura),
 pidiendo por pantalla los datos necesarios.*/
 /*float base;
@@ -62,10 +63,13 @@ float tualtura;
             System.out.println("Indica cuánto mides en metro");
             tualtura= scan.nextFloat();
             System.out.println("Tu IMC es "+(peso/(tualtura*tualtura)));*/
+            //Hay una forma alternativa de subir al cuadrado que es :Math.pow(numero que
+            // queremos elevar, numero por el que queremos elevar Ejemplo. queremos elevar 3
+            // al cuadrado, seria Math.pow(3,2);
 
 /*7. Crea un programa que lea el precio sin IVA de un producto e imprima
 el valor final con IVA del mismo.*/
-    /*    float precioSinIVA;
+        /*float precioSinIVA;
         float IVA=1.21f;
         System.out.println("Indica el precio de un artículo sin IVA");
         precioSinIVA= scan.nextFloat();
@@ -78,6 +82,9 @@ IVA.*/
         float producto2;
         float producto3;
 
+//float total= suma de los tres por el iva
+//float medio= (valor1+2+3)/3
+//float medioCon Iva= total/3
 
 
         System.out.println("Indica el precio del primer producto sin IVA");
@@ -87,8 +94,8 @@ IVA.*/
         System.out.println("Indica el precio del segundo producto sin IVA");
         producto3= scan.nextFloat();
         float total=(producto1+producto2+producto3);
-        System.out.println("El coste total de tus productos con IVA es: "+(total+IVA)+" euros.");
-        System.out.println("El coste medio de tus productos sin IVA es: "+(total/3) + " euros, y con IVA es "+ ((total+IVA)/3));
+        System.out.println("El coste total de tus productos con IVA es: "+(total*IVA)+" euros.");
+        System.out.println("El coste medio de tus productos sin IVA es: "+(total/3) + " euros, y con IVA es "+ ((total*IVA)/3));
 */
 /*9. Crea un programa que lea el nombre de una persona, y a continuación su edad
 y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?*/
@@ -110,6 +117,7 @@ el nombre. ¿Funciona?*/
         nombre= scan.next();
         System.out.println("Te llamas "+ nombre+ " tienes "+ edad+ " años" + " y mides "+ altura2+ " centímetros.");
 
+        //De momento nos olvidamos del NextLine para evitar errores cuando intentamos leer una cadena que viene tras otros tipos de datos
 
     }//main
 }//class

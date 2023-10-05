@@ -75,12 +75,24 @@ float radio=2.5f;
 float perimetro=(float)(2*Math.PI)*(radio*radio); //He elegido float porque para este ejercicio no necesito un nivel de precisión por encima de los 5 decimales.
         System.out.println(perimetro);
 
+ // ¡¡ Ojo!!  Tener en cuenta que si queremos que una variable booleana tome un cambio de valor, tras el cambio del valor en una de las variables, hay
+        // que volver a formularla para que salga correctamente.
 //8. Cree una variable de tipo char y asigne el valor ‘M’, y otra también de tipo char y
 //asigne el valor ‘P’. Utilice el operador de comparación <; dentro de una instrucción
 //System.out.println para comprobar si la primera variable es menor que la segunda.
 //¿Qué se imprime por pantalla?
+char letra2= 'M';
+char letra3= 'P';
+        System.out.println(letra2<letra3);//Me sale true.
+
 //9. Cree dos variables de tipo entero y asigne dos valores cualesquiera. Compruebe si la
 //primera es superior al doble de la segunda, e imprima por pantalla dicha comparación.
+int entero1=2;
+int entero2=3;
+boolean entero1MayorEntero2;
+        System.out.println(letra2<letra3);
+
+
 //10. Cree dos variables de tipo entero, asigne a la primera un valor distinto de cero y a la
 //segunda el valor cero. Imprima por pantalla el resultado de dividir la primera entre la
 //segunda. ¿Qué es lo que ocurre? ¿Qué se muestra por pantalla? Cuando termine el
