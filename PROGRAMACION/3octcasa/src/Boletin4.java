@@ -50,19 +50,33 @@ letra que se imprime al final?*/
         letra++;
         letra++;
         System.out.println(letra);
+
 /*6. Se necesita calcular el área de un círculo. Busca por internet la fórmula e impleméntala
 usando los tipos de variables más adecuados. Mediante una variable de nombre radio,
 comprueba distintos valores.*/
+//float radio=5;
+//float area= (float)Math.PI*(radio*radio); //He elegido float porque para este ejercicio no necesito un nivel de precisión por encima de los 5 decimales.
+       // System.out.println(area);
 
+ // float radio=5;
+ // double area= Math.PI*(radio*radio)
+ // System.out.println(area);
+
+ //float radio=5;
+ //float pi=3.1416f;
+ //float area=pi*(radio*radio);
+      // System.out.println(area);
 
 
 /*7. Se necesita calcular el perímetro de un círculo. Busca por internet la fórmula e
 impleméntala usando los tipos de variables más adecuados. Mediante una variable de
 nombre radio, comprueba distintos valores.*/
-
+float radio=2.5f;
+float perimetro=(float)(2*Math.PI)*(radio*radio); //He elegido float porque para este ejercicio no necesito un nivel de precisión por encima de los 5 decimales.
+        System.out.println(perimetro);
 
 //8. Cree una variable de tipo char y asigne el valor ‘M’, y otra también de tipo char y
-//asigne el valor ‘P’. Utilice el operador de comparación &lt; dentro de una instrucción
+//asigne el valor ‘P’. Utilice el operador de comparación <; dentro de una instrucción
 //System.out.println para comprobar si la primera variable es menor que la segunda.
 //¿Qué se imprime por pantalla?
 //9. Cree dos variables de tipo entero y asigne dos valores cualesquiera. Compruebe si la
