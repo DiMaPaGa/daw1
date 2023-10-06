@@ -8,22 +8,21 @@
 -- SELECT max(UnitsInStock) FROM northwind.products;
 -- SELECT avg (UnitsInStock) FROM northwind.products; //media
 -- 1. Seleccionar los pedidos realizados por el empleado con código entre el 2 y 5 con fecha de pedido del 31 de julio de cualquier año. Buscar información sobre la función EXTRACT.
-
+-- SELECT OrderID FROM northwind.orders where extract(month from OrderDate)=7 and extract(day from OrderDate)=31 and EmployeeID in (2,5);
 -- 2. Seleccionar los pedidos realizados por el empleado con código 3, de cualquier año, pero solo de los últimos 5 meses (agosto-diciembre). Buscar información sobre la función MONTH.
-
-
+-- SELECT OrderID FROM northwind.orders where month(OrderDate)>=8 and EmployeeID in (3);
 -- 3. Seleccionar los detalles de los pedidos (tabla OrderDetails) que tengan cantidades entre 10 y 250.
-
+-- SELECT * FROM northwind.orderdetails WHERE Quantity BETWEEN 10 AND 250;
 -- 4. Seleccionar los detalles de los pedidos cuyo coste (precio unitario x unidades) se encuentre entre 10 y 330. Mostrar el coste como TOTAL.
-
+-- SELECT *,(UnitPrice*Quantity) as "TOTAL"  FROM northwind.orderdetails WHERE (UnitPrice*Quantity) BETWEEN 10 AND 330;
 -- 5. Hacer un listado de todos los países a los que pertenecen los distintos clientes (buscar información sobre el operador DISCTINCT).
-
+-- SELECT DISTINCT (Country)AS "PAISES" FROM northwind.customers;
 -- 6. Mostrar los 15 productos más vendidos.
-
+-- SELECT ProductName,(UnitsOnOrder+ReorderLevel)AS VENTAS FROM northwind.products order by VENTAS desc LIMIT 15;
 -- 7. Imprimir el nombre de todos los empleados, así como la longitud en caracteres del mismo (en dos columnas).
-
+-- SELECT FirstName, char_length(FirstName) AS "Numero de caracteres" FROM northwind.employees;
 -- 8. Imprimir en una única columna el nombre y apellidos de todos los empleados, concatenados.
-
+-- SELECT concat_ws(" ",FirstName, LastName) AS "NOMBRE Y APELLIDOS" FROM northwind.employees;
 -- 9. Imprimir el nombre de los empleados en minúsculas y el apellido en mayúsculas.
 
 -- 10. Imprimir el nombre de los empleados, excluyendo la primera y última letra.

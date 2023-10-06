@@ -71,15 +71,85 @@ public static void main (String[] args){
     2. La operación lógica OR.
     3. La operación lógica AND.*/
 
-   boolean p=true;
-   boolean q=true;
+    System.out.println("TABLA DE LA VERDAD DE NOT");
+
+    boolean p=true;
+    boolean q=true;
+    boolean notp= !p;
+    boolean notq= !q;
+
+    System.out.println("Si P es " + p + " y Q es " + q +" entonces no P es "+ notp + " y no Q es "+notq);
+
+    p=true;
+    q=false;
+    notp= !p;
+    notq= !q;
+
+    System.out.println("Si P es " + p + " y Q es " + q +" entonces no P es "+ notp + " y no Q es "+notq);
+
+    p=false;
+    q=true;
+    notp= !p;
+    notq= !q;
+
+    System.out.println("Si P es " + p + " y Q es " + q +" entonces no P es "+ notp + " y no Q es "+notq);
+
+    p=false;
+    q=false;
+    notp= !p;
+    notq= !q;
+
+    System.out.println("Si P es " + p + " y Q es " + q +" entonces no P es "+ notp + " y no Q es "+notq);
+
+    System.out.println("TABLA DE LA VERDAD DE OR");
+   p=true;
+   q=true;
    boolean or=p||q;
 
     System.out.println("Si P es " + p + " y q es " + q +" entonces "+ or);
 
+    p=false;
+    q=true;
+    or=p||q;
 
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ or);
 
+    p=true;
+    q=false;
+    or=p||q;
 
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ or);
+
+    p=false;
+    q=false;
+    or=p||q;
+
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ or);
+
+    System.out.println("TABLA DE LA VERDAD DE AND");
+    p=true;
+    q=true;
+    boolean and=p && q;
+
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ and);
+
+    p=false;
+    q=true;
+    and=p && q;
+
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ and);
+
+    p=true;
+    q=false;
+    and=p && q;
+
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ and);
+
+    p=false;
+    q=false;
+    and=p && q;
+
+    System.out.println("Si P es " + p + " y q es " + q +" entonces "+ and);
 
 
 

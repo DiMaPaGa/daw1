@@ -110,7 +110,7 @@ Desarrollar un algoritmo para calcular el área de un rectángulo, cuya fórmula
       //Si el resultado del operador anterior es = a 0, será que es par. Si es cualquier otro valor, es impar.
 
      boolean esPar= (valor==0);
-      System.out.println(esPar);
+      System.out.println("¿Es número es par?"+esPar);
 
 
 

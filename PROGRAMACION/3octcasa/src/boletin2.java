@@ -89,9 +89,8 @@ public class boletin2 {
         ejemploMayorPrueba= ejemplo>prueba;
         System.out.println(ejemploMayorPrueba);
 
-
-      // ejemploMayorPrueba=!ejemploMayorPrueba;
-       // System.out.println(ejemploMayorPrueba);
+      /*ejemploMayorPrueba=!ejemploMayorPrueba;
+      System.out.println(ejemploMayorPrueba);*/
 
 
 
