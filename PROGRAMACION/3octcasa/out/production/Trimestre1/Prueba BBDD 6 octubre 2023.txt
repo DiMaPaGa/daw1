@@ -1,0 +1,27 @@
+
+-- 1. Mostrar un incremento del 50% en todos los productos de las tres primeras categorías, mostrando únicamente los productos que tienen stock. 
+
+-- Debe visualizarse el nombre de producto, precio anterior, precio posterior y stock. Renombre las columnas para que se muestren en español.
+
+
+-- SELECT ProductName as "Nombre del producto", UnitPrice as "Precio de la unidad", (UnitPrice*1.50) as "Precio Incrementado" ,UnitsInStock as "Unidades en Stock" FROM northwind.products where CategoryID in (1,2,3) and UnitsInStock<>0;
+
+
+-- 2. Mostrar los pedidos realizados por el empleado número 3, ordenándolos por fecha de pedido en orden decreciente.
+
+-- SELECT OrderID, EmployeeID, OrderDate FROM northwind.orders Where EmployeeID=3 order by OrderDate Desc;
+
+
+-- 3. Concatenar el id de empleado, nombre y apellidos usando una coma como separador. Realizar un alias del nombre de columna para que tenga un formato legible.
+
+-- SELECT concat_ws(",",EmployeeID,FirstName, LastName) AS "DATOS DE EMPLEADOS" FROM northwind.employees;
+
+
+-- 4. Contar los pedidos realizados por los empleados 2, 4 y 6.
+
+-- SELECT count(OrderID) FROM northwind.orders where EmployeeID in (2,4,6);
+
+
+-- 5. Mostrar los empleados que sean mujeres.
+
+-- SELECT * FROM northwind.employees where TitleOfCourtesy like 'Ms.' or 'Mrs.';
