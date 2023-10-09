@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class prueba6oct {
@@ -7,42 +6,49 @@ public class prueba6oct {
 
         Scanner scan =new Scanner(System.in);
     //Actividad 1.
-        
-      System.out.println("¿Cuál es tu nombre?: ");
+
+      System.out.println("Â¿CuÃ¡l es tu nombre?: ");
         String nombre= scan.next();
-        System.out.println("¿Cuál es tu año de nacimiento?: ");
-        int añoNacimiento= scan.nextInt();
-        System.out.println("¿Cuál es el nombre de su primer contacto?: ");
+        System.out.println("Â¿CuÃ¡l es tu aÃ±o de nacimiento?: ");
+        int aÃ±oNacimiento= scan.nextInt();
+        System.out.println("Â¿CuÃ¡l es el nombre de su primer contacto?: ");
         String nombreContac1= scan.next();
-        System.out.println("¿Cuál es el nombre de su segundo contacto?: ");
+        System.out.println("Â¿CuÃ¡l es el nombre de su segundo contacto?: ");
         String nombreContac2= scan.next();
-        System.out.println("Usted se llama "+ nombre+ "tiene "+ (2023-añoNacimiento)+ " años." + "Su primer contacto es "+ nombreContac1+ " y su segundo contacto es "+ nombreContac2+ ".");
-        int edad=(2023-añoNacimiento);
+        System.out.println("Usted se llama "+ nombre+ "tiene "+ (2023-aÃ±oNacimiento)+ " aÃ±os." + "Su primer contacto es "+ nombreContac1+ " y su segundo contacto es "+ nombreContac2+ ".");
+        int edad=(2023-aÃ±oNacimiento);
         boolean menorEdad= (edad<=18);
         System.out.println("Menor de edad? "+ menorEdad);
 
     //Actividad 2.
 
         int numero=5;
-        System.out.println("Adivine un número entero del 1 al 5");
+        System.out.println("Adivine un nÃºmero entero del 1 al 5");
         int numeroUsuario= scan.nextInt();
         boolean victoria= (numeroUsuario==numero);
         System.out.println("Victoria?"+ victoria);
 
      //Actividad 3.
         char letraNom= 'D';
-        System.out.println("Ingrese un número entero");
+        System.out.println("Ingrese un nÃºmero entero");
         int numEntero= scan.nextInt();
         char letraResultante= letraNom+=numEntero;
         System.out.println("1. La letra resultante es: "+ letraResultante);
         int codigoResultante= letraNom+numEntero;
-        System.out.println("2. El código de la letra resultante es: "+ codigoResultante);
+        System.out.println("2. El cÃ³digo de la letra resultante es: "+ codigoResultante);
 
 
 
 
 
-    }
 
 
-} 
+
+
+
+
+
+    }// main
+
+
+} //class

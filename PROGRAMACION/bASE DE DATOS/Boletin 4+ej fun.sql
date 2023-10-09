@@ -24,27 +24,28 @@
 -- 8. Imprimir en una única columna el nombre y apellidos de todos los empleados, concatenados.
 -- SELECT concat_ws(" ",FirstName, LastName) AS "NOMBRE Y APELLIDOS" FROM northwind.employees;
 -- 9. Imprimir el nombre de los empleados en minúsculas y el apellido en mayúsculas.
-
+-- SELECT lower(FirstName) as "Nombre", upper(LastName) as "Apellido" FROM northwind.employees;
 -- 10. Imprimir el nombre de los empleados, excluyendo la primera y última letra.
-
+-- SELECT substr(FirstName,2,length(FirstName)-2) FROM northwind.employees;
 -- 11. Imprimir el nombre, apellidos y fecha de nacimiento de todos los empleados. La fecha de nacimiento debe estar en el formato europeo (DD—MM--AAAA).
-
+-- SELECT FirstName, LastName, date_format(birthDate,"%d/%m/%Y") FROM northwind.employees;
 -- 12. Por cada empleado, imprimir junto a su nombre y apellidos, el número de años que han transcurrido desde su nacimiento hasta su contratación.
-
+-- SELECT FirstName, LastName, timestampdiff(year, BirthDate, HireDate) as"Edad en la que se contrataron" FROM northwind.employees;
 -- 13. Por cada empleado, imprimir el número de años que han transcurrido desde su contratación hasta la fecha actual.
-
+-- SELECT FirstName, LastName, timestampdiff(year, HireDate, Curdate()) as"Años en activo" FROM northwind.employees;
 -- 14. Repetir el ejercicio anterior expresando el resultado en meses.
-
+-- SELECT FirstName, LastName, timestampdiff(month, HireDate, Curdate()) as "meses en activo" FROM northwind.employees;
 -- 15. Repetir el ejercicio anterior expresando el resultado en días.
-
+-- SELECT FirstName, LastName, timestampdiff(day, HireDate, Curdate()) as "días en activo" FROM northwind.employees;
 -- 16. Imprimir el nombre del día de la semana en el que nació cada empleado, junto con su nombre y apellidos.
-
+-- SELECT dayname(BirthDate) as "Día de la semana", FirstName, LastName FROM northwind.employees;
 -- 17. Imprimir el nombre del mes en el que fue contratado cada empleado, junto con su nombre y apellidos.
-
+-- SELECT monthname(HireDate) as "Mes contratado", FirstName, LastName FROM northwind.employees;
 -- 18. Por cada empleado, imprimir nombre, apellidos, fecha de contratación y antigüedad en días (días que lleva contratado).
-
+-- SELECT FirstName, LastName, HireDate, timestampdiff(day, HireDate, Curdate()) as "días contratados" FROM northwind.employees;
 -- 19. Repetir el ejercicio anterior añadiendo una nueva columna con la edad a la que fue contratado.
-
+-- SELECT FirstName, LastName, HireDate, timestampdiff(day, HireDate, Curdate()) as "días contratados", timestampdiff(year, BirthDate, HireDate) as"Edad en la que se contrataron" FROM northwind.employees;
 -- 20. Seleccionar los 7 productos con precio más caro, que cuenten con stock en almacén. Buscar información sobre la palabra reservada LIMIT.
-
+-- SELECT * FROM products WHERE UnitsInStock > 0 order by UnitPrice desc limit 7;
 -- 21. Seleccionar los 9 productos con menos stock en almacén, que pertenezcan a la categoría 3, 5 u 8.
+-- SELECT * FROM products WHERE CategoryID in (3,5,8) order by UnitsInStock asc limit 9;
