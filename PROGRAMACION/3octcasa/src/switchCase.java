@@ -408,6 +408,15 @@ creciente.*/
 
 /*26. Leer por pantalla un número de tres cifras, e imprimir cada una de sus cifras en una
 línea.*/
+        System.out.println("Introduzca un número de tres cifras");
+        int num3cifras= scan.nextInt();
+
+        int centenas=(num3cifras/100);
+        int decenas=((num3cifras/10)-(centenas*10));
+        int unidades=(num3cifras-(centenas*100)-(decenas*10));
+        System.out.println("De su número, el primer dígito es "+centenas);
+        System.out.println("El segundo es" +decenas);
+        System.out.println("El tercero es"+ unidades);
 
 
 /*27. Crea una aplicación llamada CalculadoraInversa, que lea por pantalla dos operandos
@@ -420,19 +429,51 @@ disponibles son:
 /: divide los operandos, este debe dar un resultado con decimales (double)
 %: módulo, resto de la división entre operando1 y operando2.
 Para leer por pantalla usar nextInt y next.*/
+        System.out.println("Entra en la calculadora Inversa. Introduce un número");
+        int operando1= scan.nextInt();
+        System.out.println("Introduce otro número");
+        int operando2= scan.nextInt();
+        System.out.println("Indique si desea +, -, *, / ,o %");
+        String operando= scan.next();
 
-
+        switch (operando) {
+            case "+":
+                System.out.println("El resultado de su suma es "+ (operando1+operando2));
+                break;
+            case "-":
+                System.out.println ("El resultado de su resta es "+ (operando1-operando2));
+                break;
+            case "*":
+                System.out.println ("El resultado de su multiplicación es "+ (operando1*operando2));
+                break;
+            case "/":
+                System.out.println ("El resultado de su división es "+ (operando1/operando2));
+                break;
+            case "%":
+                System.out.println ("El resto de dividir los dos números entre sí es " +(operando1%operando2));
+                break;
+            default:
+                System.out.println("Identificador no válido. Revise que el operando asignado.");
+                break;
+        }
 
 
  /*28. En un casino de juegos se desea mostrar los mensajes respectivos por el puntaje
 obtenido en el lanzamiento de tres dados de un cliente, de acuerdo a los siguientes
 resultados:
+
 Si los tres dados son seis, mostrar el mensaje “Muy buena suerte”
 Si dos dados son seis, mostrar el mensaje “Buena suerte”
 Si un dado es seis, mostrar el mensaje “Mala Suerte”
 Si ningún dado se obtiene seis, mostrar el mensaje “Muy mala suerte”
 Simule los lanzamientos con tres números aleatorios, usando instrucciones Java que
 los genere.*/
+
+        int dado1=(int)Math.floor(Math.random()*6+1);
+        int dado2=(int)Math.floor(Math.random()*6+1);
+        int dado3=(int)Math.floor(Math.random()*6+1);
+
+
 
         }//main
     }//class

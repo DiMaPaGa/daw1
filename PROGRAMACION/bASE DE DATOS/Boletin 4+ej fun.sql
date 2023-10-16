@@ -43,8 +43,11 @@
 -- SELECT monthname(HireDate) as "Mes contratado", FirstName, LastName FROM northwind.employees;
 -- 18. Por cada empleado, imprimir nombre, apellidos, fecha de contratación y antigüedad en días (días que lleva contratado).
 -- SELECT FirstName, LastName, HireDate, timestampdiff(day, HireDate, Curdate()) as "días contratados" FROM northwind.employees;
+-- OTRA ALTERNATIVA SELECT FirstName, LastName, HireDate, TO_DAYS (Now()) - TO_DAYS(HireDate) "Días en la empresa" FROM northwind.employees;
+-- NO TODAS LAS FUNCIONES SE ENCUENTRAN EN TODOS LOS SISTEMAS DE LECTURA DE BASE DE DATOS
 -- 19. Repetir el ejercicio anterior añadiendo una nueva columna con la edad a la que fue contratado.
 -- SELECT FirstName, LastName, HireDate, timestampdiff(day, HireDate, Curdate()) as "días contratados", timestampdiff(year, BirthDate, HireDate) as"Edad en la que se contrataron" FROM northwind.employees;
+-- oTRA ALTERNATIVA SELECT FirstName, LastName, HireDate, FLOOR(DATEDIFF(CURDATE(), HireDate)) "Días contratado", FLOOR(DATEDIFF(HireDate, Birthdate)/365) "Edad contratado" FROM employees; LA DEVUELVE EN DIAS, SE DIVIDE ENTRE 365 PARA QUE LO DEVUELVA EN AÑOS
 -- 20. Seleccionar los 7 productos con precio más caro, que cuenten con stock en almacén. Buscar información sobre la palabra reservada LIMIT.
 -- SELECT * FROM products WHERE UnitsInStock > 0 order by UnitPrice desc limit 7;
 -- 21. Seleccionar los 9 productos con menos stock en almacén, que pertenezcan a la categoría 3, 5 u 8.
