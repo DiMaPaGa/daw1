@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Especificación del idioma del documento -->
+<head>
+<meta charset="UTF-8"> <!-- Especificación del juego de caracteres -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista en dispositivos móviles -->
+<title>Lista Personalizada</title> <!-- Título de la página -->
+<style>
+    /* Estilos CSS para personalizar las listas */
+    .custom-list {
+        counter-reset: section; /* Iniciar el contador personalizado llamado "section" */
+        list-style: none; /* Eliminar los estilos predeterminados de las listas */
+        padding-left: 0; /* Eliminar el relleno izquierdo predeterminado de las listas */
+    }
+
+    .custom-list-item {
+        counter-increment: section; /* Incrementar el contador "section" en cada elemento de la lista */
+        margin-bottom: 10px; /* Agregar un margen inferior a cada elemento de la lista */
+    }
+
+    .custom-list-item:before {
+        content: counters(section, ".") ". "; /* Mostrar el número de la lista principal y la lista anidada antes de cada elemento */
+        font-weight: normal; /* Hacer el número en negrita */
+    }
+</style>
+</head>
+<body>
+    <!-- Encabezado de nivel 2 -->
+    <h2>Lista ordenada</h2>
+
+    <!-- Lista ordenada con la clase "custom-list" para aplicar estilos personalizados -->
+    <ol class="custom-list">
+        <!-- Primer elemento de la lista principal -->
+        <li class="custom-list-item">América
+            <!-- Lista anidada bajo "América" -->
+            <ol class="custom-list">
+                <!-- Elementos de la lista anidada -->
+                <li class="custom-list-item">América central</li>
+                <li class="custom-list-item">América sur</li>
+                <li class="custom-list-item">América norte</li>
+            </ol>
+        </li>
+
+        <!-- Segundo elemento de la lista principal -->
+        <li class="custom-list-item">África
+            <!-- Lista anidada bajo "África" -->
+            <ol class="custom-list">
+                <!-- Elementos de la lista anidada -->
+                <li class="custom-list-item">África Septentrional</li>
+                <li class="custom-list-item">África Occidental</li>
+                <li class="custom-list-item">África Oriental</li>
+                <li class="custom-list-item">África Meridional</li>
+            </ol>
+        </li>
+
+        <!-- Tercer elemento de la lista principal -->
+        <li class="custom-list-item">Antártida
+            <!-- Lista anidada bajo "Antártida" -->
+            <ol class="custom-list">
+                <!-- Elementos de la lista anidada -->
+                <li class="custom-list-item">Antártida oriental</li>
+                <li class="custom-list-item">Antártida Occidental</li>
+            </ol>
+        </li>
+
+        <!-- Cuarto elemento de la lista principal -->
+        <li class="custom-list-item">Asia</li>
+
+        <!-- Quinto elemento de la lista principal -->
+        <li class="custom-list-item">Europa</li>
+
+        <!-- Sexto elemento de la lista principal -->
+        <li class="custom-list-item">Oceania</li>
+    </ol>
+</body>
+</html>

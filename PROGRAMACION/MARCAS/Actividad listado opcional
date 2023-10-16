@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> VENTA DE FLORES</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <meta name="autor" content="Diana Pascual">
+    <meta name="description" content="Venta de flores en línea en francés">
+    
+
+</head>
+
+<body>
+
+<ol type="1"> <!-- Lista principal con numeración 1, 2, 3,... -->
+    <li>América <!-- Primer elemento de la lista principal -->
+        <ol type="1"> <!-- Lista anidada con numeración 1, 2, 3,... -->
+            <li>América del Sur</li> <!-- Primer elemento de la lista anidada -->
+            <li>América del Norte</li> <!-- Segundo elemento de la lista anidada -->
+            <!-- Puedes seguir añadiendo elementos a la lista anidada según sea necesario -->
+        </ol>
+    </li>
+    <li>Europa</li> <!-- Segundo elemento de la lista principal -->
+    <li>Asia</li> <!-- Tercer elemento de la lista principal -->
+    <!-- Puedes seguir añadiendo elementos a la lista principal según sea necesario -->
+</ol>
+</body>
+</html>
