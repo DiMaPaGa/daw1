@@ -472,7 +472,17 @@ los genere.*/
         int dado1=(int)Math.floor(Math.random()*6+1);
         int dado2=(int)Math.floor(Math.random()*6+1);
         int dado3=(int)Math.floor(Math.random()*6+1);
+        System.out.println("Sus resultados han sido "+dado1+", "+dado2+", "+dado3+".");
 
+        if (dado1==6 && dado2==6 && dado3==6){
+            System.out.println("Muy buena suerte");
+        } else if ((dado1==6 && dado2==6 && dado3!=6)||(dado1==6 && dado2!=6 && dado3!=6)||(dado1!=6 && dado2==6 && dado3==6)){
+            System.out.println("Buena suerte");
+        } else if ((dado1==6 && dado2!=6 && dado3!=6)||(dado1!=6 && dado2==6 && dado3!=6)||(dado1!=6 && dado2!=6 && dado3==6)){
+            System.out.println("Mala suerte");
+        } else {
+            System.out.println("Muy mala suerte");
+        }
 
 
         }//main
