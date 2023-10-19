@@ -5,6 +5,7 @@ public class switchCase {
 
 
         Scanner scan = new Scanner(System.in);
+
       /*   int diaSemana= 9;
 // Se usan para enteros, chart o cadenas.
       switch(diaSemana){
@@ -123,18 +124,18 @@ public class switchCase {
             float peso = scan.nextFloat();
             System.out.println("Indica cuánto mides en metros");
             float tuAltura = scan.nextFloat();
-            float IMC = (peso / (float) (Math.pow(tuAltura, 2)));
+            float IMC = peso / (float) Math.pow(tuAltura, 2);
 
             if (IMC < 18.5) {
                 System.out.println("Tienes un IMC bajo");
             }
-            if (IMC >= 18.5 && IMC <= 24.9) {
+            else if (IMC >= 18.5 && IMC <= 24.9) {
                 System.out.println("Tienes un IMC normal");
             }
-            if (IMC >= 25.0 && IMC <= 29.9) {
+            else if (IMC >= 25.0 && IMC <= 29.9) {
                 System.out.println("Tienes un IMC de sobrepeso");
             }
-            if (IMC >= 30.0) {
+            else {
                 System.out.println("Tienes un IMC de obesidad");
             }*/
 
@@ -183,7 +184,7 @@ public class switchCase {
                     System.out.println("Es diciembre");
                     break;
                 default:
-                    System.out.println("Identficador no válido");
+                    System.out.println("Identificador no válido");
                     break;
             }*/
 
@@ -196,6 +197,7 @@ public class switchCase {
           /*  int codigo;
             codigo = 7777;
             System.out.println("Inserte contraseña");
+            También puedo crear una variable que guarde lo de scan y lo comparamos con código.
 
             if (codigo == scan.nextInt()) {
                 System.out.println("Contraseña correcta, accediendo al sistema");
@@ -212,7 +214,7 @@ public class switchCase {
 
           /*  System.out.println("Introduzca el precio del producto");
             float precioProduc = scan.nextFloat();
-            float precioConDescuento = (precioProduc * 0.75f);
+            float precioConDescuento = (precioProduc * 0.85f);
             float cantidadDescontada= precioProduc-precioConDescuento;
             System.out.println("El precio del producto aplicando descuento es: " + precioConDescuento );
             System.out.println("La cantidad descontada ha sido de: "+ cantidadDescontada);*/
@@ -259,7 +261,7 @@ recuerde que el nombre que introduzca debe coincidir exactamente con el nombre
 de universidad).*/
 
      /*   System.out.println("Ingrese su facultad según los siguientes identificadores: Sistemas, Derecho, Naviera, Pesquera, Contabilidad o Administración");
-        String identificador = scan.next();
+        String identificador = scan.next(); //nextLine lo lee todo, si hubiera respetado el nombre como estaba "Ing. de sistemas" el next se hubiera quedado en Ing. y hubiera dado error.
 
         switch (identificador) {
             case "Sistemas":
@@ -289,7 +291,7 @@ de universidad).*/
 promedio, sabiendo que la primera y segunda tiene 20% de peso cada una, la
 tercera y cuarta tienen 30% de peso cada una.*/
 
-        System.out.println("Ingrese su primera nota");
+      /*  System.out.println("Ingrese su primera nota");
         float nota1= scan.nextFloat();
 
         System.out.println("Ingrese su segunda nota");
@@ -302,13 +304,13 @@ tercera y cuarta tienen 30% de peso cada una.*/
         float nota4= scan.nextFloat();
 
         float notaFinal= (nota1*0.2f)+(nota2*0.2f)+(nota3*0.3f)+(nota4*0.3f);
-        System.out.println("Tu nota final es "+ notaFinal);
+        System.out.println("Tu nota final es "+ notaFinal);*/
 
 
 /* 19. Desarrolle un programa que pida cuantos hombres y mujeres hay en un aula y
 permita calcular el porcentaje de hombres y mujeres.*/
 
-        System.out.println("¿Cuántos hombres hay en el aula?");
+       /* System.out.println("¿Cuántos hombres hay en el aula?");
         int hombres= scan.nextInt();
         System.out.println("¿Cuántas mujeres hay en el aula?");
         int mujeres= scan.nextInt();
@@ -318,41 +320,42 @@ permita calcular el porcentaje de hombres y mujeres.*/
         float porcHombres= (hombres*100f)/total;
         float porcMujeres= (mujeres*100f)/total;
 
-        System.out.println("En la clase, el "+ porcHombres + "% son hombres y el " + porcMujeres+ "% son mujeres");
+        System.out.println("En la clase, el "+ porcHombres + "% son hombres y el " + porcMujeres+ "% son mujeres");*/
 
 
 // 21. Leer por pantalla dos números enteros, e intercambiar sus valores (swapping).
 
-        System.out.println("Introduzca un número entero");
+       /* System.out.println("Introduzca un número entero");
         int valor1= scan.nextInt();
         int valor2= valor1;
 
         System.out.println("Introduzca otro número entero");
         valor1= scan.nextInt();
 
-        System.out.println("Intercambiamos y ahora el valor1 vale "+ valor1 + " y el valor2 vale "+ valor2);
-
+        System.out.println("Intercambiamos y ahora el valor1 vale "+ valor1 + " y el valor2 vale "+ valor2);*/
+//O con variable temporal que guarde mi dato. tmp=a; a=b; b=tmp;
 //22. Leer por pantalla dos números enteros, e imprimirlos por pantalla en orden creciente.
 
-        System.out.println("Introduzca un número entero");
+       /* System.out.println("Introduzca un número entero");
         int valor3= scan.nextInt();
 
         System.out.println("Introduzca otro número entero");
         int valor4= scan.nextInt();
 
         if (valor3>valor4) {
-            System.out.println (valor3+ " es mayor que "+ valor4);
-        } else if (valor3<valor4){
-            System.out.println (valor4+ " es mayor que "+ valor3);
-        } else {
-            System.out.println("Ambos números son iguales. Su valor es: "+ valor3);
+            System.out.println (valor4+ " es menor que "+ valor3);
+        } else if (valor3<valor4) {
+            System.out.println(valor3 + " es menor que " + valor4);
         }
-
+       /* } else {
+            System.out.println("Ambos números son iguales. Su valor es: "+ valor3);//no haría falta
+        }*/
+//
 
 /*23. Leer por pantalla tres números enteros, e imprimirlos por pantalla en orden
 creciente.*/
 
-        System.out.println("Introduzca números diferentes entre sí. Introduzca un número entero");
+       System.out.println("Introduzca números diferentes entre sí. Introduzca un número entero");
         int valor5= scan.nextInt();
 
         System.out.println("Introduzca otro número entero");
@@ -364,7 +367,9 @@ creciente.*/
         int menor;
         int mediano;
 
-        if ((valor5 > valor6) && (valor5 > valor7)) {
+        /*inténtalo pero comparando en grupo de dos nada más.
+
+      if ((valor5 > valor6) && (valor5 > valor7)) {
             mayor=valor5;
 
         } else if ((valor6 > valor5) && (valor6 > valor7)) {
@@ -386,13 +391,62 @@ creciente.*/
             mediano=valor6;
         } else {
             mediano=valor7;
-        }
+        }*/
 
+        if (valor5>valor6){
+            mayor=valor5;
+            mediano=valor6;
+        } else{
+            mayor=valor6;
+            mediano=valor5;
+        }
+        if (mediano>valor7){
+            menor=valor7;
+        } else{
+            menor=mediano;
+            mediano=valor7;
+
+        }
+        if (mayor>menor){
+            System.out.println(mayor+ mediano+ menor);
+        } else{
+            int tmp=mayor;
+            mayor=menor;
+            menor=tmp;
+            System.out.println(mayor+ mediano+ menor);
+        }
+/* solución con swaping
+
+    tem= num1;
+    if(num1>num2){
+    tem= num1;
+    num1=num2;
+    num2=tmp;
+    }
+
+    if(num2>num3){
+    tem= num2;
+    num2=num3;
+    num3=tmp;
+    }
+
+    if(num1>num2){
+    tem= num1;
+    num1=num2;
+    num2=tmp;
+    }
+    System.out.println(num1);
+    System.out.println(num2);
+    System.out.println(num3);
+ */
         System.out.println("El orden creciente sería, primero  "+ menor + " después "+ mediano + " y por último " + mayor);
 //24. Repetir el ejercicio anterior, e imprimirlos en orden decreciente.
 
         System.out.println("El orden decreciente sería, primero  "+ mayor + " después "+ mediano + " y por último " + menor);
 
+       /* System.out.println(num3);
+        System.out.println(num2);
+        System.out.println(num1);*/
 
 /*25. Lea un número por pantalla y determine si es múltiplo de 10 (use el operador módulo
 //%).*/
@@ -400,7 +454,7 @@ creciente.*/
         System.out.println("Introduzca un número");
         int numEjercicio25= scan.nextInt();
 
-        if ((numEjercicio25%10==0)) {
+        if (numEjercicio25%10==0) {
             System.out.println("El número introducido es múltiplo de 10");
         } else {
             System.out.println("El número introducido NO es múltiplo de 10");
@@ -417,7 +471,10 @@ línea.*/
         System.out.println("De su número, el primer dígito es "+centenas);
         System.out.println("El segundo es" +decenas);
         System.out.println("El tercero es"+ unidades);
-
+/* int cifra1=num%10;
+int cifra2=(num/10)%10;
+int cifra3=num/100;
+ */
 
 /*27. Crea una aplicación llamada CalculadoraInversa, que lea por pantalla dos operandos
 (int) y un signo aritmético (String), y según este último se realizará la operación
@@ -483,6 +540,36 @@ los genere.*/
         } else {
             System.out.println("Muy mala suerte");
         }
+
+        /*
+        int contador=0;
+        if(num1==6){
+        contador++;
+        }
+         if(num2==6){
+        contador++;
+        }
+         if(num3==6){
+        contador++;
+        }
+
+        switch (contador) {
+            case "0":
+                System.out.println("Muy mala suerte");
+                break;
+            case "1":
+                System.out.println ("Mala suerte");
+                break;
+            case "2":
+                System.out.println ("Buena suerte");
+                break;
+            case "3":
+                System.out.println ("Muy buena suerte");
+                break;
+            default:
+                System.out.println ("Este caso no debe darse NUNCA");
+                break;
+         */
 
 
         }//main
