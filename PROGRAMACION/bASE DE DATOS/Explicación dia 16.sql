@@ -39,3 +39,29 @@ SELECT City, count(*) as "Número de empleados" FROM northwind.employees where T
 -- 10. Muestra las distintas ciudades en las que hay empleados.
 SELECT City FROM northwind.employees group by City;
 -- 11. Cuenta las ciudades en las que hay empleados.
+SELECT count(distinct City) FROM employees;
+-- 12. Por cada país y ciudad de envío, mostrar el total de pedidos.
+SELECT ShipCountry, ShipCity, count(*) FROM northwind.orders group by ShipCity, ShipCountry;
+-- 13. Por cada país y ciudad, contar los empleados que tienen el cargo de ‘Sales representative’.
+SELECT City, Country, count(*) FROM employees where Title=("Sales Representative") group by City, Country;
+-- 14. Por cada país y ciudad, contar el número de clientes.
+SELECT City, Country, Count(*) FROM northwind.customers group by City, Country;
+-- 15. Repetir el anterior mostrando sólo aquellos que tienen más de un cliente.
+SELECT City, Country, Count(*) FROM northwind.customers group by City, Country;
+-- 16. Por cada producto, hallar la cantidad de unidades vendidas y la media por pedido.
+
+-- 17. Por cada pedido, contar los distintos productos vendidos (no la cantidad).
+
+-- 18. Repetir el anterior mostrando solo los pedidos con un único producto.
+
+-- 19. En la tabla de proveedores (Suppliers), contar el número de proveedores por cada título de contacto (ContactTitle).
+
+-- 20. Contar el número de productos que empiezan por la letra C.
+
+-- 21. Contar el número de pedidos que fueron realizados en un mes de Julio (OrderDate).
+
+-- 22. Contar el número de pedidos realizados por el cliente DUMON en el año 1997.
+
+-- 23. Contar el número de pedidos (Orders) en los que los años de sus campos de tipo
+-- fecha no son exactamente iguales entre si, es decir, los valores de esas tres columnas
+-- no se repiten para una misma fila.
