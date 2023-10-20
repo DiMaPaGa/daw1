@@ -60,7 +60,7 @@ nav ul li:hover{
 <body>
 
     <header>
-        
+        <!--Lista desordenada con enlaces internos, en este caso, para el encabezado-->
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -77,23 +77,26 @@ nav ul li:hover{
     <h1>Ejemplo del uso de marcadores</h1>
 
     <a name="arriba"></a>
-
+    <p>Para ir abajo, pincha <a href="#abajo">aquí</a></p>
     <a href="mailto:dianamaria.pascual@a.vedrunasevillasj.es"><h5>Cuenta correo</h5></a>
-    <a name="primero"><a href="https://www.w3.org/"><img src="LogoConsorcio.png" width="100" height="60"></a></a>
+    <a href="tel:+34 645016939"><h5>Teléfono</h5></a>
+    <a name="primero"><a href="https://www.w3.org/" title="página del consorcio"><img src="LogoConsorcio.png" width="100" height="60"></a></a>
 
     <p> Aquí tienes el primer apartado. Al pulsar sobre el enlace, el navegador habrá saltado a esta parte de la página. Quizás si todo entra en la pantalla no logres ver el efecto pero prueba a poner más texto aquí o hacer zoom y conseguirás verlo.</p>
 
-    <a name="segundo"><a href="https://developer.mozilla.org/es/docs/Learn/HTML" target="_blank"><img src="LogoHTML.png" width="100" height="60"></a></a>
-
+    <a name="segundo"><a href="https://developer.mozilla.org/es/docs/Learn/HTML" title="Guía HTML" target="_blank">
+        <img src="LogoHTML.png" width="100" height="60" alt="Logo que dirige a Mozilla"></a></a>
+<!--Target: _blank, abre el enlace en una nueva ventana, _self en la misma ventana, vienen determinado; _parent en marco principal o padre si utilizamos frames y "_top" en la ventana principal del navegador, reemplazando cualquier frame existente-->
     <p> Sí tienes el segundo apartado. Al pulsar sobre el enlace, el navegador habrá saltado a esta parte de la página. Quizás si todo entra en la pantalla no logres ver el efecto pero prueba a poner más texto aquí o hacer zoom y conseguirás verlo.</body></html> </p>
 
     <a name="tercero"><a href="https://developer.mozilla.org/es/docs/Learn/CSS"><img src="LogoCSS.png" width="80" height="80"></a></a>
 
-    Aquí tienes el tercer apartado. Al pulsar sobre el enlace, el navegador habrá saltado a esta parte de la página. Quizás si todo entra en la pantalla no logres ver el efecto pero prueba a poner más texto aquí o hacer zoom y conseguirás verlo.
+   <p> Aquí tienes el tercer apartado. Al pulsar sobre el enlace, el navegador habrá saltado a esta parte de la página. Quizás si todo entra en la pantalla no logres ver el efecto pero prueba a poner más texto aquí o hacer zoom y conseguirás verlo.</p>
 
     Volver <a href="#arriba">arriba</a>.
     <h2>Ejemplo de marcadores con otros elementos</h2>
-    <p><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"><img src="enlace_imagen.png"></a>
+    <p><a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">
+        <img src="enlace_imagen.png"></a>
 
 
 
@@ -101,8 +104,8 @@ nav ul li:hover{
 <table class="default">
 <caption>Tiempo necesario para viajar desde Philadelphia</caption>
 <thead>
-    <tr>
-        <th scope="col">Destino</th>
+    <tr> <!--fila-->
+        <th scope="col">Destino</th> <!--celdas de encabezado-->
         <th scope="col">En auto</th>
         <th scope="col">En tren</th>
         <th scope="col">En bicicleta</th>
@@ -110,7 +113,7 @@ nav ul li:hover{
     </thead>
     <tbody>
         <tr>
-            <td>Nueva York</td>
+            <td>Nueva York</td> <!-- celdas de datos-->
             <td>1 h 51 min</td>
             <td>1 h 22 min</td>
             <td>8 h 53 min</td>
@@ -185,5 +188,7 @@ nav ul li:hover{
 
 
 </table>
+
+<a name="abajo"></a>
 </body>
 </html>
