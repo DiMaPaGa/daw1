@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="Pagina de Base de Datos para actividad de tablas">
+    <meta name="keywords" content="HTML,BBDD,materia,docente, contacto">
+    <meta http-equiv="refresh" content="30">
+    <title>Base de Datos</title>
+
+    <style>
+        * {
+            color: rgb(7, 7, 7);
+        }
+
+        header {
+
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+
+        }
+
+        nav {
+            background-color: rgb(63, 185, 145);
+            float: right;
+            border-radius: 4px 0px;
+            padding: 0 43px 0 0;
+        }
+
+        nav ul {
+
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        nav ul li {
+
+            float: left;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        nav ul li a {
+
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul :hover {
+            background-color: rgb(255, 208, 0);
+        }
+
+       .MATERIA {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: beige;
+            max-width: 900px;
+            border-radius: 4px;
+            padding: 5px 43px 15px 0;
+            margin: 0 0 0 3%;
+
+        }
+
+        article {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: rgb(112, 238, 179);
+            max-width: 800px;
+            border-radius: 4px;
+            padding: 0 43px 15px 0;
+            margin: 10px 0px 10px 50px;
+
+        }
+
+        body {
+            text-align: justify;
+        }
+
+        #figure1{
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            
+        }
+
+        #figure2{
+            
+            
+            width: 100%;
+            margin: 0px 0px 0px 60px ;
+
+
+        }
+        #figure3 {
+            
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            padding: 0 3% 3% 3%;
+            
+        
+
+            
+        }
+
+        .contenedor {
+            
+            float: right;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#MATERIA">MATERIA</a></li>
+                <li><a href="#DOCENTE">DOCENTE</a></li>
+                <li><a href="#CONTACTO">CONTACTO</a></li>
+                <li><a href="INDEX.HTML">VOLVER</a></li> <!--Vuelve a la tabla, es decir al horario, facilitando la navegación-->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div class="contenedor">
+            <figure id= "figure1">
+                <ul>
+                    <li>Duración: 192 horas</li>
+                    <li>Créditos ECTS: 11</li>
+                    <li>Código:0484 </li>
+                </ul>
+            </figure>
+            
+            <a name="DOCENTE">
+               
+                <figure id="figure2"> <img src="IMG/jorge-juan-muñoz.png" width="40%" height="40%">
+                    <figcaption><em>Jorge Juan Muñoz Morera</em></figcaption>
+                </figure>
+            </a>
+
+            <a name="CONTACTO">
+                <figure id="figure3"> 
+                    <p>Si desea más información, no dude en contactar con nosotros</p>
+                    <a href="mailto:jorgejuan.munoz@vedruna.es" title="correo electrónico de la docente"> Correo del personal docente </a>
+                    <br>
+                    <a href="mailto:colegio@vedrunasevillasj.es" title="correo del centro"> Correo del centro</a>
+                    <br>
+                    <a href="tel:+34 662331273" title="teléfono centro"> Telefono y Whatsapp</a>
+                </figure>
+            </a>
+        </div>
+
+        <div class="MATERIA">
+            <a name="MATERIA">
+                <h1 style="text-align: center;"> BASE DE DATOS </h1>
+            </a>
+            <article>
+                <dl>
+                    <dt>
+                        <h4>¿Qué es Base de Datos?</h4>
+                    </dt>
+                    <!--Para probar distintas etiquetas, incorporo una lista de descripción para presentar la asignatura-->
+
+                    <dd>Este módulo profesional contiene la formación necesaria para desempeñar la función de programación de bases de datos.</dd>
+                    <dd>La función de programación de bases de datos incluye aspectos como: </dd>
+                    <ul>
+                        <ul style="list-style-type:circle;">
+                            <!--Incorporo doble anidamiento de lista para que el nivel de la misma aparezca dentro de la descripción, y no al mismo nivel del último <dd> -->
+                            <li>La planificación y realización del diseño físico de una base de datos.</li>
+                            <li>La normalización de esquemas.</li>
+                            <li>La inserción y manipulación de datos.</li>
+                            <li>La planificación y realización de consultas.</li>
+                            <li>La programación de procedimientos almacenados.</li>
+                            
+                        </ul>
+                    </ul>
+
+                </dl>
+            </article>
+            <article>
+                <h4>Resultados de aprendizaje y criterios de evaluación.</h4>
+
+                <ol>
+                    <li><b>Reconoce los elementos de las bases de datos analizando sus funciones y valorando la utilidad de los sistemas gestores.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han analizado los sistemas lógicos de almacenamiento y sus características.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los distintos tipos de bases de datos según el modelo de datos utilizado.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los distintos tipos de bases de datos en función de la ubicación de la información.</li>
+                        <li style="list-style-type:lower-latin;">Se ha evaluado la utilidad de un sistema gestor de bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado los sistemas gestores de bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido la función de cada uno de los elementos de un sistema gestor de bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido la utilidad de las bases de datos distribuidas.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado las políticas de fragmentación de la información.</li>
+
+                    </ol>
+                    <li><b>Crea bases de datos definiendo su estructura y las características de sus elementos según el modelo relacional.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha analizado el formato de almacenamiento de la información.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado las tablas y las relaciones entre ellas.</li>
+                        <li style="list-style-type:lower-latin;">Se han seleccionado los tipos de datos adecuados.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido los campos clave en las tablas.</li>
+                        <li style="list-style-type:lower-latin;">Se han implantado las restricciones reflejadas en el diseño lógico.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado vistas.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado los usuarios y se les han asignado privilegios. </li>
+                        <li style="list-style-type:lower-latin;">Se han utilizando asistentes, herramientas gráficas y los lenguajes de definición y control de datos.</li>
+                    </ol>
+                    <li><b>Consulta la información almacenada en una base de datos empleando asistentes, herramientas gráficas y el lenguaje de manipulación de datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las herramientas y sentencias para realizar consultas.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas simples sobre una tabla.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas sobre el contenido de varias tablas mediante composiciones internas.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas sobre el contenido de varias tablas mediante composiciones externas.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas resumen.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas con subconsultas.</li>
+                    </ol>
+
+                    <li><b>Modifica la información almacenada en la base de datos utilizando asistentes, herramientas gráficas y el lenguaje de manipulación de datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las herramientas y sentencias para modificar el contenido de la base de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han insertado, borrado y actualizado datos en las tablas.</li>
+                        <li style="list-style-type:lower-latin;">Se ha incluido en una tabla la información resultante de la ejecución de una consulta.</li>
+                        <li style="list-style-type:lower-latin;">Se han diseñado guiones de sentencias para llevar a cabo tareas complejas.</li>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido el funcionamiento de las transacciones.</li>
+                        <li style="list-style-type:lower-latin;">Se han anulado parcial o totalmente los cambios producidos por una transacción.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los efectos de las distintas políticas de bloqueo de registros. </li>
+                        <li style="list-style-type:lower-latin;">Se han adoptado medidas para mantener la integridad y consistencia de la información.</li>
+                    </ol>
+
+                    <li><b>Desarrolla procedimientos almacenados evaluando y utilizando las sentencias del lenguaje incorporado en el sistema gestor de bases de datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las diversas formas de automatizar tareas.</li>
+                        <li style="list-style-type:lower-latin;">Se han reconocido los métodos de ejecución de guiones.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las herramientas disponibles para editar guiones.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido y utilizado guiones para automatizar tareas.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado estructuras de control de flujo.</li>
+                        <li style="list-style-type:lower-latin;">Se ha hecho uso de las funciones proporcionadas por el sistema gestor.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido funciones de usuario. </li>
+                        <li style="list-style-type:lower-latin;">Se han definido disparadores.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado cursores.</li>
+                    </ol>
+
+                    <li><b>Diseña modelos relacionales normalizados interpretando diagramas entidad/relación.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han utilizado herramientas gráficas para representar el diseño lógico.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las tablas del diseño lógico.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los campos que forman parte de las tablas del diseño lógico.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado las relaciones entre las tablas del diseño lógico.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los campos clave.</li>
+                        <li style="list-style-type:lower-latin;">Se han aplicado reglas de integridad..</li>
+                        <li style="list-style-type:lower-latin;">Se han aplicado reglas de normalización. </li>
+                        <li style="list-style-type:lower-latin;">Se han analizado y documentado las restricciones que no pueden plasmarse en el diseño lógico.</li>
+                    </ol>
+
+                    <li><b>Gestiona la información almacenada en bases de datos objeto-relacionales, evaluando y utilizando las posibilidades que proporciona el sistema gestor.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las características de las bases de datos objeto- relacionales.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado tipos de datos objeto, sus atributos y métodos.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado tablas de objetos y tablas de columnas tipo objeto.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado tipos de datos colección.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado consultas.</li>
+                        <li style="list-style-type:lower-latin;">Se ha modificado la información almacenada manteniendo la integridad y consistencia de los datos.</li>
+                    </ol>
+                </ol>
+            </article>
+        </div>
+
+    </div>
+
+    
+
+
+</body>

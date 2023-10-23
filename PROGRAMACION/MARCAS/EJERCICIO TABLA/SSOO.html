@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="Página de Sistemas para actividad de tablas">
+    <meta name="keywords" content="HTML,SSOO, Sistemas informáticos,materia,docente, contacto">
+    <meta http-equiv="refresh" content="30">
+    <title>SISTEMAS INFORMÁTICOS</title>
+
+    <style>
+        * {
+            color: rgb(7, 7, 7);
+        }
+
+        header {
+
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+
+        }
+
+        nav {
+            background-color: rgb(63, 185, 145);
+            float: right;
+            border-radius: 4px 0px;
+            padding: 0 43px 0 0;
+        }
+
+        nav ul {
+
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        nav ul li {
+
+            float: left;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        nav ul li a {
+
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul :hover {
+            background-color: rgb(255, 208, 0);
+        }
+
+       .MATERIA {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: beige;
+            max-width: 900px;
+            border-radius: 4px;
+            padding: 5px 43px 15px 0;
+            margin: 0 0 0 3%;
+
+        }
+
+        article {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: rgb(112, 238, 179);
+            max-width: 800px;
+            border-radius: 4px;
+            padding: 0 43px 15px 0;
+            margin: 10px 0px 10px 50px;
+
+        }
+
+        body {
+            text-align: justify;
+        }
+
+        #figure1{
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            
+        }
+
+        #figure2{
+            
+            
+            width: 100%;
+            margin: 0px 0px 0px 60px ;
+
+
+        }
+        #figure3 {
+            
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            padding: 0 3% 3% 3%;
+            
+        
+
+            
+        }
+
+        .contenedor {
+            
+            float: right;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#MATERIA">MATERIA</a></li>
+                <li><a href="#DOCENTE">DOCENTE</a></li>
+                <li><a href="#CONTACTO">CONTACTO</a></li>
+                <li><a href="INDEX.HTML">VOLVER</a></li> <!--Vuelve a la tabla, es decir al horario, facilitando la navegación-->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div class="contenedor">
+            <figure id= "figure1">
+                <ul>
+                    <li>Duración: 192 horas</li>
+                    <li>Créditos ECTS: 10</li>
+                    <li>Código:0483 </li>
+                </ul>
+            </figure>
+            
+            <a name="DOCENTE">
+               
+                <figure id="figure2"> <img src="IMG/RamonGaldonFrasquet.jpg" width="40%" height="40%">
+                    <figcaption><em>Ramón Galdón Frasquet</em></figcaption>
+                </figure>
+            </a>
+
+            <a name="CONTACTO">
+                <figure id="figure3"> 
+                    <p>Si desea más información, no dude en contactar con nosotros</p>
+                    <a href="mailto:ramon.galdon@vedruna.es" title="correo electrónico de la docente"> Correo del personal docente </a>
+                    <br>
+                    <a href="mailto:colegio@vedrunasevillasj.es" title="correo del centro"> Correo del centro</a>
+                    <br>
+                    <a href="tel:+34 662331273" title="teléfono centro"> Telefono y Whatsapp</a>
+                </figure>
+            </a>
+        </div>
+
+        <div class="MATERIA">
+            <a name="MATERIA">
+                <h1 style="text-align: center;"> SISTEMAS INFORMÁTICOS </h1>
+            </a>
+            <article>
+                <dl>
+                    <dt>
+                        <h4>¿Qué es Sistemas (SSOO)?</h4>
+                    </dt>
+                    <!--Para probar distintas etiquetas, incorporo una lista de descripción para presentar la asignatura-->
+
+                    <dd>Este módulo profesional contiene la formación necesaria para desempeñar la función de explotación de sistemas informáticos.</dd>
+                    <dd>La función de explotación de sistemas informáticos incluye aspectos como: </dd>
+                    <ul>
+                        <ul style="list-style-type:circle;">
+                            <!--Incorporo doble anidamiento de lista para que el nivel de la misma aparezca dentro de la descripción, y no al mismo nivel del último <dd> -->
+                            <li>La instalación, configuración básica y explotación de sistemas operativos.</li>
+                            <li>La configuración básica y gestión de redes de área local.</li>
+                            <li>La instalación, mantenimiento y explotación de aplicaciones a partir de documentación técnica.</li>                            
+                        </ul>
+                    </ul>
+
+                </dl>
+            </article>
+            <article>
+                <h4>Resultados de aprendizaje y criterios de evaluación.</h4>
+
+                <ol>
+                    <li><b>Evalúa sistemas informáticos identificando sus componentes y características.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;"> Se han reconocido los componentes físicos de un sistema informático y sus mecanismos de interconexión.</li>
+                        <li style="list-style-type:lower-latin;">Se ha verificado el proceso de puesta en marcha de un equipo.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado, instalado y configurado diferentes tipos de dispositivos periféricos.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los tipos de redes y sistemas de comunicación.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los componentes de una red informática.</li>
+                        <li style="list-style-type:lower-latin;">Se han interpretado mapas físicos y lógicos de una red informática.</li>
+                        <li style="list-style-type:lower-latin;">Se han operado las máquinas respetando las normas de seguridad y recomendaciones de ergonomía.</li>
+                    </ol>
+
+                    <li><b>Instala sistemas operativos planificando el proceso e interpretando documentación técnica.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los elementos funcionales de un sistema informático.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado las características, funciones y arquitectura de un sistema operativo.</li>
+                        <li style="list-style-type:lower-latin;">Se han comparado sistemas operativos en base a sus requisitos, características, campos de aplicación y licencias de uso.</li>
+                        <li style="list-style-type:lower-latin;">Se han instalado diferentes sistemas operativos.</li>
+                        <li style="list-style-type:lower-latin;">Se han aplicado técnicas de actualización y recuperación del sistema.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado maquinas virtuales para instalar y probar sistemas operativos.</li>
+                        <li style="list-style-type:lower-latin;">Se han documentado los procesos realizados.</li>
+                    </ol>
+
+                    <li><b>Gestiona la información del sistema identificando las estructuras de almacenamiento y aplicando medidas para asegurar la integridad de los datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han comparado sistemas de archivos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha identificado la estructura y función de los directorios del sistema operativo.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado herramientas en entorno gráfico y comandos para localizar información en el sistema de archivos.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado diferentes tipos de particiones y unidades lógicas.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado copias de seguridad.</li>
+                        <li style="list-style-type:lower-latin;">Se han instalado y evaluado utilidades relacionadas con la gestión de información.</li>
+                        <li style="list-style-type:lower-latin;">Se han automatizado tareas.</li>
+                    </ol>
+
+                    <li><b>Gestiona sistemas operativos utilizando comandos y herramientas gráficas y evaluando las necesidades del sistema.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han configurado cuentas de usuario locales y grupos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.</li>
+                        <li style="list-style-type:lower-latin;">Se ha protegido el acceso a la información mediante el uso de permisos locales.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado, arrancado y detenido servicios y procesos.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado comandos para realizar las tareas básicas de configuración del sistema.</li>
+                        <li style="list-style-type:lower-latin;">Se ha monitorizado el sistema.</li>
+                        <li style="list-style-type:lower-latin;">Se han instalado y evaluado utilidades para el mantenimiento y optimización del sistema.</li>
+                        <li style="list-style-type:lower-latin;">Se han evaluado las necesidades del sistema informático en relación con el desarrollo de aplicaciones.</li>
+
+                    </ol>
+
+                    <li><b>Interconecta sistemas en red configurando dispositivos y protocolos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha configurado el protocolo TCP/IP.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado dispositivos de interconexión de redes.</li>
+                        <li style="list-style-type:lower-latin;">Se ha configurado el acceso a redes de área extensa.</li>
+                        <li style="list-style-type:lower-latin;">Se han gestionado puertos de comunicaciones.</li>
+                        <li style="list-style-type:lower-latin;">Se ha verificado el funcionamiento de la red mediante el uso de comandos y herramientas básicas.</li>
+                        <li style="list-style-type:lower-latin;">Se han aplicado protocolos seguros de comunicaciones.</li>
+                        <li style="list-style-type:lower-latin;">Se han configurado redes de área local cableadas.</li>
+                        <li style="list-style-type:lower-latin;">Se han configurado redes de área local inalámbricas.</li>
+
+                    </ol>
+
+                    <li><b>Opera sistemas en red gestionando sus recursos e identificando las restricciones de seguridad existentes.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha configurado el acceso a recursos locales y recursos de red.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los derechos de usuario y directivas de seguridad.</li>
+                        <li style="list-style-type:lower-latin;">Se han explotado servidores de ficheros, servidores de impresión y servidores de aplicaciones.</li>
+                        <li style="list-style-type:lower-latin;">Se ha accedido a los servidores utilizando técnicas de conexión remota.</li>
+                        <li style="list-style-type:lower-latin;">Se ha evaluado la necesidad de proteger los recursos y el sistema.</li>
+                        <li style="list-style-type:lower-latin;">Se han instalado y evaluado utilidades de seguridad básica.</li>
+                    </ol>
+
+                    <li><b>Elabora documentación valorando y utilizando aplicaciones informáticas de propósito general.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha clasificado software en función de su licencia y propósito.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado tareas de documentación mediante el uso de herramientas ofimáticas.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado sistemas de correo y mensajería electrónica.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado los servicios de transferencia de ficheros.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado métodos de búsqueda de documentación técnica mediante el uso de servicios de Internet.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado aplicaciones de propósito general.</li>
+                    </ol>
+                </ol>
+            </article>
+        </div>
+
+    </div>
+
+    
+
+
+</body>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="Pagina de FOL para actividad de tablas">
+    <meta name="keywords" content="HTML,FOL,materia,docente, contacto">
+    <meta http-equiv="refresh" content="30">
+    <title>FORMACIÓN Y ORIENTACIÓN LABORAL</title>
+
+    <style>
+        * {
+            color: rgb(7, 7, 7);
+        }
+
+        header {
+
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+
+        }
+
+        nav {
+            background-color: rgb(63, 185, 145);
+            float: right;
+            border-radius: 4px 0px;
+            padding: 0 43px 0 0;
+        }
+
+        nav ul {
+
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        nav ul li {
+
+            float: left;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        nav ul li a {
+
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul :hover {
+            background-color: rgb(255, 208, 0);
+        }
+
+       .MATERIA {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: beige;
+            max-width: 900px;
+            border-radius: 4px;
+            padding: 5px 43px 15px 0;
+            margin: 0 0 0 3%;
+
+        }
+
+        article {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: rgb(112, 238, 179);
+            max-width: 800px;
+            border-radius: 4px;
+            padding: 0 43px 15px 0;
+            margin: 10px 0px 10px 50px;
+
+        }
+
+        body {
+            text-align: justify;
+        }
+
+        #figure1{
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            
+        }
+
+        #figure2{
+            
+            
+            width: 100%;
+            margin: 0px 0px 0px 60px ;
+
+
+        }
+        #figure3 {
+            
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            padding: 0 3% 3% 3%;
+            
+        
+
+            
+        }
+
+        .contenedor {
+            
+            float: right;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#MATERIA">MATERIA</a></li>
+                <li><a href="#DOCENTE">DOCENTE</a></li>
+                <li><a href="#CONTACTO">CONTACTO</a></li>
+                <li><a href="INDEX.HTML">VOLVER</a></li> <!--Vuelve a la tabla, es decir al horario, facilitando la navegación-->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div class="contenedor">
+            <figure id= "figure1">
+                <ul>
+                    <li>Duración: 96 horas</li>
+                    <li>Créditos ECTS: 5</li>
+                    <li>Código:0493</li>
+                </ul>
+            </figure>
+            
+            <a name="DOCENTE">
+               
+                <figure id="figure2"> <img src="IMG/PabloMorenoPrieto.jpg" width="40%" height="40%">
+                    <figcaption><em>Pablo Moreno Prieto</em></figcaption>
+                </figure>
+            </a>
+
+            <a name="CONTACTO">
+                <figure id="figure3"> 
+                    <p>Si desea más información, no dude en contactar con nosotros</p>
+                    <a href="mailto:pablo.moreno@vedruna.es" title="correo electrónico de la docente"> Correo del personal docente </a>
+                    <br>
+                    <a href="mailto:colegio@vedrunasevillasj.es" title="correo del centro"> Correo del centro</a>
+                    <br>
+                    <a href="tel:+34 662331273" title="teléfono centro"> Telefono y Whatsapp</a>
+                </figure>
+            </a>
+        </div>
+
+        <div class="MATERIA">
+            <a name="MATERIA">
+                <h1 style="text-align: center;"> FORMACIÓN Y ORIENTACIÓN LABORAL</h1>
+            </a>
+            <article>
+                <dl>
+                    <dt>
+                        <h4>¿Qué es FOL?</h4>
+                    </dt>
+                    <!--Para probar distintas etiquetas, incorporo una lista de descripción para presentar la asignatura-->
+
+                    <dd>Este módulo contiene la formación necesaria para que el alumnado pueda insertarse laboralmente y desarrollar su carrera profesional en el sector del desarrollo de aplicaciones multiplataforma.</dd>
+                    <dd>La formación del módulo contribuye a alcanzar los objetivos generales de este ciclo formativo que se relacionan a continuación: </dd>
+                    <ul>
+                        <ul style="list-style-type:circle;">
+                            <!--Incorporo doble anidamiento de lista para que el nivel de la misma aparezca dentro de la descripción, y no al mismo nivel del último <dd> -->
+                            <li>Búsqueda activa de empleo.</li>
+                            <li>Gestión del conflicto y equipos de trabajo.</li>
+                            <li>Contrato de trabajo.</li>
+                            <li>Seguridad social, empleo y desempleo.</li>
+                            <li>Evaluación de riesgos profesionales.</li>
+                            <li>Planificación de la prevención de riesgos en la empresa.</li>
+                            <li>Aplicación de medidas de prevención y protección en la empresa.</li>
+
+                        </ul>
+                    </ul>
+
+                </dl>
+            </article>
+            <article>
+                <h4>Resultados de aprendizaje y criterios de evaluación.</h4>
+
+                <ol>
+                    <li><b>Selecciona oportunidades de empleo, identificando las diferentes posibilidades de inserción, y las alternativas de aprendizaje a lo largo de la vida.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los principales yacimientos de empleo y de inserción laboral para el Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las aptitudes y actitudes requeridas para la actividad profesional relacionada con el perfil del título.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los itinerarios formativos-profesionales relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma..</li>
+                        <li style="list-style-type:lower-latin;">Se ha valorado la importancia de la formación permanente como factor clave para la empleabilidad y la adaptación a las exigencias del proceso productivo.</li>
+                        <li style="list-style-type:lower-latin;">Se ha realizado la valoración de la personalidad, aspiraciones, actitudes y formación propia para la toma de decisiones.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las técnicas utilizadas en el proceso de búsqueda de empleo.</li>
+                        <li style="list-style-type:lower-latin;">Se han previsto las alternativas de autoempleo en los sectores profesionales relacionados con el título.</li>
+
+                    </ol>
+                    <li><b>Aplica las estrategias del trabajo en equipo, valorando su eficacia y eficiencia para la consecución de los objetivos de la organización.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han valorado las ventajas de trabajo en equipo en situaciones de trabajo relacionadas con el perfil del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los equipos de trabajo que pueden constituirse en una situación real de trabajo.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las características del equipo de trabajo eficaz frente a los equipos ineficaces.</li>
+                        <li style="list-style-type:lower-latin;">Se ha valorado positivamente la necesaria existencia de diversidad de roles y opiniones asumidos por los miembros de un equipo.</li>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido la posible existencia de conflicto entre los miembros de un grupo como un aspecto característico de las organizaciones.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los tipos de conflictos y sus fuentes.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado procedimientos para la resolución del conflicto. </li>
+                    </ol>
+                    <li><b>Ejerce los derechos y cumple las obligaciones que se derivan de las relaciones laborales, reconociéndolas en los diferentes contratos de trabajo.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los conceptos básicos del derecho del trabajo.</li>
+                        <li style="list-style-type:lower-latin;">Se han distinguido los principales organismos que intervienen en las relaciones entre empresarios y trabajadores.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado los derechos y obligaciones derivados de la relación laboral.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado las principales modalidades de contratación, identificando las medidas de fomento de la contratación para determinados colectivos.</li>
+                        <li style="list-style-type:lower-latin;">Se han valorado las medidas establecidas por la legislación vigente para la conciliación de la vida laboral y familiar.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las características definitorias de los nuevos entornos de organización del trabajo.</li>
+                        <li style="list-style-type:lower-latin;">Se ha analizado el recibo de salarios, identificando los principales elementos que lo integran. </li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las causas y efectos de la modificación, suspensión y extinción de la relación laboral.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las condiciones de trabajo pactadas en un convenio colectivo aplicable a un sector profesional relacionado con el título de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado las diferentes medidas de conflicto colectivo y los procedimientos de solución de conflictos. </li>
+                    </ol>
+
+                    <li><b>Determina la acción protectora del sistema de la seguridad social ante las distintas contingencias cubiertas, identificando las distintas clases de prestaciones.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha valorado el papel de la seguridad social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.</li>
+                        <li style="list-style-type:lower-latin;">Se han enumerado las diversas contingencias que cubre el sistema de seguridad Social.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los regímenes existentes en el sistema de la seguridad social.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las obligaciones de empresario y trabajador dentro del sistema de seguridad social.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado en un supuesto sencillo las bases de cotización de un trabajador y las cuotas correspondientes a trabajador y empresario.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado las prestaciones del sistema de seguridad social, identificando los requisitos.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las posibles situaciones legales de desempleo en supuestos prácticos sencillos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha realizado el cálculo de la duración y cuantía de una prestación por desempleo de nivel contributivo básico.</li>
+                    </ol>
+
+                    <li><b>Evalúa los riesgos derivados de su actividad, analizando las condiciones de trabajo y los factores de riesgo presentes en su entorno laboral.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha valorado la importancia de la cultura preventiva en todos los ámbitos y actividades de la empresa.</li>
+                        <li style="list-style-type:lower-latin;">Se han relacionado las condiciones laborales con la salud del trabajador.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado los factores de riesgo en la actividad y los daños derivados de los mismos.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las situaciones de riesgo más habituales en los entornos de trabajo del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se ha determinado la evaluación de riesgos en la empresa.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las condiciones de trabajo con significación para la prevención en los entornos de trabajo relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. </li>
+                    </ol>
+
+                    <li><b>Participa en la elaboración de un plan de prevención de riesgos en la empresa, identificando las responsabilidades de todos los agentes implicados.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han determinado los principales derechos y deberes en materia de prevención de riesgos laborales.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado las distintas formas de gestión de la prevención en la empresa, en función de los distintos criterios establecidos en la normativa sobre prevención de riesgos laborales.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado las formas de representación de los trabajadores en la empresa en materia de prevención de riesgos.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los organismos públicos relacionados con la prevención de riesgos laborales.</li>
+                        <li style="list-style-type:lower-latin;">Se ha valorado la importancia de la existencia de un plan preventivo en la empresa que incluya la secuenciación de actuaciones a realizar en caso de emergencia.</li>
+                        <li style="list-style-type:lower-latin;">Se ha definido el contenido del plan de prevención en un centro de trabajo relacionado con el sector profesional del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                        <li style="list-style-type:lower-latin;">Se ha proyectado un plan de emergencia y evacuación de una empresa y mediana empresa.</li>
+                        
+                    </ol>
+
+                    <li><b></b>Aplica las medidas de prevención y protección, analizando as situaciones de riesgo en el entorno laboral del Técnico Superior en Desarrollo de Aplicaciones Multiplataforma.</li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias en caso de que sean inevitables.</li>
+                        <li style="list-style-type:lower-latin;">Se ha analizado el significado y alcance de los distintos tipos de señalización de seguridad.</li>
+                        <li style="list-style-type:lower-latin;">Se han analizado los protocolos de actuación en caso de emergencia.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las técnicas de clasificación de heridos en caso de emergencia donde existan víctimas de diversa gravedad.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín.</li>
+                        <li style="list-style-type:lower-latin;">Se han determinado los requisitos y condiciones para la vigilancia de la salud del trabajador y su importancia como medida de prevención.</li>
+                        
+                    </ol>
+                </ol>
+            </article>
+        </div>
+
+    </div>
+
+    
+
+
+</body>

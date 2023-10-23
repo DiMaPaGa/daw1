@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="Pagina de Programación para actividad de tablas">
+    <meta name="keywords" content="HTML,Programación,materia,docente, contacto">
+    <meta http-equiv="refresh" content="30">
+    <title>PROGRAMACIÓN</title>
+
+    <style>
+        * {
+            color: rgb(7, 7, 7);
+        }
+
+        header {
+
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+
+        }
+
+        nav {
+            background-color: rgb(63, 185, 145);
+            float: right;
+            border-radius: 4px 0px;
+            padding: 0 43px 0 0;
+        }
+
+        nav ul {
+
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        nav ul li {
+
+            float: left;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        nav ul li a {
+
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul :hover {
+            background-color: rgb(255, 208, 0);
+        }
+
+       .MATERIA {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: beige;
+            max-width: 900px;
+            border-radius: 4px;
+            padding: 5px 43px 15px 0;
+            margin: 0 0 0 3%;
+
+        }
+
+        article {
+            border-width: 10px;
+            border-color: #f1b14a;
+            background-color: rgb(112, 238, 179);
+            max-width: 800px;
+            border-radius: 4px;
+            padding: 0 43px 15px 0;
+            margin: 10px 0px 10px 50px;
+
+        }
+
+        body {
+            text-align: justify;
+        }
+
+        #figure1{
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            
+        }
+
+        #figure2{
+            
+            
+            width: 100%;
+            margin: 0px 0px 0px 60px ;
+
+
+        }
+        #figure3 {
+            
+            border: 3px solid rgb(35, 152, 230);
+            width: 30%;
+            background-color: rgb(112, 188, 238);
+            border-radius: 4px;
+            padding: 0 3% 3% 3%;
+            
+        
+
+            
+        }
+
+        .contenedor {
+            
+            float: right;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#MATERIA">MATERIA</a></li>
+                <li><a href="#DOCENTE">DOCENTE</a></li>
+                <li><a href="#CONTACTO">CONTACTO</a></li>
+                <li><a href="INDEX.HTML">VOLVER</a></li> <!--Vuelve a la tabla, es decir al horario, facilitando la navegación-->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div class="contenedor">
+            <figure id= "figure1">
+                <ul>
+                    <li>Duración: 256 horas</li>
+                    <li>Créditos ECTS: 14</li>
+                    <li>Código:0485 </li>
+                </ul>
+            </figure>
+            
+            <a name="DOCENTE">
+               
+                <figure id="figure2"> <img src="IMG/jorge-juan-muñoz.png" width="40%" height="40%">
+                    <figcaption><em>Jorge Juan Muñoz Morera</em></figcaption>
+                </figure>
+            </a>
+
+            <a name="CONTACTO">
+                <figure id="figure3"> 
+                    <p>Si desea más información, no dude en contactar con nosotros</p>
+                    <a href="mailto:jorgejuan.munoz@vedruna.es" title="correo electrónico de la docente"> Correo del personal docente </a>
+                    <br>
+                    <a href="mailto:colegio@vedrunasevillasj.es" title="correo del centro"> Correo del centro</a>
+                    <br>
+                    <a href="tel:+34 662331273" title="teléfono centro"> Telefono y Whatsapp</a>
+                </figure>
+            </a>
+        </div>
+
+        <div class="MATERIA">
+            <a name="MATERIA">
+                <h1 style="text-align: center;"> PROGRAMACIÓN </h1>
+            </a>
+            <article>
+                <dl>
+                    <dt>
+                        <h4>¿Qué es Programación?</h4>
+                    </dt>
+                    <!--Para probar distintas etiquetas, incorporo una lista de descripción para presentar la asignatura-->
+
+                    <dd>Este módulo profesional contiene parte de la formación necesaria para desempeñar la función de programación de aplicaciones de propósito general en lenguajes orientados a objetos.</dd>
+                    <dd>La función de programación de aplicaciones de propósito general en lenguajes orientados a objetos incluye aspectos como: </dd>
+                    <ul>
+                        <ul style="list-style-type:circle;">
+                            <!--Incorporo doble anidamiento de lista para que el nivel de la misma aparezca dentro de la descripción, y no al mismo nivel del último <dd> -->
+                            <li>El desarrollo de programas organizados en clases aplicando los principios de la programación orientada a objetos.</li>
+                            <li>La utilización de interfaces para la interacción de la aplicación con el usuario.</li>
+                            <li>La identificación, análisis e integración de librerías para incorporar funcionalidades específicas a los programas desarrollados.</li>
+                            <li>El almacenamiento y recuperación de información en sistemas gestores de bases de datos relacionales y orientados a objetos.</li>
+                            
+                        </ul>
+                    </ul>
+
+                </dl>
+            </article>
+            <article>
+                <h4>Resultados de aprendizaje y criterios de evaluación.</h4>
+
+                <ol>
+                    <li><b>Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los bloques que componen la estructura de un programa informático.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado proyectos de desarrollo de aplicaciones.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado entornos integrados de desarrollo.</li>
+                        <li style="list-style-type:lower-latin;">Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.</li>
+                        <li style="list-style-type:lower-latin;">Se ha modificado el código de un programa para crear y utilizar variables.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado y utilizado constantes y literales.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.</li>
+                        <li style="list-style-type:lower-latin;">Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.</li>
+                        <li style="list-style-type:lower-latin;">Se han introducido comentarios en el código.</li>
+                    </ol>
+                    <li><b>Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los fundamentos de la programación orientada a objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han escrito programas simples.</li>
+                        <li style="list-style-type:lower-latin;">Se han instanciado objetos a partir de clases predefinidas.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado métodos y propiedades de los objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han escrito llamadas a métodos estáticos.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado parámetros en la llamada a métodos.</li>
+                        <li style="list-style-type:lower-latin;">Se han incorporado y utilizado librerías de objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado constructores.</li>
+                        <li style="list-style-type:lower-latin;">Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.</li>
+                    </ol>
+                    <li><b>Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha escrito y probado código que haga uso de estructuras de selección.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado estructuras de repetición.</li>
+                        <li style="list-style-type:lower-latin;">Se han reconocido las posibilidades de las sentencias de salto.</li>
+                        <li style="list-style-type:lower-latin;">Se ha escrito código utilizando control de excepciones.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado programas ejecutables utilizando diferentes estructuras de control.</li>
+                        <li style="list-style-type:lower-latin;">Se han probado y depurado los programas.</li>
+                        <li style="list-style-type:lower-latin;">Se ha comentado y documentado el código.</li>
+                    </ol>
+
+                    <li><b>Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido clases.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido propiedades y métodos.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado constructores.</li>
+                        <li style="list-style-type:lower-latin;">Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido y utilizado clases heredadas.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado y utilizado métodos estáticos.</li>
+                        <li style="list-style-type:lower-latin;">Se han definido y utilizado interfaces.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado y utilizado conjuntos y librerías de clases.</li>
+                    </ol>
+
+                    <li><b>Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se ha utilizado la consola para realizar operaciones de entrada y salida de información.</li>
+                        <li style="list-style-type:lower-latin;">Se han aplicado formatos en la visualización de la información.</li>
+                        <li style="list-style-type:lower-latin;">Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado ficheros para almacenar y recuperar información.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.</li>
+                        <li style="list-style-type:lower-latin;">Se han programado controladores de eventos.</li>
+                        <li style="list-style-type:lower-latin;">Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información.</li>
+                    </ol>
+
+                    <li><b>Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han escrito programas que utilicen arrays.</li>
+                        <li style="list-style-type:lower-latin;">Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado listas para almacenar y procesar información.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado iteradores para recorrer los elementos de las listas.</li>
+                        <li style="list-style-type:lower-latin;">Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado clases y métodos genéricos.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto. </li>
+                        <li style="list-style-type:lower-latin;">Se han identificado las clases relacionadas con el tratamiento de documentos XML.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado programas que realicen manipulaciones sobre documentos XML.</li>
+                    </ol>
+
+                    <li><b>Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado los conceptos de herencia, superclase y subclase.</li>
+                        <li style="list-style-type:lower-latin;">Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha reconocido la incidencia de los constructores en la herencia.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado clases heredadas que sobrescriban la implementación de métodos de la superclase.</li>
+                        <li style="list-style-type:lower-latin;">Se han diseñado y aplicado jerarquías de clases.</li>
+                        <li style="list-style-type:lower-latin;">Se han probado y depurado las jerarquías de clases.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado programas que implementen y utilicen jerarquías de clases.</li>
+                        <li style="list-style-type:lower-latin;">Se ha comentado y documentado el código.</li>
+                    </ol>
+
+                    <li><b>Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las características de las bases de datos orientadas a objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han instalado sistemas gestores de bases de datos orientados a objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han clasificado y analizado los distintos métodos soportados por los sistemas gestores para la gestión de la información almacenada.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado bases de datos y las estructuras necesarias para el almacenamiento de objetos.</li>
+                        <li style="list-style-type:lower-latin;">Se han programado aplicaciones que almacenen objetos en las bases de datos creadas.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.</li>
+                    </ol>
+
+                    <li><b>Gestiona información almacenada en bases de datos relacionales manteniendo la integridad y consistencia de los datos.</b></li>
+                    <ol>
+                        <li style="list-style-type:lower-latin;">Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos relacionales.</li>
+                        <li style="list-style-type:lower-latin;">Se han programado conexiones con bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se ha escrito código para almacenar información en bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado programas para recuperar y mostrar información almacenada en bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han efectuado borrados y modificaciones sobre la información almacenada.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado aplicaciones que ejecuten consultas sobre bases de datos.</li>
+                        <li style="list-style-type:lower-latin;">Se han creado aplicaciones para posibilitar la gestión de información presente en bases de datos relacionales. </li>
+                    </ol>
+                </ol>
+            </article>
+        </div>
+
+    </div>
+
+    
+
+
+</body>

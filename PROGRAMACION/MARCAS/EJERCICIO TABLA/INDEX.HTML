@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="autor" content="Diana Pascual García">
         <meta name="description" content="actividad del 20 de octubre sobre ejercicios con tablas">
@@ -10,6 +10,10 @@
         <title>Ejercicio de tabla</title> 
 
         <style>
+
+            * {
+                font-family: "Arial";
+            }
             table {
                 border-collapse: collapse;
                 margin: 0 auto;
@@ -25,11 +29,22 @@
             }
             caption {
                 font-weight: bold;
+                font-size: 13px;
             }
             th, td {
                 text-align:center;
                 width: 100px;
                 height: 50px;
+            }
+            .tabla-header{
+                background-color: navajowhite; 
+            }
+            #pre-header{
+                background-color: white; 
+
+            }
+            .pre-row{
+                background-color: gainsboro; 
             }
 
         </style>
@@ -37,69 +52,76 @@
     </head>
 
     <body>
-        <center>
+        <div style="text-align: center;">
         
             <a href="https://vedrunasevilla.org/" title="Acceso a web Vedruna" target="_blank" rel="nofollow"> <img src="IMG/LOGO.png"; ></a>
 
-        </center>
+        </div>
 
         <table >
-            <caption><H5>HORARIO DEL CURSO 23-24 DE DESARROLLO DE APLICACIONES WEB Y MULTIPLATAFORMA</H5></caption>
-            <tr>
-                <td>HORARIO</td>
-                <td>LUNES</td>
-                <td>MARTES</td>
-                <td>MIERCOLES</td>
-                <td>JUEVES</td>
-                <td>VIERNES</td>
-            </tr>
-            <tr>
-                <td>15:00 A 15:55</td>
-                <td rowspan="2">BBDD</td>
-                <td rowspan="2">MARCAS</td>
-                <td rowspan="2">PROGRAMACION</td>
-                <td rowspan="2">PROGRAMACION</td>
-                <td rowspan="2">SSOO</td>
-                
-            </tr>
-            <tr>
-               
-                <td>15:55 A 16:50</td>
+            <thead>
+                <caption> HORARIO DEL CURSO 23-24 DE DESARROLLO DE APLICACIONES WEB Y MULTIPLATAFORMA </caption>
+                <tr>
+                    <th id="pre-header">HORARIO</th>
+                    <th class="tabla-header">LUNES</th>
+                    <th class="tabla-header">MARTES</th>
+                    <th class="tabla-header">MIERCOLES</th>
+                    <th class="tabla-header">JUEVES</th>
+                    <th class="tabla-header">VIERNES</th>
+                </tr>
+            </thead>
             
-            </tr>
-            <tr>
-                <td>16:50 A 17:45</td>
-                <td>SSOO</td>
-                <td>FOL</td>
-                <td>FOL</td>
-                <td>BBDD</td>
-                <td>ENTORNOS</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td colspan="5">RECREO</td>
-            
-            </tr>
-            <tr>
-                <td>18:15 A 19:10</td>
-                <td>SSOO</td>
-                <td>PROGRAMACION</td>
-                <td rowspan="2">FOL</td>
-                <td>BBDD</td>
-                <td>ENTORNOS</td>
-            </tr>
-            <tr>
-                <td>19:10 A 20:05</td>
-                <td rowspan="2">PROGRAMACION</td>
-                <td rowspan="2">BBDD</td>
-                <td rowspan="2">SSOO</td>
-                <td rowspan="2">MARCAS</td>
-            </tr>
-            <tr>
-                <td>20:05 A 21:00</td>
-                <td>ENTORNOS</td>
-            </tr>
-             
+            <tbody>
+
+                <tr>
+                    <td class="pre-row">15:00 A 15:55</td>
+                    <td rowspan="2"><a href="BBDD.html" title="Asignatura Base de Datos" target="_blank"> BBDD </a></td>
+                    <td rowspan="2"><a href="MARCA.html" title="Asignatura de Marcas" target="_blank"> MARCAS </a></td>
+                    <td rowspan="2"><a href="PROGRAMACION.html" title="Asignatura de Programación" target="_blank"> PROGRAMACION </a></td>
+                    <td rowspan="2"><a href="PROGRAMACION.html" title="Asignatura de Programación" target="_blank"> PROGRAMACION </a></td>
+                    <td rowspan="2"><a href="SSOO.html" title="Asignatura de Sistemas" target="_blank"> SSOO </a></td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row">15:55 A 16:50</td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row">16:50 A 17:45</td>
+                    <td><a href="SSOO.html" title="Asignatura de Sistemas" target="_blank"> SSOO </a></td>
+                    <td><a href="FOL.html" title="Asignatura de FOL" target="_blank"> FOL </a></td>
+                    <td><a href="FOL.html" title="Asignatura de FOL" target="_blank"> FOL </a></td>
+                    <td><a href="BBDD.html" title="Asignatura Base de Datos" target="_blank"> BBDD </a></td>
+                    <td><a href="ENTORNOS.html" title="Asignatura de Entornos" target="_blank"> ENTORNOS </a></td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row"></td>
+                    <td colspan="5"> RECREO </td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row">18:15 A 19:10</td>
+                    <td><a href="SSOO.html" title="Asignatura de Sistemas" target="_blank"> SSOO </a></td>
+                    <td><a href="PROGRAMACION.html" title="Asignatura de Programación" target="_blank"> PROGRAMACION </a></td>
+                    <td rowspan="2"><a href="FOL.html" title="Asignatura de FOL" target="_blank"> FOL </a></td>
+                    <td><a href="BBDD.html" title="Asignatura Base de Datos" target="_blank"> BBDD </a></td>
+                    <td><a href="ENTORNOS.html" title="Asignatura de Entornos" target="_blank"> ENTORNOS </a></td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row">19:10 A 20:05</td>
+                    <td rowspan="2"><a href="PROGRAMACION.html" title="Asignatura de Programación" target="_blank"> PROGRAMACION </a></td>
+                    <td rowspan="2"><a href="BBDD.html" title="Asignatura Base de Datos" target="_blank"> BBDD </a></td>
+                    <td rowspan="2"><a href="SSOO.html" title="Asignatura de Sistemas" target="_blank"> SSOO </a></td>
+                    <td rowspan="2"><a href="MARCA.html" title="Asignatura de Marcas" target="_blank"> MARCAS </a></td>
+                </tr>
+
+                <tr>
+                    <td class="pre-row">20:05 A 21:00</td>
+                    <td><a href="ENTORNOS.html" title="Asignatura de Entornos" target="_blank"> ENTORNOS </a></td>
+                </tr>
+            </tbody> 
          </table>
 
 
