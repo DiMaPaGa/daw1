@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Bucles {
 
-    public static void main (String []args){
-        Scanner scan =new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-     //Se llaman también estructuras de salto que retornan, repetitivas...
+        //Se llaman también estructuras de salto que retornan, repetitivas...
 
       /*  int contador=0;
 
@@ -27,7 +27,7 @@ public class Bucles {
 */
 //Boletin 3. Iterativos.
 
-       // act:1
+        // act:1
        /*1= 10 tamaño de 0 a 9;
        2= 21 tamaño de 20 a 0 inclusives;
        3= se imprime 15 diecisiete tamaño;
@@ -36,7 +36,7 @@ public class Bucles {
        6= se imprime 71 tamaño de 70 a 0 inclusive.NOOOOOO el ";" tras la condición lo ejecuta infinitas tamaño
        7= Se imprime solo 3 tamaño, 2 por la condición de for y 1 más por el incremento de dentro, por lo que cada vez suma 3*/
 
-       //original 1
+        //original 1
 
        /*int var=0;
        int ite=0;
@@ -50,14 +50,14 @@ public class Bucles {
        for (int var=0; var<10; var++) {
            System.out.println(var);
        }*/
-      //original 2
-        int ite=0;
+        //original 2
+      /*  int ite=0;
         for(int i=20; i>=0; i--) {
             System.out.println(i);
             ite++;
         }
         System.out.println("Iteraciones "+ ite);
-        //Lo transformamos el 2 a while
+        //Lo transformamos el 2 a while*/
 
         /*int i=20;
         while (i>0) {
@@ -124,7 +124,7 @@ public class Bucles {
 
         System.out.println("fin");*/
 
-       // original 7
+        // original 7
         /*for(int i=0; i<10;i+=2) {
             System.out.println(i);
             i++;
@@ -187,7 +187,7 @@ public class Bucles {
         }*/
 // actividad 8:
 
-        System.out.println("Ingrese un número");
+       /* System.out.println("Ingrese un número");
         int veces= scan.nextInt();
 
         for(int i=0; i<veces; i++){
@@ -195,13 +195,177 @@ public class Bucles {
                 System.out.print("0 ");
             }
             System.out.println();
+        }*/
+
+// actividad 9: Modifica el ejercicio 8 para que la primera línea siempre imprima unos. Por ejemplo, si se lee el 3 debe imprimirse:
+/*
+        1 1 1
+        0 0 0
+        0 0 0
+
+        System.out.println("Ingrese un número");
+        int veces= scan.nextInt();
+
+        for(int i=0; i<veces; i++){
+            for(int j=0; j<veces; j++) {
+                if (i==0) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+
+            // Actividad 10: Modifica el ejercicio 8 para que la primera columna siempre imprima unos. Por
+            //ejemplo, si se lee el 3 debe imprimirse:
+
+         /*  System.out.println("Ingrese un número");
+            int veces = scan.nextInt();
+
+            for (int i = 0; i < veces; i++) {
+                System.out.print("1 ");
+                for (int j = 1; j < veces; j++) {
+                    System.out.print("0 ");
+                }
+                System.out.println();
+            }*/
+       /* System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 0; j < veces; j++) {
+                if (j==0){
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+// 11. Modifica el ejercicio 8 para que la última línea siempre imprima unos. Por ejemplo, si se lee el 3 debe imprimirse:
+
+        /*System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for(int i=0; i<veces; i++){
+            for(int j=0; j<veces; j++) {
+                if (i==veces-1) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+
+  //12. Modifica el ejercicio 8 para que la última columna siempre imprima unos. Por ejemplo si se lee el 3 debe imprimirse:
+        //0 0 1
+        //0 0 1
+        //0 0 1
+
+       /* System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 1; j < veces; j++) {
+                System.out.print("0 ");
+                if (j==veces-1){
+                    System.out.print("1 ");
+                }
+            }
+            System.out.println();
+        }*/
+// 13. Modifica el ejercicio 8 para que la primera fila y columna siempre imprima unos. Por ejemplo, si se lee el 3 debe imprimirse:
+//1 1 1
+//1 0 0
+//1 0 0
+
+    /*    System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 0; j < veces; j++) {
+                if (j==0 || i==0){
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+
+
+//14. Modifica el ejercicio 8 para que la diagonal siempre imprima unos. Por ejemplo, si se
+//lee el 3 debe imprimirse:
+//0 0 1
+//0 0 1
+//1 1 1
+
+      /*  System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 0; j < veces; j++) {
+                if (j==veces-1 || i==veces-1){
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+
+
+//15. Modifica el ejercicio 8 para que el marco siempre imprima unos. Por ejemplo, si se lee
+//el 3 debe imprimirse:
+//1 1 1
+//1 0 1
+//1 1 1
+
+/* System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 0; j < veces; j++) {
+                if (j==0 || i==0 || j==veces-1 || i==veces-1){
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }*/
+
+
+//16. Modifica el ejercicio 8 para que la diagonal principal siempre imprima unos. Por
+//ejemplo, si se lee el 3 debe imprimirse:
+//1 0 0
+//0 1 0
+//0 0 1
+
+        System.out.println("Ingrese un número");
+        int veces = scan.nextInt();
+
+        for (int i = 0; i < veces; i++) {
+            for (int j = 0; j < veces; j++) {
+                if (j==i) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
         }
 
 
 
-    }
+
+
+
+
 
 
     }
-
+}
 
