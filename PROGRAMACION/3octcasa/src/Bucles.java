@@ -187,7 +187,7 @@ public class Bucles {
         }*/
 // actividad 8:
 
-       /* System.out.println("Ingrese un número");
+     /*  System.out.println("Ingrese un número");
         int veces= scan.nextInt();
 
         for(int i=0; i<veces; i++){
@@ -343,7 +343,7 @@ public class Bucles {
 //1 0 0
 //0 1 0
 //0 0 1
-
+/*
         System.out.println("Ingrese un número");
         int veces = scan.nextInt();
 
@@ -357,11 +357,180 @@ public class Bucles {
             }
             System.out.println();
         }
+*/
+       /* 17. Leer dos enteros e imprimir una tabla o matriz de tantas filas y columnas como los
+        números leídos. La tabla o matriz solo debe contener ceros. Por ejemplo, si se leen el 2
+        y 4 se imprimiría:
+        0 0 0 0
+        0 0 0 0*/
+      /*  System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        System.out.println("Escribe otro número");
+        int num2= scan.nextInt();
+
+        for(int i=0; i<num1; i++) {
+            for (int j=0; j<num2; j++){
+                System.out.print("0 ");
+            }
+            System.out.println();
+        }*/
 
 
 
 
 
+       /* 18. Modificar el ejercicio anterior para que contenga la sucesión 1, 2, 3, 4,…, etc, con
+        tantos términos como posiciones tenga la tabla o matriz. Para el caso del ejercicio
+        anterior, se imprimiría:
+        1 2 3 4
+        5 6 7 8*/
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        System.out.println("Escribe otro número");
+        int num2= scan.nextInt();
+        int contador=1;
+
+        for(int i=0; i<num1; i++) {
+
+            for (int j=0; j<num2; j++){
+                System.out.print(contador+ " ");
+                contador++;
+            }
+            System.out.println();
+        }*/
+
+
+
+        /*19. Crea un programa que lea un número e imprima dicho número por pantalla siete
+        veces. Por ejemplo, si se lee el 6, debe imprimirse:
+        6
+        6
+        6
+        6
+        6
+        6
+        6*/
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+
+        for(int i=0; i<7; i++) {
+            System.out.println(num1);
+            }*/
+
+
+        /*20. Modifica el programa para que el número se imprima tantas veces como diga el propio
+        número. Por ejemplo, si se lee el 4, debe imprimirse:
+        4
+        4
+        4
+        4*/
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+
+        for(int i=0; i<num1; i++) {
+            System.out.println(num1);
+        }*/
+
+
+
+      /*  21. Modifica el ejercicio anterior, para que además del número se lea un carácter, y se
+        imprima dicho carácter tantas veces como diga el número. Por ejemplo, si se lee 3 y
+‘A’, debe imprimirse:
+        A
+        A
+        A*/
+
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        System.out.println("Escribe una letra");
+        String letra= scan.next();
+
+        for(int i=0; i<num1; i++) {
+            System.out.println(letra);
+        }*/
+
+
+
+
+
+       /* 22. Crea un programa que lea un número, e imprima por pantalla los primeros números
+        positivos. Por ejemplo, si se lee el 5 debe imprimirse:
+        1
+        2
+        3
+        4
+        5*/
+
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+
+        for(int i=0; i<num1; i++) {
+            System.out.println(i+1);
+        }*/
+
+
+
+
+
+        //23. Modifica el ejercicio anterior para que se imprima todo en la misma línea.
+
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+
+        for(int i=0; i<num1; i++) {
+            System.out.print(i+1);
+        }*/
+
+        /*24. Crea un programa que lea un número, e imprima por pantalla los primeros números
+        pares. Por ejemplo, si se lee el 5 debe imprimirse:
+        2
+        4
+        6
+        8
+        10*/
+       /* System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        int contador=2;
+
+        for(int i=0; i<num1; i++) {
+            System.out.println(contador);
+            contador=contador+=2;
+        }*/
+
+
+
+      //  25. Modifica el ejercicio anterior para que imprima los primeros números impares.
+
+      /*  System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        int contador=1;
+
+        for(int i=0; i<num1; i++) {
+            System.out.println(contador);
+            contador=contador+=2;
+        }*/
+
+
+       /* 26. Modifica los dos anteriores para que todo se imprima en la misma línea, pero
+        separando los números por coma en lugar de espacios en blanco.*/
+
+        /*System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        int contador=2;
+
+        for(int i=0; i<num1; i++) {
+            System.out.print(contador+",");
+            contador=contador+=2;
+        }*/
+
+        /*  System.out.println("Escribe un número");
+        int num1= scan.nextInt();
+        int contador=1;
+
+        for(int i=0; i<num1; i++) {
+            System.out.print(contador+ ",");
+            contador=contador+=2;
+        }*/
 
 
 
