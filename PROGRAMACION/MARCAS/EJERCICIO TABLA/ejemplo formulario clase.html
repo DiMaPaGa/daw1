@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Formulario tipo</h2>
+	<p>Este es un ejemplo de formulario con un fieldset cuya leyenda es Datos personales, y que engloba a todos los campos</p>
+	<form>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre y apellidos: </label>
+        <input id="nombre" type="text"><br>
+
+        <label for="sexo">Sexo: </label>
+        <select id="sexo">
+            <!--Etiqueta option-->
+            <option value="value1">Hombre</option> 
+            <option value="value2" selected>Mujer</option>
+        </select><br><br>
+
+        <label>Edad: </label>
+        <input type="checkbox" value="20-39"> 20-39
+        <input type="checkbox" value="40-59"> 40-59
+        <input type="checkbox" value="60-79"> 60-79<br><br>
+
+        <label for="email">Email: </label>
+        <input id="email" type="email"><br><br>
+
+        <label for="estudios">Estudios: </label>
+        <select id="estudios">
+           <optgroup label="Estudios Universitarios">
+              <option>Doctorado</option>
+              <option>Máster</option>
+              <option>Grado</option>
+           </optgroup>
+           <optgroup label="Ciclo Formativo">
+              <option>Grado Superior</option>
+              <option>Grado Medio</option>
+           </optgroup>
+        </select><br><br>
+
+      <label for="navegador">Elige tu navegador favorito: </label>
+      <input id="navegador" list="browsers">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Internet Explorer">
+            <option value="Opera">
+            <option value="Safari">
+            <option value="Microsoft Edge">
+        </datalist><br><br>
+
+        <label for="mensaje">Escribe tu mensaje: </label>
+        <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
+    </fieldset>  
+    <input type="submit" value="Enviar">
+</form>
+<br>
+<h2>Ejemplos de inputs</h2>
+<p>Este es un ejemplo de formulario con todos los inputs posibles</p>
+ <form>
+  <label for="check">Acepto condiciones</label>
+  <input type="checkbox" id="check"><br><br>
+  <label for="color">Elige un color:</label>
+  <input type="color" id="color"><br><br>
+  <label for="fecha">Elige una fecha:</label>
+  <input type="date" id="fecha"><br><br>
+  <label for="correo">Indica tu correo:</label>
+  <input type="email" id="correo"><br><br>
+  <label for="archivo">Selecciona un archivo:</label>
+  <input type="file" id="archivo">   <br><br>
+  
+  <label for="mes">Indica el mes:</label>
+  <input type="month" id="mes"><br><br>
+  <label for="numero">Selecciona un número:</label>
+  <input type="number" id="numero"><br><br>
+  <label for="contrasenya">Indica tu contraseña:</label>
+  <input type="password" id="contrasenya"><br><br>
+  <label for="radio">Esto es un radio button:</label>
+  <input type="radio" id="radio"><br><br>
+  <label for="rango">Selecciona un número del rango:</label>
+  <input type="range" id="rango" min="0" max="100"><br><br>
+  <label for="buscar">Campo de búsqueda:</label>
+  <input type="search" id="buscar"><input type="submit" value="Enviar"><br><br>
+  <label for="telefono">Indica tu teléfono:</label>
+  <input type="tel" id="telefono"><br><br>
+  <label for="nombre">Indica tu nombre:</label>
+  <input type="text" id="nombre"><br><br>
+  <label for="hora">Indica la hora:</label>
+  <input type="time" id="hora"><br><br>
+  <label for="url">Indica una URL:</label>
+  <input type="url" id="url"><br><br>
+  <label for="semana">Indica la semana:</label>
+  <input type="week"><br><br>
+  <input type="button" value="Enviar">
+  <label for="frutas">Selecciona una fruta:</label> 
+
+
+ </form>
+	
+</body>
+</html>
