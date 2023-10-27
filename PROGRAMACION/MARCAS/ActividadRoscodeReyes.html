@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="autor" content="Diana Pascual García">
+        <meta name="description" content="actividad del 27 de octubre sobre ejercicios con tablas">
+        <meta name="keywords" content="Pastelería,Rosco de Reyes, pedidos">
+        <meta http-equiv="refresh" content="30">
+        <title>Actividad Rosco de Reyes</title>
+    
+    </head>
+    <style>
+
+        * {
+            font-family: "Arial";
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        thead th {
+            background-color: navajowhite;
+        }
+        tbody th {
+            background-color: gainsboro;
+        }
+        thead th, tbody td, tbody th {
+            border: 1px solid black;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 13px;
+        }
+        th, td {
+            text-align:center;
+            width: 100px;
+            height: 50px;
+        }
+        .tabla-header{
+            background-color: navajowhite; 
+        }
+        #pre-header{
+            background-color: white; 
+
+        }
+        .pre-row{
+            background-color: gainsboro; 
+        }
+
+    </style>
+
+    <body>
+
+        <table>
+            <thead>
+                <caption> PRECIOS DE NUESTROS ROSCOS </caption>
+                <tr style="border-color: black;">
+                    <th rowspan="4"></th>
+                    <th colspan="2">Relleno de nata</th>
+                    <th colspan="2">Relleno de chocolate</th>
+                    <th colspan="2">Sin rellenar</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+
+                <tr>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                </tr>
+
+                <tr>
+                    <td style="border-color: black;">Mediano</td>
+                    <td>35€</td>
+                    <td>40€</td>
+                    <td>30€</td>
+                    <td>35€</td>
+                    <td>25€</td>
+                    <td>30€</td>
+                </tr>
+
+                <tr>
+                    <td style="border-color: black;">Grande</td>
+                    <td>45€</td>
+                    <td>50€</td>
+                    <td>40€</td>
+                    <td>45€</td>
+                    <td>35€</td>
+                    <td>40€</td>
+                </tr>
+
+                <tr style="border-color: black;">
+                    <td colspan="7" > Todos los envíos a domicilio tendran un coste de 6,50€ </td>
+                </tr>
+
+            </tbody> 
+         </table>
+
+        <form method="post">
+            <fieldset style="width: 40%; margin: 50px;">
+                <legend>
+                    <h3>DATOS PERSONALES</h3>
+                </legend>
+                <label for="nombre">Nombre y apellidos: </label>
+                <input id="nombre" type="text">
+                <br>
+    
+                <label for="teléfono">Teléfono: </label>
+                <input id="teléfono" type="tel">
+                <br>
+
+                <label for="Dirección">Dirección: </label>
+                <input id="Dirección" type="text" placeholder="Sólo si desea a domicilio">
+                <br>
+            </fieldset>
+            <fieldset style="width: 40%; margin: 50px;">
+                <legend>
+                    <h3>DATOS DEL PEDIDO</h3>
+                </legend>
+
+                <label for="envío"> Seleccione tipo de envío: </label>
+                <select id="envío">
+                    <option value="A domicilio">A domicilio</option> 
+                    <option value="Recogida en tienda">Recogida en tienda</option>
+                </select>
+                <br>
+                <label for="fecha">Fecha de reserva </label>
+                <input id="fecha" type="date">
+                <br>
+            </fieldset>
+            <fieldset style="width: 40%; margin: 50px;">
+                <legend>
+                    <h3>CREANDO SU ROSCO...</h3>
+                </legend>
+
+                <label for="Relleno">Elija el relleno que desee</label>
+                <select id="Relleno" type="text">
+                    <option value="Nata"> Nata </option>
+                    <option value="Chocolate"> Chocolate </option>
+                    <option value="Sin relleno"> Sin relleno </option>
+                </select>
+                <br>
+
+                <label for="tamaño"> ¿Qué tamaño prefiere?: </label>
+                <select id="tamaño">
+                    <option value="Grande">Grande</option> 
+                    <option value="Mediano">Mediano</option>
+                </select><br><br>
+
+                <label>¿Desea algún toppings? Elija cuantos prefiera... </label>
+                <input type="checkbox" value="Fruta escarchada"> Fruta escarchada
+                <input type="checkbox" value="Almendras"> Almendras
+                <input type="checkbox" value="Virutas de chocolate"> Virutas de chocolate
+                <input type="checkbox" value="Coco en polvo"> Coco en polvo
+                <br><br>
+
+            </fieldset>
+                <button type="submit">Enviar</button>
+            </fieldset>
+    
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
