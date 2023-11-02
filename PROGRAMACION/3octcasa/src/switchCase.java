@@ -5,7 +5,11 @@ public class switchCase {
 
 
         Scanner scan = new Scanner(System.in);
-
+/* Resumen Actividades: switch (diasemana); primitiva; paroimpar con módulo; IMC; switch (mes año); contraseña;
+                        descuentos; temperatura clima; contar cifras; switch matrículasasignturas; promedio notas;
+                        calcular%HyM; swapping;ordenar números crediente o decreciente; múltiplos; leer cifras de
+                        un número de 3 cifras; calculadora; (int)Math.floor(Math.random()*6max+1min);
+ */
       /*   int diaSemana= 9;
 // Se usan para enteros, chart o cadenas.
       switch(diaSemana){
@@ -408,12 +412,12 @@ creciente.*/
 
         }
         if (mayor>menor){
-            System.out.println(mayor+ mediano+ menor);
+            System.out.println(menor+ mediano+ mayor);
         } else{
             int tmp=mayor;
             mayor=menor;
             menor=tmp;
-            System.out.println(mayor+ mediano+ menor);
+            System.out.println(menor+ mediano+ mayor);
         }
 /* solución con swaping
 

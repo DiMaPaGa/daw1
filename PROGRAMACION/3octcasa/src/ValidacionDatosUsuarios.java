@@ -6,7 +6,8 @@ public class ValidacionDatosUsuarios {
     public static void main (String []args){
 
         Scanner scan=new Scanner(System.in);
-
+/* Actividad de validación DNI y cuenta bancaria: se usa Switch, lo de la letra en resto de 23 (int)y 23 switch.
+En lo de la cuenta corriente hay calculo matemático de ir descontando y demás */
 //Validación del DNI
         System.out.println("¿Cuál es tu DNI?");
         int numDni=scan.nextInt();

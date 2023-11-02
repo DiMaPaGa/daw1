@@ -21,13 +21,23 @@ muestra el número que había generado.*/
         for (int i = 0; i < 10; i++) { //Mientras que no lo acierte, tendrá 10 oportunidades.
 
             if (numeroSolicitado != ganador) { //esta condición se hará mientras que no acierte.
-                System.out.println("No has acertado");
-                contador++;
-                System.out.println("Te quedan " + (10 - contador) + " intentos. Introduce un número");
-                numeroSolicitado = scan.nextInt();
+
+                if (numeroSolicitado>ganador){
+                    System.out.println("No has acertado, el numero correcto es más bajo");
+                    contador++;
+                    System.out.println("Te quedan " + (10 - contador) + " intentos. Introduce un número");
+                    numeroSolicitado = scan.nextInt();
+                } else {
+                    System.out.println("No has acertado, el numero correcto es más alto");
+                    contador++;
+                    System.out.println("Te quedan " + (10 - contador) + " intentos. Introduce un número");
+                    numeroSolicitado = scan.nextInt();
+                }
+                if(i==9 && numeroSolicitado != ganador)
+                    System.out.println("No has acertado y te has quedado sin oportunidades. El número ganador era "+ ganador+ " .");
 
             } else {
-                System.out.println("Has acertado, enhorabuena"); //Y esta cuando acierte, y sale del bucle.
+                System.out.println("Has acertado en solo "+ contador + " oportunidades, enhorabuena"); //Y esta cuando acierte, y sale del bucle.
                 break;
             }
 

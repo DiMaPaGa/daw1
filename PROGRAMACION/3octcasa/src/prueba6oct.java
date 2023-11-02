@@ -5,6 +5,9 @@ public class prueba6oct {
     public static void main (String[] args){
 
         Scanner scan =new Scanner(System.in);
+
+        /*Resumen actividades:Ingresar datos para mostrar por pantalla junto a mayoria edad; adivinar número;
+                              convertir char en número o letra con suma int */
     //Actividad 1.
 
       System.out.println("¿Cuál es tu nombre?: ");
