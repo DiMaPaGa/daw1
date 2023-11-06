@@ -91,6 +91,31 @@ segunda opción será terminar el programa.*/
 
 
 
+
+        //3. capicua
+
+        Scanner scan = new Scanner(System.in);
+        int num1= scan.nextInt();
+        int num = num1;
+        reversed = 0;
+        while(num != 0) {
+            int digito = num % 10;
+            reversed = reversed * 10 + digito;
+            num /= 10;
+        }
+        if (num1==reversed){
+            System.out.println("el numero es capicuo");
+        }
+        else if (num1!=reversed){
+            System.out.println("el numero no es capicuo");
+        }
+
+    }
+}
+
+
+
+
     }
 
 

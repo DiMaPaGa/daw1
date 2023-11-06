@@ -10,7 +10,7 @@ devolverá el resultado y saldrá un menú, la primera opción del menú será h
 segunda opción será terminar el programa.*/
 
 
-        int decision=0; //Creo la variable decisión para el menú final.
+        int decision=0; //Creo la variable decisión para el menú final. Mejor FLOAT!!
 
         do {
             //Ahora incorporo todas las peticiones al usuario.
