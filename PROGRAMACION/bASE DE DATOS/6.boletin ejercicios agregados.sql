@@ -14,7 +14,7 @@ SELECT count(*) FROM northwind.customers where CompanyName like ("F%") or Compan
 -- 5. Calcular el precio unitario medio de los productos.
 SELECT avg(UnitPrice) as "Precio medio" FROM northwind.products;
 -- select sum(UnitPrice)/count(*), pero es muy complicado
--- SELECT truncate(AVG(UnitPrice),2) as "precio medio" FROM products;
+-- SELECT ROUND(AVG(UnitPrice),2) as "precio medio" FROM products;
 -- 6. Calcular el total de unidades en stock.
 SELECT sum(UnitsInStock) FROM northwind.products;
 -- 7. Calcular el total de unidades en pedido.

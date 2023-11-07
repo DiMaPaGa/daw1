@@ -1,5 +1,8 @@
 -- 1. Contar la cantidad de pedidos que han sido realizados por un cliente de Mexico.
 SELECT count(*) FROM northwind.orders where ShipCountry like ("Mexico"); 
+SELECT count(*) FROM northwind.orders where ShipCountry = ("Mexico"); 
+SELECT count(*) FROM northwind.orders where ShipCountry in ("Mexico"); 
+SELECT count(*) FROM northwind.orders where CustomerID in (SELECT CustomerID FROM northwind.customers wHERE Country = ("Mexico")); -- mejor que poner shipcountry al relacionarlo con claves foráneas.
 -- 2. Por cada pedido adjuntar, además de su información, el nombre de la compañía que lo ha enviado (ShipVia).
 
 -- 3. Imprimir toda la información de los clientes, con los nombres de las columnas traducidos al castellano y separando con espacios aquellos nombres compuestos de varias palabras.
@@ -12,6 +15,7 @@ SELECT Country, count(*) FROM northwind.employees group by Country;
 Select count(*) from customers where Country like "Spain";
 -- 7. Mostrar los pedidos realizados por clientes de Suecia y Argentina.
 Select * from customers where Country like "Sweden" or Country like "Argentina";
+SELECT * FROM northwind.customers WHERE Country IN ("Sweden", "Argentina");
 -- 8. Por cada pedido, mostrar el descuento medio.
 SELECT OrderID, avg(Discount) FROM northwind.orderdetails group by OrderID;
 -- 9. Por cada pedido, contar los productos que incluye, solo para aquellos pedidos que cuentan con más de tres productos y han sido atendidos por un empleado estadounidense.
@@ -31,6 +35,15 @@ SELECT count(*) as "Compañías" FROM northwind.categories where CategoryName li
 -- 16. Contar el número de filas de la tabla customerdemographics.
 SELECT Count(*) FROM northwind.customerdemographics;
 -- 17. Mostrar los nombres de ciudades de los proveedores en orden alfabetico inverso, pero solo para aquellas cuyo nombre de ciudad comienza de la A a la C incluidas ambas letras.
-SELECT CompanyName FROM northwind.suppliers Where City like "A%" or City like "B%" or City like "C%"  order by CompanyName desc;
+-- no... SELECT CompanyName FROM northwind.suppliers Where City like "A%" or City like "B%" or City like "C%"  order by CompanyName desc;
+SELECT City FROM northwind.suppliers where City like ("A%") or City like ("B%") or City like ("C%") order by City desc;
+SELECT City
+FROM northwind.suppliers
+WHERE City >= 'A' AND City <= 'Czzz'
+ORDER BY City DESC;
+SELECT City
+FROM northwind.suppliers
+WHERE City  BETWEEN 'A' AND 'Czzz'
+ORDER BY City DESC;
 -- 18. Por cada nombre de compañía de envíos contar el número de distintos producto enviados. Es decir, que si una compañía de envíos envía una bata, tres bicis y siete jerseys de cuello de pico
 -- estampados a un cliente zamorano y luego la misma compañía de envíos envía una bata a un cliente jienense, esa compañía de envíos (que Dios la guarde en su alma) habría enviado tres productos distintos.

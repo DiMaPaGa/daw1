@@ -49,7 +49,8 @@ SELECT City, Country, Count(*) FROM northwind.customers group by City, Country;
 -- 15. Repetir el anterior mostrando sólo aquellos que tienen más de un cliente.
 SELECT City, Country, Count(*) FROM northwind.customers group by City, Country having count(*)>1;
 -- 16. Por cada producto, hallar la cantidad de unidades vendidas y la media por pedido.
-SELECT ProductID, OrderID, sum(Quantity) as "Total unidades vendidas", sum(Quantity)/count(distinct OrderID) as "Media por pedido" FROM northwind.orderdetails group by ProductID, OrderID; -- Select ProductID, sum (Quantity), Avg(quantity) from Orderdetails Group by ProductID
+SELECT ProductID, OrderID, sum(Quantity) as "Total unidades vendidas", sum(Quantity)/count(distinct OrderID) as "Media por pedido" FROM northwind.orderdetails group by ProductID, OrderID; 
+-- Select ProductID, sum (Quantity), Avg(quantity) from Orderdetails Group by ProductID ESTE ES ELQUE ESTÁ BIENN
 -- 17. Por cada pedido, contar los distintos productos vendidos (no la cantidad).
 SELECT OrderID, count(distinct ProductID) as "Productos vendidos" FROM northwind.orderdetails group by OrderID;
 -- 18. Repetir el anterior mostrando solo los pedidos con un único producto.
@@ -59,7 +60,8 @@ SELECT ContactTitle, count(*) as "Número de poveedores" FROM northwind.supplier
 -- 20. Contar el número de productos que empiezan por la letra C.
 SELECT count(*) as "Número de productos" from northwind.products where ProductName like "C%";
 -- 21. Contar el número de pedidos que fueron realizados en un mes de Julio (OrderDate).
-SELECT count(*) as "Numero de pedidos en julio" FROM northwind.orders where extract(month from OrderDate)=7; -- Select count(*) from orders where month(orderdate)=7; 
+SELECT count(*) as "Numero de pedidos en julio" FROM northwind.orders where extract(month from OrderDate)=7; 
+-- Select count(*) from orders where month(orderdate)=7; 
 -- 22. Contar el número de pedidos realizados por el cliente DUMON en el año 1997.
 SELECT count(*) as "Número de pedidos" FROM northwind.orders where CustomerID="DUMON" and year(OrderDate)=1997;
 -- 23. Contar el número de pedidos (Orders) en los que los años de sus campos de tipo fecha no son exactamente iguales entre si, es decir, los valores de esas tres columnas
