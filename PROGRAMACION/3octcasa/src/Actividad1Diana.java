@@ -12,7 +12,7 @@ a adivinar es mayor o menor que el introducido, a demás de los intentos que te 
 (además te dice en cuantos intentos lo has acertado), si se llega al limite de intentos te
 muestra el número que había generado.*/
 
-        int ganador= (int)(Math.random()*100+1); //creo la variable random, así como contador.
+   /*     int ganador= (int)(Math.random()*100+1); //creo la variable random, así como contador.
         int contador=0;
 
         System.out.println("Introduce un número");
@@ -31,7 +31,7 @@ muestra el número que había generado.*/
                 break;
             }
 
-        }
+        }*/
 
 
 
@@ -39,7 +39,7 @@ muestra el número que había generado.*/
 devolverá el resultado y saldrá un menú, la primera opción del menú será hacer otra operación y la
 segunda opción será terminar el programa.*/
 
-
+/*
         int decision=0; //Creo la variable decisión para el menú final.
 
         do {
@@ -89,10 +89,10 @@ segunda opción será terminar el programa.*/
 
         System.out.println("Ha decidido salir del programa"); //Y este es el mensaje para cuando salga de la calculadora.
 
+*/
 
 
-
-        //3. capicua
+       /* //3. capicua
 
         Scanner scan = new Scanner(System.in);
         int num1= scan.nextInt();
@@ -110,7 +110,7 @@ segunda opción será terminar el programa.*/
             System.out.println("el numero no es capicuo");
         }
 
-    }
+    }*/
 }
 
 
@@ -120,4 +120,3 @@ segunda opción será terminar el programa.*/
 
 
 
-}

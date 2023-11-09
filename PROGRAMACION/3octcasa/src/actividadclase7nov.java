@@ -135,14 +135,94 @@ public class actividadclase7nov {
 
         // 4.	Escriba un programa que lea por pantalla un número entero n, e imprima los n primeros números cuadrados. Por ejemplo, para n=5 debe imprimir 1 4 9 16 25
 
-System.out.println("Escriba un número");
+/*System.out.println("Escriba un número");
         int n= scan.nextInt();
 
         for (int i = 1; i <= n; i++) {
             System.out.print((i*i)+" ");
 
-        }
+        }*/
 
+        // 5.	Escriba un programa que lea por pantalla un número entero n, e imprima
+        // la suma de los n primeros números positivos. Por ejemplo, para n=5 debe imprimir 1+2+3+4+5=15
+
+       /* System.out.println("Escriba un número");
+        int n= scan.nextInt();
+        int sumatorio=0;
+
+        for (int i = 1; i <= n; i++) {
+
+                if (i==n){
+                    System.out.print(i+ "=");
+                    sumatorio=i+sumatorio; //tambien puede ponerse solo resultado +=i;
+                } else{
+                    System.out.print(i+ "+");
+                    sumatorio=i+sumatorio;
+                }
+        }
+        System.out.print(sumatorio);*/
+
+
+
+        //6.	Escriba un programa que lea por pantalla dos números entero m y n, e imprima el número m repetido n veces. Por ejemplo, para m=8 y n=5 debe imprimir 8 8 8 8 8
+
+     /*   System.out.println("Escriba un número");
+        int m= scan.nextInt();
+        System.out.println("Escriba otro");
+        int n= scan.nextInt();
+
+        for (int i=0; i<n; i++) {
+            if (i==n-1){
+                System.out.print(m);
+            } else {
+                System.out.print(m +" ");
+            }
+            }*/
+// 7.	Escriba un programa que lea por pantalla un número n, e imprima una cuenta atrás. Por ejemplo, para n=5 debe imprimir
+//5
+//4
+//3
+//2
+//1
+//0
+      /*  System.out.println("Escribe un número");
+        int n= scan.nextInt();
+
+        for (int i = n; i >= 0; i--) {
+            System.out.println(i);
+        }*/
+
+
+   //     8.	Escriba un programa que lea por pantalla dos números entero m y n, e imprima la letra ‘M’ repetida m veces y la letra ‘N’ repetida n veces.
+        //     Por ejemplo, para m=8 y n=5 debe imprimir M M M M M M M M N N N N N
+
+      /*  System.out.println("Escriba cuántas M");
+        int m= scan.nextInt();
+        System.out.println("Escriba cuántas N");
+        int n= scan.nextInt();
+
+        int total= m+n;
+        for(int i=1;i<=total;i++) {
+            if(i<=m){
+                System.out.print("M ");
+            }
+            else  if (i==total){
+                System.out.print("N");
+            } else {
+                System.out.print("N ");
+            }
+        }*/
+
+// 9.	Escriba un programa que lea por pantalla un número n, e imprima los n primeros términos
+// (con n >= 0) de la sucesión 4n+3. Por ejemplo, para n=4 debe imprimir 3 7 11 15
+
+     /*   System.out.println("Escribe un número");
+        int n= scan.nextInt();
+        int resultado=0;
+
+        for (int i = 0; i < n;i++) {
+            System.out.print(4*i+3+ " ");
+        }*/
 
     } //main
 
