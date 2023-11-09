@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Solo falta comentar la actividad, crear página para el Css y link y pegarlo aquí, comprimir carpeta y entregarla-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tabla Opcional</title>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+    <style>
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: separate;
+            border: 3px solid rgb(193, 152, 41)
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        html {
+            font-family: "helvetica neue", helvetica, arial, sans-serif;
+        }
+
+        .recreo,
+        .horario,
+        caption
+         {
+            font-family: "Tangerine", Courier, monospace;
+        }
+
+        th {
+            letter-spacing: 2px;
+        }
+
+        td {
+            letter-spacing: 1px;
+        }
+
+        tbody td {
+            text-align: center;
+        }
+
+        th {
+            background: url("fondoHorario.jpg");
+            color: rgb(193, 152, 41);
+            text-shadow: 1px 1px 1px black;
+            background: linear-gradient(to bottom,
+                    rgba (0, 0, 0, 0.5) rgba (0, 0, 0, 1));
+            border: 2px solid rgb(193, 152, 41);
+        }
+
+        .horas {
+            background: url("OtroFondo.jpg");
+            color: rgb(77, 59, 9);
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .recreo {
+            background: url("fondoHorario.jpg");
+            color: rgb(77, 59, 9);
+            text-shadow: 1px 1px 1px black;
+            background: linear-gradient(to bottom,
+                    rgba (0, 0, 0, 0.5),
+                    rgba (0, 0, 0, 1));
+            border: 2px solid rgb(193, 152, 41);
+        }
+
+        tbody tr:nth-child(1) {
+            background-color: #9fbcee8e;
+        }
+
+        tbody tr:nth-child(3) {
+            background-color: #9fd5d1;
+        }
+
+        tbody tr:nth-child(5) {
+            background-color: #9fbcee8e;
+        }
+
+        tbody tr:nth-child(6) {
+            background-color: #9fd5d1;
+        }
+
+        caption {
+            
+            padding: 10px;
+            caption-side: top;
+            color: #666;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <caption> Horario del primer curso de DAW y DAM (2023 - 2024) </caption>
+            <tr>
+                <th class="horario">HORARIO</th>
+                <th class="horario">LUNES</th>
+                <th class="horario">MARTES</th>
+                <th class="horario">MIERCOLES</th>
+                <th class="horario">JUEVES</th>
+                <th class="horario">VIERNES</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td class="horas">15:00 A 15:55</td>
+                <td rowspan="2"> MARCAS </td>
+                <td rowspan="2"> BBDD </td>
+                <td rowspan="2"> PROGRAMACION </td>
+                <td rowspan="2"> PROGRAMACION </td>
+                <td rowspan="2"> SSOO </td>
+            </tr>
+
+            <tr>
+                <td class="horas">15:55 A 16:50</td>
+            </tr>
+
+            <tr>
+                <td class="horas">16:50 A 17:45</td>
+                <td> SSOO </td>
+                <td> FOL </td>
+                <td> FOL </td>
+                <td> BBDD </td>
+                <td> BBDD </td>
+            </tr>
+
+            <tr>
+                <td colspan="6" class="recreo"> RECREO </td>
+            </tr>
+
+            <tr>
+                <td class="horas">18:15 A 19:10</td>
+                <td> SSOO </td>
+                <td> ENTORNOS </td>
+                <td> FOL </td>
+                <td> ENTORNOS </td>
+                <td> ENTORNOS </td>
+            </tr>
+
+            <tr>
+                <td class="horas">19:10 A 20:05</td>
+                <td rowspan="2"> PROGRAMACION </td>
+                <td rowspan="2"> PROGRAMACIÓN </td>
+                <td rowspan="2"> BBDD </td>
+                <td rowspan="2"> SSOO </td>
+                <td rowspan="2"> MARCAS </td>
+            </tr>
+
+            <tr>
+                <td class="horas">20:05 A 21:00</td>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
