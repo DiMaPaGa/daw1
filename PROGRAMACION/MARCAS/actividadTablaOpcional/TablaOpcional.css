@@ -1,0 +1,83 @@
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: separate; /*He probado con separate en lugar de collapse, ya que en mi diseño esta separación ofrece una visualización de un espacio en blado en los límites de las celdas que mejora el segguimiento del horario*/
+            border: 3px solid rgb(193, 152, 41)
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        html {
+            font-family: "helvetica neue", helvetica, arial, sans-serif; /*Será la fuente principal para todo el documento*/
+        }
+
+        .recreo,
+        .horario,
+        caption
+         {
+            font-family: "Tangerine", Courier, monospace; /*Tangerine es la nueva fuente descargada, pero indico otras alternativas en el caso de que no funcione en algún navegador. Solo se utilizará en los apartados indicados*/
+        }
+
+        th {
+            letter-spacing: 2px;
+        }
+
+        td {
+            letter-spacing: 1px;
+        }
+
+        tbody td {
+            text-align: center;
+        }
+
+        th {
+            background: url("fondoHorario.jpg"); /*He empleado este fondo para el encabezado y el apartado del recreo, pero mientras que en el encabezado se verá cortado por celdas, en recreo no se verá cortada*/
+            color: rgb(193, 152, 41); /*Probé cambiar los colores de las letras en contraste con los fondos elegidos*/
+            text-shadow: 1px 1px 1px black; /*Probé varios tamaños de sombras, pero me pareció más nítido dejar los 3 valores en 1 para no perder legibilidad con los colores del fondo */
+            border: 2px solid rgb(193, 152, 41);
+        }
+
+        .horas {
+            background: url("OtroFondo.jpg"); /*Aquí incorporamos un fondo diferente para crear contraste*/
+            color: rgb(77, 59, 9);
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .recreo {
+            background: url("fondoHorario.jpg");
+            background-size: cover; /* Vamos a cubrir todo el contenedor sin que la imagen se repita*/
+            color: rgb(77, 59, 9);
+            text-shadow: 1px 1px 1px black;
+            border: 2px solid rgb(193, 152, 41);
+        }
+
+        tbody tr:nth-child(1) {/*He trabajado con este selector de CSS que emplea la pseudo-clase nth-child(n) para dar colores a las diferentes filas. Mi primer impulso fue emplear even para las pares y odd para las impares, pero como la tabla tiene aplicada varias rowspan, no se lograba el efecto deseado*/
+            background-color: #9fbcee8e; 
+        }
+
+        tbody tr:nth-child(3) {
+            background-color: #9fd5d1;
+        }
+
+        tbody tr:nth-child(5) {
+            background-color: #9fbcee8e;
+        }
+
+        tbody tr:nth-child(6) {
+            background-color: #9fd5d1;
+        }
+
+        caption {
+            
+            padding: 10px;
+            caption-side: top;
+            color: #666;
+            text-align: center;
+            text-transform: uppercase; /*Quise ir aplicando algunas de las modificaciones de texto trabajadas en los ejercicios de clase*/
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 1px black;
+        }
