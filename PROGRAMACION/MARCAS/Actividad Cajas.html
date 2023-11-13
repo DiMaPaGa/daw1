@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="actividad para practicar las opciones de border-radius">
+    <meta name="keywords" content="HTML,cajas, border-radius, CSS">
+    <title>Actividad cajas</title>
+    
+    <style>
+        .caja1{
+            border: 1px solid black;
+            width: 200px;
+            height: 52px;
+            border-bottom-right-radius: 65px; /*Solo se requiere un valor para manipular ese borde como se ve en la imagen A*/
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+
+        .caja2{
+            border: 1px solid black;
+            width: 200px;
+            height: 52px;
+            border-bottom-right-radius: 62px 30px; /*Es necesario aplicar dos valores para jugar con este ángulo, dando más tamaño al primer valor*/
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+
+        .caja3{
+            border: 1px solid black;
+            width: 200px;
+            height: 52px;
+            border-bottom-right-radius: 28px 50px; /*De nuevo, son necesarios dos valores, pero en este caso siendo el segundo valor el mayor*/
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+
+        .caja4{
+            border: 1px solid black;
+            width: 200px;
+            height: 52px;
+            border-radius: 30px 150px;/*En este caso, selecciono border-radius general y aplico dos valores, el primero modifica el borde de arriba a la izquierda, así como el de abajo a la derecha y el segundo el superior derecha y el inferior izquierda. Si hubiera escrito 30px 150px 30px 150px, hubiera logrado el mismo efecto. */
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+
+        .caja5{
+            border: 1px solid black;
+            width: 200px;
+            height: 52px;
+            border-top-left-radius:38px 15px; /*Aquí, como los bordes se encontraban modificados en altura y anchura, he creído conveniente concretar cada uno de ellos por separado*/
+            border-top-right-radius: 15px 38px;
+            border-bottom-right-radius: 38px 15px;
+            border-bottom-left-radius: 15px 38px;
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+
+        .caja6{
+            border: 1px solid black;
+            width: 82px;
+            height: 52px;
+            border-radius: 50px;/*Finalmente, en este, basta solo con poner el borde de 50px y jugar con la anchura del recuadro hasta que se aprecie el círculo*/
+            display: flex;
+            justify-content: center;
+            color:white;
+            margin: 28px auto;
+            padding-top: 30px;
+            background-color: rgb(74, 72, 72);
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+   <div class="caja1">A</div>
+   <div class="caja2">B</div>
+   <div class="caja3">C</div>
+   <div class="caja4">D</div>
+   <div class="caja5">E</div>
+   <div class="caja6">F</div>
+</body>
+
+</html>
