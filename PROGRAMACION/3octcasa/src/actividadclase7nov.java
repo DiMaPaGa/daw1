@@ -216,13 +216,13 @@ public class actividadclase7nov {
 // 9.	Escriba un programa que lea por pantalla un número n, e imprima los n primeros términos
 // (con n >= 0) de la sucesión 4n+3. Por ejemplo, para n=4 debe imprimir 3 7 11 15
 
-     /*   System.out.println("Escribe un número");
+        System.out.println("Escribe un número");
         int n= scan.nextInt();
         int resultado=0;
 
         for (int i = 0; i < n;i++) {
             System.out.print(4*i+3+ " ");
-        }*/
+        }
 
     } //main
 
