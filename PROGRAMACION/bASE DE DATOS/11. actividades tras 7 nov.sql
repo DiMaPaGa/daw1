@@ -27,11 +27,25 @@ SELECT * FROM northwind.products where SupplierID in (1, 3, 7, 8, 9) and UnitsIn
 -- 8. Seleccionar los productos cuyo precio unitario esta entre 35 y 250, sin stocken almacen que pertenecen a las categorias 1, 3, 4, 7 y 8 y que son
 -- distribuidos por los proveedores 2, 4, 6, 7, 8 y 9.
 SELECT * FROM northwind.products where UnitPrice between 35 and 250 and UnitsInStock =0 and CategoryID in (1, 3, 4, 7, 8) and SupplierID in (2, 4, 6, 7, 8, 9);
--- 1. Mostrar la cantidad total de productos vendidos por cada empleado
-SELECT EmployeeID, count(*) FROM northwind.orders GROUP BY EmployeeID ;
+-- 1. Mostrar la cantidad total de pedidos vendidos por cada empleado cuando sea más de 100 pedidos
+SELECT EmployeeID, count(*) FROM northwind.orders GROUP BY EmployeeID HAVING count(*)>100;
 -- 2. Mostrar la cantidad de pedidos realizados por cada cliente, solo aquellos que han realizado mas de 5 pedidos
 SELECT CustomerID, Count(*) as "Cantidad Pedidos" FROM northwind.orders GROUP BY CustomerID HAVING count(*)>5;
 -- 3. Muestra los precios más alto y más bajo de todos los productos
-SELECT MAX(UnitPrice), min(UnitPrice) FROM northwind.products;
+SELECT MAX(UnitPrice) as "Precio más alto", min(UnitPrice) as "Precio más bajo" FROM northwind.products;
 -- 4. Por cada empleado, muestra su nombre y su edad
 SELECT FirstName, timestampdiff(year, BirthDate, Curdate()) as "edad" FROM northwind.employees;
+SELECT FirstName, (year(curdate())-year(BirthDate)) "edad" from northwind.employees;
+-- 5. Mostrar el nombre de la categoría y su descripcion en la misma columna, separando por ';'
+SELECT concat_ws(";", CategoryName, Description) as "Nombre; Descripcion" FROM northwind.categories;
+-- 6. Muestra el numero de pedidos realizados en cada mes durante el año 1997. La consulta debe incluir el mes y la cantidad de pedidos en cada mes
+Select monthname(OrderDate) as "mes", COUNT(*) FROM northwind.orders where year(OrderDate)=1997 GROUP BY monthname(OrderDate);
+-- 7. Muestra la media del peso de los pedidos (Freight) realizados en el año 1996
+SELECT avg(Freight) FROM northwind.orders where year(OrderDate)=1996;
+-- 8. Muestra el ID de categoria y la cantidad de productos que pertenecen a cada categoria
+SELECT CategoryID, count(*) FROM northwind.products group by CategoryID;
+-- 9. Mostrar los clientes en los que su nombre (ContactName) empiece desde la F hasta la M, ambas incluidas.
+SELECT ContactName FROM northwind.customers where ContactName BETWEEN "F" and "N";
+SELECT ContactName FROM northwind.customers where ContactName BETWEEN "F" and "MZ";
+SELECT ContactName FROM northwind.customers where left(ContactName,1) BETWEEN 'F' AND 'M';
+
