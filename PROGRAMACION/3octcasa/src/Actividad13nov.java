@@ -38,7 +38,7 @@ public class Actividad13nov {
 
         // Imprimir el abecedario
 
-        char letra='a';
+       // char letra='a';
 
       /*  for (char i = 'a'; i <='z' ; i++) {
             System.out.print(i+" ");
@@ -174,7 +174,7 @@ public class Actividad13nov {
         // Leer la edad de una persona. A partir de ella calcular su año de nacimiento (suponga que estamos en el 2022)
         // e imprimir el año resultante. Dependiendo de dicho año, imprima qué horóscopo le tocaría en el calendario chino.
 
-        System.out.println("¿Qué edad tienes?");
+        /*System.out.println("¿Qué edad tienes?");
         int edad= scan.nextInt();
 
         int anionac=2022-edad;
@@ -222,10 +222,71 @@ public class Actividad13nov {
             default:
                 System.out.println("NO VALIDO");
                 break;
+        }*/
+// Programa que muestre lo siguiente por pantalla:
+//ZYWXVUTSRQPONMLKJIHGFEDCBA
+//YWXVUTSRQPONMLKJIHGFEDCBA
+//WXVUTSRQPONMLKJIHGFEDCBA
+//XVUTSRQPONMLKJIHGFEDCBA
+//VUTSRQPONMLKJIHGFEDCBA
+//UTSRQPONMLKJIHGFEDCBA
+//TSRQPONMLKJIHGFEDCBA
+//SRQPONMLKJIHGFEDCBA
+//RQPONMLKJIHGFEDCBA
+//QPONMLKJIHGFEDCBA
+//PONMLKJIHGFEDCBA
+//ONMLKJIHGFEDCBA
+//NMLKJIHGFEDCBA
+//MLKJIHGFEDCBA
+//LKJIHGFEDCBA
+//KJIHGFEDCBA
+//JIHGFEDCBA
+//IHGFEDCBA
+//HGFEDCBA
+//GFEDCBA
+//FEDCBA
+//EDCBA
+//DCBA
+//CBA
+//BA
+//A
+
+       /*for (char i = 'z'; i >='a' ; i--) {
+            System.out.print(i+" ");
+
+        }*/ //Me quedo con esta solución:
+        char letraZ='Z';
+        char letraA='A';
+
+        for (char i = letraZ; i >=letraA ; i--) {
+            for (int j = i; j >=letraA ; j--) {
+                System.out.print((char)j);
+            }
+            System.out.println();
+            }
+// Otra solución
+        int contador = 0;
+        char caracter = ('Z' + 1);
+        do {
+            caracter--;
+            System.out.print(caracter);
+            if (caracter == 'A') {
+                System.out.println("");
+                contador++;
+                caracter = (char) ('Z' + 1 - contador);
+            }
+        } while (caracter != 'A');
+
+// La más correcta pero aun no la hemos visto
+
+        String letras = "ZYWXVUTSRQPONMLKJIHGFEDCBA";
+        for (int i = 0; i < 26; i++) {
+            for (int j = 0; j < 1; j++) {
+                System.out.print(letras);
+                letras = letras.substring(1);
+            }
+            System.out.println();
         }
-
-
-
 
 
 

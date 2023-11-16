@@ -64,10 +64,11 @@ SELECT OrderID, Count(*) as "recuentoProductos" FROM northwind.orderdetails wher
 -- ??
 
 -- 22.Mostrar los clientes en los que su nombre (ContactName) empiece desde la F hasta la M, ambas incluidas.
+SELECT ContactName FROM northwind.customers where ContactName BETWEEN "F" and "N";
 
-
--- 23.Cuenta los Productos que empiecen por Letra G,H ó I y cuya categoria sea 2,3,4 o 5).
-
+-- 23.Cuenta los Productos que empiecen por Letra G,H ó I y cuya categoria sea 2,3,4 o 5.
+SELECT count(*) FROM northwind.products Where ProductName between "G" and "J" and CategoryID BETWEEN 2 and 5;
+SELECT count(*) FROM northwind.products Where ProductName between "G%" and "J%" and CategoryID BETWEEN 2 and 5;
 
 -- 24.Contactos de alemania cuya ciudad comience por 'F'.
 
