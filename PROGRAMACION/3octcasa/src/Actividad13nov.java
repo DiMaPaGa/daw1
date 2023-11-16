@@ -178,43 +178,46 @@ public class Actividad13nov {
         int edad= scan.nextInt();
 
         int anionac=2022-edad;
+        System.out.println("Su año de nacimiento es "+ anionac);
 
-        switch (anionac){
-            case 1:
-                System.out.println("RATA");
-                break;
-            case 2:
-                System.out.println("BUEY");
-                break;
-            case 3:
-                System.out.println("TIGRE");
-                break;
-            case 4:
-                System.out.println("CONEJO");
-                break;
-            case 5:
-                System.out.println("DRAGON");
-                break;
-            case 6:
-                System.out.println("SERPIENTE");
-                break;
-            case 7:
-                System.out.println("CABALLO");
-                break;
-            case 8:
-                System.out.println("CABRA");
-                break;
-            case 9:
+        int anioChino= anionac%12;
+
+        switch (anioChino){
+            case 0:
                 System.out.println("MONO");
                 break;
-            case 10:
+            case 1:
                 System.out.println("GALLO");
                 break;
-            case 11:
+            case 2:
                 System.out.println("PERRO");
                 break;
-            case 12:
+            case 3:
                 System.out.println("CERDO");
+                break;
+            case 4:
+                System.out.println("RATA");
+                break;
+            case 5:
+                System.out.println("BUEY");
+                break;
+            case 6:
+                System.out.println("TIGRE");
+                break;
+            case 7:
+                System.out.println("CONEJO");
+                break;
+            case 8:
+                System.out.println("DRAGON");
+                break;
+            case 9:
+                System.out.println("SERPIENTE");
+                break;
+            case 10:
+                System.out.println("CABALLO");
+                break;
+            case 11:
+                System.out.println("CABRA");
                 break;
             default:
                 System.out.println("NO VALIDO");

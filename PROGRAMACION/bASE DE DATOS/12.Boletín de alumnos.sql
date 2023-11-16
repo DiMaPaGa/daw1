@@ -44,13 +44,13 @@ SELECT FirstName, LastName FROM northwind.employees where City="Murcia";
 SELECT FirstName, BirthDate FROM northwind.employees where City="France";
 
 -- 16.Dime cuantos empleados tienen el titulo 'Sales Representative'.
-
+SELECT count(*) FROM northwind.employees WHERE Title="Sales Representative";
 
 -- 17.Mostrar los paises y cantidad de empleados que tiene cada país.
-
+SELECT Country, Count(*) as "Cantidad de empleados" FROM northwind.employees group by Country;
 
 -- 18.Mostrar los 3 productos más vendidos y la cantidad de productos vendidos.
-
+SELECT ProductName, UnitsOnOrder FROM northwind.products order by UnitsOnOrder desc limit 3;
 
 -- 19.Muestre el nombre de cada producto, el longitud de caracteres de este y calcular media del precio del producto(UnitPrice).
 SELECT ProductName, length(ProductName), avg(UnitPrice) FROM northwind.products GROUP BY ProductName;
@@ -61,7 +61,7 @@ Ordena la tabla resultante por el recuento de pedidos, poniendo los recuentos m�
 SELECT OrderID, Count(*) as "recuentoProductos" FROM northwind.orderdetails where Discount > 0 Group by OrderID having recuentoProductos>2 order by recuentoProductos desc;
 
 -- 21.Cuantos contactos de shippers hay por país.
-
+-- ??
 
 -- 22.Mostrar los clientes en los que su nombre (ContactName) empiece desde la F hasta la M, ambas incluidas.
 
@@ -126,6 +126,7 @@ que tenemos en stock (PrecioUnitario*Unidades en Stock). Muestra solo aquellas q
 
 -- 42.Haz el recuento de clientes agrupados por ciudad y país, mostrando únicamente aquellos casos en los que se cuente con más de dos clientes.
 -- Ordénalos por países en orden alfabético.
+SELECT City, Country, Count(*) FROM northwind.customers group by City, Country having Count(*)>2 order by Country asc;
 
 
 -- 43.Muestra los nombres de la compañía que tengan en título de contacto "Owner" y la ciudad  sea "Madrid", además de que el nombre de la comañía empiece por 'B'.

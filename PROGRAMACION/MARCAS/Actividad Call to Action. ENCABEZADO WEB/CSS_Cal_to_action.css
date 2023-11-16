@@ -24,7 +24,9 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+button:hover {/* ESTO PERMITE CAMBIAR EL FORMATO CUANDO SE PASA EL CURSOR POR ENCIMA*/
     background-color: aquamarine;
     color: black;
+    height: 59px;
+    width: 325px;
 }
