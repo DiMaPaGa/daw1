@@ -259,8 +259,8 @@ public class Actividad13nov {
         char letraA='A';
 
         for (char i = letraZ; i >=letraA ; i--) {
-            for (int j = i; j >=letraA ; j--) {
-                System.out.print((char)j);
+            for (char j = i; j >=letraA ; j--) {
+                System.out.print(j);
             }
             System.out.println();
             }
@@ -279,14 +279,14 @@ public class Actividad13nov {
 
 // La más correcta pero aun no la hemos visto
 
-        String letras = "ZYWXVUTSRQPONMLKJIHGFEDCBA";
+    /*    String letras = "ZYWXVUTSRQPONMLKJIHGFEDCBA";
         for (int i = 0; i < 26; i++) {
             for (int j = 0; j < 1; j++) {
                 System.out.print(letras);
                 letras = letras.substring(1);
             }
             System.out.println();
-        }
+        }*/
 
 
 
