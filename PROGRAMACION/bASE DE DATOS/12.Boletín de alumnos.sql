@@ -4,13 +4,14 @@
 -- 2.Contar los pedidos que han sido realizados por clientes Franceses.
 -- No PUEDE RESOLVERSE con consulta simple.
 
--- 3.Selecciona los nombres de los productos que que empiecen desde la C hasta la L, los cuales tengan unidades disponibles.
-SELECT ProductName FROM northwind.products where ProductName BETWEEN 'C'and 'M' and UnitsOnOrder > 0;
-
+-- 3.Selecciona los nombres de los productos que que empiecen desde la C hasta la L, los cuales tengan unidades disponibles. (son unidades en stock)
+SELECT ProductName FROM northwind.products where ProductName BETWEEN 'C'and 'M' and UnitsInStock > 0;
+SELECT ProductName FROM northwind.products where ProductName BETWEEN 'C%'and 'Lz%' and UnitsInStock > 0;
 -- 4.Cantidad de pedidos totales realizados en Enero de 1997.
 SELECT count(*) FROM northwind.orders where month(OrderDate)=1 and year(OrderDate)=1997;
+select count(*) "Pedidos" from orders where year(OrderDate) = "1997" and monthname(OrderDate) = "January";
 
--- 5.Sumar el total de unidades en stock de todos los productos cuyo campo UnitsInOrder no sea cero.
+-- 5.Sumar el total de unidades en stock de todos los productos cuyo campo UnitsOnOrder no sea cero.
 SELECT sum(UnitsInStock) FROM northwind.products where UnitsOnOrder > 0;
 
 -- 6.Mostrar la cantidad de pedidos realizados por cada empleado, solo aquellos que han realizado mas de 100 pedidos.
@@ -19,17 +20,18 @@ SELECT EmployeeID, count(*) FROM northwind.orders group by EmployeeID having cou
 -- 7.Por cada empleado, imprimir su nombre y apellidos y el número de años que ha pasado desde su contratación hasta la fecha actual.
 SELECT FirstName as "Nombre", LastName as "Apellido", timestampdiff(year, HireDate, Curdate()) as "Años contratados" FROM northwind.employees;
 
--- 8.Muestra los productos mas vendidos en orden descendente y agrupalos por su SupplierID.
-SELECT SupplierID, count(*) FROM northwind.products GROUP BY SupplierID order By count(*) desc;
+-- 8.Muestra los productos mas vendidos en orden descendente y agrupalos por su SupplierID.¡¡¡¡¡ojo!!!!!
+select SupplierID"ID proveedor",max(UnitsOnOrder)"Productos más vendidos" from products group by SupplierID order by max(UnitsOnOrder) desc;
 
 -- 9.Obtener el nombre de los empleados que sean de Estados Unidos y selecciona los años que lleve trabajando.
 SELECT FirstName, timestampdiff(year, HireDate, Curdate()) as "Años trabajando" FROM northwind.employees where Country =("USA");
 
 -- 10.Lista de empleados que no sean de la ciudad Tacoma.
 SELECT * FROM northwind.employees where City !="Tacoma";
+SELECT * FROM northwind.employees where City not like 'Tacoma';
 
 -- 11.Agrupa las categorías.Ordena las categorías en orden ascendente y que sean mayores a 10.
-SELECT CategoryID, count(*) FROM northwind.products group by CategoryID HAVING count(*)<10 order by CategoryID asc;
+SELECT CategoryID, count(*) FROM northwind.products group by CategoryID HAVING count(*)>10 order by CategoryID asc;
 
 -- 12.Muéstrame a los empleados que su apellido empiece por D o que su nombre empiece por M.
 SELECT * FROM northwind.employees where LastName like "D%" or FirstName like "M%";
@@ -77,7 +79,7 @@ SELECT count(*) FROM northwind.products Where ProductName between "G%" and "J%" 
 
 
 -- 26.Calcula el precio promedio de cada categoría.
-
+SELECT CategoryID, avg(UnitPrice) FROM northwind.products group by CategoryID;
 
 -- 27.Muestra por pantalla el nombre de los productos, el precio unitario y un descuento del 20%, poniéndole un alias.
 
