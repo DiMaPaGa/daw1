@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+    font-size: 2.7rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+/*MARGEN*/
+
+.clear{
+    height: 5%;
+}
+
+
+
+
+/*MENU NAV*/
+nav{
+height: 100%; /* 100% Full-height */
+  width: 25vw; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(12, 23, 85); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+
+
+
+}
+
+nav div p{
+    text-align: center;
+}
+
+nav div p img{
+    height: 20vh;
+    width: 20vh;
+}
+
+#enlaces{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25%;
+}
+
+#enlaces a{
+    color: white;
+    text-decoration: none;
+}
+
+#enlaces a:hover{
+    color: aquamarine;
+}
+
+
+/*CENTRAL*/
+
+#principal{
+    margin-left: 25vw;
+}
+
+#principal h1,h2,h3{
+    color: rgb(73, 73, 255);
+    text-align: center;
+
+}
+
+#principal p,a{
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/*BLOG*/
+
+#blog{
+    width: 100%;
+    height: auto;
+    background-color: rgb(183, 197, 238);
+    padding: 5vw;
+}
+
+.entrada{
+    padding: 5%;
+    border: 3px black solid;
+}
+
+/*PORTFOLIO*/
+
+#portfolio{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.carta{
+    min-height: 5vw;
+    min-width: 2.5vw;
+    padding: 3vw;
+    border: 3px rgb(26, 54, 139) solid;
+    
+}
+
+.botonInfo{
+    height: auto;
+    width: auto;
+    background-color: rgb(129, 255, 181);
+    text-align: center;
+    border-radius: 15%;
+}
+
+.botonInfo:hover{
+    background-color: aquamarine;
+    cursor: cell;
+    border-radius: 5%;
+}
+
+/*SERVICIOS*/
+
+#servicios{
+    background-color: rgb(183, 197, 238);
+}
+
+#servicios p{
+text-align: center;
+}
+
+#servicios ul,ol{
+    list-style-type: none;
+}
+
+/*VIDEO*/
+
+#video p{
+    text-align: center;
+}
+
+#video iframe{
+    margin-left: 20%;
+}
+
+/*SOBRE MI*/
+
+#sobremi table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#sobremi thead th {
+    background-color: rgb(205, 245, 255);
+}
+
+#sobremi tbody th {
+    background-color: gainsboro;
+}
+
+#sobremi thead th,
+tbody td,
+tbody th {
+    border: 1px solid black;
+}
+
+#sobremi caption {
+    font-weight: bold;
+    color: rgb(73, 73, 255);
+    text-align: center;
+}
+
+#sobremi th,
+td {
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+/*CONTACTO*/
+
+#contacto{
+    padding: 5%;
+    background-color: rgb(183, 197, 238);
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.bodycss{
+    background-color: rgb(183, 197, 238);
+}
+
+
+
+
+
+

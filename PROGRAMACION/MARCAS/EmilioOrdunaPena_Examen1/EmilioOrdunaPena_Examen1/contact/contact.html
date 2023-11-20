@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+
+ <head> 
+<meta charset="UTF-8">
+<meta name ="description" content="Emilio's Portfolio">
+<meta name ="keywords"  content="html, lenguaje, dam, marcas">
+<meta name="language"   content="ES">
+<meta name="author" content="eordunap@hotmail.com">
+<meta name="robots" content="index, follow">
+<meta name="revised" content="Friday, December 2nd, 2022, 18:30pm">
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE-Edge, chrome1">
+<meta http-equiv="refresh"  content="300; URL=index.html">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<title>Emilio's Portfolio</title>
+
+</head>
+ 
+ <body class="bodycss">
+    <nav>
+        <div id="imgNav">
+           <p><a href="index.html"><img src="../img/imagenHome.png" alt="imagenHome"></a></p>
+        </div>
+        <div id="enlaces">
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="../blog/blog.html">Blog</a></p>
+            <p><a href="../portfolio/portfolio.html">Portfolio</a></p>
+            <p><a href="../services/services.html">Services</a></p>
+            <p><a href="../about/about.html">About</a></p>
+            <p><a href="../aboutMe/aboutMe.html">About me</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            &copy; 2022-23 Emilio Orduña Peña
+        </div>
+    </nav>
+    <div id="principal">
+
+        <div id="contacto">
+            <div id="form1">
+                <form method="get" action="response.php">
+                    <!-- Cajita -->
+                    <fieldset>
+                        <!-- Leyenda de la cajita -->
+                        <legend>Contáctame</legend>
+                
+                        <!-- input de texto -->
+                        <!-- IMPORTANTE!! el atributo for del label indica el id del input al que va asociado.
+                            La variable name en input hay que ponerla SIEMPRE y es el nombre que tomará la variable. 
+                            Lo que el usuario meta en el input será el valor de dicha variable -->
+                        <label for="name">Nombre: </label>
+                        <input type="text" id="name" name="name" placeholder="Nombre" size="20" maxlength="20" required/><br/>
+                
+                        <!-- input de email -->
+                        <label for="email">Correo electrónico: </label>
+                        <input type="email" id="email" name="email" /><br/>
+
+                        <label for="asunto">Selecciona Asunto:</label>
+                        <select name="asunto" id="asunto">
+                            <optgroup label="Laboral">
+                                <option value="web">Desarrollo web</option>
+                                <option value="multip">Desarrollo multiplataforma</option>
+                            </optgroup>
+                            <optgroup label="Otros">
+                                <option value="comun">Puesta en común</option>
+                                <option value="social">Social</option>
+                            </optgroup>
+                        </select><br/>
+
+                        Como me ha conocido: <br/>
+                        <input type="checkbox" name="box1" id="box1" value="box1" />
+                        <label for="box1">Discord</label><br/>
+                        <input type="checkbox" name="box2" id="box2" value="box2" />
+                        <label for="box2">Instagram</label><br/>
+                
+                        <!-- input de elegir una opción -->
+                        Que le ha parecido la "web": <br/>
+                        <!-- Importante mismo name-->
+                        <input type="radio" name="option" id="option1" value="option1" />
+                        <label for="option1">Mal</label>
+                        <input type="radio" name="option" id="option2" value="option2" />
+                        <label for="option2">Muy mal</label>
+                
+                        <br/>
+
+                    </fieldset>
+                    <input type="reset" value="Reset" />
+                    <!-- botón de enviar formulario -->
+                    <input type="submit" value="Enviar" />
+                </form>
+            </div>
+
+            <div id="form2"></div>
+            <label for="someText">Cuerpo del mensaje: <label> <br/>
+                <textarea id="someText" name="someText" placeholder="Aqui va el cuerpo del mensaje..." rows="10" cols="50"></textarea><br/>
+        </div>
+
+
+    
+        </div>
+
+        
+
+ </body> 
+
+</html>
