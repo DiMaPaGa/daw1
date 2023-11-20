@@ -21,7 +21,7 @@ SELECT EmployeeID, count(*) FROM northwind.orders group by EmployeeID having cou
 SELECT FirstName as "Nombre", LastName as "Apellido", timestampdiff(year, HireDate, Curdate()) as "Años contratados" FROM northwind.employees;
 
 -- 8.Muestra los productos mas vendidos en orden descendente y agrupalos por su SupplierID.¡¡¡¡¡ojo!!!!!
-select SupplierID"ID proveedor",max(UnitsOnOrder)"Productos más vendidos" from products group by SupplierID order by max(UnitsOnOrder) desc;
+select SupplierID"ID proveedor",max(UnitsOnOrder)"Productos más vendidos" from northwind.products group by SupplierID order by max(UnitsOnOrder) desc;
 
 -- 9.Obtener el nombre de los empleados que sean de Estados Unidos y selecciona los años que lleve trabajando.
 SELECT FirstName, timestampdiff(year, HireDate, Curdate()) as "Años trabajando" FROM northwind.employees where Country =("USA");
@@ -73,109 +73,111 @@ SELECT count(*) FROM northwind.products Where ProductName between "G" and "J" an
 SELECT count(*) FROM northwind.products Where ProductName between "G%" and "J%" and CategoryID BETWEEN 2 and 5;
 
 -- 24.Contactos de alemania cuya ciudad comience por 'F'.
-
+SELECT ContactName FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID; -- Lo interpreto como listado de contactos.
+SELECT ContactName, Count(*) FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID;-- Esto sería el numero de contactos
 
 -- 25.Muestra todos los pedidos que hayan realizado por cada empleado en el año 1996 y cuyo “freight” medio sea mayor a 20 e inferior a 50.
-
+SELECT EmployeeID, count(*), avg(Freight) FROM northwind.orders where year(OrderDate)=1996 group by EmployeeID having avg(Freight) between 21 and 49;
 
 -- 26.Calcula el precio promedio de cada categoría.
 SELECT CategoryID, avg(UnitPrice) FROM northwind.products group by CategoryID;
 
 -- 27.Muestra por pantalla el nombre de los productos, el precio unitario y un descuento del 20%, poniéndole un alias.
-
+SELECT ProductName as "Nombre Productos", UnitPrice as "Precio Unitario", (UnitPrice*0.80) as "Descuento 20%" FROM northwind.products;
 
 -- 28.Cantidad de pedidos realizados desde Mexico.
-
+SELECT count(*) FROM northwind.orders Where ShipCountry = "Mexico";
 
 -- 29.Muestrame los pedidos que fueron pedidos en el 1997 y por via 3.
-
+SELECT OrderID FROM northwind.orders where year(OrderDate)=1997 and ShipVia=3;
 
 -- 30.Lista de empleados donde aparezcan los que son solos ellos de ese país.
-
+-- Es una subconsulta!!
+SELECT FirstName, LastName, Country FROM northwind.employees where Country not in (SELECT Country FROM northwind.employees group by Country having count(*)>1);
 
 -- 31.Mostrar las ciudades que tienen más clientes que la ciudad de Barcelona.
-
+-- Es una subconsulta!!
 
 -- 32.Imprimir el nombre, apellidos y fecha de nacimiento de todos los empleados. La fecha de nacimiento debe estar en el formato europeo (DD—MM--AAAA).
-
+select FirstName, LastName, date_format(BirthDate, "%d-%m-%Y") as "Fecha Europea" from northwind.employees;
 
 -- 33.Muestra el ID del empleado y el numero de pedidos del año 1997.
+select EmployeeID, count(*) as "Pedidos1997" from northwind.orders where year(OrderDate)= 1997 group by EmployeeID;
 
-
--- 34.Seleciona el valor maximo de OrderID y haz la suma total del preio x su cantidad.
-
+-- 34.Seleciona el valor maximo de OrderID y haz la suma total del precio x su cantidad.
+-- subconsulta?
 
 /* 35.Muestra aquellas categorias, cuantos productos tienen que tengan un precio unitario mayor que 15€ y cual sería el beneficio que obtendriamos de los productos 
 que tenemos en stock (PrecioUnitario*Unidades en Stock). Muestra solo aquellas que tengan más de 5 productos que cumplan esa condición. */
-
+select CategoryID, Count(*) as "Total Productos", (sum(UnitPrice * UnitsInStock)) as "Beneficio" from northwind.products where UnitPrice > 15 group by CategoryID having count(*)>5;
 
 -- 36.Muestra el numero de empleados que tengan mas de 65 años.
+select Count(*) from northwind.employees where timestampdiff(year, BirthDate, curdate()) > 65;
 
-
--- 37.Contar los clientes que viven en Suecia y Suiza y mostrar cómo se llaman esos clientes. Traduce las columnas.
-
+-- 37.Contar --- los clientes que viven en Suecia y Suiza y mostrar cómo se llaman esos clientes. Traduce las columnas.
+SELECT ContactName AS "Nombre Contacto", Country as "Pais" FROM northwind.customers where Country in ("Sweden", "Switzerland");
 
 -- 38.Por cada producto,muestrame su precio por unidad y su stock, solo aquellos que tengan más de 20 unidades.
-
+select ProductName, UnitPrice, UnitsInStock from northwind.products where UnitsInStock >20;
 
 -- 39.Mostrar la jerarquía de todos los empleados.
-
+select FirstName, LastName, ReportsTo from northwind.employees order by ReportsTo;
 
 -- 40.Muestra la cantidad de productos en el que su Freigth sea mayor que 50 y en el que el pais de envio(ShipCountry) sea ESPAÑA.
-
+SELECT count(*) FROM northwind.orders where Freight>50 and ShipCountry="Spain";
 
 -- 41.Cantidad de pedidos realizados por cada cliente, solo aquellos que han realizado mas de 20 (agrupar por CustomerID);
-
+SELECT CustomerID, Count(*) FROM northwind.orders group by CustomerID having count(*) > 20;
 
 -- 42.Haz el recuento de clientes agrupados por ciudad y país, mostrando únicamente aquellos casos en los que se cuente con más de dos clientes.
 -- Ordénalos por países en orden alfabético.
 SELECT City, Country, Count(*) FROM northwind.customers group by City, Country having Count(*)>2 order by Country asc;
 
-
 -- 43.Muestra los nombres de la compañía que tengan en título de contacto "Owner" y la ciudad  sea "Madrid", además de que el nombre de la comañía empiece por 'B'.
-
+SELECT CompanyName FROM northwind.customers where ContactTitle = "Owner" and City="Madrid" and CompanyName like "B%";
 
 -- 44.Imprimir el nombre de los empleados en mayusculas junto a los años que lleva en la empresa de manera ascendente.
-
+select upper(Firstname), timestampdiff(year, HireDate, Curdate()) as "años en la empresa" from northwind.employees order by "años en la empresa" asc ;
 
 -- 45.Cuenta los pedidos que se han hecho desde Francia.
-
+SELECT count(*) FROM northwind.orders where ShipCountry="France";
 
 -- 46.Selecciona todos los empleados cuyos nombres comiencen por la letra D y pertenezcan a Londres.
-
+SELECT * FROM northwind.employees WHERE LastName like 'D%' AND City = "London";
 
 -- 47.Por cada pedido muestra el número de pedidos que se ha realizado para clientes que hayan realizado más de 2 pedidos en orden ascendente.
-
+SELECT CustomerID, Count(*) FROM northwind.orders group by CustomerID having count(*)>2 order by Count(*) asc;
 
 -- 48.Mostrar el país, la fecha y el ID de los pedidos enviados a paises que comiencen por la F en el año 1997.
-
+SELECT ShipCountry, OrderDate, OrderID FROM northwind.orders where ShipCountry like ('F%') and year(OrderDate)=1997;
 
 -- 49.Muestra los precio más alto y más bajo de todos los productos.
-
+select max(UnitPrice), min(UnitPrice) from northwind.products;
 
 /* 50.Indica cuales son los 3 empleados cuyos pedidos sean los que más tiempo de entrega tengan en aquellos pedidos en los que la suma del valor de los productos 
 sea mayor a 1000€ ordenado de mayor a menor tiempo de entrega. Queremos ver la ID del Empleado, el valor total del pedido y el tiempo que ha tardado en entregarse. */
-
+-- subconsulta?
 
 -- 51.Calcular el precio en stock medio de los productos. 
-
+select avg(UnitPrice) from northwind.products where UnitsInStock>0;
 
 -- 52.Cuenta los empleados que tengan más de 60 años.
-
+SELECT count(*) FROM northwind.employees where timestampdiff(year, BirthDate, Curdate())>60;
 
 -- 53.Ordena los productos que tengan un precio unitario mayor de 10 y menor de 100 de forma descendente.
-
+select ProductName, UnitPrice from northwind.products where UnitPrice between 11 and 99 order by UnitPrice desc;
 
 -- 54.Encuentra la cantidad de precios repetidos por los pedidos. Ordenar los precios en orden ascendente y que sean mayores a 100.
-
+SELECT UnitPrice, Count(*) FROM northwind.orderdetails where UnitPrice>100 group by UnitPrice having count(*)>1 order by UnitPrice asc;
 
 -- 55.Cuenta todos los productos salidos de la ShipCity. Haz un top 10 de los mas vendidos (Pon los nombres en español).
-
+-- subconsulta?
 
 -- 56.Muestra los nombres de los productos con precio unico mayor a 12 y menor a 50, además del precio de los productos. 
-
+select ProductName, UnitPrice from northwind.products where UnitPrice between 13 and 49;
 
 -- 57.Muestrame los empleados , cuya edad se encuentre entre 23 y 40 años.
-
+select FirstName, LastName, timestampdiff(year, BirthDate, curdate()) as "edad" from northwind.employees where "edad" between 23 and 40;
 
 -- 58.Por cada país, muestra todos los clientes que empiecen por la letra A y cuyo país de procedencia sea México o Alemania.
+SELECT Country, CustomerID FROM northwind.customers Where CustomerID like 'A%' and Country in ("Mexico", "Germany");
