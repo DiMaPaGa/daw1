@@ -4,50 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Diana Pascual García">
+    <meta name="description" content="Modelo de examen realizado en clase como prueba para practicar">
+    <meta name="keywords" content="HTML,Marcas,Simulacro,Examen">
+    
+    <title>SIMULACRO EXAMEN</title>
     <style>
+
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
         .contenedor {
             background-color: white;
             width: 100%;
+            margin: 0 auto;
 
         }
 
         header {
-            background-image: url(logo\ \(1\).png);
-            background-size: 268px 58px;
-            background-repeat: no-repeat;
-            background-position: left;
+            background-color: white;
             padding: 10px 0 5px 45px;
-            float: left;
-            width: 1000px;
+            width: 100%;
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
 
         }
 
+        div .logo {
+            width: 40%;
+
+        }
+
+        .logo img {
+            max-width: 200px;
+            max-height: 60px;
+            padding: 3px 3px 3px 100px;
+        }
+
+        div .menu {
+            width: auto;
+        }
 
         nav {
             float: right;
-            display: inline;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
             color: black;
             background-color: white;
 
         }
 
         nav ul {
-
             list-style: none;
             overflow: hidden;
 
         }
 
-        nav ul li {
-            float: right;
-            padding: 10px;
+        li {
+
+            position: relative;
+            display: inline;
+            margin: 2px;
+            padding: 3px;
             color: black
         }
 
         nav ul :hover {
-            background-color: orange;
+            background-color: coral;
         }
 
         .fondo {
@@ -57,19 +83,8 @@
             background-repeat: no-repeat;
             position: relative;
             width: 100%;
-            height: 400px;
-            top: 150px;
-
-
-
-        }
-
-        .fondo h2 {
-            margin-left: 20px;
-            line-height: 100px;
-            text-align: left;
-            vertical-align: middle;
-            font-size: 40px;
+            height: 500px;
+            top: 65px;
 
         }
 
@@ -79,84 +94,219 @@
             text-align: left;
             vertical-align: middle;
             font-size: 15px;
-            position: sticky;
-
-        }
-
-        .contenido1 {
-
-            border-color: white;
-            width: 30%;
-            height: 150px;
-            float: left;
-            overflow: hidden;
             position: relative;
-            top: 150px;
-            margin-left: 10px;
 
 
         }
 
-        .contenido2 {
-
-            border-color: white;
-            width: 30%;
-            height: 150px;
-            float: left;
-            overflow: hidden;
+        .titulo {
+            margin: 25px;
+            width: 300px;
+            text-align: left;
+            vertical-align: middle;
+            font-size: 40px;
             position: relative;
-            top: 150px;
-            margin-left: 10px;
+            padding: 40px;
+
         }
 
-        .contenido3 {
-
-            border-color: white;
-            width: 30%;
-            height: 150px;
-            float: left;
-            overflow: hidden;
+        section {
+            margin: 0 auto;
             position: relative;
-            top: 150px;
-            margin-left: 10px;
+            width: 107%;
+            top: -75px;
+            border-radius: 4px;
+
         }
 
-        .contenido4 {
+        .contenido {
 
             border-color: white;
             width: 30%;
-            height: 150px;
+            height: 250px;
             float: left;
-            overflow: hidden;
             position: relative;
             top: 150px;
-            margin-left: 10px;
+            padding: 10px;
+            text-align: justify;
 
 
         }
 
-        .contenido5 {
+        .contenido .encabezado {
 
-            border-color: white;
-            width: 30%;
-            height: 150px;
-            float: left;
-            overflow: hidden;
-            position: relative;
-            top: 150px;
-            margin-left: 10px;
+            background-color: coral;
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+
         }
 
-        .contenido6 {
+        .encabezado .imgc1 {
+            margin: 0px;
+            background-image: url(estetoscopio-cardiologo.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
 
-            border-color: white;
-            width: 30%;
-            height: 150px;
-            float: left;
-            overflow: hidden;
+
+        }
+
+
+        .encabezado .imgc2 {
+            margin: 0px;
+            background-image: url(botiquin-medico.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
+
+
+        }
+
+
+        .encabezado .imgc3 {
+            margin: 0px;
+            background-image: url(bote-de-medicina.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
+
+
+        }
+
+
+        .encabezado .imgc4 {
+            margin: 0px;
+            background-image: url(pinzas-de-acero.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
+
+
+        }
+
+
+        .encabezado .imgc5 {
+            margin: 0px;
+            background-image: url(hospital-apple-silueta.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
+
+
+        }
+
+
+        .encabezado .imgc6 {
+            margin: 0px;
+            background-image: url(ambulancia-silueta.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding: 8px 0 8px 50px;
+
+
+        }
+
+
+        #texto {
+            overflow: auto;
+            height: 250px;
+        }
+
+
+        .contenidofinal {
+            background-color: white;
+            padding: 10px 0 5px 45px;
+            width: 100%;
+            position: absolute;
+            top: 1240px;
+            display: flex;
+
+
+        }
+
+        .img2 {
+            background-image: url(dentist.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
             position: relative;
-            top: 150px;
-            margin-left: 10px;
+            width: 50%;
+            height: 480px;
+            top: -5px;
+        }
+
+        .formulario {
+        
+            background-color: coral;
+            color: white;
+            width: 50%;
+
+
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            text-align: center;
+        }
+
+        input {
+            border-radius: 4px;
+            border: 0;
+        }
+
+        textarea {
+            border-radius: 4px;
+            border: 0;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+        }
+
+        .miscolumnas{
+            display: flex;
+
+        }
+
+        .columna1{
+            padding: 0 15px;
+            
+        }
+        .columna2{
+            padding: 0 15px;
+            
+            
+        }
+
+        label {
+            display: block;
+            /*ahora lo inputs quedan bajo los label*/
+            padding: 5px;
+            /*separa los espacios internos*/
+        }
+
+        #radioLateral{
+            display:flex;
+        }
+
+        #botonEnvio{
+            padding:10px ;
+        }
+
+        #botonEnvio:hover{
+            border:5px solid white;
+            background-color: coral;
+            color:white;
         }
     </style>
 
@@ -172,6 +322,9 @@
     <div class="contenedor">
         <header>
             <div class="logo">
+                <img src="logo (1).png">
+            </div>
+            <div class="menu">
 
 
 
@@ -194,15 +347,20 @@
 
 
         <div class="fondo">
-            <h2> HEART<spam style="color: red;">BEATS</spam>. </h2>
-            <p class=" central"> Care for your Loved Ones from the Experts in the Medical & Hospitality Industry</p>
+            <h2 class="titulo"> HEART<spam style="color: red;">BEATS</spam>. </h2>
+            <p class="central"> Care for your Loved Ones from the Experts in the Medical & Hospitality Industry</p>
 
         </div>
 
-        <div>
-            <div class="contenido1">
-                <h3>INTENSIVE CARE</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
+        <section>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc1">
+                        <h3>INTENSIVE CARE</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
                     magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
                     Labore quod quis explicabo expedita tempore officia.
                     Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
@@ -217,52 +375,15 @@
                     Perferendis placeat unde, dolor iusto possimus nemo vero, nam fugit eaque temporibus similique
                     delectus sequi, laudantium doloremque fuga deleniti quo cum deserunt earum. Unde quasi fugiat
                     impedit suscipit cupiditate consequuntur?</p>
-
-            </div>
-            <div class="contenido2">
-                <h3>FAMILY PLANNING</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
-                    magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
-                    Labore quod quis explicabo expedita tempore officia.
-                    Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
-                    laboriosam exercitationem quia dolorem temporibus distinctio modi, optio, ea quod, voluptatibus fuga
-                    porro sequi natus ab nisi ipsa.
-                    Consectetur, quasi! Perspiciatis voluptas nam necessitatibus cum, alias repudiandae nemo dolor ea
-                    cumque blanditiis? Accusamus suscipit iste corporis eum itaque eligendi officia assumenda ex fugiat
-                    ipsam! Voluptates asperiores officiis corporis?
-                    Repellendus, numquam cupiditate! Placeat totam nostrum praesentium doloribus rem officiis
-                    necessitatibus porro unde consectetur error modi quo cupiditate laudantium ratione quidem sequi
-                    maxime, expedita illum animi odio iusto id voluptate.
-                    Perferendis placeat unde, dolor iusto possimus nemo vero, nam fugit eaque temporibus similique
-                    delectus sequi, laudantium doloremque fuga deleniti quo cum deserunt earum. Unde quasi fugiat
-                    impedit suscipit cupiditate consequuntur?</p>
-
-
-
-            </div>
-            <div class="contenido3">
-                <h3>EXPERT CONSULTATION</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
-                    magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
-                    Labore quod quis explicabo expedita tempore officia.
-                    Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
-                    laboriosam exercitationem quia dolorem temporibus distinctio modi, optio, ea quod, voluptatibus fuga
-                    porro sequi natus ab nisi ipsa.
-                    Consectetur, quasi! Perspiciatis voluptas nam necessitatibus cum, alias repudiandae nemo dolor ea
-                    cumque blanditiis? Accusamus suscipit iste corporis eum itaque eligendi officia assumenda ex fugiat
-                    ipsam! Voluptates asperiores officiis corporis?
-                    Repellendus, numquam cupiditate! Placeat totam nostrum praesentium doloribus rem officiis
-                    necessitatibus porro unde consectetur error modi quo cupiditate laudantium ratione quidem sequi
-                    maxime, expedita illum animi odio iusto id voluptate.
-                    Perferendis placeat unde, dolor iusto possimus nemo vero, nam fugit eaque temporibus similique
-                    delectus sequi, laudantium doloremque fuga deleniti quo cum deserunt earum. Unde quasi fugiat
-                    impedit suscipit cupiditate consequuntur?</p>
-
-
-            </div>
-            <div class="contenido4">
-                <h3>DENTAL SCIENCES</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
+            </article>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc2">
+                        <h3>FAMILY PLANNING</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
                     magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
                     Labore quod quis explicabo expedita tempore officia.
                     Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
@@ -280,10 +401,15 @@
 
 
 
-            </div>
-            <div class="contenido5">
-                <h3>X-RAY SERVICES</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
+            </article>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc3">
+                        <h3>EXPERT CONSULTATION</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
                     magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
                     Labore quod quis explicabo expedita tempore officia.
                     Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
@@ -300,10 +426,15 @@
                     impedit suscipit cupiditate consequuntur?</p>
 
 
-            </div>
-            <div class="contenido6">
-                <h3>24X7 EMERGENCIES</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores necessitatibus
+            </article>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc4">
+                        <h3>DENTAL SCIENCES</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
                     magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
                     Labore quod quis explicabo expedita tempore officia.
                     Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
@@ -321,64 +452,126 @@
 
 
 
-            </div>
+            </article>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc5">
+                        <h3>X-RAY SERVICES</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
+                    magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
+                    Labore quod quis explicabo expedita tempore officia.
+                    Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
+                    laboriosam exercitationem quia dolorem temporibus distinctio modi, optio, ea quod, voluptatibus fuga
+                    porro sequi natus ab nisi ipsa.
+                    Consectetur, quasi! Perspiciatis voluptas nam necessitatibus cum, alias repudiandae nemo dolor ea
+                    cumque blanditiis? Accusamus suscipit iste corporis eum itaque eligendi officia assumenda ex fugiat
+                    ipsam! Voluptates asperiores officiis corporis?
+                    Repellendus, numquam cupiditate! Placeat totam nostrum praesentium doloribus rem officiis
+                    necessitatibus porro unde consectetur error modi quo cupiditate laudantium ratione quidem sequi
+                    maxime, expedita illum animi odio iusto id voluptate.
+                    Perferendis placeat unde, dolor iusto possimus nemo vero, nam fugit eaque temporibus similique
+                    delectus sequi, laudantium doloremque fuga deleniti quo cum deserunt earum. Unde quasi fugiat
+                    impedit suscipit cupiditate consequuntur?</p>
+
+
+            </article>
+            <article class="contenido">
+                <div class="encabezado">
+                    <div class="imgc6">
+                        <h3>24X7 EMERGENCIES</h3>
+                    </div>
+                </div>
+                <p id="texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque maiores
+                    necessitatibus
+                    magni, repellendus suscipit tempore nesciunt recusandae soluta, expedita consectetur, rem earum!
+                    Labore quod quis explicabo expedita tempore officia.
+                    Quisquam laborum, numquam mollitia aliquam consectetur accusantium quae quibusdam autem? Eligendi id
+                    laboriosam exercitationem quia dolorem temporibus distinctio modi, optio, ea quod, voluptatibus fuga
+                    porro sequi natus ab nisi ipsa.
+                    Consectetur, quasi! Perspiciatis voluptas nam necessitatibus cum, alias repudiandae nemo dolor ea
+                    cumque blanditiis? Accusamus suscipit iste corporis eum itaque eligendi officia assumenda ex fugiat
+                    ipsam! Voluptates asperiores officiis corporis?
+                    Repellendus, numquam cupiditate! Placeat totam nostrum praesentium doloribus rem officiis
+                    necessitatibus porro unde consectetur error modi quo cupiditate laudantium ratione quidem sequi
+                    maxime, expedita illum animi odio iusto id voluptate.
+                    Perferendis placeat unde, dolor iusto possimus nemo vero, nam fugit eaque temporibus similique
+                    delectus sequi, laudantium doloremque fuga deleniti quo cum deserunt earum. Unde quasi fugiat
+                    impedit suscipit cupiditate consequuntur?</p>
 
 
 
-        </div>
-
-        <div>
-            <div class="imagen2">
+            </article>
 
 
-            </div>
+
+        </section>
+
+        <div class="contenidofinal">
+            <div class="img2"> </div>
             <div class="formulario">
+                <form>
+                    <fieldset>
+                        <legend>
+                            <h3>Book an Appointment.</h3>
+                        </legend>
+
+                        <div class="miscolumnas">
+
+                        <div class="columna1">
+                            <label for="nombre">Name: </label>
+                            <input id="nombre" type="text" size="20px" placeholder="María" required><br>
+
+                            <label for="correo">Email address:</label>
+                            <input type="email" id="correo" size="20px" placeholder="María@gmail.com" required><br><br>
+
+                            <label for="fechaConsulta">appointment Date:</label>
+                            <input type="date" id="fechaConsulta" required><br><br>
+                            <label for="socio">Booked with us before? </label>
+                            <div id="radioLateral">
+                            <label>
+                                <input type="radio" name="socio" value="value1" checked>
+                                Sí
+                            </label>
+
+                            <label>
+                                <input type="radio" name="socio" value="value2">
+                                No
+                            </label><br><br>
+                            </div>
+
+                        </div>
+
+                        <div class="columna2">
+                            <label for="telefono">Phone:</label>
+                            <input type="tel" id="telefono" size="20px" placeholder="690887425" required><br><br>
+                            <label for="fechaNacimiento">Date of birth:</label>
+                            <input type="date" id="fechaNacimiento" required><br><br>
+                            <label for="mensaje">Message: </label>
+                            <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
+                            <input id="botonEnvio" type="submit" value="CONFIRM BOOKING">
+
+
+
+
+                        </div>
+                    </div>
+                    </fieldset>
+
+                </form>
 
 
             </div>
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
     </div>
 
 
-
-
-
-
-
+    </div>
 
 
 
