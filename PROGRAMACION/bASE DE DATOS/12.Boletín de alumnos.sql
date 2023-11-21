@@ -38,7 +38,7 @@ SELECT * FROM northwind.employees where LastName like "D%" or FirstName like "M%
 
 -- 13.Muestra los empleados que tienen más de 65 años.
 SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) as "edad"  FROM northwind.employees where timestampdiff(year, BirthDate, curdate()) > 65;
-
+SELECT * FROM EMPLOYEES WHERE timestampdiff (YEAR, BIRTHDATE, CURDATE()) > 65; -- Como no especifica, mejor poner todo.
 -- 14.Dime el nombre y apellido de los empleados que sean de Murcia.
 SELECT FirstName, LastName FROM northwind.employees where City="Murcia";
 
@@ -63,7 +63,7 @@ Ordena la tabla resultante por el recuento de pedidos, poniendo los recuentos m�
 SELECT OrderID, Count(*) as "recuentoProductos" FROM northwind.orderdetails where Discount > 0 Group by OrderID having recuentoProductos>2 order by recuentoProductos desc;
 
 -- 21.Cuantos contactos de shippers hay por país.
--- ??
+-- ?? select ShipCountry, count(*) "Contactos" from northwind.orders group by ShipCountry;
 
 -- 22.Mostrar los clientes en los que su nombre (ContactName) empiece desde la F hasta la M, ambas incluidas.
 SELECT ContactName FROM northwind.customers where ContactName BETWEEN "F" and "N";
@@ -71,14 +71,15 @@ SELECT ContactName FROM northwind.customers where ContactName BETWEEN "F" and "N
 -- 23.Cuenta los Productos que empiecen por Letra G,H ó I y cuya categoria sea 2,3,4 o 5.
 SELECT count(*) FROM northwind.products Where ProductName between "G" and "J" and CategoryID BETWEEN 2 and 5;
 SELECT count(*) FROM northwind.products Where ProductName between "G%" and "J%" and CategoryID BETWEEN 2 and 5;
-
+SELECT count(*) "Productos" FROM products where ((ProductName like "G%") or (ProductName like "H%") or (ProductName LIKE "I%")) AND CategoryID in (2,3,4,5); -- Otra forma.
 -- 24.Contactos de alemania cuya ciudad comience por 'F'.
-SELECT ContactName FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID; -- Lo interpreto como listado de contactos.
-SELECT ContactName, Count(*) FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID;-- Esto sería el numero de contactos
+SELECT ContactName FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID; -- Lo interpreto como listado de contactos ¡¡Es asiiii!!.
+SELECT ContactName, Count(*) FROM northwind.customers where Country =("Germany") and City like ("F%") group by CustomerID;-- Esto sería el numero de contactos. Pero no pide contar.
+SELECT * FROM customers WHERE Country="Germany" AND City LIKE "F%";
 
 -- 25.Muestra todos los pedidos que hayan realizado por cada empleado en el año 1996 y cuyo “freight” medio sea mayor a 20 e inferior a 50.
-SELECT EmployeeID, count(*), avg(Freight) FROM northwind.orders where year(OrderDate)=1996 group by EmployeeID having avg(Freight) between 21 and 49;
-
+SELECT EmployeeID, count(*), avg(Freight) FROM northwind.orders where year(OrderDate)=1996 group by EmployeeID having avg(Freight) between 21 and 49; -- NO SE PONE LA COLUMNA DE AVG(FREIGHT), PORQUE ESTA MEDIA DE FREIGHT SERIA SOLO DE LOS PEDIDOS DE 1996.
+SELECT EmployeeID, count(*), avg(Freight) FROM northwind.orders where year(OrderDate)=1996  group by EmployeeID having avg(Freight) between 21 and 49;
 -- 26.Calcula el precio promedio de cada categoría.
 SELECT CategoryID, avg(UnitPrice) FROM northwind.products group by CategoryID;
 

@@ -8,7 +8,7 @@ public class DianaPascualGarciaExamenPrueba {
 
     //Ejercicio 1
         System.out.println("Incorpore su género siendo 1 mujer y 2 hombre");
-        int genero= scan.nextInt();
+        int genero= scan.nextInt();//aqui se puede crear la variable clase tambien, que se llame igual en los dos casos antes del switch.
 
         if (genero==2){
             System.out.println("Ha elegido hombre");
@@ -104,6 +104,50 @@ public class DianaPascualGarciaExamenPrueba {
             System.out.println(" Has terminado correctamente, ¡Enhorabuena!");
         } else {
             System.out.println("Sigue practicando");
+        }
+//EJERCICIO 3
+
+       /* for (int i = 0; i < n; i++) {
+            for (int j = 0; j<=i;j++) { //Recuerda: la j anidada se imprimirá mientras que sea menor o igual a i dado que i controla la impresión hasta que se llega a n y j es j++ dado que estamos pintando la parte creciente del banderin.
+
+                if (j==0||j==i){ //pinta la primera (j==0) y la última (j==i)
+                    System.out.print(rojo + "+" + reset);
+                } else{
+                    System.out.print(amarillo + "*" + reset);
+                }
+            }
+            System.out.println();
+        }
+        for (int i = n; i >=0; i--) {
+            for (int j = i; j >= 0; j--) {//Aqui, casi igual solo que j irá decreciendo para que pinte cada vez menos *, i empieza en 1 para que no vuelva a pintar las máximas * y j por eso empieza desde n-i, mientras que j sea mayor que 0.
+                if (j==0||j==i){//rojo cuando se cumplen la condicion de inicio y final de j.
+                    System.out.print(rojo + "+" + reset);
+                } else{
+                    System.out.print(amarillo + "*" + reset);
+                }
+            }
+            System.out.println();
+        }*/
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j<=n>; j++) { //Recuerda: la j anidada se imprimirá mientras que sea menor o igual a i dado que i controla la impresión hasta que se llega a n y j es j++ dado que estamos pintando la parte creciente del banderin.
+               if(j>= n-i) {
+                   System.out.println("* ");
+               } else{
+                   System.out.println(" ");
+               }
+            }
+            System.out.println();
+        }
+
+        for (int i = n-1; i >0 ; i--) {
+            for (int j = n; j >= 0 ; j--) {
+                if(j< i) {
+                    System.out.println("* ");
+                } else{
+                    System.out.println(" ");
+                }
+            }
+            System.out.println();
         }
 
 
