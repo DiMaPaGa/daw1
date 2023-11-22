@@ -26,6 +26,7 @@ html {
     padding: 10px;
     font-weight: 10px;
     background-color: #333;
+    opacity: 68%; /*Le he metido el opacity para asegurarme de tenerlo y saber como se usa... a más, más opacidad*/
     color: #00ff6c;
 }
 
@@ -33,11 +34,13 @@ dd {
     font: bold 20px/45px Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0 0 0 12px;
-    white-space: nowrap;
+    white-space: nowrap;/*se utiliza para especificar que el contenido de un elemento no debe mostrar saltos de línea o envolver el texto cuando el espacio en la pantalla es insuficiente.
+
+Cuando se aplica white-space: nowrap; a un elemento HTML, se indica que el texto dentro de ese elemento debe mostrarse en una sola línea sin dividirse en varias líneas, incluso si el contenido supera el ancho disponible del contenedor. */
 }
 
 dd + dd {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ccc; /*línea entre niveles*/
 }
 
 </style>

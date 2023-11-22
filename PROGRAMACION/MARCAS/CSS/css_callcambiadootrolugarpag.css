@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fondo { /*He elegido una clase en lugar de un identificador, por si este fondo quisiera aplicarse a otras pantallas del mismo proyecto web*/
+    background-image: url("fondo_papel.jpg");
+    background-size: 95% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 28px; /*Añade un padding para separar la imagen del borde, me parece apreciarlo en la captura de la actividad*/ 
+    position: relative;
+    top:193px;
+    left: 42px;
+    margin:0 auto /*esto solo si lo incorporas dentro de un contenedor, si lo dejas tal cual en el body no hará nada*/
+}
+
+div {
+    text-align: center;
+    margin:-5px;
+}
+
+button {
+    height: 29px;
+    width: 125px;
+    background-color: coral;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+button:hover {/* ESTO PERMITE CAMBIAR EL FORMATO CUANDO SE PASA EL CURSOR POR ENCIMA*/
+    background-color: aquamarine;
+    color: black;
+    height: 59px;
+    width: 325px;
+}

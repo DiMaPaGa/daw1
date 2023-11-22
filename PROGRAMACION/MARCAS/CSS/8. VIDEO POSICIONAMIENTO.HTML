@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 2rem;
+            font-size: 2rem;
+            font-family: sans-serif;
+            background-color: #000000;
+            height: 300vh;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        div {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.261);
+            border-radius: 5px;
+        }
+
+        .static,
+        .relative,
+        .absolute,
+        .fixed,
+        .sticky {
+            padding: 1rem;
+        }
+
+        .parent {
+            background-color: #555555;
+        }
+
+        .static {
+            background-color: #dddddd;
+        }
+
+        .relative {
+            background-color: #81c476;
+        }
+
+        .absolute {
+            background-color: #fc9191;
+        }
+
+        .fixed {
+            background-color: #a8d5e2;
+        }
+
+        .sticky {
+            background-color: #e1e1ac;
+        }
+
+
+        /* CSS Position */
+
+        .static {
+            /*posicionamiento natural, no hace ningun cambio. NI TOP, BOTTOM...*/
+            position: static;
+        }
+
+        .relative {
+            /*No se mueve de su flujo natural su espacio está reservado y no afecta a ninguno del resto de los elementos pero me permite añadirle un desplazamiento de su 
+    posición original permite utilizar top, bottom, left y right para controlar su posición.permite px, porcentajes, em, rem... Se desplaza DE SU POSICIÓN NATURAL
+    !OJO! LEFT PRIORIDAD SOBRE RIGHT, SI ESTÁN LOS DOS JUNTOS SOLO RESPONDE A LEFT, LO MISMO OCURRE CON TOP SOBRE BOTTOM*/
+            position: relative;
+            z-index:1;/*lo pone por delante*/
+        }
+
+        .parent {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+            /*Se desacopla del producto natural y se queda flotando. Si no le definimos top, bottom... el se quedaría como ocupando el espacio donde le tocaría estar
+    pero no reserva el espacio como el relative, por lo que puede tener otros elementos por detrás. OJO si le ponemos top... seguirá al padre... el padre mejor que tenga
+    position relative porque si es static se irá siguiendo al body u otra superior. Se usa poco porque es difícil controlarlo, pero puede ser bueno por ejemplo, para añadir
+    un boton de cierre*/
+        }
+
+        .fixed {
+            position: fixed;
+            /*Parecido al absolute pero se posiciona con respecto a las dimensiones totales de mi página, no del padre, sno del body*/
+            top: 50%;
+            left: 0;
+            /*Importante para fijarlo a un lado siempre y no tener sorpresas, sino sigue la posición natural dentro del body si ademas le añades right, estira el elemento 
+            hasta ese otro tope, salvo que le pongamos un width específico, entonces right no sirve. Este truco SOLO sirve en FIXED y en ABSOLUTO*/
+        }
+
+       /* .scroll{
+            overflow: scroll;
+            border: 2px solid red;
+            height:250px;
+
+        }*/
+        .sticky {
+            position: sticky;
+            top: 0;
+            /*sigue a su contenedor*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS POSITION</h1>
+    <div class="scroll">
+        <div class="parent">
+            <div class="static">static</div>
+            <div class="relative">relative</div>
+            <div class="absolute">absolute</div>
+            <div class="fixed">fixed</div>
+            <div class="sticky">sticky</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+            <div class="static">static</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
