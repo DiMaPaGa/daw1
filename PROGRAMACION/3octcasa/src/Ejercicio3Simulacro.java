@@ -114,17 +114,35 @@ public class Ejercicio3Simulacro {
 
         }*/
 
-       /* Lea un entero que represente un año (puede ser un número negativo). Dependiendo del valor de dicho número, debe imprimir los siguientes mensajes:
+       /* 1.Lea un entero que represente un año (puede ser un número negativo). Dependiendo del valor de dicho número, debe imprimir los siguientes mensajes:
         -	Valor inferior a cero: “prehistoria”.
         -	Valor desde cero hasta 800: “pre-edad media”.
         -	Valor desde 801 hasta 1599: “edad media”.
         -	Valor desde 1600 hasta 1899: “pre-edad moderna”,
         -	Valor desde 1900 hasta la actualidad (2023): “edad moderna”
 
+         System.out.print("Ingrese un año (puede ser negativo): ");
+        int year = scan.nextInt();
+
+        if (year < 0) {
+            System.out.println("Prehistoria");
+        } else if (year <= 800) {
+            System.out.println("Pre-edad media");
+        } else if (year <= 1599) {
+            System.out.println("Edad media");
+        } else if (year <= 1899) {
+            System.out.println("Pre-edad moderna");
+        } else if (year <= 2023) {
+            System.out.println("Edad moderna");
+        } else {
+            System.out.println("Año futuro");
+        }
 
 
 
-        Lea dos números enteros por pantalla, que llamaremos num1 y num2. Suponga que ambos números son positivos, es decir, no realice validación para ello.
+
+
+        2.Lea dos números enteros por pantalla, que llamaremos num1 y num2. Suponga que ambos números son positivos, es decir, no realice validación para ello.
         Decremente al entero num1 el valor del entero num2 tantas veces como sea necesario, hasta que num1 sea cero o negativo. Cuando esto ocurra, el algoritmo termina y se imprime el valor final de num1 junto con la cantidad de veces que se le ha restado num2.
 */
       /*  int cont = 0;
@@ -226,15 +244,13 @@ usuario no haya introducido el número 0.*/
         System.out.println("introduce un número");
         int digito= scan.nextInt();
         int contador=0;
-        int resultado=0;
 
-        while (resultado>0) {
-            resultado=digito/2;
-            contador++;
+        for (int i = 1; i <=digito; i++) {
+            if(i%2==0){
+                contador++;
+            }
 
         }
-        System.out.println(" Contiene" + contador + " número pares.");
-
-
+        System.out.println("El número " + digito + " contiene " + contador + " número pares.");
     }
 }

@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Boletin5 {
 
@@ -13,7 +13,7 @@ public static void main (String[] args){
     //int valor1= scan.nextInt();
    // System.out.println("Ingrese otro valor");
    // int valor2= scan.nextInt();
-   // boolean PrimeroMayorASegundo= valor1>valor2;
+   // boolean PrimeroMayorASegundo= valor1>(valor2*2);
    // System.out.println(PrimeroMayorASegundo);
 
     /*2. Lea por pantalla una edad y almacene en una variable el resultado de comprobar
@@ -65,7 +65,7 @@ public static void main (String[] args){
 
     /*Refuerzo:
 
-    Crear un programa que imprima por pantalla las tablas de la verdad de:
+   9. Crear un programa que imprima por pantalla las tablas de la verdad de:
 
     1. La operacion lógica NOT (este lo hará el profesor).
     2. La operación lógica OR.

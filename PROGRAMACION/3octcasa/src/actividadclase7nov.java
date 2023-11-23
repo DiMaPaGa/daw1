@@ -9,7 +9,7 @@ public class actividadclase7nov {
 
         //8.	Leer por pantalla un entero e imprimirlo elevado a la quinta potencia. Utilizar un bucle para realizar el cálculo.
 
-       /* System.out.println("Ingresa un número");
+        /*System.out.println("Ingresa un número");
         int numero= scan.nextInt();
         int resultado=1;
 
@@ -18,6 +18,7 @@ public class actividadclase7nov {
             resultado= resultado *numero;
         }
         System.out.println(resultado);*/
+
 
        // 9.	Repetir el ejercicio anterior para leer también por pantalla la potencia a la que debe elevarse el número.
 
@@ -44,12 +45,12 @@ public class actividadclase7nov {
 
         //11.	Leer por pantalla un número n, e imprimir por pantalla un cuadrado cuya altura viene dada por n.
         // ejemplo para n = 4
-       /* System.out.println("Dí un número");
+     /*  System.out.println("Dí un número");
         int estrellas= scan.nextInt();
 
         for (int i = 0; i < estrellas; i++) {
             for (int j = 0; j < estrellas; j++) {
-                System.out.print("*"); //incorpora las estrellas en la linea
+                System.out.print("* "); //incorpora las estrellas en la linea
             }
             System.out.println(); //salta a la siguiente
         }*/
@@ -61,9 +62,9 @@ public class actividadclase7nov {
         for (int i = 0; i < estrellas; i++) {
             for (int j = 0; j < estrellas; j++) {
                 if (i==0|| j==0 || i == estrellas-1 || j==estrellas-1) {
-                    System.out.print("*");
+                    System.out.print("* ");
                 }else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
 
             }
@@ -78,25 +79,25 @@ public class actividadclase7nov {
         for (int i=0; i<triangulo; i++) {
             for (int j=0; j< triangulo;j++){
                 if (i==j||j<i){
-                    System.out.print("*");
+                    System.out.print("* ");
                 }else {
-                    System.out.print(" ");
+                    System.out.print("  ");
 
                 }
 
             }
             System.out.println();
         }*/
-// pirámide Leer por pantalla un número n, e imprimir por pantalla un triángulo cuyo número de niveles viene dado por
-      /*  System.out.println(" escribe un número");
+//14.  pirámide Leer por pantalla un número n, e imprimir por pantalla un triángulo cuyo número de niveles viene dado por
+     /*  System.out.println(" escribe un número");
     int piramide= scan.nextInt(); //i=altura y j espacios k asteriscos
 
-        for (int i=0; i<piramide; i++) {
+        for (int i=0; i<=piramide; i++) {
             for (int j=0; j< piramide -i;j++){
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             for (int k=1; k<=(i*2)-1; k++){
-                System.out.print("*");
+                System.out.print("* ");
 
                 }
             System.out.println();
@@ -216,13 +217,13 @@ public class actividadclase7nov {
 // 9.	Escriba un programa que lea por pantalla un número n, e imprima los n primeros términos
 // (con n >= 0) de la sucesión 4n+3. Por ejemplo, para n=4 debe imprimir 3 7 11 15
 
-        System.out.println("Escribe un número");
+      /*  System.out.println("Escribe un número");
         int n= scan.nextInt();
         int resultado=0;
 
         for (int i = 0; i < n;i++) {
             System.out.print(4*i+3+ " ");
-        }
+        }*/
 
     } //main
 

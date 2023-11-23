@@ -36,27 +36,26 @@ public class Actividad13nov {
     }
     */
 
-        // Imprimir el abecedario
+        //3. Imprimir el abecedario
 
-       // char letra='a';
+       //char letra='a';
 
       /*  for (char i = 'a'; i <='z' ; i++) {
             System.out.print(i+" ");
 
         }*/
 
-       /* for (int i = letra; i <='z' ; i++) {
+       /* for (char i = 'a'; i <='z' ; i++) {
 
-            System.out.println(letra);
-            letra++;
+            System.out.print(i+" ");
 
             if(i=='n'){
-                System.out.println("ñ");
+                System.out.print("ñ ");
 
             }
         }*/
 
-        // Leer un número entero de tres cifras, forzando al usuario a que introduzca un número de esas características. Imprimir por pantalla si es par o impar.
+        //4. Leer un número entero de tres cifras, forzando al usuario a que introduzca un número de esas características. Imprimir por pantalla si es par o impar.
 
     /*   int numero=0;
 
@@ -70,7 +69,7 @@ public class Actividad13nov {
         } else {
             System.out.println(numero+ " es impar.");
         }*/
-// Leer un carácter para saber el estado de una persona (S para soltera o C para casado), forzando al usuario que introduzca S o C.
+//5. Leer un carácter para saber el estado de una persona (S para soltera o C para casado), forzando al usuario que introduzca S o C.
 // Dependiendo de lo que haya introducido, imprimir: La persona es soltera o bien La persona esa casada.
 
     /*    System.out.println("introduce una letra s si eres soltera y c si eres casada. En Minúscular");
@@ -86,7 +85,7 @@ public class Actividad13nov {
         } else {
             System.out.println("La persona es casada");
         }*/
-// Tablas del 1 al 10
+//6. Tablas del 1 al 10
 
    /*     int resultado=0;
 
@@ -102,7 +101,7 @@ public class Actividad13nov {
             }
             System.out.println();
         }*/
-// Contador de digitos. Introduce un numero por pantalla y muestra cuantos digitos tiene.
+//7. Contador de digitos. Introduce un numero por pantalla y muestra cuantos digitos tiene.
 
        /* System.out.println("Introduce un número");
         int num= scan.nextInt();
@@ -117,7 +116,7 @@ public class Actividad13nov {
         }
         System.out.println("El número tiene "+ i + " dígitos");*/
 
-        // Meter un número por pantalla de 0 a 10 y que ponga el nombre del dígito.
+        //8. Meter un número por pantalla de 0 a 10 y que ponga el nombre del dígito.
 
       /*  System.out.println("Introduce un número del 1 al 10");
         int num= scan.nextInt();
@@ -157,7 +156,7 @@ public class Actividad13nov {
                 System.out.println("NO VALIDO");
                 break;
         }*/
-// Leer la edad de dos personas, e imprimir por pantalla cuál de las dos es la mayor (La primera es mayor o La segunda es mayor).
+//9. Leer la edad de dos personas, e imprimir por pantalla cuál de las dos es la mayor (La primera es mayor o La segunda es mayor).
        /* System.out.println("Ingresa la edad de A");
         int edadA= scan.nextInt();
         System.out.println("Ingresa la edad de B");
@@ -171,7 +170,7 @@ public class Actividad13nov {
             System.out.println("B es mayor que A");
         }*/
 
-        // Leer la edad de una persona. A partir de ella calcular su año de nacimiento (suponga que estamos en el 2022)
+        // 10. Leer la edad de una persona. A partir de ella calcular su año de nacimiento (suponga que estamos en el 2022)
         // e imprimir el año resultante. Dependiendo de dicho año, imprima qué horóscopo le tocaría en el calendario chino.
 
         /*System.out.println("¿Qué edad tienes?");
@@ -255,7 +254,7 @@ public class Actividad13nov {
             System.out.print(i+" ");
 
         }*/ //Me quedo con esta solución:
-        char letraZ='Z';
+     /*  char letraZ='Z';
         char letraA='A';
 
         for (char i = letraZ; i >=letraA ; i--) {
@@ -263,9 +262,9 @@ public class Actividad13nov {
                 System.out.print(j);
             }
             System.out.println();
-            }
+            }*/
 // Otra solución
-        int contador = 0;
+     /*   int contador = 0;
         char caracter = ('Z' + 1);
         do {
             caracter--;
@@ -275,7 +274,7 @@ public class Actividad13nov {
                 contador++;
                 caracter = (char) ('Z' + 1 - contador);
             }
-        } while (caracter != 'A');
+        } while (caracter != 'A');*/
 
 // La más correcta pero aun no la hemos visto
 

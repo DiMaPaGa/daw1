@@ -1,7 +1,7 @@
 public class boletin2 {
     public static void main (String[] args){
 
-        /* ej.1 1. Crear una variable entera e imprimirla por pantalla sin asignarle ningún valor.
+        /*  1. Crear una variable entera e imprimirla por pantalla sin asignarle ningún valor.
     ¿Qué se ha impreso?*/
 
         //int edad;
