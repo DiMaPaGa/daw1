@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: rgba(0, 162, 255, 0.7);
+            width: 90%;
+            padding: 10px 10px 5px 45px;
+            margin: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 20px;
+            text-align: center;  
+        }
+        .logo{
+            background-image: url(IMG/logo.png);
+            float: left;
+            background-size: 50%;
+            width: 200px;
+            height: 50px;
+            margin: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-color: white;
+            border-radius: 20px;
+        }
+        .navegador{
+            padding: 10px;
+            position: sticky;
+        }
+        nav{
+               display: flex;
+               flex-direction: row;         
+        }
+        nav ul{
+            list-style: none;   
+            display: flex; 
+        }
+        nav ul li{
+            display: flex;
+               flex-direction: row; 
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 10px;
+            color: rgb(0, 0, 0); 
+            margin: left 10px;
+            margin: right 10px;
+            border-radius: 20px;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        nav ul li:hover{
+            background: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+     <!--La cabecera con un logo -->
+    <header>
+        <div class="logo"><a href="#"></a></div>
+            <div class="navegador">
+        <nav>
+            <ul>
+                <li><a href="www.wikipedia.com"> HOME</a></li>
+                <li>ABOUT US</li>
+                <li>APPOINTMENT</li>
+                <li>DOCTORS</li>
+                <li>BLOG</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+</body>
+</html>

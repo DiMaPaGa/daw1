@@ -14,19 +14,19 @@
         *{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        .contenedor {
+        .contenedor { /*contenedor completo*/
             background-color: white;
             width: 100%;
-            margin: 0 auto;
+            margin: 0 auto; /*solo aquí, que es el contenedor grande*/
             height: 300hv;
 
         }
 
-        header {
+        header {/*header contiene al logo y menu nav*/
             background-color: white;
             padding: 10px 0 5px 45px;
             width: 100%;
-            display: flex;
+            display: inline-flex;
             position: fixed;
             top: 0;
             z-index: 1;
@@ -34,50 +34,69 @@
 
         }
 
-        div .logo {
+        div .logo {/*contenedor logo de encabezado*/
             width: 40%;
 
         }
 
-        .logo img {
+        .logo img { /*para modificar directamente el logo, imagen adjuntada en html en su div*/
             max-width: 200px;
             max-height: 60px;
             padding: 3px 3px 3px 100px;
         }
 
-        div .menu {
+        div .menu { /*contenedor del nav*/
             width: auto;
         }
 
-        nav {
+        nav { /*aspectos generales del menú de navegación*/
             float: right;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-weight: bold;
             color: black;
-            background-color: white;
+            background-color: coral;
+            border-radius: 4px;
 
         }
 
-        nav ul {
+        nav ul { /*aspectos generales lista desordenada*/
             list-style: none;
-            overflow: hidden;
+            display: flex;
 
         }
 
-        li {
+        li { /*items dentro listado*/
 
             position: relative;
+            top:0;
             display: inline;
             margin: 2px;
-            padding: 3px;
-            color: black
+            padding: 3px;/*0*/
+            color: white
+             
         }
 
-        nav ul :hover {
-            background-color: coral;
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            border: none;
         }
 
-        .fondo {
+        li:last-of-type { /*Similar al first-type*/
+            margin-right: 30px;
+        }
+
+        nav ul :hover { /*comportamiento cursor encima nav*/
+            background-color: white;
+            color: black;
+            
+            border-radius: 4px ;
+            /*border: 1px dotted brown;*/
+            cursor: pointer;
+            
+        }
+
+        .fondo { /*contenedor de mitad pág*/
 
             background-image: url(nurse.jpg);
             background-size: cover;
@@ -89,18 +108,20 @@
 
         }
 
-        .central {
+        .central { /*comportamiento del párrafo class central dentro del div fondo*/
             margin-left: 20px;
             width: 300px;
             text-align: left;
             vertical-align: middle;
             font-size: 15px;
             position: relative;
+            top: 23px;
+            left: 15px;
 
 
         }
 
-        .titulo {
+        .titulo {/*comportamiento del class título dentro del div fondo*/
             margin: 25px;
             width: 300px;
             text-align: left;
@@ -111,7 +132,7 @@
 
         }
 
-        section {
+        section { /*contenedor apartado de articles*/
             margin: 0 auto;
             position: relative;
             width: 107%;
@@ -120,7 +141,7 @@
 
         }
 
-        .contenido {
+        .contenido { /*especificaciones para cada caja*/
 
             border-color: white;
             width: 30%;
@@ -134,7 +155,7 @@
 
         }
 
-        .contenido .encabezado {
+        .contenido .encabezado { /*encabezado dentro de cada caja article*/
 
             background-color: coral;
             color: white;
@@ -143,7 +164,7 @@
 
         }
 
-        .encabezado .imgc1 {
+        .encabezado .imgc1 { /*diseño imagen que acompaña a cada encabezado*/
             margin: 0px;
             background-image: url(estetoscopio-cardiologo.png);
             background-size: 40px;
@@ -216,33 +237,33 @@
 
 
         #texto {
-            overflow: auto;
+            overflow: auto; /*dentro del texto es donde manejo como quiero el scroll*/
             height: 250px;
         }
 
 
-        .contenidofinal {
+        .contenidofinal { /*ultimo contenedor que alberga dos, el de la imagen y el formulario*/
             background-color: white;
-            padding: 10px 0 5px 45px;
+            padding: 10px 0 5px 3px;/*10 0 5 45*/
             width: 100%;
-            position: absolute;
-            top: 1240px;
-            display: flex;
+            position: relative;/*absolute*/
+            top: 165px;/*1240px*/
+            display: inline-flex; /*flex*/
 
 
         }
 
-        .img2 {
+        .img2 { /*Dentro del ultimo contenedor, espacio para la imagen*/
             background-image: url(dentist.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
-            width: 50%;
+            width: 50%; /*importante*/
             height: 480px;
-            top: -5px;
+            top: 0px; /*-5 si dejo los nuevo cambios*/
         }
 
-        .formulario {
+        .formulario {/*contenedor para el formulario. dentro del mismo, tiene las columnas bajo el título*/
         
             background-color: coral;
             color: white;
@@ -251,40 +272,40 @@
 
         }
 
-        fieldset {
+        fieldset { /*campo del formulario para quitarle borde*/
             border: none;
         }
 
-        legend {
+        legend { /*título del formulario*/
             text-align: center;
         }
 
-        input {
+        input { /*para poner las cajas redondeadas*/
             border-radius: 4px;
             border: 0;
         }
 
-        textarea {
+        textarea { /*para poner las cajas redondeadas*/
             border-radius: 4px;
             border: 0;
         }
 
-        form {
+       /* form {
             display: grid;
             grid-template-columns:1fr 1fr;
-        }
+        }*/
 
         .miscolumnas{
-            display: flex;
+            display: inline-flex;
 
         }
 
         .columna1{
-            padding: 0 15px;
+            padding: 0 30px;
             
         }
         .columna2{
-            padding: 0 15px;
+            padding: 0 10px;
             
             
         }
@@ -297,7 +318,7 @@
         }
 
         #radioLateral{
-            display:flex;
+            display:inline-flex;/*para poner los botones del cuestionario de seleccion, los redonditos que solo seleccionas uno, uno al lado de otro y no debajo*/
         }
 
         #botonEnvio{
@@ -322,8 +343,8 @@
 <body>
     <div class="contenedor">
         <header>
-            <div class="logo">
-                <img src="logo (1).png">
+            <div class="logo"><a href="#">
+                <img src="logo (1).png"></a>
             </div>
             <div class="menu">
 
@@ -331,7 +352,7 @@
 
                 <nav>
                     <ul>
-                        <li>HOME</li>
+                        <li><a href="https://es.wikipedia.org"> HOME</a></li>
                         <li>DEPARTMENTS</li>
                         <li>APPOINTMENTS</li>
                         <li>DOCTORS</li>
@@ -513,7 +534,7 @@
         <div class="contenidofinal">
             <div class="img2"> </div>
             <div class="formulario">
-                <form>
+                <form action="Procesar formulario" method="post">
                     <fieldset>
                         <legend>
                             <h3>Book an Appointment.</h3>
@@ -551,7 +572,7 @@
                             <label for="fechaNacimiento">Date of birth:</label>
                             <input type="date" id="fechaNacimiento" required><br><br>
                             <label for="mensaje">Message: </label>
-                            <textarea rows="10" cols="50" placeholder="Mensaje" id="mensaje"></textarea>
+                            <textarea rows="10" cols="30" placeholder="Mensaje" id="mensaje"></textarea>
                             <input id="botonEnvio" type="submit" value="CONFIRM BOOKING">
 
 

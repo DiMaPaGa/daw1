@@ -16,8 +16,8 @@
     }
 
     table {
-        border-collapse: collapse;
-        margin: 0 auto;
+        border-collapse: collapse;/*los bordes de las celdas se fusionan en un solo borde compartido. Esto crea un diseño más compacto y limpio para la tabla.*/
+        margin: 0 auto; /*centra la tabla horizontalmente en su contenedor.*/
     }
 
     thead th,
@@ -37,6 +37,16 @@
         text-align: left;
         width: 100px;
         height: 20px;
+    }
+    fieldset{
+    margin: 36px 50px 5px 49p
+    }
+    .boton{
+     margin-left: 20px;
+     
+
+
+
     }
 </style>
 
@@ -58,7 +68,7 @@
     </header>
 
     <section>
-        <table>
+        <table><!--Empieza la tabla-->
             <thead>
                 <caption>
                     <h3>PRECIOS DE NUESTROS ROSCONES</h3>
@@ -171,7 +181,7 @@
 
                 <label > ¿Qué tamaño prefiere?:</label>
                 <br>
-                <input type="radio" id="mediano" name="size" value="Mediano">
+                <input type="radio" id="mediano" name="size" value="Mediano" checked> <!--Se marca como predeterminado-->
                 <label for="mediano" >Mediano</label><br>
                 <input type="radio" id="grande" name="size" value="Grande">
                 <label for="grande" >Grande</label><br>
@@ -185,13 +195,13 @@
                 <br><br>
 
             </fieldset>
-            <button type="submit" >Enviar</button>
+            <button type="submit"class="boton" >Enviar</button>
             </fieldset>
 
         </form>
     </section>
     <footer>
-        <p>Página creada por: Diana Pascual García &copy;. Victoria Confiteria &reg;</p>
+        <p>Página creada por: Diana Pascual García 2023 &copy;. Victoria Confiteria &reg;</p>
     </footer>
 
 </body>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Diana Pascual García">
+    <meta name="description" content="actividad del 27 de octubre sobre ejercicios con tablas y formularios">
+    <meta name="keywords" content="Pastelería,Roscón de Reyes, pedidos">
+    <title>Actividad Roscón de Reyes</title>
+
+</head>
+<style>
+    * {
+        font-family: "Arial";
+    }
+
+    table {
+        border-collapse: collapse;/*los bordes de las celdas se fusionan en un solo borde compartido. Esto crea un diseño más compacto y limpio para la tabla.*/
+        margin: 0 auto; /*centra la tabla horizontalmente en su contenedor.*/
+    }
+
+    thead th,
+    tbody td,
+    tbody th {
+        border: 1px solid black;
+    }
+
+
+    caption {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        text-align: left;
+        width: 100px;
+        height: 20px;
+    }
+    fieldset{
+    margin: 36px 50px 5px 49p
+    }
+    .boton{
+     margin-left: 20px;
+     
+
+
+
+    }
+</style>
+
+<body>
+
+    <header> <!--Por lo que entiendo, se nos pide un nuevo apartado a una página web ya creada (La he llamado "Confitería Victoria"). 
+    Al tratarse de un añadido que complementa a una web "madre", no le integro formato de fondo ni otros colores en los apartados para que 
+    pueda incorporarse a la web del cliente y adaptarlo más fácilmente a sus diseños de marca.
+    Sin embargo, para demostrar que voy probando los diferentes aprendizajes en la materia, incorporo etiquetas de principios de maquetación
+    en html5 (header, section, footer), etiquetas no trabajadas en clase, como iframe para introducir la ubicación de la tienda, o en el 
+    formulario, la opción de"campos requeridos",así como diferentes modos de introducir la información requerida del cliente-->
+
+        <h1 style="text-align: center;"> NO TE QUEDES SIN TU ROSCÓN</h1>
+
+        <p>Llegan las fechas y con ellas unos de los dulces más deseados de la época: Los roscones de Reyes.
+            Este año, no te quedes con las ganas de poder disfrutar junto a tus seres queridos de esta delicia.
+            No dejes que el tiempo corra y deja ya reservado con nosotros tu roscón. Lo crearemos a tu gusto,
+            siempre con los más frescos ingredientes y con la confianza de tu confitería amiga "Victoria"</p>
+    </header>
+
+    <section>
+        <table><!--Empieza la tabla-->
+            <thead>
+                <caption>
+                    <h3>PRECIOS DE NUESTROS ROSCONES</h3>
+                </caption>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2">Relleno de nata</th>
+                    <th colspan="2">Relleno de chocolate</th>
+                    <th colspan="2">Sin rellenar</th>
+                </tr>
+                <tr>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                    <td>1-2 toppings</td>
+                    <td>3-4 toppings</td>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Mediano</td>
+                    <td>35€</td>
+                    <td>40€</td>
+                    <td>30€</td>
+                    <td>35€</td>
+                    <td>25€</td>
+                    <td>30€</td>
+                </tr>
+
+                <tr>
+                    <td>Grande</td>
+                    <td>45€</td>
+                    <td>50€</td>
+                    <td>40€</td>
+                    <td>45€</td>
+                    <td>35€</td>
+                    <td>40€</td>
+                </tr>
+
+                <tr>
+                    <td colspan="7"> Todos los envíos a domicilio tendran un coste de 6,50€ </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div style="display: flex;">
+            <figure id="Modelo Roscón"><img src="Ejercicio roscon/Roscon-reyes-pasteleria-vitoria.jpg" width="60%"
+                    height="85%">
+                <figcaption><em>Nuestro Roscón de Reyes</em></figcaption>
+            </figure>
+            <br>
+            <figure id="Ubicación">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.0141685797253!2d-5.999158899999999!3d37.3894972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c1221c4befd%3A0xf34dc689e57acbad!2sConfiteria%20La%20Victoria!5e0!3m2!1ses!2ses!4v1698606571429!5m2!1ses!2ses"
+                    width="400px" height="300px" style="border:1px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <figcaption><em>Ven a visitarnos</em></figcaption>
+            </figure>
+            <br>
+        </div>
+        <form action="Procesar formulario" method="post">
+            <fieldset style="width: 60%; margin: 50px; ">
+                <legend >
+                    <h3 >DATOS PERSONALES</h3>
+                </legend>
+                <label for="nombre" >Nombre y apellidos: </label>
+                <input id="nombre" type="text" size="40" required >
+                <br>
+
+                <label for="teléfono" >Teléfono: </label>
+                <input id="teléfono" type="tel" required >
+                <br>
+
+                <label for="Dirección" > Dirección: </label>
+                <textarea rows="3" cols="80" placeholder="Sólo si desea pedido a domicilio" id="Dirección"></textarea>
+                <br>
+            </fieldset>
+            <fieldset style="width: 60%; margin: 50px; ">
+                <legend >
+                    <h3 >DATOS DEL PEDIDO</h3>
+                </legend>
+
+                <label for="envío" > Seleccione tipo de envío: </label>
+                <select id="envío" required >
+                    <option value="A domicilio" >A domicilio</option>
+                    <option value="Recogida en tienda" >Recogida en tienda</option>
+                </select>
+                <br>
+                <label for="fecha" >Fecha de reserva </label>
+                <input id="fecha" type="date" required >
+                <br>
+            </fieldset>
+            <fieldset style="width: 60%; margin: 50px; ">
+                <legend >
+                    <h3 >CREANDO SU ROSCÓN...</h3>
+                </legend>
+
+                <label for="Relleno" >Elija el relleno que desee</label>
+                <select id="Relleno" type="text" required >
+                    <option value="Nata"> Nata </option>
+                    <option value="Chocolate"> Chocolate </option>
+                    <option value="Sin relleno"> Sin relleno </option>
+                </select>
+                <br>
+
+                <label > ¿Qué tamaño prefiere?:</label>
+                <br>
+                <input type="radio" id="mediano" name="size" value="Mediano" checked> <!--Se marca como predeterminado-->
+                <label for="mediano" >Mediano</label><br>
+                <input type="radio" id="grande" name="size" value="Grande">
+                <label for="grande" >Grande</label><br>
+                <br>
+
+                <label >¿Desea algún toppings? Elija cuantos prefiera... </label> <br>
+                <input type="checkbox" value="Fruta escarchada"> Fruta escarchada <br>
+                <input type="checkbox" value="Almendras"> Almendras <br>
+                <input type="checkbox" value="Virutas de chocolate"> Virutas de chocolate <br>
+                <input type="checkbox" value="Coco en polvo"> Coco en polvo <br>
+                <br><br>
+
+            </fieldset>
+            <button type="submit"class="boton" >Enviar</button>
+            </fieldset>
+
+        </form>
+    </section>
+    <footer>
+        <p>Página creada por: Diana Pascual García 2023 &copy;. Victoria Confiteria &reg;</p>
+    </footer>
+
+</body>

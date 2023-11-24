@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Formulario{
+            width: 100%;
+            padding: 10px;
+            border: black 2px dashed;
+            background-color: rgb(172, 223, 223);
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+        }
+        .imagenFormulario{
+            background-image: url(IMG/dentist.jpg);
+            padding: 10px;
+            border-radius: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50%;
+
+        }
+        .formularioTexto{
+                display: flex;
+                flex-direction: row;
+                width: max-content;
+                padding: 10px 10px 0px 30px ;
+        }
+        fieldset{
+            border: 8px rgb(114, 189, 212) double;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .columnasFormulario{
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+        }
+        .Columna1F{
+            text-align: left;
+            background-color: rgb(134, 182, 255);
+            margin: 5px;
+            padding: 10px;
+        }
+        .Columna2F{
+            text-align: justify;
+            background-color: rgb(134, 182, 255);
+            margin: 5px;
+            padding: 10px;
+            }
+    </style>
+</head>
+<body>
+    <!-- Un formulario con una imagen y un título -->
+    <div class="Formulario">
+        <div class="imagenFormulario"></div>
+        <div class="formularioTexto">
+            <fieldset>
+                <legend><h2>Escriba sus datos para enviar tarta</h2></legend>
+                <div class="columnasFormulario">
+                    <div class="Columna1F">
+                                <label for="nombre">Nombre y apellidos: </label>
+                    <input id="nombre" type="text"  placeholder="Nombre Apellido"><br><br>
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono"  placeholder="xxx xxx xxx"><br><br>
+                    <label for="dirección" >Dirección para reparto:</label>
+                    <input type="direction" id="dirección" placeholder="C/ Nº Piso ..."><br><br>
+                    <label for="dirección">Código postal:</label>
+                    <input type="direction" id="dirección"  placeholder="41XXX"><br><br>
+                    <label>Desea recogida en tienda o reparto: </label><br>
+                    <label  for="radio">Recogida en tienda</label>
+                    <input name="entrega" type="radio" id="radio"><br>
+                    <label  for="radio">Reparto a casa</label>
+                    <input name="entrega" type="radio" id="radio"><br><br>
+
+                    </div>
+                    <div class="Columna2F">
+                        <select id="Relleno" list="Relleno">
+                            <option value="Relleno de nata">Relleno de nata</option>
+                            <option value="Relleno de chocolate">Relleno de chocolate</option>
+                            <option value="Sin Relleno">Sin Relleno</option>
+                        </select><br><br>
+                        <label>Tamaño del Roscón: </label><br>
+                        <label  for="radio">Grande</label>
+                        <input name="Tamaño" type="radio" id="radio">
+                        <label  for="radio">Mediano</label>
+                        <input name="Tamaño" type="radio" id="radio"><br><br>
+                
+                        <label>Toppings: </label><br>
+                        <input type="checkbox" value="Frutas"> Fruta escarchada<br>
+                        <input type="checkbox" value="Almendras"> Almendras<br>
+                        <input type="checkbox" value="Virutas de Chocolate"> Virtuas de chocolate<br>
+                        <input type="checkbox" value="Coco en polvo"> Coco en polvo<br><br><br>
+                        
+                        
+                       
+                            <label for="fecha"><strong>Elige una fecha para entregar</strong></label>
+                        <input type="date" id="fecha"><br><br>
+                        <input type="button" onclick="myFunction()" value="Enviar">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
