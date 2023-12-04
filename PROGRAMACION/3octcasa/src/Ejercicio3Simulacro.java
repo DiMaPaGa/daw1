@@ -199,7 +199,7 @@ pantalla el siguiente mensaje:
 Una vez se haga todo este proceso, volver a repetir los requerimientos mientras que el
 usuario no haya introducido el número 0.*/
 
-        int eleccion = 0;
+      /*  int eleccion = 0;
         int saldo = 1000;
         int retirada = 0;
         int ingreso= 0;
@@ -241,7 +241,7 @@ usuario no haya introducido el número 0.*/
         /* Sumar numeros pares. Crea un programa que te pida introducir un numero, suponemos que sea positivo, y que
         muestre cuantos numeros pares hay desde el 1 hasta el numero introducido, mostrando por pantalla el resultado.*/
 
-        System.out.println("introduce un número");
+        /*System.out.println("introduce un número");
         int digito= scan.nextInt();
         int contador=0;
 
@@ -252,5 +252,14 @@ usuario no haya introducido el número 0.*/
 
         }
         System.out.println("El número " + digito + " contiene " + contador + " número pares.");
+        */
+
+
+        java.lang.
+
+                String hola= "Hola";
+
+
+
     }
 }
