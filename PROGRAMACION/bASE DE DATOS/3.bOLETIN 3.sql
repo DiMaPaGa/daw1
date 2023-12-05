@@ -84,4 +84,4 @@
 
 -- 27. Seleccionar todos los campos de los productos descontinuados, que pertenezcan a los proveedores con códigos: 1, 3, 7, 8 y 9, que tengan stock en almacén, y al
 -- mismo tiempo que sus precios unitarios estén entre 39 y 190, ordenados por código de proveedores y precio unitario de manera ascendente.
--- SELECT * FROM northwind.products WHERE Discontinued=0 and SupplierID in (1,3,7,8,9) and UnitsInStock<>0 and UnitPrice between 39 and 190 order by SupplierID, UnitPrice asc; 
+-- SELECT * FROM northwind.products WHERE Discontinued=0 and SupplierID in (1,3,7,8,9) and UnitsInStock<>0 and UnitPrice between 39 and 190 order by SupplierID, UnitPrice asc; orderdetails
