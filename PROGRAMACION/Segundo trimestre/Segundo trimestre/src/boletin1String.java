@@ -1,0 +1,164 @@
+import java.util.Scanner;
+
+public class boletin1String {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+
+        /*1. Declara un String que contenga tu nombre, después muestra un mensaje de bienvenida
+        por consola. Por ejemplo: si introduzco “Fernando”, me aparezca “Bienvenido Fernando”.*/
+
+       /* String nombre= "Diana";
+
+        System.out.println("Bienvenida "+ nombre);
+
+        //2. Modifica la aplicación anterior, para que nos pida el nombre que queremos introducir.
+
+        System.out.println("Introduce tu nombre");
+        nombre= scan.next();
+
+        System.out.println("Bienvenida "+ nombre);*/
+
+        /*3. Escribe una aplicación con un String que contenga una contraseña cualquiera. Después
+        se te pedirá que introduzcas la contraseña, con 3 intentos. Cuando aciertes ya no pedirá
+        más la contraseña y mostrará un mensaje diciendo “Enhorabuena”. Piensa bien en la
+        condición de salida (3 intentos y si acierta sale, aunque le queden intentos).*/
+
+        /*String contrasena="abcde";
+        int intentos=0;
+
+        do {
+            System.out.println("Introduce contraseña");
+            String solicitud= scan.next();
+            if (solicitud.equals(contrasena)) {
+                System.out.println("Enhorabuena");
+                break;
+            } else {
+                intentos++;
+                System.out.println("Contraseña incorrecta, le quedan "+ (3-intentos)+ " intentos.");
+            }
+
+        } while (intentos<3);
+
+        if (intentos>2){
+            System.out.println("Acceso bloqueado");
+        }*/
+
+
+
+        /*4. Del siguiente String “La lluvia en Sevilla es una maravilla” cuenta cuántas vocales hay en
+        total (recorre el String con un bucle y charAt).*/
+
+        /*String frase= "La lluvia en Sevilla es una maravilla";
+        int contador=0;
+
+        for (int i=0; i<frase.length();i++){
+            char letra= frase.charAt(i);
+            if (letra =='a'||letra =='e'||letra =='i'||letra =='o'||letra =='u'){
+                contador++;
+
+            }
+
+        }
+
+        System.out.println("Hay "+ contador + " vocales.");*/
+
+
+        // 5. Reemplaza todas las a del String anterior por una e.
+
+        /*String frase2 = frase.replace("a","e");
+        System.out.println(frase2);*/
+
+        /*6. Dada una cadena mostrar por pantalla la cantidad de vocales que tiene. Ejemplo:
+        Entrada: cad = &quot;Hola tu&quot;
+        Salida: La cantidad de vocales es 3*/
+
+
+        System.out.println("Entrada");
+        String entrada= scan.next();
+        int vocales=0;
+
+        for (int i=0; i<entrada.length();i++){
+            char comparar= entrada.charAt(i);
+            if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
+                vocales++;
+
+            }
+
+        }
+
+        System.out.println("Hay "+ vocales + " vocales.");
+
+
+
+
+        /*7. Dada una cadena invertir la misma y mostrar por pantalla. Ejemplo:
+        Entrada: &quot;casa blanca&quot;
+        Salida: &quot;acnalb asac&quot;*/
+
+        System.out.println("Incorpora un texto para convertirlo");
+        String texto= scan.next();
+
+
+        for (int i=texto.length(); i==0;i--){
+            char comparar= entrada.charAt(i);
+            if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
+                vocales++;
+
+            }
+
+        }
+
+        System.out.println("Hay "+ vocales + " vocales.");
+
+
+
+        /*8. Dada una cadena cad, y un carácter car, verificar cuántas veces se repite el carácter car
+        en la cadena cad, por ejemplo:
+        Entrada: cad = &quot;casa blanca&quot;, car = &#39;a&#39;
+        Salida: El carácter &#39;a&#39; se repite 4 veces*/
+
+
+        /*9. Lee un número por teclado y muestra por consola el carácter al que pertenece en la
+        tabla ASCII. Por ejemplo: si introduzco un 97, me muestre una a.*/
+
+
+       /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
+        muestre su código en la tabla ASCII.*/
+
+
+        /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
+        recta, separados por un espacio entre cada carácter.*/
+
+
+        /*12. Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int,
+        pero se leerán como String y luego se convertirán) y un signo aritmético (String), según
+        este último se realizará la operación correspondiente. Al final mostrará el resultado en
+        consola. Los signos aritméticos disponibles son:
+        +: suma los dos operandos.
+
+        -: resta los operandos.
+
+                *: multiplica los operandos.
+                /: divide los operandos, este debe dar un resultado con decimales (double)
+^: 1º operando como base y 2º como exponente.
+                %: módulo, resto de la división entre operando1 y operando2.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+}
