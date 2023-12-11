@@ -48,19 +48,19 @@ public class boletin1String {
         /*4. Del siguiente String “La lluvia en Sevilla es una maravilla” cuenta cuántas vocales hay en
         total (recorre el String con un bucle y charAt).*/
 
-        /*String frase= "La lluvia en Sevilla es una maravilla";
+        String frase= "La lluvia en Sevilla es una maravilla";
         int contador=0;
 
         for (int i=0; i<frase.length();i++){
-            char letra= frase.charAt(i);
-            if (letra =='a'||letra =='e'||letra =='i'||letra =='o'||letra =='u'){
+            char letra= frase.toLowerCase().charAt(i);
+            if ("aeiouáéíóú".indexOf(letra) !=-1){
                 contador++;
 
             }
 
         }
 
-        System.out.println("Hay "+ contador + " vocales.");*/
+        System.out.println("Hay "+ contador + " vocales.");
 
 
         // 5. Reemplaza todas las a del String anterior por una e.
@@ -78,8 +78,10 @@ public class boletin1String {
         int vocales=0;
 
         for (int i=0; i<entrada.length();i++){
-            char comparar= entrada.charAt(i);
-            if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
+            char comparar= entrada.toLowerCase().charAt(i);
+            /*if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
+                vocales++;*/
+            if ("aeiouáéíóú".indexOf(comparar) != -1){
                 vocales++;
 
             }
@@ -95,20 +97,16 @@ public class boletin1String {
         Entrada: &quot;casa blanca&quot;
         Salida: &quot;acnalb asac&quot;*/
 
-        System.out.println("Incorpora un texto para convertirlo");
-        String texto= scan.next();
+        /*System.out.println("Introduce texto");
+        String cadenaDada=scan.next();*/
 
+        String cadenaDada="Casa blanca";
+        String cadenaReversa= "";
 
-        for (int i=texto.length(); i==0;i--){
-            char comparar= entrada.charAt(i);
-            if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
-                vocales++;
-
-            }
-
+        for (int i = cadenaDada.length()-1; i>=0 ; i--) {
+            cadenaReversa+=cadenaDada.charAt(i);
         }
-
-        System.out.println("Hay "+ vocales + " vocales.");
+        System.out.println(cadenaReversa);
 
 
 
@@ -117,17 +115,45 @@ public class boletin1String {
         Entrada: cad = &quot;casa blanca&quot;, car = &#39;a&#39;
         Salida: El carácter &#39;a&#39; se repite 4 veces*/
 
+        System.out.println("Introduce una cadena:");
+        String cad = scan.next();
+        System.out.println("Introduce un carácter:");
+        char car = scan.next().charAt(0);
+        int contadorCaracter = 0;
+        for (int i = 0; i < cad.length(); i++) {
+            if (cad.charAt(i) == car) {
+                contadorCaracter++;
+            }
+        }
+        System.out.println("El carácter '" + car + "' se repite " + contadorCaracter + " veces");
+
 
         /*9. Lee un número por teclado y muestra por consola el carácter al que pertenece en la
         tabla ASCII. Por ejemplo: si introduzco un 97, me muestre una a.*/
 
+        System.out.println("Introduce un número:");
+        int codigoASCII = scan.nextInt();
+        char caracterASCII = (char) codigoASCII;
+        System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);
 
        /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
         muestre su código en la tabla ASCII.*/
 
+        System.out.println("Introduce un carácter:");
+        char caracterEntrada = scan.next().charAt(0);
+        int codigoASCIICaracter = (int) caracterEntrada;
+        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);
+
 
         /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
         recta, separados por un espacio entre cada carácter.*/
+
+        System.out.println("Introduce una cadena:");
+        String cadena = scan.next();
+        for (int i = 0; i < cadena.length(); i++) {
+            int codigoASCIIChar = (int) cadena.charAt(i);
+            System.out.print(codigoASCIIChar + " ");
+        }
 
 
         /*12. Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int,
@@ -143,20 +169,39 @@ public class boletin1String {
 ^: 1º operando como base y 2º como exponente.
                 %: módulo, resto de la división entre operando1 y operando2.*/
 
+        System.out.println("Introduce el primer operando:");
+        int operando1 = Integer.parseInt(scan.next());
+        System.out.println("Introduce el segundo operando:");
+        int operando2 = Integer.parseInt(scan.next());
+        System.out.println("Introduce el signo aritmético (+, -, *, /, ^, %):");
+        String operacion = scan.next();
+        double resultado = 0;
 
+        switch (operacion) {
+            case "+":
+                resultado = operando1 + operando2;
+                break;
+            case "-":
+                resultado = operando1 - operando2;
+                break;
+            case "*":
+                resultado = operando1 * operando2;
+                break;
+            case "/":
+                resultado = (double) operando1 / operando2;
+                break;
+            case "^":
+                resultado = Math.pow(operando1, operando2);
+                break;
+            case "%":
+                resultado = operando1 % operando2;
+                break;
+            default:
+                System.out.println("Operación no válida");
+                break;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println("Resultado: " + resultado);
 
 
     }
