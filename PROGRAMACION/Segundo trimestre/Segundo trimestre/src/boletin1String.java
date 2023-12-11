@@ -7,7 +7,7 @@ public class boletin1String {
         /*1. Declara un String que contenga tu nombre, después muestra un mensaje de bienvenida
         por consola. Por ejemplo: si introduzco “Fernando”, me aparezca “Bienvenido Fernando”.*/
 
-       /* String nombre= "Diana";
+       String nombre= "Diana";
 
         System.out.println("Bienvenida "+ nombre);
 
@@ -16,14 +16,14 @@ public class boletin1String {
         System.out.println("Introduce tu nombre");
         nombre= scan.next();
 
-        System.out.println("Bienvenida "+ nombre);*/
+        System.out.println("Bienvenida "+ nombre);
 
         /*3. Escribe una aplicación con un String que contenga una contraseña cualquiera. Después
         se te pedirá que introduzcas la contraseña, con 3 intentos. Cuando aciertes ya no pedirá
         más la contraseña y mostrará un mensaje diciendo “Enhorabuena”. Piensa bien en la
         condición de salida (3 intentos y si acierta sale, aunque le queden intentos).*/
 
-        /*String contrasena="abcde";
+        String contrasena="abcde";
         int intentos=0;
 
         do {
@@ -41,7 +41,7 @@ public class boletin1String {
 
         if (intentos>2){
             System.out.println("Acceso bloqueado");
-        }*/
+        }
 
 
 
@@ -55,18 +55,28 @@ public class boletin1String {
             char letra= frase.toLowerCase().charAt(i);
             if ("aeiouáéíóú".indexOf(letra) !=-1){
                 contador++;
-
             }
-
         }
 
         System.out.println("Hay "+ contador + " vocales.");
 
+/*String ej4 = "La lluvia en Sevilla es una maravilla";
+        int contVocales = 0;
+
+        for (int i = 0; i <ej4.length() ; i++) {
+            char vocal = ej4.charAt(i);
+            if (vocal== 'a' || vocal== 'e' || vocal== 'i' || vocal== 'o' || vocal== 'u'){
+                contVocales++;
+            }
+        }*/
 
         // 5. Reemplaza todas las a del String anterior por una e.
 
-        /*String frase2 = frase.replace("a","e");
-        System.out.println(frase2);*/
+        String frase2 = frase.replace("a","e");
+        System.out.println(frase2);
+
+        /*System.out.println(sevilla.replace('a','e')); también y más corto"*/
+
 
         /*6. Dada una cadena mostrar por pantalla la cantidad de vocales que tiene. Ejemplo:
         Entrada: cad = &quot;Hola tu&quot;
@@ -79,18 +89,24 @@ public class boletin1String {
 
         for (int i=0; i<entrada.length();i++){
             char comparar= entrada.toLowerCase().charAt(i);
-            /*if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
-                vocales++;*/
             if ("aeiouáéíóú".indexOf(comparar) != -1){
                 vocales++;
-
             }
-
         }
-
         System.out.println("Hay "+ vocales + " vocales.");
 
+                /*if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
+                vocales++;*/
 
+        /*System.out.println("Introduce una frase");
+        String cantidadVocales=scan.nextLine();
+        int fraseVocales=0;
+        for (int i = 0; i < cantidadVocales.length() ; i++) {
+            if ((cantidadVocales.charAt(i) == 'a') || (cantidadVocales.charAt(i) == 'e') || (cantidadVocales.charAt(i) == 'i') || (cantidadVocales.charAt(i) == 'o') || (cantidadVocales.charAt(i) == 'u'))
+                fraseVocales++;
+        }
+        System.out.println(cantidadVocales+" Tiene un total de: "+ frase
+                System.out.println(cantidadVocales+" Tiene un total de: "+ fraseVocales +" Vocales");*/
 
 
         /*7. Dada una cadena invertir la misma y mostrar por pantalla. Ejemplo:
@@ -108,6 +124,13 @@ public class boletin1String {
         }
         System.out.println(cadenaReversa);
 
+       /* String cadena = "casa blanca";
+        int i = cadena.length();
+        do{
+            i--;
+            System.out.print(cadena.charAt(i));
+        }while(i>0);*/
+
 
 
         /*8. Dada una cadena cad, y un carácter car, verificar cuántas veces se repite el carácter car
@@ -116,13 +139,15 @@ public class boletin1String {
         Salida: El carácter &#39;a&#39; se repite 4 veces*/
 
         System.out.println("Introduce una cadena:");
-        String cad = scan.next();
+        String cad = scan.next().toLowerCase();
+
         System.out.println("Introduce un carácter:");
-        char car = scan.next().charAt(0);
-        int contadorCaracter = 0;
+        char car = scan.next().toLowerCase().charAt(0);
+
+        int contadorCaracter=0;
         for (int i = 0; i < cad.length(); i++) {
             if (cad.charAt(i) == car) {
-                contadorCaracter++;
+                 contadorCaracter++;
             }
         }
         System.out.println("El carácter '" + car + "' se repite " + contadorCaracter + " veces");
@@ -137,23 +162,23 @@ public class boletin1String {
         System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);
 
        /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
-        muestre su código en la tabla ASCII.*/
+        muestre su código en la tabla ASCII.
 
         System.out.println("Introduce un carácter:");
         char caracterEntrada = scan.next().charAt(0);
         int codigoASCIICaracter = (int) caracterEntrada;
-        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);
+        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);*/
 
 
         /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
-        recta, separados por un espacio entre cada carácter.*/
+        recta, separados por un espacio entre cada carácter.
 
         System.out.println("Introduce una cadena:");
         String cadena = scan.next();
         for (int i = 0; i < cadena.length(); i++) {
             int codigoASCIIChar = (int) cadena.charAt(i);
             System.out.print(codigoASCIIChar + " ");
-        }
+        }*/
 
 
         /*12. Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int,
