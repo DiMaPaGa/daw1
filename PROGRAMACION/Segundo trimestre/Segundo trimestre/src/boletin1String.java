@@ -48,7 +48,7 @@ public class boletin1String {
         /*4. Del siguiente String “La lluvia en Sevilla es una maravilla” cuenta cuántas vocales hay en
         total (recorre el String con un bucle y charAt).*/
 
-        String frase= "La lluvia en Sevilla es una maravilla";
+      /*  String frase= "La lluvia en Sevilla es una maravilla";
         int contador=0;
 
         for (int i=0; i<frase.length();i++){
@@ -60,7 +60,7 @@ public class boletin1String {
 
         }
 
-        System.out.println("Hay "+ contador + " vocales.");
+        System.out.println("Hay "+ contador + " vocales.");*/
 
 
         // 5. Reemplaza todas las a del String anterior por una e.
@@ -73,22 +73,22 @@ public class boletin1String {
         Salida: La cantidad de vocales es 3*/
 
 
-        System.out.println("Entrada");
+     /*   System.out.println("Entrada");
         String entrada= scan.next();
         int vocales=0;
 
         for (int i=0; i<entrada.length();i++){
-            char comparar= entrada.toLowerCase().charAt(i);
+            char comparar= entrada.toLowerCase().charAt(i);*/
             /*if (comparar =='a'||comparar =='e'||comparar =='i'||comparar =='o'||comparar =='u'){
                 vocales++;*/
-            if ("aeiouáéíóú".indexOf(comparar) != -1){
+          /*  if ("aeiouáéíóú".indexOf(comparar) != -1){
                 vocales++;
 
             }
 
         }
 
-        System.out.println("Hay "+ vocales + " vocales.");
+        System.out.println("Hay "+ vocales + " vocales."); */
 
 
 
@@ -117,9 +117,11 @@ public class boletin1String {
 
         System.out.println("Introduce una cadena:");
         String cad = scan.next();
+        
         System.out.println("Introduce un carácter:");
         char car = scan.next().charAt(0);
         int contadorCaracter = 0;
+
         for (int i = 0; i < cad.length(); i++) {
             if (cad.charAt(i) == car) {
                 contadorCaracter++;
