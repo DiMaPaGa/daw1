@@ -7,23 +7,23 @@ public class boletin1String {
         /*1. Declara un String que contenga tu nombre, después muestra un mensaje de bienvenida
         por consola. Por ejemplo: si introduzco “Fernando”, me aparezca “Bienvenido Fernando”.*/
 
-       String nombre= "Diana";
+       /*String nombre= "Diana";
 
-        System.out.println("Bienvenida "+ nombre);
+        System.out.println("Bienvenida "+ nombre);*/
 
         //2. Modifica la aplicación anterior, para que nos pida el nombre que queremos introducir.
 
-        System.out.println("Introduce tu nombre");
+      /*  System.out.println("Introduce tu nombre");
         nombre= scan.next();
 
-        System.out.println("Bienvenida "+ nombre);
+        System.out.println("Bienvenida "+ nombre);*/
 
         /*3. Escribe una aplicación con un String que contenga una contraseña cualquiera. Después
         se te pedirá que introduzcas la contraseña, con 3 intentos. Cuando aciertes ya no pedirá
         más la contraseña y mostrará un mensaje diciendo “Enhorabuena”. Piensa bien en la
         condición de salida (3 intentos y si acierta sale, aunque le queden intentos).*/
 
-        String contrasena="abcde";
+       /* String contrasena="abcde";
         int intentos=0;
 
         do {
@@ -41,7 +41,7 @@ public class boletin1String {
 
         if (intentos>2){
             System.out.println("Acceso bloqueado");
-        }
+        }*/
 
 
 
@@ -72,8 +72,8 @@ public class boletin1String {
 
         // 5. Reemplaza todas las a del String anterior por una e.
 
-        String frase2 = frase.replace("a","e");
-        System.out.println(frase2);
+       /* String frase2 = frase.replace("a","e");
+        System.out.println(frase2);*/
 
         /*System.out.println(sevilla.replace('a','e')); también y más corto"*/
 
@@ -116,13 +116,13 @@ public class boletin1String {
         /*System.out.println("Introduce texto");
         String cadenaDada=scan.next();*/
 
-        String cadenaDada="Casa blanca";
+       /* String cadenaDada="Casa blanca";
         String cadenaReversa= "";
 
         for (int i = cadenaDada.length()-1; i>=0 ; i--) {
             cadenaReversa+=cadenaDada.charAt(i);
         }
-        System.out.println(cadenaReversa);
+        System.out.println(cadenaReversa);*/
 
        /* String cadena = "casa blanca";
         int i = cadena.length();
@@ -138,7 +138,7 @@ public class boletin1String {
         Entrada: cad = &quot;casa blanca&quot;, car = &#39;a&#39;
         Salida: El carácter &#39;a&#39; se repite 4 veces*/
 
-        System.out.println("Introduce una cadena:");
+        /*System.out.println("Introduce una cadena:");
         String cad = scan.next().toLowerCase();
 
         System.out.println("Introduce un carácter:");
@@ -150,16 +150,16 @@ public class boletin1String {
                  contadorCaracter++;
             }
         }
-        System.out.println("El carácter '" + car + "' se repite " + contadorCaracter + " veces");
+        System.out.println("El carácter '" + car + "' se repite " + contadorCaracter + " veces");*/
 
 
         /*9. Lee un número por teclado y muestra por consola el carácter al que pertenece en la
         tabla ASCII. Por ejemplo: si introduzco un 97, me muestre una a.*/
 
-        System.out.println("Introduce un número:");
+       /* System.out.println("Introduce un número:");
         int codigoASCII = scan.nextInt();
         char caracterASCII = (char) codigoASCII;
-        System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);
+        System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);*/
 
        /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
         muestre su código en la tabla ASCII.
@@ -194,7 +194,7 @@ public class boletin1String {
 ^: 1º operando como base y 2º como exponente.
                 %: módulo, resto de la división entre operando1 y operando2.*/
 
-        System.out.println("Introduce el primer operando:");
+       /* System.out.println("Introduce el primer operando:");
         int operando1 = Integer.parseInt(scan.next());
         System.out.println("Introduce el segundo operando:");
         int operando2 = Integer.parseInt(scan.next());
@@ -226,9 +226,32 @@ public class boletin1String {
                 break;
         }
 
-        System.out.println("Resultado: " + resultado);
+        System.out.println("Resultado: " + resultado);*/
 
 
-    }
+                // Lee una cadena de caracteres por pantalla
 
-}
+                System.out.print("Ingresa una cadena: ");
+                String cadenaOriginal = scan.nextLine();
+
+
+
+                // Itera sobre cada caracter de la cadena
+                for (int i = 0; i < cadenaOriginal.length()-1; i++) {
+                    char caracter = cadenaOriginal.charAt(i);
+
+                    // Verifica si el caracter es una vocal y reemplaza por un espacio en blanco
+                    if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u' ||
+                            caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U') {
+                        cadenaOriginal = cadenaOriginal.replace(caracter,' ');
+                    }
+
+                }
+        System.out.println(cadenaOriginal);
+
+            }
+        }
+
+
+
+
