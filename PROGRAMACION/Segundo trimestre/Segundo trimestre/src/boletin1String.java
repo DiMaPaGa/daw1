@@ -72,8 +72,8 @@ public class boletin1String {
 
         // 5. Reemplaza todas las a del String anterior por una e.
 
-        String frase2 = frase.replace("a","e");
-        System.out.println(frase2);
+       /* String frase2 = frase.replace("a","e");
+        System.out.println(frase2);*/
 
         /*System.out.println(sevilla.replace('a','e')); también y más corto"*/
 
@@ -161,24 +161,43 @@ public class boletin1String {
         char caracterASCII = (char) codigoASCII;
         System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);
 
+        /*System.out.println("Introduce un número:");
+        String codigoASCII = scan.next();
+        int codigo=Integer.parseInt(codigoASCII)
+        char caracterASCII = (char) codigoASCII;
+        System.out.println("El carácter correspondiente al código ASCII " + codigoASCII + " es: " + caracterASCII);
+        resultado de clase*/
+
        /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
-        muestre su código en la tabla ASCII.
+        muestre su código en la tabla ASCII.*/
 
         System.out.println("Introduce un carácter:");
         char caracterEntrada = scan.next().charAt(0);
         int codigoASCIICaracter = (int) caracterEntrada;
-        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);*/
+        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);
+
+        /* clase
+        sout
+        char diez=scan.next().charAt(0);
+        sout (int)
+         */
 
 
         /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
-        recta, separados por un espacio entre cada carácter.
+        recta, separados por un espacio entre cada carácter.*/
 
         System.out.println("Introduce una cadena:");
         String cadena = scan.next();
         for (int i = 0; i < cadena.length(); i++) {
             int codigoASCIIChar = (int) cadena.charAt(i);
             System.out.print(codigoASCIIChar + " ");
-        }*/
+        }
+
+        /*String word=scan.nextLine();
+        int car=word.length();
+        for(int
+        char
+         */
 
 
         /*12. Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int,
@@ -194,10 +213,10 @@ public class boletin1String {
 ^: 1º operando como base y 2º como exponente.
                 %: módulo, resto de la división entre operando1 y operando2.*/
 
-        System.out.println("Introduce el primer operando:");
-        int operando1 = Integer.parseInt(scan.next());
+        /*System.out.println("Introduce el primer operando:");
+        String operando1 = Integer.parseInt(scan.next());
         System.out.println("Introduce el segundo operando:");
-        int operando2 = Integer.parseInt(scan.next());
+        String operando2 = Integer.parseInt(scan.next());
         System.out.println("Introduce el signo aritmético (+, -, *, /, ^, %):");
         String operacion = scan.next();
         double resultado = 0;
@@ -226,7 +245,40 @@ public class boletin1String {
                 break;
         }
 
-        System.out.println("Resultado: " + resultado);
+        System.out.println("Resultado: " + resultado);*/
+
+        /*correcction de clase:*/
+
+       /* System.out.print("Por favor, introduce valor PRIMER operando : ");
+        String operando1s = scan.nextLine();
+        System.out.print("Por favor, introduce SIGNO de la operacion : ");
+        String signo = scan.nextLine();
+        System.out.print("Por favor, introduce valor SEGUNDO operando  : ");
+        String operando2s = scan.nextLine();
+
+
+        int operando1v = Integer.parseInt(operando1s);
+        int operando2v = Integer.parseInt(operando2s);
+        float resulta=1;
+
+         if ("+".equals(signo)){
+            resulta=operando1v+operando2v;
+        } else if ("-".equals(signo)) {
+            resulta=operando1v-operando2v;
+        } else if ("*".equals(signo)){
+            resulta=operando1v*operando2v;
+        } else if ("/".equals(signo)){
+            resulta=operando1v/operando2v;
+        } else if ("^".equals(signo)){
+            for (int i=0; i<operando2v; i++){
+                resulta=resulta*operando1v;
+            }
+        } else if }
+        } else if ("%".equals(signo)){
+            resulta=(operando2v*100)/operando1v;
+        }
+        System.out.println("RESULTADO DE LA OPERACION = "+resulta);*/
+
 
 
     }
