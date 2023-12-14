@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class boletin1String {
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         /*1. Declara un String que contenga tu nombre, después muestra un mensaje de bienvenida
         por consola. Por ejemplo: si introduzco “Fernando”, me aparezca “Bienvenido Fernando”.*/
@@ -171,10 +171,10 @@ public class boletin1String {
        /* 10. Modifica el ejercicio anterior para que, en lugar de pedir un número, pida un carácter y
         muestre su código en la tabla ASCII.*/
 
-        System.out.println("Introduce un carácter:");
+       /* System.out.println("Introduce un carácter:");
         char caracterEntrada = scan.next().charAt(0);
         int codigoASCIICaracter = (int) caracterEntrada;
-        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);
+        System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);*/
 
         /* clase
         sout
@@ -184,14 +184,14 @@ public class boletin1String {
 
 
         /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
-        recta, separados por un espacio entre cada carácter.*/
+        recta, separados por un espacio entre cada carácter.
 
         System.out.println("Introduce una cadena:");
         String cadena = scan.next();
         for (int i = 0; i < cadena.length(); i++) {
             int codigoASCIIChar = (int) cadena.charAt(i);
             System.out.print(codigoASCIIChar + " ");
-        }
+        }*/
 
         /*String word=scan.nextLine();
         int car=word.length();
@@ -279,6 +279,7 @@ public class boletin1String {
         }
         System.out.println("RESULTADO DE LA OPERACION = "+resulta);*/
 
-
+    }
+}
 
 
