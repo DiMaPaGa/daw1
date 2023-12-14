@@ -98,6 +98,17 @@ public class BoletinString3 {
             System.out.println("No son iguales");
         }
 
+        /*Dicen que es más claro con equals
+        boolean iguales= CAD1.EQUALS(CADENA);
+
+        if(iguales){
+        sout("Son iguales")
+        }
+        else {
+        sout("No son iguales")
+        }
+        **/
+
 
 // 16.	Repite ignorando mayúsculas.
 
@@ -109,6 +120,17 @@ public class BoletinString3 {
             System.out.println("No son iguales");
         }
 
+        /*Dicen que es más claro con equals
+        boolean iguales= cad1.equalsignorecase(cadena);
+
+        if(iguales){
+        sout("Son iguales")
+        }
+        else {
+        sout("No son iguales")
+        }
+        **/
+
 
 //17.	Lee un carácter por teclado y muestra por consola el código ASCII al que pertenece. Por ejemplo: si introduzco una a, debe mostrar 97.
 
@@ -117,12 +139,39 @@ public class BoletinString3 {
         char caracter= ej17.charAt(0);
         System.out.println((int) caracter);
 
+        /*
+        String caracter;
+        do{
+        System.out.println("Introduce un carácter");
+        caracter = scan.nextLine();
+
+
+        }while (caracter.lenght() != 1);
+
+        int ascii= (int)caracter;
+
+        System.out.println(" el código ASCII de '" + character + "' es "+ ascii");*/
+
 // 18.	Lee una cadena de caracteres por teclado que represente un número de dos cifras, e imprime por pantalla el carácter que representa.
 
-        System.out.println("introduzca un número de dos cifras");
-        String ej18= scan.next();
+        String ej18="";
+
+        do{
+            System.out.println("introduzca un número de dos cifras");
+            ej18= scan.nextLine();
+            for (int i = 0; i < ej18.length() ; i++) {
+                if (ej18.charAt(i) <'0' || ej18.charAt(i) >'9'){
+                    ej18="";
+                    break;
+                }
+
+            }
+        } while (ej18.length() != 2);
+
         int codigo= Integer.parseInt(ej18);
-        System.out.println((char)codigo);
+        char cadenaa3= (char) codigo;
+
+        System.out.println(" el caracter es: "+ cadenaa3);
 
 
 /*19.	Escribe una aplicación con un String que contenga una contraseña inventada. Después se pedirá que introduzcas la contraseña, con 3 intentos.
