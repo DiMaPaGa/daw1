@@ -10,7 +10,7 @@ SELECT northwind.employees.EmployeeID, northwind.employees.FirstName, northwind.
 -- 14. Por cada cliente, mostrar el ID de cliente, nombre de contacto y pedidos que ha hecho.
 SELECT northwind.customers.CustomerID, northwind.customers.ContactName, northwind.orders.OrderID  FROM northwind.customers, northwind.orders WHERE customers.CustomerID = orders.CustomerID;
 -- 15. Por cada cliente, mostrar el ID de cliente, nombre de contacto y numero total pedidos.
-SELECT northwind.customers.CustomerID, northwind.customers.ContactName, count(northwind.orders.OrderID) as "TotalPedidos" FROM northwind.customers, northwind.orders WHERE customers.CustomerID = orders.CustomerID group by customers.CustomerID, customers.ContactName;
+SELECT northwind.customers.CustomerID, northwind.customers.ContactName, count(northwind.orders.OrderID) as "TotalPedidos" FROM northwind.customers, northwind.orders WHERE customers.CustomerID = orders.CustomerID group by customers.CustomerID, customers.ContactName; -- Se puede dejar únicamente agrupado por CustomerID ya que cada cliente tiene un nombre vinculado a su ID.
 -- 16. Por cada pedido presente en orderdetails, imprimir toda su información y además, el nombre de la categoría a la que pertenece.
 SELECT northwind.orderdetails.*, northwind.categories.CategoryName FROM northwind.orderdetails, northwind.products ,northwind.categories WHERE orderdetails.ProductID = products.ProductID and categories.CategoryID= products.CategoryID; 
 -- 17. Por cada pedido, mostrar el ID de pedido, dirección del cliente y dirección del empleado.
