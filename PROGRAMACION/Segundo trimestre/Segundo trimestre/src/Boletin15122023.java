@@ -50,7 +50,7 @@ public class Boletin15122023 {
 
             if (caracter == espacio) {
                 espacios++;
-            }  else if (numero.indexOf(caracter)==-1){
+            }  else if (numero.indexOf(Character.toLowerCase(caracter))==-1){
                 letras++;
             } else {
                 numeros++;
@@ -61,7 +61,29 @@ public class Boletin15122023 {
 
         System.out.println("La cadena tiene "+ letras + " letras, "+ numeros+ " números y "+ espacios+ " espacios");
 
+ /* System.out.println("Introduce un texto");
+        String texto = scan.nextLine();
+        char espacio = ' ';
+        int letras = 0;
+        int numeros = 0;
+        int espacios = 0;
+        char caracter;
 
+        for (int i = 0; i < texto.length(); i++) {
+            caracter = texto.charAt(i);
+
+            if (caracter == espacio) {
+                espacios++;
+            } else if (Character.isDigit(caracter)) {
+                numeros++;
+            } else if (Character.isLetter(caracter)) {
+                letras++;
+            }
+        }
+
+        System.out.println("La cadena tiene " + letras + " letras, " + numeros + " números y " + espacios + " espacios");
+
+        scan.close();  // Cierra el scanner al finalizar*/
 
 
     }
