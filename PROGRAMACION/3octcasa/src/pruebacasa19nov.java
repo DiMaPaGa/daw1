@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class pruebacasa19nov {
     public static void main (String[] args){
 
-        Scanner scan = new Scanner (System.in);
+      /*  Scanner scan = new Scanner (System.in);
         System.out.println("Ingrese un numero");
         int estrellas= scan.nextInt();
         int contador=1;
         boolean retorno =false;
         String rojo="\033[0;31m";
         String amarillo="\033[0;33m";
-        String reset="\033[0m";
+        String reset="\033[0m";*/
 
      /*   while(contador!=0){
 
@@ -34,7 +34,7 @@ public class pruebacasa19nov {
             }
 
 */
-        while(contador!=0){
+       /* while(contador!=0){
 
             for (int i = 0; i < contador; i++) {
                 if (i == 0 || i == contador - 1) {
@@ -57,7 +57,7 @@ public class pruebacasa19nov {
 
 
 
-        }
+        }*/
 
    /*     System.out.println("introduzca un valor para el tamaño de su banderín");
         int n= scan.nextInt();

@@ -99,17 +99,17 @@ IVA.*/
 */
 /*9. Crea un programa que lea el nombre de una persona, y a continuación su edad
 y altura, e imprima todo por pantalla en una misma línea. ¿Funciona?*/
-        System.out.println("¿Cuál es tu nombre?");
-        String nombre= scan.next();
-        System.out.println("¿Cuál es tu edad?");
+       /* System.out.println("¿Cuál es tu nombre?");*/
+       // String nombre= scan.next();
+        /*System.out.println("¿Cuál es tu edad?");
         int edad= scan.nextInt();
         System.out.println("¿Cuál es tu altura en centímetros?");
         int altura2= scan.nextInt();
-        System.out.println("Te llamas "+ nombre+ " tienes "+ edad+ " años" + " y mides "+ altura2+ " centímetros.");
+        System.out.println("Te llamas "+ nombre+ " tienes "+ edad+ " años" + " y mides "+ altura2+ " centímetros.");*/
 /*10. Repita el ejercicio anterior pero leyendo primero los numeros y después
 el nombre. ¿Funciona?*/
 
-        System.out.println("¿Cuál es tu edad?");
+       /* System.out.println("¿Cuál es tu edad?");
         edad= scan.nextInt();
         System.out.println("¿Cuál es tu altura en centímetros?");
         altura2= scan.nextInt();
@@ -117,7 +117,7 @@ el nombre. ¿Funciona?*/
         nombre= scan.next();
         System.out.println("Te llamas "+ nombre+ " tienes "+ edad+ " años" + " y mides "+ altura2+ " centímetros.");
 
-        //De momento nos olvidamos del NextLine para evitar errores cuando intentamos leer una cadena que viene tras otros tipos de datos
+        //De momento nos olvidamos del NextLine para evitar errores cuando intentamos leer una cadena que viene tras otros tipos de datos*/
 
     }//main
 }//class

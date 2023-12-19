@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DianaMariaPascualGarcia {
     public static void main(String[] args){
 
-        Scanner scan=new Scanner(System.in);
+      /*  Scanner scan=new Scanner(System.in);
 
 
      // EJERCICIO 1
@@ -304,7 +304,7 @@ public class DianaMariaPascualGarcia {
                 break;
 
 
-        }
+        }*/
 
 
 

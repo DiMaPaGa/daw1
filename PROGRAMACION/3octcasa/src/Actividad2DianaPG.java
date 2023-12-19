@@ -10,9 +10,9 @@ devolverá el resultado y saldrá un menú, la primera opción del menú será h
 segunda opción será terminar el programa.*/
 
 
-        int decision=0; //Creo la variable decisión para el menú final. Mejor FLOAT!!
+        //int decision=0; //Creo la variable decisión para el menú final. Mejor FLOAT!!
 
-        do {
+        /*do {
             //Ahora incorporo todas las peticiones al usuario.
             System.out.println("Introduce un número");
             int num1= scan.nextInt();
@@ -59,7 +59,7 @@ segunda opción será terminar el programa.*/
 
         System.out.println("Ha decidido salir del programa"); //Y este es el mensaje para cuando salga de la calculadora.
 
-
+*/
 
     }
 
