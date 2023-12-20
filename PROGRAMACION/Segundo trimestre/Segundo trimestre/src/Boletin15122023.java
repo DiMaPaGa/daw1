@@ -94,7 +94,7 @@ public class Boletin15122023 {
         /*1- Leer una frase por teclado (máximo 80 caracteres) y construir otras dos cadenas de forma que una contenga
         los caracteres en la posición par y la otra los caracteres en posición impar.*/
 
-        String parrafo = "";
+      /*  String parrafo = "";
         String par = "";
         String impar = "";
         do {
@@ -114,13 +114,14 @@ public class Boletin15122023 {
 
             System.out.println("La cadena par es: " + par);
             System.out.println(" La cadena impar es: " + impar);
-
+*/
 
             //2- Introducir una cadena y pasarla en función de una variable de  opción (boolean) a mayúsculas o a minúsculas e imprimir la cadena resultante.
 
-        System.out.println("Introduce un texto");
+      /*  System.out.println("Introduce un texto");
         String cadena2= scan.nextLine();
         boolean minuscula= true;
+        //boolean mayus=scan.nextBoolean(); Asi en clase
 
             System.out.println("Si desea que el texto esté en minúsculas, escriba 'true' y si la prefiere en mayúsculas, escriba 'false'");
             minuscula=scan1.nextBoolean();
@@ -132,25 +133,25 @@ public class Boletin15122023 {
         } else {
             System.out.println(cadena2.toUpperCase());
 
-        }
+        }*/
 
 
 
             //3- Crear un programa que lea una cadena y una palabra, y que nos diga la posición de dicha palabra en la frase. Si no la encuentra que devuelva un 0.
 
-        System.out.println("Escribe una cadena");
+       /* System.out.println("Escribe una cadena");
         String cadena3= scan.nextLine();
         System.out.println("Escribe una palabra");
         String palabra3= scan1.next();
 
-        System.out.println(cadena3.indexOf(palabra3)+1);
+        System.out.println(cadena3.indexOf(palabra3)+1);*/
 
 
             //4- Introducir una cadena de caracteres, y después muestre un mensaje indicando:
             //a) Si la cadena introducida tiene menos de 5 caracteres, entre 5 y 15 caracteres o más de 15 caracteres.
             //b) Si la cadena introducida comienza por la letra 'a'.
 
-       System.out.println("Escribe una cadena");
+      /* System.out.println("Escribe una cadena");
         String cadena4= scan.nextLine().toLowerCase();
 
         if (cadena4.length()<5){
@@ -165,15 +166,16 @@ public class Boletin15122023 {
             System.out.println("La cadena empieza por a");
         } else{
             System.out.println("La cadena NO empieza a");
-        }
+        }*/
 
 
 
             //5 - Introduzca una frase en la consola y una vocal, y después muestre por pantalla la misma frase pero con la vocal introducida en mayúscula.
 
-        System.out.println("Escribe una frase");
+      /*  System.out.println("Escribe una frase");
         String cadena5= scan.nextLine().toLowerCase();
-        System.out.println("Escribe una letra");
+        System.out.println("Introduce una vocal");
+        //char vocal= scan.nextLine().toUpperCase().charAt(0);
         String vocal5= scan1.next();
         String cadenaResult= "";
 
@@ -182,14 +184,12 @@ public class Boletin15122023 {
             if (cadena5.charAt(i)==(vocal5.charAt(0))){
                 cadenaResult += cadena5.toUpperCase().charAt(i);
 
-
             } else {
                 cadenaResult +=cadena5.charAt(i);
             }
 
-
         }
-        System.out.println(cadenaResult);
+        System.out.println(cadenaResult);*/
 
 
 
@@ -210,14 +210,12 @@ public class Boletin15122023 {
                         System.out.println("Ha introducido un valor incorrecto");
                         break;
                     }
-
                 }
             } else {
                 esNumero=false;
                 System.out.println("La longitud del número debe ser de una, dos o tres cifras");
             }
         } while (!esNumero);
-
 
         System.out.println(" El número tiene " + numero.length() + " cifras.");
 
