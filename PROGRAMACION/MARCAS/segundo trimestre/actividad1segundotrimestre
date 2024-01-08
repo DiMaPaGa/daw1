@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="ejemplo.css"?>
+
+<Ciudades>
+    <ciudad continente="Asia">
+        <Nombre> Nueva Delhi
+            <País> India </País>
+        </Nombre>
+    </ciudad>
+
+    <ciudad continente="Europa">
+        <Nombre> Lisboa
+            <País> Portugal </País>
+        </Nombre>
+    </ciudad>
+
+    <ciudad continente="África">
+        <Nombre> El Cairo
+            <País> Egipto </País>
+        </Nombre>
+    </ciudad>
+
+</Ciudades>
+
+
+
+Pedido para el señor <destinatario_pedido> Juan Delgado Martínez </destinatario_pedido>. El pedido se compone de <articulo_pedido> una bicicleta A2023 </articulo_pedido>. A
+entregar en la <direccion_entrega> calle Barco 4, tercer piso, letra A </direccion_entrega>, el día <fecha_de_entrega> 19-5-2000 </fecha_de_entrega>.
+
+<hechos_historicos>
+
+    <descripcion>IBM da a conocer el PC.
+        <fecha> <dia> 12</dia> <mes> 8 </mes> <año> 1981 </año></fecha>
+    </descripcion>
+
+    <descripcion>Se funda Google.
+    <fecha> <dia> 4 </dia> <mes> 9 </mes> <año> 1998 </año></fecha>
+    </descripcion>
+
+    <descripcion> Se funda Facebook.
+    <fecha> <dia> 4 </dia> <mes> 2 </mes> <año> 2004 </año></fecha>
+    </descripcion>
+
+
+</hechos_historicos>
+
+
+<mensaje>
+    <remite>
+        <nombre> Alfredo Reino  </nombre>
+        <email> alf@ibium.com </email>
+    </remite>
+    <destinatario>
+        <nombre> Bill Clinton  </nombre>
+        <email> president@whitehouse.gov</email>
+    </destinatario>
+    <asunto> Hola Bill </asunto>
+    <texto>
+        <saludo> ¿Hola qué tal? </saludo>
+        <cuerpo_mensaje> Hace mucho tiempo que no escribes. A ver si llamas y quedamos pronto.  </cuerpo_mensaje>
+        <despedida> Un saludo. </despedida>
+    </texto>
+</mensaje>
+
+<animales>
+    <div id=animal> perro <div id=patas> 4</div> </div>
+    <div id=animal> pato <div id=patas> 2 </div> </div>
+    <div id=animal> ballena <div id=patas> 0 </div> </div>
+</animales>
+
