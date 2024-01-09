@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Actividad 2--> 
+
+<pedido>
+    Pedido para el señor 
+    <destinatario_pedido> Juan Delgado Martínez </destinatario_pedido>. 
+    El pedido se compone de <articulo_pedido> una bicicleta A2023 </articulo_pedido>. 
+    A entregar en la <direccion_entrega> calle Barco 4, tercer piso, letra A </direccion_entrega>, 
+    el día <fecha_de_entrega> <dia>19</dia> <mes>5</mes> <anio>2000</anio> </fecha_de_entrega>.
+</pedido>

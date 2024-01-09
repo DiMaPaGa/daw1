@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href="act5.css"?>
+
+<animales>
+
+    <animal> perro <patas> 4 </patas> </animal>
+    <animal> pato <patas> 2 </patas> </animal>
+    <animal> ballena <patas> 0 </patas> </animal>
+
+</animales>
