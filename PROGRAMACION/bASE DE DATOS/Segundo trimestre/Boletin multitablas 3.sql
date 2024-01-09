@@ -70,13 +70,13 @@ HAVING COUNT(*) > 2;
 
 -- 27. Crear una consulta que muestre el nombre de empleado y el número de empleados que cada uno de los empleados tiene a su cargo, pero solo para aquellos empleados que tienen gente a su cargo.
 SELECT e.FirstName, COUNT(sub.EmployeeID) AS "Número de subordinados"
-FROM employees e
-LEFT JOIN employees sub ON e.EmployeeID = sub.ReportsTo
+FROM employees AS e
+LEFT JOIN employees AS sub ON e.EmployeeID = sub.ReportsTo
 GROUP BY e.FirstName
 HAVING COUNT(sub.EmployeeID) > 0;
 
 SELECT e.FirstName, COUNT(sub.EmployeeID) AS "Número de subordinados"
-FROM employees e, employees sub
+FROM employees AS e, employees AS sub
 WHERE e.EmployeeID = sub.ReportsTo
 GROUP BY e.FirstName
 HAVING COUNT(sub.EmployeeID) > 0;
