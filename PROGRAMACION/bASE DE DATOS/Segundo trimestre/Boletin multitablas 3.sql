@@ -17,17 +17,24 @@ JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
 JOIN products ON products.ProductID = orderdetails.ProductID
 JOIN employees ON orders.EmployeeID = employees.EmployeeID;
 
+-- correccion clase
+SELECT orders.OrderID,OrderDate,orderdetails.ProductID,orderdetails.UnitPrice,employees.EmployeeID,concat(employees.firstName," ",employees.lastname) "NOMBRE DEL EMPLEADO" FROM northwind.orders,employees,orderdetails where orders.EmployeeID=employees.EmployeeID and orders.OrderID=orderdetails.OrderID;
+select ProductID, OrderDate, orders.OrderID, UnitPrice, employees.EmployeeID, FirstName
+from orders 
+join orderdetails on (orderdetails.OrderID = orders.OrderID)
+join employees on (orders.EmployeeID = employees.EmployeeID);
+
 
 -- 23. Calcular el stock de productos por cada categoria. Mostrar el nombre de la categoria y el stock por categoria.
 SELECT categories.CategoryName, sum(products.UnitsInStock) as "Stock por categoría" 
 FROM categories, products 
-Where categories.CategoryID = products.CategoryID GROUP BY categories.CategoryName; 
+Where categories.CategoryID = products.CategoryID GROUP BY categories.CategoryID; 
 
 SELECT categories.CategoryName, sum(products.UnitsInStock) as "Stock por categoría" 
 FROM categories
 JOIN products ON categories.CategoryID = products.CategoryID 
-GROUP BY categories.CategoryName; 
-
+GROUP BY categories.CategoryID; 
+-- Podria agrupar el anterior por CategoryName, como ya lo tenía, pero CategoryID me aseguro de que no se van a repetir porque en categoryName 
 -- 24. Obtener el nombre del cliente, nombre del proveedor, nombre del empleado y el nombre de los productos que estan en el pedido 10794.
 SELECT customers.ContactName, suppliers.ContactName, employees.FirstName, products.ProductName 
 FROM customers, suppliers, employees, products, orders, orderdetails 
@@ -82,12 +89,12 @@ GROUP BY e.FirstName
 HAVING COUNT(sub.EmployeeID) > 0;
 
 -- 28. Crear una consulta que muestre el nombre de empleado, el número de pedidos tramitado por cada empleado, de aquellos empleados que han tramitado mas de 15 pedidos.
-SELECT employees.FirstName, COUNT(orders.OrderID) AS "NÚMERO DE PEDIDOS"
+SELECT employees.FirstName, COUNT(*) AS "NÚMERO DE PEDIDOS"
 FROM employees
 JOIN orders ON employees.EmployeeID = orders.EmployeeID
-GROUP BY employees.FirstName
-HAVING COUNT(orders.OrderID) > 15;
-
+GROUP BY employees.FirstName 
+HAVING COUNT(*) > 15;
+-- mejor agrupar por employeeID
 SELECT employees.FirstName, COUNT(orders.OrderID) AS "NÚMERO DE PEDIDOS"
 FROM employees, orders
 WHERE employees.EmployeeID = orders.EmployeeID
@@ -103,54 +110,54 @@ WHERE customers.Country = 'USA'
 GROUP BY customers.CompanyName
 HAVING COUNT(orders.OrderID) > 5;
 
-SELECT customers.CompanyName, COUNT(orders.OrderID) AS "NÚMERO DE PEDIDOS", sum(orderdetails.UnitPrice * orderdetails.Quantity) as "DINERO GASTADO"
+SELECT customers.CompanyName, COUNT(*) AS "NÚMERO DE PEDIDOS", sum(orderdetails.UnitPrice * orderdetails.Quantity) as "DINERO GASTADO"
 FROM customers, orders, orderdetails
 WHERE customers.CustomerID = orders.CustomerID AND orders.OrderID = orderdetails.OrderID
 AND customers.Country = 'USA'
 GROUP BY customers.CompanyName
-HAVING COUNT(orders.OrderID) > 5;
+HAVING COUNT(*) > 5;
 
 -- 30. Crear una consulta que muestre el nombre del jefe y el número de empleados a su cargo de aquel jefe que mas empleados tenga a su cargo.
 
-SELECT e1.FirstName AS Jefe, COUNT(e2.ReportsTo) AS "NUM DE SUBORDINADOS"
+SELECT e1.FirstName AS Jefe, COUNT(*) AS "NUM DE SUBORDINADOS"
 FROM employees e1
 LEFT JOIN employees e2 ON e1.EmployeeID = e2.ReportsTo
 GROUP BY e1.FirstName
-ORDER BY COUNT(e2.ReportsTo) DESC
+ORDER BY COUNT(*) DESC
 LIMIT 1;
 
-SELECT e1.FirstName AS Jefe, COUNT(e2.ReportsTo) AS "NUM DE SUBORDINADOS"
+SELECT e1.FirstName AS Jefe, COUNT(*) AS "NUM DE SUBORDINADOS"
 FROM employees e1, employees e2 
 WHERE e1.EmployeeID = e2.ReportsTo
 GROUP BY e1.FirstName
-ORDER BY COUNT(e2.ReportsTo) DESC
+ORDER BY COUNT(*) DESC
 LIMIT 1;
 
 -- 31. Obtener el nombre del cliente y el número de pedidos del cliente que mas pedidos ha realizado en la empresa.
-SELECT customers.CompanyName, COUNT(orders.OrderID) as "Número de pedidos"
+SELECT customers.ContactName, COUNT(*) as "Número de pedidos"
 FROM customers
 JOIN orders ON customers.CustomerID = orders.CustomerID
-GROUP BY customers.CompanyName
-ORDER BY COUNT(orders.OrderID) DESC
+GROUP BY customers.ContactName
+ORDER BY COUNT(*) DESC
 LIMIT 1;
 
-SELECT customers.CompanyName, COUNT(orders.OrderID) as "Número de pedidos"
+SELECT customers.ContactName, COUNT(*) as "Número de pedidos"
 FROM customers, orders
 WHERE customers.CustomerID = orders.CustomerID
-GROUP BY customers.CompanyName
-ORDER BY COUNT(orders.OrderID) DESC
+GROUP BY customers.ContactName
+ORDER BY COUNT(*) DESC
 LIMIT 1;
 
 -- 32. Obtener el nombre del cliente y el volumen de negocio del cliente que mas volumen de negocio nos ha dejado en la empresa.
-SELECT customers.CompanyName, COUNT(orders.OrderID) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
+SELECT customers.ContactName, COUNT(*) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
 FROM customers
 JOIN orders ON customers.CustomerID = orders.CustomerID
 JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
-GROUP BY customers.CompanyName
+GROUP BY customers.ContactName
 ORDER BY DineroGastado DESC
 LIMIT 1;
 
-SELECT customers.CompanyName, COUNT(orders.OrderID) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
+SELECT customers.CompanyName, COUNT(*) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
 FROM customers, orders, orderdetails
 WHERE customers.CustomerID = orders.CustomerID and orders.OrderID = orderdetails.OrderID
 GROUP BY customers.CompanyName
