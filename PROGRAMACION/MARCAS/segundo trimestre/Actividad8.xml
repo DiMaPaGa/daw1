@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Actividad 8-->
+
+<equipos_Futbol>
+
+    <equipo>
+        <nombre_equipo>Calavera F.C.</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador></entrenador>
+
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre_jugador>Julio Torres Álvarez</nombre_jugador>
+                <nacionalidad>Española</nacionalidad>
+            </jugador>
+
+             <jugador posicion="portero">
+                <nombre_jugador>Alberto García Sánchez</nombre_jugador>
+                <nacionalidad>Española</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre_equipo>Torreblanca</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+            <jugador posicion="defensa">
+                <nombre_jugador>Julio Sánchez Ruiz</nombre_jugador>
+                <nacionalidad>Colombiano</nacionalidad>
+            </jugador>
+             <jugador posicion="medio">
+                <nombre_jugador>César Rubio Cáceres</nombre_jugador>
+                <nacionalidad>Brasileño</nacionalidad>
+            </jugador>
+        
+        </jugadores>
+    </equipo>
+
+
+
+
+
+
+
+
+
+
+
+</equipos_Futbol>
