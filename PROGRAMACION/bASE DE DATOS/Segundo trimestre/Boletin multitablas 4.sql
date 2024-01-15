@@ -20,7 +20,11 @@ SELECT products.ProductName, products.UnitPrice, suppliers.SupplierID, suppliers
 FROM products
 JOIN suppliers USING (SupplierID); 
 
+<<<<<<< HEAD
 -- 3. Mostrar el número de la orden, fecha, código del producto, precio, código del empleado y su nombre completo (no ponerlo en una columna salvo que lo diga).
+=======
+-- 3. Mostrar el número de la orden, fecha, código del producto, precio, código del empleado y su nombre completo.
+>>>>>>> 19a615eb5d122e992394614160647e7287014a8e
 -- Producto cartesiano
 SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.Firstname, employees.LastName) as "Nombre empleado"
 FROM orders, products, employees, orderdetails
@@ -33,7 +37,11 @@ JOIN employees USING (EmployeeID)
 JOIN orderdetails USING (OrderID)
 JOIN products USING (ProductID); 
 
+<<<<<<< HEAD
 -- 4. Visualizar el nombre y el id de la compania del cliente,fecha,precio unitario y producto de la orden (él añadiría el OrderID).
+=======
+-- 4. Visualizar el nombre y el id de la compania del cliente,fecha,precio unitario y producto de la orden.
+>>>>>>> 19a615eb5d122e992394614160647e7287014a8e
 -- Producto cartesiano
 SELECT customers.CompanyName, customers.CustomerID, orders.OrderDate, products.UnitPrice, products.ProductName 
 FROM customers, orders, products, orderdetails

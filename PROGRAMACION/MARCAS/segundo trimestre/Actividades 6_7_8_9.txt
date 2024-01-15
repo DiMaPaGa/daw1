@@ -1,0 +1,209 @@
+<!--Actividad 6-->
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<entidades>
+
+    <menor_que>&lt;</menor_que>
+    <mayor_que>&gt;</mayor_que>
+    <comilla_doble>&quot;</comilla_doble>
+    <comilla_simple>&apos;</comilla_simple>
+    <ampersand>&amp;</ampersand>
+
+</entidades>
+
+
+
+<!--Actividad 7-->
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<cds_en_oferta>
+    <cd>
+        <titulo>Still got the blues</titulo>
+        <artista>Gary Moore</artista>
+        <pais>UK</pais>
+        <compania_discografica>Virgin records</compania_discografica>
+        <precio>10.20</precio>
+        <ano_publicacion>1990</ano_publicacion>
+    
+    </cd>
+    <cd>
+        <titulo>One night only</titulo>
+        <artista>Bee Gees</artista>
+        <pais>UK</pais>
+        <compania_discografica>Polydor</compania_discografica>
+        <precio>10.90</precio>
+        <ano_publicacion>1998</ano_publicacion>
+    
+    </cd>
+    <cd>
+        <titulo>When a man loves a woman</titulo>
+        <artista>Percy Sledge</artista>
+        <pais>USA</pais>
+        <compania_discografica>Atlantic</compania_discografica>
+        <precio>8.70</precio>
+        <ano_publicacion>1987</ano_publicacion>
+    
+    </cd>
+    <cd>
+        <titulo>Bill Willie style</titulo>
+        <artista>Will Smith</artista>
+        <pais>USA</pais>
+        <compania_discografica>Columbia</compania_discografica>
+        <precio>9.90</precio>
+        <ano_publicacion>1997</ano_publicacion>
+    
+    </cd>
+    <cd>
+        <titulo>La canción de Juan Perro</titulo>
+        <artista>Radio Futura</artista>
+        <pais>España</pais>
+        <compania_discografica>Sony Music-Ariola</compania_discografica>
+        <precio>9.90</precio>
+        <ano_publicacion>1987</ano_publicacion>
+    
+    </cd>
+    <cd>
+        <titulo>The dock of the bay</titulo>
+        <artista>Otis Redding</artista>
+        <pais>USA</pais>
+        <compania_discografica>Atlantic</compania_discografica>
+        <precio>7.90</precio>
+        <ano_publicacion>1987</ano_publicacion>
+    
+    </cd>
+
+</cds_en_oferta>
+
+
+
+<!--Actividad 8 : Se han incoporado nombres y datos reales, sin indicar el nombre del entrenador, como se pedía en el enunciado-->
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<equipos_Futbol>
+
+    <equipo>
+        <nombre_equipo>Real Betis Balompié</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador> </entrenador>
+
+        <jugadores>
+            <jugador posicion="portero">
+                <nombre_jugador>Claudio Bravo</nombre_jugador>
+                <nacionalidad>Chilena</nacionalidad>
+            </jugador>
+
+            <jugador posicion="defensa">
+                <nombre_jugador>Youssouf Sabaly</nombre_jugador>
+                <nacionalidad>Francesa</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre_equipo>Sevilla FC</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador> </entrenador>
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre_jugador>Erik Manuel Lamela</nombre_jugador>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+             <jugador posicion="medio">
+                <nombre_jugador>Joan Jordán</nombre_jugador>
+                <nacionalidad>Española</nacionalidad>
+            </jugador>
+        
+        </jugadores>
+    </equipo>
+
+</equipos_Futbol>
+
+
+
+
+<!--Actividad 9-->
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<modelo_factura>
+    <encabezado>
+        <titulo>Factura</titulo>
+        <numero> 999</numero>      
+    </encabezado>
+
+    <datos_empresa>
+        <nombre>Equipos digitales S.L.</nombre>
+        <direccion>
+            <calle>Av.Valladolid</calle>
+            <ciudad>Madrid</ciudad>
+            <codigo_postal>28015</codigo_postal>
+        </direccion>
+        <CIF>Q-9876543</CIF>
+        <telefono>917776688</telefono>
+        <fax>917776699</fax>
+    </datos_empresa>
+
+    <datos_pedido>
+        <fecha>
+            <dia>12</dia>
+            <mes>01</mes>
+            <anio>2005</anio>
+        </fecha>
+        <numero_pedido>731</numero_pedido>
+        <forma_pago>EFECTIVO</forma_pago>
+    </datos_pedido>
+
+    <datos_cliente>
+        <numero> 879 </numero>
+        <nombre_cliente>Dario Bueno Gutiérrez</nombre_cliente>
+        <direccion_envio>
+            <calle_envio>Av.Oporto nº7 4ºd</calle_envio>
+            <poblacion>Madrid</poblacion>
+            <codigo_postal_envio> 28043 </codigo_postal_envio>
+            <provincia>Madrid</provincia>
+        </direccion_envio> 
+    </datos_cliente>
+
+    <datos_factura>
+        <articulo>
+            <referencia>MII93000F/8</referencia>
+            <descripcion>MICRO PENTIUM IV 3000MHZ FB800</descripcion>
+            <cantidad>1</cantidad>
+            <precio>230 eur.</precio>
+            <IVA>16,0</IVA>
+            <importe>266,80 eur.</importe>
+        </articulo>
+
+        <articulo>
+            <referencia>MB8QDIP4</referencia>
+            <descripcion>PLACA BASE QDI P4</descripcion>
+            <cantidad>1</cantidad>
+            <precio>180 eur.</precio>
+            <IVA>16,0</IVA>
+            <importe>208,80 eur.</importe>
+        </articulo>
+
+        <articulo>
+            <referencia>MEDD512M32</referencia>
+            <descripcion>DIMM DDR 512MB 3200</descripcion>
+            <cantidad>2</cantidad>
+            <precio>40 eur.</precio>
+            <IVA>16,0</IVA>
+            <importe>92,80 eur.</importe>
+        </articulo>
+
+        <articulo>
+            <referencia>HD250GSA7</referencia>
+            <descripcion>DISCO DURO 250GB S-ATA 7200</descripcion>
+            <cantidad>4</cantidad>
+            <precio>120 eur.</precio>
+            <IVA>16,0</IVA>
+            <importe>556,80 eur.</importe>
+        </articulo>
+
+    </datos_factura>
+
+</modelo_factura>

@@ -4,19 +4,19 @@
 <Ciudades>
     <ciudad continente="Asia">
         <Nombre> Nueva Delhi
-            <País> India </País>
+            <Pais> India </Pais>
         </Nombre>
     </ciudad>
 
     <ciudad continente="Europa">
         <Nombre> Lisboa
-            <País> Portugal </País>
+            <Pais> Portugal </Pais>
         </Nombre>
     </ciudad>
 
-    <ciudad continente="África">
+    <ciudad continente="Africa">
         <Nombre> El Cairo
-            <País> Egipto </País>
+            <Pais> Egipto </Pais>
         </Nombre>
     </ciudad>
 
