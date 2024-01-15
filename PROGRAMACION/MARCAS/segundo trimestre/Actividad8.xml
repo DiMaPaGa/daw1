@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!--Actividad 8 : Se han incoporado nombres y datos reales, sin indicar el nombre del entrenador, como se pedía en el enunciado-->
+
+<equipos_Futbol>
+
+    <equipo>
+        <nombre_equipo>Real Betis Balompié</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador> </entrenador>
+
+        <jugadores>
+            <jugador posicion="portero">
+                <nombre_jugador>Claudio Bravo</nombre_jugador>
+                <nacionalidad>Chilena</nacionalidad>
+            </jugador>
+
+            <jugador posicion="defensa">
+                <nombre_jugador>Youssouf Sabaly</nombre_jugador>
+                <nacionalidad>Francesa</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre_equipo>Sevilla FC</nombre_equipo>
+        <ciudad>Sevilla</ciudad>
+        <entrenador> </entrenador>
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre_jugador>Erik Manuel Lamela</nombre_jugador>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+             <jugador posicion="medio">
+                <nombre_jugador>Joan Jordán</nombre_jugador>
+                <nacionalidad>Española</nacionalidad>
+            </jugador>
+        
+        </jugadores>
+    </equipo>
+
+</equipos_Futbol>

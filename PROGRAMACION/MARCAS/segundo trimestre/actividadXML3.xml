@@ -6,15 +6,15 @@
 <hechos_historicos>
 
     <descripcion>IBM da a conocer el PC.
-        <fecha> <dia> 12</dia> <mes> 8 </mes> <año> 1981 </año></fecha>
+        <fecha> <dia> 12</dia> <mes> 8 </mes> <anio> 1981 </anio></fecha>
     </descripcion>
 
     <descripcion>Se funda Google.
-        <fecha> <dia> 4 </dia> <mes> 9 </mes> <año> 1998 </año></fecha>
+        <fecha> <dia> 4 </dia> <mes> 9 </mes> <anio> 1998 </anio></fecha>
     </descripcion>
 
     <descripcion> Se funda Facebook.
-        <fecha> <dia> 4 </dia> <mes> 2 </mes> <año> 2004 </año></fecha>
+        <fecha> <dia> 4 </dia> <mes> 2 </mes> <anio> 2004 </anio></fecha>
     </descripcion>
 
 
