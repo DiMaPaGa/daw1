@@ -204,8 +204,6 @@ public class Arrays1 {
             posicion= scan.nextInt();
             if (posicion>=0 && posicion<=25){
                 cadena+=alfabeto[posicion];
-            } else if (posicion<0) {
-                break;
             } else {
                 System.out.println("Error, inserte otro número");
             }
@@ -215,8 +213,88 @@ public class Arrays1 {
             System.out.println("FIN");
             System.out.println("Cadena resultante: "+ cadena);
 
+        //11.	Crear un array de String de tamaño 3, con los nombres de tres compañeros de clase. A continuación, pedir por teclado un nombre, y comprobar si está en el array,
+        // escribiendo un mensaje al respecto de tipo: Juan esta en el array.
+
+        String[] nombres= {"Jesus", "Sergio", "Alejandro"};
+
+        System.out.println("Introduce un nombre: Sin tildes");
+        String alumno= scan.next();
 
 
+        for (String var:nombres) {
+            if (alumno.equalsIgnoreCase(var)) {
+                System.out.println(alumno + " está en el array");
+                break;
+            }
+        }
+
+        /* String[] alumnos = {"Jesus", "Sergio", "Alejandro"};
+        System.out.println("Introduce un nombre: ");
+        String alumnos= scan.next();
+        boolean esta= false;
+        int posicion= 1-;
+
+        for (int i = 0; i <alumnos.length; i++) {
+            if (alumnos[i].equals(nombre)){
+                esta =true;
+                posicion= i;
+                break;
+            }
+
+        }
+
+        if (esta) {
+            System.out.println(nombre + " está en el array"+ posicion);
+        } else {
+            System.out.println(nombre + " NO está en el array" + posicion);
+        }*/
+
+
+
+
+
+
+
+
+        // 12.	Repetir escribiendo un mensaje de tipo: Juan esta en el array en la posición 2.
+
+  // lo he incorporado en el resultado anterior.
+
+        /*13.	Leer por pantalla un numero entero y crear un array de ese tamaño,
+        con valores aleatorios entre 1 y 300. A continuación, pedir un número entero
+        entre 0 y 9, e imprimir todas las posiciones del array que tengan un número
+        acabado en ese dígito. Esos números, además de imprimirlos, almacenarlos en
+        un array de salida con el tamaño adecuado.*/
+
+        System.out.println("Ingresa un número");
+        int tamanio= scan.nextInt();
+
+        int[] array13= new int[tamanio];
+
+        for (int i = 0; i < array13.length ; i++) {
+            array13[i]= (int) Math.floor(Math.random() * (300 - 1 + 1)) + 1;
+
+        }
+        int numero;
+
+        do{
+            System.out.println("Incorpora un número del 0 al 9");
+            numero=scan.nextInt();
+        }while (numero<0 || numero>9);
+
+        int[] newarray;
+        int valor=0;
+        for (int i = 0; i < array13.length; i++) {
+
+            if (array13[i]%10 ==numero){
+                System.out.println(array13[i]);
+                newarray[valor]=array13[i];
+
+
+
+
+        }
 
 
 
