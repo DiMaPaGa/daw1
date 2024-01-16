@@ -259,16 +259,22 @@ public class Arrays1 {
         acabado en ese dígito. Esos números, además de imprimirlos, almacenarlos en
         un array de salida con el tamaño adecuado.*/
 
-        System.out.println("\n Actividad 10");
+        System.out.println("\n Actividad 1");
 
-        System.out.println("Ingresa un número");
-        int tamanio= scan.nextInt();
+        int tamanio;
+        do{
+            System.out.println("Ingresa un número");
+            tamanio= scan.nextInt();
+        } while (tamanio<1);
+
 
         int[] array13= new int[tamanio];
+
 
         for (int i = 0; i < array13.length ; i++) {
             array13[i]= (int) (Math.random() * (300 - 1 + 1)) + 1; //math.random optimizado si es entero: (int) (Math.random() * (max - min + 1)) + 1
         }
+
         int numero;
 
         do{
@@ -300,6 +306,54 @@ public class Arrays1 {
         for (int var: newarray) {
             System.out.print(var+" ");
         }
+
+        /* solucion de clase: int tamanyo;
+
+do {
+System.out.println("Introduce un tamanyo para el array (Mayor de 0): ");
+tamanyo = scan.nextInt();
+} while (tamanyo < 1);
+
+int[] arrayEnteros = new int[tamanyo];
+
+for (int i = 0; i < arrayEnteros.length; i++) {
+arrayEnteros[i] = (int) (Math.random()*300 + 1);
+}
+
+int numEntero;
+do {
+System.out.println("Introduce un numero entero entre 0 y 9: ");
+numEntero = scan.nextInt();
+} while (numEntero < 0 || numEntero > 9);
+
+int tamanyoArray2 = 0;
+
+System.out.println("Posiciones:");
+for (int i = 0; i < arrayEnteros.length; i++) {
+if (arrayEnteros[i] % 10 == numEntero) {
+System.out.println(i);
+tamanyoArray2++;
+}
+}
+
+int[] arrayNuevo = new int[tamanyoArray2];
+tamanyoArray2 = 0;
+for (int i = 0; i < arrayEnteros.length; i++) {
+if (arrayEnteros[i] % 10 == numEntero) {
+arrayNuevo[tamanyoArray2] = arrayEnteros[i];
+tamanyoArray2++;
+}
+}
+
+System.out.println("Array completo:");
+for (int i = 0; i < arrayEnteros.length; i++) {
+System.out.println(arrayEnteros[i]);
+}
+
+System.out.println("Array final:");
+for (int i = 0; i < arrayNuevo.length; i++) {
+System.out.println(arrayNuevo[i]);
+}*/
 
 
 

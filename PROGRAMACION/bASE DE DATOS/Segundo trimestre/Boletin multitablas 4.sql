@@ -72,7 +72,7 @@ GROUP BY categories.CategoryID;
 SELECT products.ProductName, sum(orderdetails.Quantity) AS "Cantidad completa"
 FROM products, orderdetails
 WHERE products.ProductID=orderdetails.ProductID
-GROUP BY products.ProductID
+GROUP BY products.ProductID -- Pero se podría por ProductName
 ORDER BY sum(orderdetails.Quantity) DESC
 LIMIT 5;
 
@@ -86,7 +86,7 @@ LIMIT 5;
 
 -- 7. Obtener todas las ordenes hechas por el empleado King Robert.
 -- Producto cartesiano
-SELECT orders.*
+SELECT orders.* -- O si se interpreta OrderID, pues solo con OrderID
 FROM orders, employees
 WHERE orders.EmployeeID = employees.EmployeeID and concat_ws(" ", employees.LastName, employees.FirstName)= "King Robert";
 
@@ -98,7 +98,7 @@ WHERE concat_ws(" ", employees.LastName, employees.FirstName)= "King Robert";
 
 -- 8. Obtener todas las ordenes por el cliente cuya compania es "Que delicia".
 -- Producto cartesiano= ¡Ojo! si se escribe "Que delicia" tal y como sale en el enunciado, el resultado real es 0, ya que al parecer hay un carácter especial en la primera i del nombre. 
-SELECT orders.*
+SELECT orders.* -- u OrderID
 FROM orders, customers
 WHERE orders.CustomerID=customers.CustomerID and customers.CompanyName="Que Delicia";
 
@@ -120,7 +120,11 @@ WHERE customers.CompanyName="Que Del?cia";
 SELECT concat_ws(" ", employees.LastName, employees.FirstName) as "Nombre de empleado", orders.* 
 FROM orders, employees
 WHERE orders.EmployeeID = employees.EmployeeID and concat_ws(" ", employees.LastName, employees.FirstName) IN  ('King Robert', 'Davolio Nancy', 'Fuller Andrew');
-
+-- solucion clase
+SELECT orders.OrderID, employees.FirstName FROM orders, employees WHERE orders.EmployeeID = employees.EmployeeID 
+AND ((employees.LastName = "King" and employees.FirstName = "Robert")
+OR (employees.LastName = "Davolio" and employees.FirstName = "Nancy")
+OR (employees.LastName = "Fuller" and employees.FirstName = "Andrew"));
 -- JOIN
 SELECT CONCAT_WS(" ", employees.LastName, employees.FirstName) AS "Nombre de empleado", orders.*
 FROM orders
@@ -128,7 +132,7 @@ JOIN employees USING (EmployeeID)
 WHERE employees.LastName IN ('King', 'Davolio', 'Fuller') AND employees.FirstName IN ('Robert', 'Nancy', 'Andrew'); -- Aquí incluyo otra forma de hacer la misma criba sin emplear concat, por si resulta más clara.
 
 -- 10. Obtener todos los productos(codigo,nombre,precio,stock) de la orden 10257.
--- Producto cartesiano
+-- Producto cartesiano -- mirar en casa de nuevo que al parecer solo se necesitan dos tablas(products y orderdetails)
 SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
 FROM products, orderdetails, orders
 WHERE products.ProductID = orderdetails.ProductID and orderdetails.OrderID = orders.OrderID 
