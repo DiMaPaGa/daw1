@@ -182,7 +182,7 @@ public class Arrays1 {
         -1 // fin
         Cadena resultante: AFZ*/
 
-        System.out.println("Actividad 10");
+      /*  System.out.println("Actividad 10");
         char[] alfabeto= new char['Z'-'A'+1];
         char letra='A';
 
@@ -211,12 +211,12 @@ public class Arrays1 {
         }while (posicion>=0);
 
             System.out.println("FIN");
-            System.out.println("Cadena resultante: "+ cadena);
+            System.out.println("Cadena resultante: "+ cadena);*/
 
         //11.	Crear un array de String de tamaño 3, con los nombres de tres compañeros de clase. A continuación, pedir por teclado un nombre, y comprobar si está en el array,
         // escribiendo un mensaje al respecto de tipo: Juan esta en el array.
 
-        String[] nombres= {"Jesus", "Sergio", "Alejandro"};
+      /*  String[] nombres= {"Jesus", "Sergio", "Alejandro"};
 
         System.out.println("Introduce un nombre: Sin tildes");
         String alumno= scan.next();
@@ -227,8 +227,8 @@ public class Arrays1 {
                 System.out.println(alumno + " está en el array");
                 break;
             }
-        }
-
+        }*/
+// 12.	Repetir escribiendo un mensaje de tipo: Juan esta en el array en la posición 2.
         /* String[] alumnos = {"Jesus", "Sergio", "Alejandro"};
         System.out.println("Introduce un nombre: ");
         String alumnos= scan.next();
@@ -253,19 +253,13 @@ public class Arrays1 {
 
 
 
-
-
-
-
-        // 12.	Repetir escribiendo un mensaje de tipo: Juan esta en el array en la posición 2.
-
-  // lo he incorporado en el resultado anterior.
-
         /*13.	Leer por pantalla un numero entero y crear un array de ese tamaño,
         con valores aleatorios entre 1 y 300. A continuación, pedir un número entero
         entre 0 y 9, e imprimir todas las posiciones del array que tengan un número
         acabado en ese dígito. Esos números, además de imprimirlos, almacenarlos en
         un array de salida con el tamaño adecuado.*/
+
+        System.out.println("\n Actividad 10");
 
         System.out.println("Ingresa un número");
         int tamanio= scan.nextInt();
@@ -273,8 +267,7 @@ public class Arrays1 {
         int[] array13= new int[tamanio];
 
         for (int i = 0; i < array13.length ; i++) {
-            array13[i]= (int) Math.floor(Math.random() * (300 - 1 + 1)) + 1;
-
+            array13[i]= (int) (Math.random() * (300 - 1 + 1)) + 1; //math.random optimizado si es entero: (int) (Math.random() * (max - min + 1)) + 1
         }
         int numero;
 
@@ -283,17 +276,29 @@ public class Arrays1 {
             numero=scan.nextInt();
         }while (numero<0 || numero>9);
 
-        int[] newarray;
         int valor=0;
+
         for (int i = 0; i < array13.length; i++) {
 
             if (array13[i]%10 ==numero){
-                System.out.println(array13[i]);
+                System.out.println("En posición "+ i + " está el valor "+ array13[i]);
+                valor++;
+            }
+        }
+        int[] newarray= new int[valor];
+        valor=0;
+
+        for (int i = 0; i < array13.length; i++) {
+            if (array13[i]%10 ==numero){
                 newarray[valor]=array13[i];
+                valor++;
+            }
+        }
 
+        System.out.println("El nuevo array es de tamaño: "+ valor+ " y sus valores son: ");
 
-
-
+        for (int var: newarray) {
+            System.out.print(var+" ");
         }
 
 
