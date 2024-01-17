@@ -17,23 +17,25 @@ public class practica1 {
         for (int var: practica) {
             System.out.print(var+" ");
         }
+
         int mochila;
-        int contador=practica.length;
+        int iteraciones=1;
 
-
-        do{
-
-            for (int i = 0; i < practica.length; i++) {
-                if (practica[i]>practica[i+1]){
-                mochila= practica[i];
-                practica [i]= practica[i+1];
-                practica[i+1]= mochila;
+        for (int i = 0; i <practica.length-1 ; i++) {
+            for (int j = 0; j < practica.length-iteraciones; j++) {
+                if (practica[j] > practica[j + 1]) {
+                    mochila = practica[j];
+                    practica[j] = practica[j + 1];
+                    practica[j + 1] = mochila;
                 }
-            }
-        }while (contador>1);
 
+            }
+            iteraciones++;
+        }
+
+        System.out.println("\n Array ordenada");
         for (int var: practica) {
-            System.out.println(var+" ");
+            System.out.print(var+" ");
         }
 
 
