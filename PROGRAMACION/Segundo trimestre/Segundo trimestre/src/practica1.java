@@ -18,19 +18,17 @@ public class practica1 {
             System.out.print(var+" ");
         }
 
-        int mochila;
-        int iteraciones=1;
+
 
         for (int i = 0; i <practica.length-1 ; i++) {
-            for (int j = 0; j < practica.length-iteraciones; j++) {
+            for (int j = 0; j < (practica.length-1)-i; j++) {
                 if (practica[j] > practica[j + 1]) {
-                    mochila = practica[j];
+                    int mochila = practica[j];
                     practica[j] = practica[j + 1];
                     practica[j + 1] = mochila;
                 }
 
             }
-            iteraciones++;
         }
 
         System.out.println("\n Array ordenada");
