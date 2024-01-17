@@ -1,0 +1,7 @@
+
+
+-- Selecciona el ID del cliente, el nombre de contacto del cliente, el nombre del producto, el ID del pedido, la cantidad de los detalles del pedido y su precio unitario. 
+Muestra únicamente aquellos pedidos cuyo total (cantidad * precio unitario) sea superior a 5000.
+
+-- Selecciona el nombre y apellido del empleado (misma columna como "Nombre_Completo"), el nombre de contacto del cliente, el ID del pedido y la fecha del pedido. 
+Los resultados se ordenan por el Nombre_completo del empleado y la fecha del pedido.
