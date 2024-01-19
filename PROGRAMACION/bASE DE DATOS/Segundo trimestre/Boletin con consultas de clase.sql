@@ -19,15 +19,35 @@ WHERE suppliers.CompanyName between 'E%' and 'Pz%'
 GROUP BY Country;
 
 -- 4.Selecciona el codigo de producto, el nombre del producto, el nombre de categoria del pedido 10654
-
+SELECT products.ProductID, products.ProductName, categories.CategoryName
+FROM products, categories, orders, orderdetails
+WHERE products.CategoryID = categories.CategoryID
+AND orders.OrderID= orderdetails.OrderID
+AND orderdetails.ProductID = products.ProductID
+AND orders.OrderID= 10654;
 
 -- 5.Obtener el ID del pedido, la fecha del pedido, el ID del cliente, el nombre de la compañía del cliente, el ID del productoy la cantidad
-
+SELECT orders.OrderID, orders.OrderDate, customers.CustomerID, customers.CompanyName, products.ProductID, orderdetails.Quantity
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID= customers.CustomerID
+AND products.ProductID=orderdetails.ProductID
+AND orders.OrderID=orderdetails.OrderID;
 
 -- 6.Listar las ordenes de pedido,clientes, la cuantia por unidad y los articulos de aquellos pedidos realizados por clientes brasileños y selecciona de aquellos los productos que la cuantia por unidad se mida en 'ml'
+SELECT orders.OrderID, customers.CustomerID, products.QuantityPerUnit, products.ProductName
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID = customers.CustomerID
+AND orders.OrderID=orderdetails.OrderID
+AND orderdetails.ProductID = products.ProductID
+AND customers.Country="Brazil" and products.QuantityPerUnit like "%ml%";
 
+-- 7.Dime cuantos pedidos Ha Hecho cada empleado, muestarme el nombre de cliente, la ID de categoria, el nombre y ciudad del provedor asi como el titulo del empleado
+SELECT count(*), employees.EmployeeID, customers.ContactName, categories.CategoryID, suppliers.ContactName, suppliers.City, employees.Title
+FROM employees, customers, categories, suppliers, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+AND customers.CustomerID= orders.OrderID
+AND categories.CategoryID= products.CategoryID
 
--- 7.Dime cuantos pedidos a echo cada empleado, muestarme el nombre de cliente, la ID de categoria, el nombre y ciudad del provedor asi como el titulo del empleado
 
 
 -- 8.Por cada cliente muestra el ID de cliente, el nombre de contacto y los pedidos que han realizado.

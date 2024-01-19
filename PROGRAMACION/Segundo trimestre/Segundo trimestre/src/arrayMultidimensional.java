@@ -11,7 +11,8 @@ public class arrayMultidimensional {
 1.	Modifica la matriz sin utilizar bucles para que tenga el siguiente contenido, y tras modificarla completamente imprímela por pantalla sin utilizar bucles: Están las soluciones con y sin bucles
 1 1 1
 0 0 0
-0 0 0 7.	Modifica todos los ejercicios anteriores para que la modificación y la impresión se realicen mediante bucles.*/
+0 0 0
+7.	Modifica todos los ejercicios anteriores para que la modificación y la impresión se realicen mediante bucles.*/
     /*    System.out.println("\nActividad 1\n");
 
         int [][] matriz1={{0,0,0},{0,0,0},{0,0,0}};
@@ -235,7 +236,7 @@ public class arrayMultidimensional {
         
         //modificar el ejercicio para que sea n*m
 
-       System.out.println("\nActividad 9\n");
+       /*System.out.println("\nActividad 9\n");
 
         System.out.println("Incorpora un número para altura");
         int m=scan.nextInt();
@@ -251,30 +252,181 @@ public class arrayMultidimensional {
 
             }
             System.out.println();
-        }
+        }*/
 
         //Leer por pantalla un caracter y un numero n, e imprimir por pantalla.
 
-        System.out.println("Escribe un carácter");
+     /*   System.out.println("Escribe un carácter");
         String caracter= scan.next();
         System.out.println("Escribe un número");
         int numero= scan.nextInt();
 
-        String [][] arr10= new String [numero][numero];
+        String [][] matrix= new String [numero][numero];
 
-        for (int i = 0; i < arr10.length ; i++) {
-            for (int j = 0; j <arr10.length ; j++) {
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix.length ; j++) {
                 if (i==0 || j==0){
-                    arr10[i][j]=caracter;
+                    matrix[i][j]=caracter;
                 } else{
-                    arr10[i][j]="0";
+                    matrix[i][j]="0";
                 }
 
-                System.out.print(arr10[i][j]+ " ");
+                System.out.print(matrix[i][j]+ " ");
 
             }
             System.out.println();
+        }*/
+
+
+/*
+        5.	Leer por pantalla un carácter y un número n, e imprimir por pantalla una matriz cuadrada como la siguiente. Ejemplo para ‘a’ y 4:
+        0 0 0 a
+        0 0 0 a
+        0 0 0 a
+        a a a a
+         */
+      /*  System.out.println("\nActividad 5\n");
+
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix.length ; j++) {
+                if (j== matrix[i].length-1 || i==matrix[j].length-1){
+                    matrix[i][j]=caracter;
+                } else{
+                    matrix[i][j]="0";
+                }
+
+                System.out.print(matrix[i][j]+ " ");
+
+            }
+            System.out.println();
+        }*/
+
+       /* 6.	Leer por pantalla un carácter y un número n, e imprimir por pantalla una matriz cuadrada como la siguiente. Ejemplo para ‘a’ y 4:
+        a a a a
+        a 0 0 a
+        a 0 0 a
+        a a a a*/
+
+      /*  System.out.println("\nActividad 6\n");
+
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix.length ; j++) {
+                if (j== matrix[i].length-1 || i==matrix[j].length-1 || i==0 || j==0){
+                    matrix[i][j]=caracter;
+                } else{
+                    matrix[i][j]="0";
+                }
+
+                System.out.print(matrix[i][j]+ " ");
+
+            }
+            System.out.println();
+        }*/
+
+
+       /* System.out.println("\nActividad 7 de di\n");
+
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix.length ; j++) {
+                if (j==i){
+                    matrix[i][j]=caracter;
+                } else{
+                    matrix[i][j]="0";
+                }
+
+                System.out.print(matrix[i][j]+ " ");
+
+            }
+            System.out.println();
+        }*/
+
+       /* 1.	Leer por pantalla un número entero n, y crear una matriz de String de dimensiones nxn como la que se muestra a continuación. Imprimir la matriz por pantalla después de haberla rellenado completamente.
+
+        Ejemplo para n = 4:
+        1.0    2.0    3.0     4.0
+        5.0    6.0    7.0     8.0
+        9.0    10.0  11.0  12.0
+        13.0  14.0  15.0  16.0*/
+
+       /* System.out.println("\nActividad 1 de dia 19\n");
+
+        System.out.println("Introduce un número: ");
+        int n= scan.nextInt();
+
+        String [][] eje2= new String [n][n];
+        int valor=1;
+
+
+        for (int i = 0; i < eje2.length ; i++) {
+            for (int j = 0; j <eje2[i].length ; j++) {
+                eje2 [i][j]= valor + ".0";
+                System.out.print(eje2 [i][j]+" ");
+                valor++;
+            }
+            System.out.println();
+        }*/
+
+       /* System.out.println("\nActividad 1 de dia 19 con float\n");
+
+        float valor2=1.0f;
+        for (int i = 0; i < eje2.length ; i++) {
+            for (int j = 0; j <eje2[i].length ; j++) {
+                eje2 [i][j]= valor2+" ";
+                valor2++;
+                System.out.print(eje2 [i][j]);
+            }
+            System.out.println();
+        }*/
+
+
+        /*
+        2.	Crear una matriz de String de dimensiones 2x4 y rellenarla con nombres de compañeros o familiares.
+                El programa a continuación debe leer por pantalla una posición de la matriz válida, leer un nuevo
+        nombre por pantalla y sustituir el nombre que exista en esa posición. Debe repetirse la operación hasta que
+        el usuario introduzca una posición inválida. Antes de finalizar, imprima la matriz.
+         */
+        String [][] eje3= {{"Ca", "si","que","lo"},{"ten", "go", "o", "no"}};
+        int fila=0;
+        int columna=0;
+        String cadena="";
+        boolean validada=true;
+
+
+        do {
+            System.out.println("Introduce un numero de fila:");
+            fila = scan.nextInt();
+            System.out.println("Introduce un numero de columna: ");
+            columna = scan.nextInt();
+
+            validada=fila< eje3.length && columna< eje3[fila].length;
+
+                if (validada){
+                    System.out.println("Cambie la cadena");
+                    cadena= scan.next();
+                    eje3[fila][columna]=cadena;
+                }
+
+
+        } while (validada);
+
+        System.out.println("HA TERMINADO. El array queda: ");
+
+        for (int i = 0; i < eje3.length ; i++) {
+            for (int j = 0; j < eje3[i].length; j++) {
+                System.out.print(eje3[i][j] + " ");
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
 
 /* correcciones de clase
 
