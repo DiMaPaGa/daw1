@@ -5,6 +5,7 @@
 <!DOCTYPE perifericos [
 <!ELEMENT perifericos (#PCDATA)>
 ]>
+
 <perifericos>impresora</perifericos>
 
 
@@ -36,6 +37,7 @@
 <!ELEMENT raza (#PCDATA)>
 <!ELEMENT edad EMPTY>
 ]>
+
 <caballo>
     <nombre>Silvestre</nombre>
     <raza>Morgan</raza>
@@ -53,23 +55,21 @@
 <!ELEMENT material (#PCDATA)>
 <!ELEMENT color (#PCDATA)>
 ]>
+
 <mesa> La mesa de 
-
-    <material>madera </material> es de color
-
+    <material>madera</material> es de color
     <color>marrón</color>.
-
-
 </mesa>
 
 
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--Actividad 5-->
+<!-- Se entiende que tras <secciones> podría venir cualquier cosa, por lo que resultaría válido considerar letras como elementos al mismo nivel de <secciones> o como hijas de secciones. Opto por la segunda alternativa al parecerme el código más claro.-->
 
 <!DOCTYPE partes [
 <!ELEMENT partes (secciones)>
-<!ELEMENT secciones ANY> <!-- Se entiende que tras <secciones> podría venir cualquier cosa, por lo que resultaría válido considerar letras como elementos al mismo nivel de <secciones> o como hijas de secciones. Opto por la segunda alternativa al parecerme el código más claro.-->
+<!ELEMENT secciones ANY> 
 <!ELEMENT letras (#PCDATA)>
 ]>
 <partes>
@@ -79,6 +79,8 @@
         <letras>xyz</letras>
     </secciones>
 </partes>
+
+
 
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -117,6 +119,7 @@
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT color (#PCDATA)>
 ]>
+
 <ropa>
     <nombre>guante</nombre>
     <color>rojo</color>
@@ -161,7 +164,6 @@
 
 <!--Actividad 9-->
 
-
 <!DOCTYPE forma_geometrica [
 <!ELEMENT forma_geometrica (nombre, caracteristicas, numero_de_lados)>
 <!ELEMENT nombre (#PCDATA)>
@@ -170,6 +172,7 @@
 <!ELEMENT tipo (#PCDATA)>
 <!ELEMENT numero_de_lados (#PCDATA)>
 ]>
+
 <forma_geometrica>
     <nombre>rombo</nombre>
     <caracteristicas>
@@ -188,6 +191,7 @@
 <!ELEMENT lugares ANY>
 <!ELEMENT lugar (#PCDATA)>
 ]>
+
 <lugares>En el <lugar>polo norte</lugar> hace mucho frío. Pero, en el
     <lugar>desierto del Sahara</lugar> hace mucho calor.</lugares>
 
@@ -252,9 +256,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <!--Actividad 13-->
-
 
 <!DOCTYPE elementos [
 <!ELEMENT elementos (pcdata*, any, vacio)>
