@@ -348,7 +348,7 @@ public class arrayMultidimensional {
         9.0    10.0  11.0  12.0
         13.0  14.0  15.0  16.0*/
 
-       /* System.out.println("\nActividad 1 de dia 19\n");
+       /*System.out.println("\nActividad 1 de dia 19\n");
 
         System.out.println("Introduce un número: ");
         int n= scan.nextInt();
@@ -360,8 +360,8 @@ public class arrayMultidimensional {
         for (int i = 0; i < eje2.length ; i++) {
             for (int j = 0; j <eje2[i].length ; j++) {
                 eje2 [i][j]= valor + ".0";
-                System.out.print(eje2 [i][j]+" ");
                 valor++;
+                System.out.print(eje2 [i][j]+" ");
             }
             System.out.println();
         }*/
@@ -385,11 +385,11 @@ public class arrayMultidimensional {
         nombre por pantalla y sustituir el nombre que exista en esa posición. Debe repetirse la operación hasta que
         el usuario introduzca una posición inválida. Antes de finalizar, imprima la matriz.
          */
-        String [][] eje3= {{"Ca", "si","que","lo"},{"ten", "go", "o", "no"}};
-        int fila=0;
-        int columna=0;
-        String cadena="";
-        boolean validada=true;
+       String [][] eje3= {{"Moisés","Diana","Ana", "Nando"},{"María","Paco","Lydia","Fabiola"}};
+        int fila;
+        int columna;
+        String cadena;
+        boolean validada;
 
 
         do {
@@ -398,7 +398,7 @@ public class arrayMultidimensional {
             System.out.println("Introduce un numero de columna: ");
             columna = scan.nextInt();
 
-            validada=fila< eje3.length && columna< eje3[fila].length;
+            validada=fila>=0 && fila< eje3.length && columna>=0 && columna< eje3[fila].length;
 
                 if (validada){
                     System.out.println("Cambie la cadena");
@@ -416,6 +416,8 @@ public class arrayMultidimensional {
                 System.out.print(eje3[i][j] + " ");
             }
         }
+
+
 
 
 

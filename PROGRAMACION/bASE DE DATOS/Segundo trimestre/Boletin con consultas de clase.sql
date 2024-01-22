@@ -41,19 +41,24 @@ AND orders.OrderID=orderdetails.OrderID
 AND orderdetails.ProductID = products.ProductID
 AND customers.Country="Brazil" and products.QuantityPerUnit like "%ml%";
 
--- 7.Dime cuantos pedidos Ha Hecho cada empleado, muestarme el nombre de cliente, la ID de categoria, el nombre y ciudad del provedor asi como el titulo del empleado
-SELECT count(*), employees.EmployeeID, customers.ContactName, categories.CategoryID, suppliers.ContactName, suppliers.City, employees.Title
-FROM employees, customers, categories, suppliers, orders
+-- 7.Dime cuantos ¿qué? pedidos Ha Hecho cada empleado, muestarme el nombre de cliente, la ID de categoria, el nombre y ciudad del provedor asi como el titulo del empleado
+SELECT orders.OrderID, employees.EmployeeID, customers.ContactName, categories.CategoryID, suppliers.ContactName, suppliers.City, employees.Title
+FROM employees, customers, categories, suppliers, orders, products
 WHERE employees.EmployeeID = orders.EmployeeID
 AND customers.CustomerID= orders.OrderID
 AND categories.CategoryID= products.CategoryID
-
-
+AND suppliers.SupplierID = products.SupplierID;
 
 -- 8.Por cada cliente muestra el ID de cliente, el nombre de contacto y los pedidos que han realizado.
-
+SELECT customers.CustomerID, customers.ContactName, orders.OrderID
+FROM customers, orders
+WHERE customers.CustomerID = orders.CustomerID;
 
 -- 9.Muestrame el id del order,la fecha requerida,la via,la discontinuidad,el reorderlevel,la quantity y la quantity por unidad.Usa join y las tablas: orders,orderdetails y products.
+SELECT orders.OrderID, orders.RequiredDate, orders.ShipVia, orderdetails.Discount, products.ReorderLevel, products.QuantityPerUnit
+FROM orders
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID);
 
 
 -- 10.Listar las ordenes de pedido,clientes, fecha de pedido y los articulos de aquellos pedidos realizados por clientes brasileños en el mes de septiembre de cualquier año
