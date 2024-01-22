@@ -233,7 +233,7 @@ public class arrayMultidimensional {
             }
             System.out.println();
         }*/
-        
+
         //modificar el ejercicio para que sea n*m
 
        /*System.out.println("\nActividad 9\n");
@@ -385,7 +385,7 @@ public class arrayMultidimensional {
         nombre por pantalla y sustituir el nombre que exista en esa posición. Debe repetirse la operación hasta que
         el usuario introduzca una posición inválida. Antes de finalizar, imprima la matriz.
          */
-       String [][] eje3= {{"Moisés","Diana","Ana", "Nando"},{"María","Paco","Lydia","Fabiola"}};
+      /* String [][] eje3= {{"Moisés","Diana","Ana", "Nando"},{"María","Paco","Lydia","Fabiola"}};
         int fila;
         int columna;
         String cadena;
@@ -415,8 +415,151 @@ public class arrayMultidimensional {
             for (int j = 0; j < eje3[i].length; j++) {
                 System.out.print(eje3[i][j] + " ");
             }
+        }*/
+
+        /*3.	Repetir el ejercicio anterior para que antes del último paso (imprimir la matriz),
+        se lea por pantalla un String. En caso de ser “MAYUSCULAS”, pasar a mayúsculas el contenido
+        de la matriz. En caso de ser “minusculas”, pasar a minúsculas el contenido de la matriz. En cualquier otro caso, no hacer nada. A continuación, imprimir la matriz.*/
+
+        /*String [][] eje3= {{"Moisés","Diana","Ana", "Nando"},{"María","Paco","Lydia","Fabiola"}};
+        int fila;
+        int columna;
+        String cadena;
+        boolean validada;
+
+
+        do {
+            System.out.println("Introduce un numero de fila:");
+            fila = scan.nextInt();
+            System.out.println("Introduce un numero de columna: ");
+            columna = scan.nextInt();
+
+            validada=fila>=0 && fila< eje3.length && columna>=0 && columna< eje3[fila].length;
+
+            if (validada){
+                System.out.println("Cambie la cadena");
+                cadena= scan.next();
+                eje3[fila][columna]=cadena;
+            }
+
+
+        } while (validada);*/
+
+//correccion del nuevo ejercicio 3 con actividad corregida en clase
+     /*   int positioni;
+        int positionj;
+
+        String[][] nombres = {
+                {"Ana","Bernardo","Carlos","Domingo"},
+                {"Ernesto","Francisco","Gabriel","Hector"}
+        };
+
+        do {
+            String sustituto;
+            System.out.print("Introduzca el número de la matriz: ");
+            positioni = scan.nextInt();
+            System.out.print("Introduzca el número del nomrbe: ");
+            positionj = scan.nextInt();
+
+            if ((positioni<=1) && (positionj
+                    <=3 && positionj>=0 && positioni>=0)){
+                System.out.print("Ahora introduzca el nombre que lo sustituirá: ");
+                sustituto = scan2.nextLine();
+                nombres[positioni][positionj] = sustituto;
+            }
+        } while ((positioni<=1) && (positionj<=3) && (positionj>=0 && positioni>=0));
+
+        System.out.println("Quieres los nombres en mayusculas o en minusculas?\nIntroduzca 'MAYUSCULAS' o 'minusculas'");
+        String mayusculas = scanString.nextLine();
+        if (mayusculas.equals("MAYUSCULAS")){
+            for (int i = 0; i < nombres.length; i++) {
+                for (int j = 0; j < nombres[i].length; j++) {
+                    nombres[i][j] = nombres[i][j].toUpperCase();
+                }
+            }
+        }else if (mayusculas.equals("minusculas")) {
+            for (int i
+                 = 0; i < nombres.length; i++) {
+                for (int j = 0; j < nombres[i].length; j++) {
+                    nombres[i][j] = nombres[i][j].toLowerCase();
+                }
+            }
+        }*/
+
+        /*
+        1. Leer por teclado un entero y crear una matriz cuadrada (mismo numero de filas que de columnas). Dependiendo
+         del tamaño tendrá esta forma:
+// Tamaño 1
+        1
+// Tamaño 2
+        10
+        10
+// Tamaño 3
+        101
+        101
+        101
+// Tamaño 4
+        1010
+        1010
+        1010
+        1010
+         */
+
+        System.out.println("incorpora un número");
+        int number = scan.nextInt();
+
+        int[][] arr1 = new int[number][number];
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                if (j % 2 == 0) {
+                    arr1[i][j] = 1;
+                    System.out.print(arr1[i][j]);
+                } else {
+                    arr1[i][j] = 0;
+                    System.out.print(arr1[i][j]);
+                }
+
+            }
+            System.out.println();
         }
 
+
+
+        /* solucion de clase
+
+        String[][] nombres = {
+                {"Vargas", "MAnuel", "Bojita", "Adan"},
+                {"Julian", "Carlos", "Juan", "David"},
+        };
+        int alto;
+        int ancho;
+        String nombre = "";
+        do {
+
+            System.out.println("introduce la posicion de altura");
+            alto = scan.nextInt();
+            System.out.println("introduce la posicion de ancho");
+            ancho = scan.nextInt();
+           if (alto<2&&alto>=0&&ancho<4&&ancho>=0) {
+               Syst
+System.out.println("introduce un nombre");
+               nombre = scan.next();
+               nombres[alto][ancho] = nombre;
+           }else{
+               System.out.println("Posicion invalida");
+               break;
+           }
+
+
+
+    }while(alto<2||alto>=0||ancho<3||ancho>=0);
+        for (int i = 0; i < nombres.length; i++) {
+            for (int j = 0; j < nombres[i].length; j++) {
+                System.out.print(nombres[i][j] + " ");
+            }
+            System.out.println(" ");
+         */
 
 
 
