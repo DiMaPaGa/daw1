@@ -1,4 +1,7 @@
-e﻿BOLETIN 1
+﻿BOLETIN 1
+
+sudo useradd newuser
+  sudo passwd newuser 
 
 **1. Enunciado:** Muestra el contenido de tu carpeta de inicio.
 
@@ -11,6 +14,7 @@ touch ~/miarchivo.txt
 **3. Enunciado:** Intenta crear un archivo en la carpeta de inicio de otro usuario.
 
 sudo -u sergiovela bash -c 'touch ~/miarchivo.txt'  Esto es lo más correcto, pero no me deja hacerlo sin contraseña (sin la misma, no tengo permiso para entrar).
+¡OJO! Con sudo, al elevar el privilegio, me solicita mi contraseña de usuario, no la del root, pero no está permitida.
 
 **4. Enunciado:** Cambia el directorio a tu carpeta de inicio.
 
@@ -32,7 +36,7 @@ confirmo que la tengo creada.
 
 **7. Enunciado:** Intenta copiar un archivo a la carpeta de inicio de otro usuario.
 
-sudo -u sergiovela bash -c 'cp ~/README.TXT'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
+sudo -u sergiovela bash -c 'cp ~/README.TXT'   Vuelve a pasar lo mismo que en el ejercicio 3.
 
 **8. Enunciado:** Muestra el contenido de una subcarpeta dentro de tu carpeta de inicio.
 
@@ -51,6 +55,7 @@ mv ~/README.txt ~/LEEME.txt
 
 mkdir ~/misdocumentos
 chmod 200 ~/misdocumentos
+¡Ojo! Rectifico en actividad 13, ver aclaración allí.
 
 **12. Enunciado:** Intenta crear un archivo en la carpeta `misdocumentos` de otro usuario.
 
@@ -59,7 +64,7 @@ sudo -u sergiovela bash -c 'mkdir ~/misdocumentos'   Vuelve a pasar lo mismo que
 **13. Enunciado:** Cambia al directorio `misdocumentos` en tu carpeta de inicio.
 
 cd ~/misdocumentos
-Como en el ejercicio 11 entendí que tenía que darme "unicamente a mi" permiso de solo lectura, ahora me sale permiso denegado
+Como en el ejercicio 11 entendí que tenía que darme "unicamente a mí" permiso de solo escritura ahora me sale permiso denegado
 Lo resuelvo con:
 chmod 700 ~/misdocumentos
 y luego
@@ -68,7 +73,7 @@ Y ya puedo acceder
 
 **14. Enunciado:** Intenta cambiar al directorio `misdocumentos` de otro usuario.
 
-sudo -u sergiovela bash -c 'cd ~/misdocumentos' Pero no me deja sin la contraseña root.
+sudo -u sergiovela bash -c 'cd ~/misdocumentos' Pero no me deja sin la contraseña.
 
 **15. Enunciado:** Copia un archivo desde otro lugar en tu carpeta de inicio a `misdocumentos`.
 
@@ -95,6 +100,7 @@ mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN.txt
 **20. Enunciado:** Intenta cambiar el nombre de un archivo en `misdocumentos` desde fuera de tu carpeta de inicio.
 
 mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN2.txt
+
 
 **21. Enunciado:** Muestra la lista de tus procesos en ejecución.
 
@@ -132,37 +138,79 @@ more LEEME.txt | head -n 20
 
 **26. Enunciado:** Muestra las últimas 15 líneas del archivo "registro.txt" con `tail`.
 
-tail -n 15 registro.txt
-tail -n 15 LEEME.txt
+Esto es lo que pide el enunciado: tail -n 15 registro.txt
+por lo que selecciono uno de los archivos txt: tail -n 15 LEEME.txt
 
 
 **27. Enunciado:** Copia un archivo "documento.txt" a una carpeta llamada "respaldo".
 
+Primero me sitúo en el directorio de inicio:
+cd ~
+Creo la carpeta respaldo
+mkdir respaldo
+Y como no tengo un documento que se llame "documento.txt", copio el documento README.txt a la carpeta "respaldo"
+renombrándolo como "documentos.txt":
+cp README.txt respaldo/documentos.txt
+
 **28. Enunciado:** Crea un nuevo directorio llamado "proyectos" con permisos de lectura y escritura para el usuario y solo lectura para otros.
+
+mkdir proyectos
+chmod 644 proyectos
 
 **29. Enunciado:** Lista todos los archivos ocultos en tu directorio de inicio.
 
+ls -a ~
+
 **30. Enunciado:** Crea un enlace simbólico del archivo "configuracion.conf" en tu carpeta de inicio llamado "enlace.conf".
+
+ln -s ~/configuracion.conf ~/enlace.conf
 
 **31. Enunciado:** Muestra el uso de espacio en disco de todos los directorios en tu carpeta de inicio, ordenados por tamaño.
 
+du -h --max-depth=1 ~/ | sort -hr
+
 **32. Enunciado:** Crea una copia de seguridad de tu carpeta de inicio en un archivo comprimido llamado "respaldo.tar.gz".
+
+tar czf respaldo.tar.gz ~
 
 **33. Enunciado:** Crea un enlace duro del archivo "datos.txt" en tu carpeta de inicio a "datos_enlace.txt".
 
+echo "Estoy creando el archivo que pide en enunciado para crear el enlace duro" > datos.txt
+ln datos.txt datos_enlace.txt
+
 **34. Enunciado:** Encuentra todos los archivos con la extensión ".jpg" en tu carpeta de inicio y sus subdirectorios.
+
+find ~ -name "*.jpg"
 
 **35. Enunciado:** Crea un nuevo grupo llamado "proyecto" y agrega a tu usuario a ese grupo.
 
+sudo groupadd proyecto
+sudo usermod -aG proyecto miusuario
+
 **36. Enunciado:** Cambia el propietario del archivo "archivo1.txt" en tu carpeta de inicio al usuario "nuevo_usuario".
+
+touch archivo1.txt
+sudo chown nuevo_usuario:nuevo_usuario archivo1.txt
 
 **37. Enunciado:** Cambia el grupo del archivo "archivo2.txt" en tu carpeta de inicio al grupo "proyecto".
 
+touch archivo2.txt
+sudo chgrp proyecto archivo2.txt
+
 **38. Enunciado:** Crea un archivo vacío llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de modificación personalizada.
+
+touch ~/nuevo_archivo.txt
+touch -m -t 202401251920 ~/nuevo_archivo.txt
 
 **39. Enunciado:** Cambia la contraseña de tu usuario.
 
+passwd
+Si no pudiera: 
+sudo passwd nombre_de_usuario
+
 **40. Enunciado:** Crea un archivo llamado "lista.txt" que contenga una lista numerada de archivos en tu carpeta de inicio.
+
+
 
 **41. Enunciado:** Encuentra y muestra todos los archivos que contienen la palabra "importante" en su nombre en tu carpeta de inicio y subdirectorios.
 

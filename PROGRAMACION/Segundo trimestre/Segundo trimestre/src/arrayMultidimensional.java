@@ -458,11 +458,10 @@ public class arrayMultidimensional {
             String sustituto;
             System.out.print("Introduzca el número de la matriz: ");
             positioni = scan.nextInt();
-            System.out.print("Introduzca el número del nomrbe: ");
+            System.out.print("Introduzca el número del nombre: ");
             positionj = scan.nextInt();
 
-            if ((positioni<=1) && (positionj
-                    <=3 && positionj>=0 && positioni>=0)){
+            if ((positioni<=1) && (positionj<=3 && positionj>=0 && positioni>=0)){
                 System.out.print("Ahora introduzca el nombre que lo sustituirá: ");
                 sustituto = scan2.nextLine();
                 nombres[positioni][positionj] = sustituto;
@@ -505,7 +504,7 @@ public class arrayMultidimensional {
         1010
          */
 
-        System.out.println("incorpora un número");
+        /*System.out.println("incorpora un número");
         int number = scan.nextInt();
 
         int[][] arr1 = new int[number][number];
@@ -514,17 +513,44 @@ public class arrayMultidimensional {
             for (int j = 0; j < arr1[i].length; j++) {
                 if (j % 2 == 0) {
                     arr1[i][j] = 1;
-                    System.out.print(arr1[i][j]);
-                } else {
-                    arr1[i][j] = 0;
-                    System.out.print(arr1[i][j]);
                 }
-
+                System.out.print(arr1[i][j]);
             }
             System.out.println();
-        }
+        }*/
 
+        // modificar el ejercicio anterior para que se impriman solo unos en la diagonal
 
+      /*  System.out.println("incorpora un número");
+        int number = scan.nextInt();
+
+        int[][] arr1 = new int[number][number];
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                if (j==i) {
+                    arr1[i][j] = 1;
+                }
+                System.out.print(arr1[i][j]);
+            }
+            System.out.println();
+        }*/
+
+        // Y ahora con la diagonal inversa:
+     /*   System.out.println("incorpora un número");
+        int number = scan.nextInt();
+
+        int[][] arr1 = new int[number][number];
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                if (j==arr1.length-1-i) {
+                    arr1[i][j] = 1;
+                }
+                System.out.print(arr1[i][j]);
+            }
+            System.out.println();
+        }*/
 
         /* solucion de clase
 

@@ -60,9 +60,14 @@ FROM orders
 JOIN orderdetails USING (OrderID)
 JOIN products USING (ProductID);
 
-
 -- 10.Listar las ordenes de pedido,clientes, fecha de pedido y los articulos de aquellos pedidos realizados por clientes brasileños en el mes de septiembre de cualquier año
-
+SELECT orders.OrderID, customers.CustomerID, orders.OrderDate, products.ProductID
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID = customers.CustomerID
+AND products.ProductID = orderdetails.ProductID
+AND orders.OrderID = orderdetails.OrderID
+AND customers.Country = "Brazil"
+AND month(orders.OrderDate) = 9;
 
 -- 11.Selecciona el ID del cliente, el nombre de contacto del cliente, el nombre del producto, el ID del pedido, la cantidad de los detalles del pedido y su precio unitario
 -- Muestra únicamente aquellos pedidos cuyo total (cantidad * precio unitario) sea superior a 5000.
@@ -81,11 +86,21 @@ AND orderDetails.ProductID = products.ProductID
 AND (OrderDetails.Quantity * OrderDetails.UnitPrice) > 5000;
 
 -- 12.Obtener el ID del empleado, el nombre y apellido del empleado en una sola columna, el ID del pedido, la fecha del pedido, el ID del cliente,el nombre de la compañía del cliente de las órdenes hechas en 1996 en Estados Unidos
-
+SELECT employees.EmployeeID, concat_ws(" ", employees.FirstName, employees.LastName) as "Nombre completo", orders.OrderID, orders.OrderDate, customers.CustomerID, customers.CompanyName
+FROM employees, orders, customers
+WHERE employees.EmployeeID=orders.EmployeeID
+AND orders.CustomerID = customers.CustomerID
+AND YEAR(orders.OrderDate) =1996
+AND customers.Country = "USA";
 
 -- 13.Mostrar la descripcion de territorio, el codigo de territorio y el nombre completo + su codigo de empleado (en una sola columna separado con espacio ' ')
 -- del empleado con nombre 'Nancy'.
 
+SELECT territories.TerritoryDescription, territories.TerritoryID, concat_ws(" ", employees.FirstName, employees.LastName, employees.EmployeeID) as "Nombre y codigo de empleado"
+FROM territories, employees, employeeterritories
+WHERE territories.TerritoryID = employeeterritories.TerritoryID
+AND employeeterritories.EmployeeID = employees.EmployeeID
+AND employees.FirstName = "Nancy";
 
 -- 14.Selecciona el nombre y apellido del empleado (misma columna como "Nombre_Completo"), el nombre de contacto del cliente, el ID del pedido y la fecha del pedido
 -- Los resultados se ordenan por el Nombre_completo del empleado y la fecha del pedido.
@@ -101,15 +116,37 @@ WHERE employees.EmployeeID = orders.EmployeeID
 AND orders.CustomerID = customers.CustomerID
 ORDER BY Nombre_Completo, Orders.OrderDate;
 
-
 -- 15.Selecciona el codigo de empleado, la cantidad de productos y la fecha de venta de cada pedido ordenado de más reciente a más antiguo
 
+SELECT employees.EmployeeID, count(orderdetails.ProductID) as "Cantidad de productos", orders.OrderDate
+FROM employees, orderdetails, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+AND orders.OrderID = orderdetails.OrderID
+GROUP BY employees.EmployeeID, orders.OrderDate
+ORDER BY orders.OrderDate DESC;
 
 -- 16.Mostrar el nombre de categoria, su longitud en caracteres, el nombre de producto, su longitud de caracteres y el precio unitario de estos (Redondeado abajo)
 -- de los productos cuya categoria tenga mas de 12 caracteres .Muestra solo los productos cuyo nombre de producto empiecen por 'F' y NO ACABEN en 'x'
 
+SELECT categories.CategoryName, length(categories.CategoryName) as "Caracteres nombre categoria", products.ProductName, length(products.ProductName) as "Caracteres nombre producto", floor(products.UnitPrice) as "Precio redondeado"
+FROM categories, products
+WHERE categories.CategoryID = products.CategoryID
+AND products.ProductName LIKE "F%"
+AND products.ProductName NOT LIKE "%x";
 
--- 17.Muestrame el id del customer,la fecha, el precio, el id del producto,el quantity,el id de la categoria,las unidades en orden. Usa join
 
+-- 17.Muestrame el id del customer,la fecha, el precio, el id del producto,el quantity,el id de la categoria,las unidades en orden ¿PERO TAMBIÉN ORDENADAS?. Usa join
+SELECT customers.CustomerID, orders.OrderDate, products.UnitPrice, products.ProductID, orderdetails.Quantity, categories.CategoryID, products.UnitsOnOrder
+FROM orders
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN customers USING (CustomerID)
+JOIN categories USING (CategoryID)
+ORDER BY products.UnitsOnOrder;
 
--- 18.Muestra el nombre de empleado, y los pedidos que han realiazado aquellos empleados que han realizado mas de 9 pedidos
+-- 18.Muestra el nombre de empleado, y los pedidos que han realizado aquellos empleados que han realizado mas de 9 pedidos
+SELECT employees.FirstName, count(orders.OrderID) as "numero pedidos realizados"
+FROM employees, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.FirstName
+HAVING count(orders.OrderID)> 9;
