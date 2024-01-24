@@ -210,39 +210,87 @@ sudo passwd nombre_de_usuario
 
 **40. Enunciado:** Crea un archivo llamado "lista.txt" que contenga una lista numerada de archivos en tu carpeta de inicio.
 
-
+cd ~
+ls -1 > lista.txt
 
 **41. Enunciado:** Encuentra y muestra todos los archivos que contienen la palabra "importante" en su nombre en tu carpeta de inicio y subdirectorios.
 
+find ~ -type f -name "*importante*"
+
 **42. Enunciado:** Muestra el uso de memoria RAM en tiempo real con actualizaciones cada 2 segundos.
+
+watch -n 2 free -m
 
 **43. Enunciado:** Crea un enlace simbólico al archivo "documento.pdf" en tu carpeta de inicio llamado "enlace.pdf".
 
+Como el documento no lo tengo, tengo primero que crear un .txt, convertirlo a PDF y luego crear el enlace. Sería:
+
+echo "Contenido del documento" > ~/documento.txt
+pdflatex ~/documento.txt
+ln -s ~/documento.pdf ~/enlace.pdf
+
 **44. Enunciado:** Muestra información detallada de todos los dispositivos de red en tu sistema.
+
+ifconfig -a
 
 **45. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y establece permisos de solo lectura para todos los demás usuarios.
 
+mkdir ~/fotos
+chmod 744 ~/fotos
+
+chmod 744 establece todos los permisos para usuario principal, pero solo lectura para grupos y los demás usuarios. Como el enunciado 
+dice para todos los demás usuarios, entiendo que es considerando también grupos.
+
 **46. Enunciado:** Comprime un directorio llamado "proyecto" en un archivo llamado "proyecto.zip".
+
+zip -r proyecto.zip proyecto/
 
 **47. Enunciado:** Muestra la fecha y hora actual y regístrala en un archivo llamado "registro.txt" en tu carpeta de inicio.
 
+date | tee ~/registro.txt
+
 **48. Enunciado:** Muestra los primeros 15 procesos en ejecución ordenados por uso de CPU.
+
+ps aux --sort=-%cpu | head -n 16 
+¡Ojo! pongo 16 porque la primera línea que sale es la de encabezado, no un proceso en sí.
 
 **49. Enunciado:** Crea una nueva carpeta llamada "archivos_personales" en tu carpeta de inicio y establece permisos para que solo tú puedas leer, escribir y ejecutar en ella.
 
+mkdir ~/archivos_personales
+chmod 700 ~/archivos_personales
+
 **50. Enunciado:** Copia el archivo "importante.doc" desde tu carpeta de inicio a una carpeta llamada "documentos" en tu carpeta de inicio.
+
+mkdir ~/documentos
+touch ~/importante.doc
+cp ~/importante.doc ~/documentos/
 
 **51. Enunciado:** Muestra el contenido del archivo `/etc/passwd` en páginas de 20 líneas usando `more`.
 
+more -20 /etc/passwd
+
 **52. Enunciado:** Muestra el espacio en disco utilizado por cada carpeta en tu carpeta de inicio.
+
+du -h --max-depth=1 ~ | sort -hr
 
 **53. Enunciado:** Cambia la contraseña del usuario "nuevo_usuario" como administrador.
 
+sudo passwd nuevo_usuario
+
 **54. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio, incluyendo detalles como permisos, propietario y grupo.
+
+ls -l ~
 
 **55. Enunciado:** Crea un archivo llamado "notas.txt" en tu carpeta de inicio y permite solo la lectura para el propietario y el grupo.
 
+touch ~/notas.txt
+chmod 440 ~/notas.txt
+
 **56. Enunciado:** Cambia el nombre del archivo "viejo.txt" en tu carpeta de inicio a "nuevo.txt".
+
+touch ~/nuevo.txt
+mv ~/viejo.txt ~/nuevo.txt
+
 
 **57. Enunciado:** Crea una carpeta llamada "archivos" en tu carpeta de inicio y copia todos los archivos con la extensión ".txt" en ella.
 
