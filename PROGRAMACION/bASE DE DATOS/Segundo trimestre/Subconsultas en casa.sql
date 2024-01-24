@@ -1,4 +1,30 @@
--- 6. Escribir una consulta para recuperar el nombre de la compañía e ID de proveedor de aquellos proveedores que viven en un país que tiene más proveedores que Alemania.
+-- Ciudad que tienen menos cliente que la ciudad de buenos aires
+SELECT City, count(*) 
+FROM customers  
+GROUP BY city 
+HAVING count(*) < 
+(SELECT count(*) from customers Where City = "Buenos Aires");
+
+-- pedidos cuyo valor de carga (Freight) está por encima de la media
+SELECT OrderID from orders where Freight > (select avg(Freight) from orders);
+
+-- 4. Productos cuya categoría empieza por la letra C.
+
+SELECT ProductName
+FROM products
+WHERE CategoryID IN
+(SELECT CategoryID From categories WHERE CategoryName LIKE "C%");
+
+
+-- 5.Productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock de los productos 
+-- de la categoría 4.
+
+SELECT ProductName, UnitsInStock FROM products Where UnitsInStock > (select UnitsInStock FROM products where CategoryID = 4 ORDER BY UnitsInStock DESC LIMIT 1);
+SELECT ProductName, UnitsInStock FROM products Where UnitsInStock > (select max(UnitsInStock) FROM products where CategoryID = 4);
+SELECT ProductName FROM products Where UnitsInStock > (select max(UnitsInStock) FROM products where CategoryID = 4);
+
+ 
+ -- 6. Escribir una consulta para recuperar el nombre de la compañía e ID de proveedor de aquellos proveedores que viven en un país que tiene más proveedores que Alemania.
 SELECT CompanyName, SupplierID 
 FROM suppliers
 WHERE Country IN 
