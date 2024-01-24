@@ -57,3 +57,34 @@ WHERE timestampdiff(year, BirthDate, curdate()) >
     FROM employees 
     WHERE FirstName = 'Margaret'
     and LastName = 'Peacock');
+
+-- 10. Escribir una consulta para recuperar el ID de pedido, ID de cliente y nombre de compañía. Trabaje sin hacer joins entre orders y customers.
+SELECT OrderID, a.CustomerID, CompanyName
+FROM orders, (select CustomerID, CompanyName FROM customers) as a
+WHERE a.CustomerID = orders.CustomerID;
+
+-- 11.  Nombre de compañías de clientes que no han hecho pedidos en el 1996. No usar JOIN.
+SELECT CompanyName
+FROM customers
+WHERE CustomerID IN
+(Select CustomerID From orders Where year(OrderDate) != 1996); 
+
+-- 12. Nombre de productos suministrados por proveedores de Japón. No usar JOIN.
+SELECT ProductName
+FROM products 
+wHERE SupplierID IN
+(Select SupplierID FROM suppliers Where Country = "Japan");
+
+-- 13. Hacer una subconsulta para obtener los empleados que tienen como jefe a Andrew Fuller.
+
+SELECT *
+FROM employees
+Where ReportsTo IN
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+-- 14. Repetir para mostrar los que no tienen como jefe a Andrew.
+
+SELECT *
+FROM employees
+Where ReportsTo Not IN
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
