@@ -80,15 +80,19 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
          */
 
         System.out.println("Indique un número");
-        int multiplicador= scan.nextInt();
+        tabla(scan.nextInt()) ;
 
     }//class
 
-    public static void tabla (int multiplicador){
+    public static void tabla (int multiplicando){
         int veces=25;
         lineaencabezado(veces);
-        System.out.println("\n  "+"TABLA DE MULTIPLICAR DEL "+ multiplicador);
+        System.out.println("TABLA DE MULTIPLICAR DEL "+ multiplicando);
         lineaencabezado(veces);
+        int multiplicador=10;
+        for (int i = 0; i <= multiplicador; i++) {
+            System.out.println(multiplicando+ " x "+i+ " = "+ (multiplicando*i));
+        }
     }
 
     public static void lineaencabezado (int veces){
@@ -96,12 +100,13 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
             System.out.print("=");
 
         }
+        System.out.println();
     }
 
     public static void encabezado(String ejercicio, int asteriscos){
 
         impresion(asteriscos);
-        System.out.println("\n "+ ejercicio.toUpperCase());
+        System.out.println(ejercicio.toUpperCase());
         impresion(asteriscos);
 
     }
@@ -110,6 +115,7 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
         for (int i = 0; i < veces ; i++) {
             System.out.print("*");
         }
+        System.out.println();
     }
 
 
