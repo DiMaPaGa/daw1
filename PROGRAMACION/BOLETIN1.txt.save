@@ -1,0 +1,213 @@
+﻿BOLETIN 1
+
+**1. Enunciado:** Muestra el contenido de tu carpeta de inicio.
+
+ls ~
+
+**2. Enunciado:** Crea un archivo llamado `miarchivo.txt` en tu carpeta de inicio.
+
+touch ~/miarchivo.txt
+
+**3. Enunciado:** Intenta crear un archivo en la carpeta de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'touch ~/miarchivo.txt' Este sería el más correcto, pero no puedo acceder ya que se requiere contraseña.
+
+**4. Enunciado:** Cambia el directorio a tu carpeta de inicio.
+
+cd ~
+
+**5. Enunciado:** Intenta cambiar al directorio de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'cd ~'  Pero no se puede, como ocurría antes.
+
+**6. Enunciado:** Copia un archivo de tu carpeta de inicio a otra ubicación en tu carpeta de inicio.
+
+mkdir ~/carpeta_pruebmkdir ~/carpeta_pruebaa
+
+**7. Enunciado:** Intenta copiar un archivo a la carpeta de inicio de otro usuario.
+
+**8. Enunciado:** Muestra el contenido de una subcarpeta dentro de tu carpeta de inicio.
+
+**9. Enunciado:** Intenta listar el contenido de la subcarpeta de inicio de otro usuario.
+
+**10. Enunciado:** Cambia el nombre de un archivo en tu carpeta de inicio.
+
+**11. Enunciado:** Crea una nueva carpeta llamada `misdocumentos` en tu carpeta de inicio y asegúrate de que solo tú tengas acceso de escritura en ella.
+
+**12. Enunciado:** Intenta crear un archivo en la carpeta `misdocumentos` de otro usuario.
+
+**13. Enunciado:** Cambia al directorio `misdocumentos` en tu carpeta de inicio.
+
+**14. Enunciado:** Intenta cambiar al directorio `misdocumentos` de otro usuario.
+
+**15. Enunciado:** Copia un archivo desde otro lugar en tu carpeta de inicio a `misdocumentos`.
+
+**16. Enunciado:** Intenta copiar un archivo a `misdocumentos` desde una ubicación fuera de tu carpeta de inicio.
+
+**17. Enunciado:** Muestra el contenido de la carpeta `misdocumentos`.
+
+**18. Enunciado:** Intenta listar el contenido de `misdocumentos` desde fuera de tu carpeta de inicio.
+
+**19. Enunciado:** Cambia el nombre de un archivo en la carpeta `misdocumentos`.
+
+**20. Enunciado:** Intenta cambiar el nombre de un archivo en `misdocumentos` desde fuera de tu carpeta de inicio.
+
+**21. Enunciado:** Muestra la lista de tus procesos en ejecución.
+
+**22. Enunciado:** Muestra las estadísticas de uso de la CPU de los procesos en tiempo real.
+
+**23. Enunciado:** Realiza un ping al sitio web "example.com" 5 veces.
+
+**24. Enunciado:** Abre el editor de texto `vi` y crea un nuevo archivo llamado "notas.txt".
+
+**25. Enunciado:** Muestra las primeras 20 líneas del archivo "archivo_grande.txt" con `more`.
+
+**26. Enunciado:** Muestra las últimas 15 líneas del archivo "registro.txt" con `tail`.
+
+**27. Enunciado:** Copia un archivo "documento.txt" a una carpeta llamada "respaldo".
+
+**28. Enunciado:** Crea un nuevo directorio llamado "proyectos" con permisos de lectura y escritura para el usuario y solo lectura para otros.
+
+**29. Enunciado:** Lista todos los archivos ocultos en tu directorio de inicio.
+
+**30. Enunciado:** Crea un enlace simbólico del archivo "configuracion.conf" en tu carpeta de inicio llamado "enlace.conf".
+
+**31. Enunciado:** Muestra el uso de espacio en disco de todos los directorios en tu carpeta de inicio, ordenados por tamaño.
+
+**32. Enunciado:** Crea una copia de seguridad de tu carpeta de inicio en un archivo comprimido llamado "respaldo.tar.gz".
+
+**33. Enunciado:** Crea un enlace duro del archivo "datos.txt" en tu carpeta de inicio a "datos_enlace.txt".
+
+**34. Enunciado:** Encuentra todos los archivos con la extensión ".jpg" en tu carpeta de inicio y sus subdirectorios.
+
+**35. Enunciado:** Crea un nuevo grupo llamado "proyecto" y agrega a tu usuario a ese grupo.
+
+**36. Enunciado:** Cambia el propietario del archivo "archivo1.txt" en tu carpeta de inicio al usuario "nuevo_usuario".
+
+**37. Enunciado:** Cambia el grupo del archivo "archivo2.txt" en tu carpeta de inicio al grupo "proyecto".
+
+**38. Enunciado:** Crea un archivo vacío llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de modificación personalizada.
+
+**39. Enunciado:** Cambia la contraseña de tu usuario.
+
+**40. Enunciado:** Crea un archivo llamado "lista.txt" que contenga una lista numerada de archivos en tu carpeta de inicio.
+
+**41. Enunciado:** Encuentra y muestra todos los archivos que contienen la palabra "importante" en su nombre en tu carpeta de inicio y subdirectorios.
+
+**42. Enunciado:** Muestra el uso de memoria RAM en tiempo real con actualizaciones cada 2 segundos.
+
+**43. Enunciado:** Crea un enlace simbólico al archivo "documento.pdf" en tu carpeta de inicio llamado "enlace.pdf".
+
+**44. Enunciado:** Muestra información detallada de todos los dispositivos de red en tu sistema.
+
+**45. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y establece permisos de solo lectura para todos los demás usuarios.
+
+**46. Enunciado:** Comprime un directorio llamado "proyecto" en un archivo llamado "proyecto.zip".
+
+**47. Enunciado:** Muestra la fecha y hora actual y regístrala en un archivo llamado "registro.txt" en tu carpeta de inicio.
+
+**48. Enunciado:** Muestra los primeros 15 procesos en ejecución ordenados por uso de CPU.
+
+**49. Enunciado:** Crea una nueva carpeta llamada "archivos_personales" en tu carpeta de inicio y establece permisos para que solo tú puedas leer, escribir y ejecutar en ella.
+
+**50. Enunciado:** Copia el archivo "importante.doc" desde tu carpeta de inicio a una carpeta llamada "documentos" en tu carpeta de inicio.
+
+**51. Enunciado:** Muestra el contenido del archivo `/etc/passwd` en páginas de 20 líneas usando `more`.
+
+**52. Enunciado:** Muestra el espacio en disco utilizado por cada carpeta en tu carpeta de inicio.
+
+**53. Enunciado:** Cambia la contraseña del usuario "nuevo_usuario" como administrador.
+
+**54. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio, incluyendo detalles como permisos, propietario y grupo.
+
+**55. Enunciado:** Crea un archivo llamado "notas.txt" en tu carpeta de inicio y permite solo la lectura para el propietario y el grupo.
+
+**56. Enunciado:** Cambia el nombre del archivo "viejo.txt" en tu carpeta de inicio a "nuevo.txt".
+
+**57. Enunciado:** Crea una carpeta llamada "archivos" en tu carpeta de inicio y copia todos los archivos con la extensión ".txt" en ella.
+
+**58. Enunciado:** Crea un archivo vacío llamado "recordatorio.txt" en tu carpeta de inicio y agrega una línea de texto a él.
+
+**59. Enunciado:** Muestra los primeros 5 procesos en ejecución ordenados por uso de memoria.
+
+**60. Enunciado:** Comprime un directorio llamado "documentos" en un archivo "documentos.tar".
+
+**61. Enunciado:** Borra todos los archivos con la extensión ".log" en tu carpeta de inicio.
+
+**62. Enunciado:** Muestra las 10 últimas líneas del archivo "registro.log".
+
+**63. Enunciado:** Crea un archivo llamado "nombres.txt" con una lista de nombres separados por saltos de línea.
+
+**64. Enunciado:** Encuentra y muestra todos los archivos en tu carpeta de inicio que han sido modificados en los últimos 7 días.
+
+**65. Enunciado:** Muestra el uso de memoria RAM y swap en tiempo real con actualizaciones cada 3 segundos.
+
+**66. Enunciado:** Crea un nuevo usuario llamado "nuevo_usuario" y asigna una contraseña.
+
+**67. Enunciado:** Muestra una lista de los comandos más recientes que has ejecutado en la terminal.
+
+**68. Enunciado:** Copia todos los archivos con la extensión ".jpg" de una carpeta llamada "fotos" a otra carpeta llamada "backup_fotos".
+
+**69. Enunciado:** Crea un enlace duro del archivo "documento1.txt" en tu carpeta de inicio a "documento2.txt".
+
+**70. Enunciado:** Muestra el espacio en disco disponible en todas las particiones montadas en tu sistema.
+
+**71. Enunciado:** Cambia el grupo del archivo "archivo1.txt" en tu carpeta de inicio al grupo "nuevo_grupo".
+
+**72. Enunciado:** Muestra una lista de los archivos ocultos en tu carpeta de inicio y sus detalles.
+
+**73. Enunciado:** Crea una carpeta llamada "trabajo" en tu carpeta de inicio y establece permisos de solo lectura y ejecución para todos los demás usuarios.
+
+**74. Enunciado:** Comprime un directorio llamado "informes" en un archivo "informes.zip" y establece una contraseña para protegerlo.
+
+**75. Enunciado:** Muestra la fecha y hora actual en un formato personalizado (por ejemplo, "YYYY-MM-DD HH:MM:SS").
+
+**76. Enunciado:** Encuentra y muestra todos los archivos con el nombre "documento.txt" en tu carpeta de inicio y sus subdirectorios.
+
+**77. Enunciado:** Muestra los procesos en ejecución, ordenados por uso de CPU, pero limitados a los 10 primeros.
+
+**78. Enunciado:** Comprime un archivo llamado "documento.pdf" en un archivo ZIP llamado "documento.zip".
+
+**79. Enunciado:** Crea un archivo llamado "numeros.txt" que contenga una secuencia de números del 1 al 10, uno por línea.
+
+**80. Enunciado:** Muestra la lista de usuarios en el sistema.
+
+**81. Enunciado:** Cambia el nombre del archivo "antiguo.txt" en tu carpeta de inicio a "nuevo_nombre.txt".
+
+**82. Enunciado:** Muestra una lista de los archivos y carpetas en tu carpeta de inicio junto con sus tamaños en un formato legible para humanos.
+
+**83. Enunciado:** Muestra el uso de espacio en disco de la carpeta "archivos" en tu carpeta de inicio.
+
+**84. Enunciado:** Crea un archivo llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de acceso personalizada.
+
+**85. Enunciado:** Encuentra y muestra todos los archivos que se han accedido en los últimos 3 días en tu carpeta de inicio.
+
+**86. Enunciado:** Muestra el número total de archivos en tu carpeta de inicio y subdirectorios.
+
+**87. Enunciado:** Copia todos los archivos de texto en tu carpeta de inicio a una carpeta llamada "textos".
+
+**88. Enunciado:** Muestra la hora actual en tu zona horaria.
+
+**89. Enunciado:** Encuentra y muestra los archivos en tu carpeta de inicio con un tamaño superior a 1 MB.
+
+**90. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y permite solo la escritura para el propietario y solo la lectura para otros.
+
+**91. Enunciado:** Borra todos los archivos con la extensión ".temp" en tu carpeta de inicio y subdirectorios.
+
+**92. Enunciado:** Muestra los primeros 15 procesos en ejecución, ordenados por el consumo de memoria.
+
+**93. Enunciado:** Comprime una carpeta llamada "informacion" en un archivo tar llamado "info.tar.gz".
+
+**94. Enunciado:** Muestra la fecha y hora actual en un formato personalizado (por ejemplo, "DD/MM/YYYY HH:MM:SS").
+
+**95. Enunciado:** Encuentra y muestra todos los archivos modificados en los últimos 7 días en tu carpeta de inicio y subdirectorios.
+
+**96. Enunciado:** Cambia el nombre de la carpeta "vieja_carpeta" en tu carpeta de inicio a "nueva_carpeta".
+
+**97. Enunciado:** Encuentra y muestra todos los archivos que pertenecen al grupo "nuevo_grupo".
+
+**98. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio y sus detalles, ordenados por tamaño en orden ascendente.
+
+**99. Enunciado:** Cambia el grupo del archivo "archivo1.txt" en tu carpeta de inicio al grupo "nuevo_grupo".
+
+**100. Enunciado:** Muestra el contenido del archivo "/etc/hosts" utilizando el comando `cat`.

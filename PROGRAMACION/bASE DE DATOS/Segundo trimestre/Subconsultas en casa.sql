@@ -69,6 +69,11 @@ FROM customers
 WHERE CustomerID IN
 (Select CustomerID From orders Where year(OrderDate) != 1996); 
 
+SELECT CompanyName
+FROM customers
+WHERE CustomerID NOT IN
+(Select CustomerID From orders Where year(OrderDate) = 1996); -- Es la correcta, porque en esta no te pille los del 1996
+
 -- 12. Nombre de productos suministrados por proveedores de Japón. No usar JOIN.
 SELECT ProductName
 FROM products 
@@ -79,7 +84,12 @@ wHERE SupplierID IN
 
 SELECT *
 FROM employees
-Where ReportsTo IN
+Where ReportsTo IN -- Siempre el IN sabe que algo va a dar de 1 a n, con = solo para 1;
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+SELECT *
+FROM employees
+Where ReportsTo =
 (Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
 
 -- 14. Repetir para mostrar los que no tienen como jefe a Andrew.
@@ -88,3 +98,8 @@ SELECT *
 FROM employees
 Where ReportsTo Not IN
 (Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+SELECT *
+FROM employees
+Where ReportsTo !=
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller") or ReportsTo is null -- "or ReportsTo is null" se puede poner para eliminar a los nulos;

@@ -1,0 +1,514 @@
+e﻿BOLETIN 1
+
+**1. Enunciado:** Muestra el contenido de tu carpeta de inicio.
+
+ls ~
+
+**2. Enunciado:** Crea un archivo llamado `miarchivo.txt` en tu carpeta de inicio.
+
+touch ~/miarchivo.txt
+
+**3. Enunciado:** Intenta crear un archivo en la carpeta de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'touch ~/miarchivo.txt'  Esto es lo más correcto, pero no me deja hacerlo sin contraseña (sin la misma, no tengo permiso para entrar).
+
+**4. Enunciado:** Cambia el directorio a tu carpeta de inicio.
+
+cd ~
+
+**5. Enunciado:** Intenta cambiar al directorio de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'cd ~'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
+
+**6. Enunciado:** Copia un archivo de tu carpeta de inicio a otra ubicación en tu carpeta de inicio.
+
+Lo primero, creo una nueva carpeta:
+mkdir ~/carpeta_prueba
+Y luego copio el archivo en la nueva carpeta
+cp ~/README.txt ~/carpeta_prueba
+Después, si hago: 
+ls ~/carpeta_prueba
+confirmo que la tengo creada.
+
+**7. Enunciado:** Intenta copiar un archivo a la carpeta de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'cp ~/README.TXT'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
+
+**8. Enunciado:** Muestra el contenido de una subcarpeta dentro de tu carpeta de inicio.
+
+ls ~/carpeta_prueba
+
+**9. Enunciado:** Intenta listar el contenido de la subcarpeta de inicio de otro usuario.
+
+sudo -u sergiovela bash -c 'ls ~/carpeta_prueba'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
+
+**10. Enunciado:** Cambia el nombre de un archivo en tu carpeta de inicio.
+
+mv ~/README.txt ~/LEEME.txt
+
+
+**11. Enunciado:** Crea una nueva carpeta llamada `misdocumentos` en tu carpeta de inicio y asegúrate de que solo tú tengas acceso de escritura en ella.
+
+mkdir ~/misdocumentos
+chmod 200 ~/misdocumentos
+
+**12. Enunciado:** Intenta crear un archivo en la carpeta `misdocumentos` de otro usuario.
+
+sudo -u sergiovela bash -c 'mkdir ~/misdocumentos'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
+
+**13. Enunciado:** Cambia al directorio `misdocumentos` en tu carpeta de inicio.
+
+cd ~/misdocumentos
+Como en el ejercicio 11 entendí que tenía que darme "unicamente a mi" permiso de solo lectura, ahora me sale permiso denegado
+Lo resuelvo con:
+chmod 700 ~/misdocumentos
+y luego
+cd ~/misdocumentos
+Y ya puedo acceder
+
+**14. Enunciado:** Intenta cambiar al directorio `misdocumentos` de otro usuario.
+
+sudo -u sergiovela bash -c 'cd ~/misdocumentos' Pero no me deja sin la contraseña root.
+
+**15. Enunciado:** Copia un archivo desde otro lugar en tu carpeta de inicio a `misdocumentos`.
+
+cp ~/carpeta_prueba/README.txt ~/misdocumentos/
+
+**16. Enunciado:** Intenta copiar un archivo a `misdocumentos` desde una ubicación fuera de tu carpeta de inicio.
+
+cp ~/carpeta_prueba/README.txt ~/misdocumentos/
+
+**17. Enunciado:** Muestra el contenido de la carpeta `misdocumentos`.
+
+ls 
+es suficiente porque ya estoy en la carpeta.
+
+**18. Enunciado:** Intenta listar el contenido de `misdocumentos` desde fuera de tu carpeta de inicio.
+
+ls ~/misdocumentos
+
+**19. Enunciado:** Cambia el nombre de un archivo en la carpeta `misdocumentos`.
+
+mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN.txt
+
+
+**20. Enunciado:** Intenta cambiar el nombre de un archivo en `misdocumentos` desde fuera de tu carpeta de inicio.
+
+mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN2.txt
+
+**21. Enunciado:** Muestra la lista de tus procesos en ejecución.
+
+ps
+
+**22. Enunciado:** Muestra las estadísticas de uso de la CPU de los procesos en tiempo real.
+
+top
+
+**23. Enunciado:** Realiza un ping al sitio web "example.com" 5 veces.
+
+dianamaria@debian:~$ ping -c 5 example.com
+PING example.com (93.184.216.34) 56(84) bytes of data.
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=1 ttl=52 time=123 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=2 ttl=52 time=138 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=3 ttl=52 time=128 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=4 ttl=52 time=145 ms
+64 bytes from 93.184.216.34 (93.184.216.34): icmp_seq=5 ttl=52 time=147 ms
+
+--- example.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+rtt min/avg/max/mdev = 123.009/135.981/146.599/9.244 ms
+
+
+**24. Enunciado:** Abre el editor de texto `vi` y crea un nuevo archivo llamado "notas.txt".
+
+vi notas.txt
+
+**25. Enunciado:** Muestra las primeras 20 líneas del archivo "archivo_grande.txt" con `more`.
+
+Esto es lo que pide el enunciado:  more archivo_grande.txt | head -n 20
+por lo que selecciono uno de los archivos que tengo grande 
+more LEEME.txt | head -n 20
+
+
+**26. Enunciado:** Muestra las últimas 15 líneas del archivo "registro.txt" con `tail`.
+
+tail -n 15 registro.txt
+tail -n 15 LEEME.txt
+
+
+**27. Enunciado:** Copia un archivo "documento.txt" a una carpeta llamada "respaldo".
+
+Primero me sitúo en el directorio de inicio:
+cd ~
+Creo la carpeta respaldo
+mkdir respaldo
+Y como no tengo un documento que se llame "documento.txt", copio el documento README.txt a la carpeta "respaldo"
+renombrándolo como "documentos.txt":
+cp LEEME.txt respaldo/documentos.txt
+
+**28. Enunciado:** Crea un nuevo directorio llamado "proyectos" con permisos de lectura y escritura para el usuario y solo lectura para otros.
+
+mkdir proyectos
+chmod 644 proyectos
+
+**29. Enunciado:** Lista todos los archivos ocultos en tu directorio de inicio.
+
+ls -a ~
+
+**30. Enunciado:** Crea un enlace simbólico del archivo "configuracion.conf" en tu carpeta de inicio llamado "enlace.conf".
+
+ln -s ~/configuracion.conf ~/enlace.conf
+
+**31. Enunciado:** Muestra el uso de espacio en disco de todos los directorios en tu carpeta de inicio, ordenados por tamaño.
+
+du -h --max-depth=1 ~/ | sort -hr
+
+**32. Enunciado:** Crea una copia de seguridad de tu carpeta de inicio en un archivo comprimido llamado "respaldo.tar.gz".
+
+tar czf respaldo.tar.gz ~
+mkdir /home/respaldo.tar.gz
+He utilizado los dos comandos anteriores, pero en ambos me indican que tengo premiso denegado ara crear directorio.
+
+**33. Enunciado:** Crea un enlace duro del archivo "datos.txt" en tu carpeta de inicio a "datos_enlace.txt".
+
+echo "Estoy creando el archivo que pide en enunciado para crear el enlace duro" > datos.txt
+ln datos.txt datos_enlace.txt
+
+**34. Enunciado:** Encuentra todos los archivos con la extensión ".jpg" en tu carpeta de inicio y sus subdirectorios.
+
+find ~ -name "*.jpg"
+No tengo ninguno pero el comando funciona.
+
+**35. Enunciado:** Crea un nuevo grupo llamado "proyecto" y agrega a tu usuario a ese grupo.
+
+sudo groupadd proyecto
+sudo usermod -aG proyecto miusuario
+Estos comandos deberían valer, pero no me encuentro con los privilegios para poder crear y agregar usuarios
+si utilizo mi contraseña de usuario.
+
+
+**36. Enunciado:** Cambia el propietario del archivo "archivo1.txt" en tu carpeta de inicio al usuario "nuevo_usuario".
+
+touch archivo1.txt
+sudo chown nuevo_usuario:nuevo_usuario archivo1.txt
+Vuelve a ocurrir lo mismo, el mensaje exacto es: dianamaria is not in the sudoers file.  This incident will be reported.
+
+**37. Enunciado:** Cambia el grupo del archivo "archivo2.txt" en tu carpeta de inicio al grupo "proyecto".
+
+touch archivo2.txt
+sudo chgrp proyecto archivo2.txt
+Creo que los comandos son los correctos, pero vuelve a salir el mismo mensaje que en la actividad 36.
+
+**38. Enunciado:** Crea un archivo vacío llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de modificación personalizada.
+
+touch ~/nuevo_archivo.txt
+touch -m -t 202401251920 ~/nuevo_archivo.txt
+
+**39. Enunciado:** Cambia la contraseña de tu usuario.
+
+passwd
+Me permite poner la contraseña pero da error de autenticación de token.
+Pruebo
+sudo passwd dianamaria
+Pero tampoco... 
+
+**40. Enunciado:** Crea un archivo llamado "lista.txt" que contenga una lista numerada de archivos en tu carpeta de inicio.
+
+cd ~
+ls -1 > lista.txt
+
+**41. Enunciado:** Encuentra y muestra todos los archivos que contienen la palabra "importante" en su nombre en tu carpeta de inicio y subdirectorios.
+
+find ~ -type f -name "*importante*"
+
+**42. Enunciado:** Muestra el uso de memoria RAM en tiempo real con actualizaciones cada 2 segundos.
+
+watch -n 2 free -m
+
+**43. Enunciado:** Crea un enlace simbólico al archivo "documento.pdf" en tu carpeta de inicio llamado "enlace.pdf".
+
+Como el documento no lo tengo, tengo primero que crear un .txt, convertirlo a PDF y luego crear el enlace. Sería:
+
+echo "Contenido del documento" > ~/documento.txt
+pdflatex ~/documento.txt
+ln -s ~/documento.pdf ~/enlace.pdf
+
+**44. Enunciado:** Muestra información detallada de todos los dispositivos de red en tu sistema.
+
+ip a
+
+**45. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y establece permisos de solo lectura para todos los demás usuarios.
+
+mkdir ~/fotos
+chmod 744 ~/fotos
+
+chmod 744 establece todos los permisos para usuario principal, pero solo lectura para grupos y los demás usuarios. Como el enunciado 
+dice para todos los demás usuarios, entiendo que es considerando también grupos.
+
+**46. Enunciado:** Comprime un directorio llamado "proyecto" en un archivo llamado "proyecto.zip".
+
+zip -r proyecto.zip proyecto/
+
+**47. Enunciado:** Muestra la fecha y hora actual y regístrala en un archivo llamado "registro.txt" en tu carpeta de inicio.
+
+date | tee ~/registro.txt
+
+**48. Enunciado:** Muestra los primeros 15 procesos en ejecución ordenados por uso de CPU.
+
+ps aux --sort=-%cpu | head -n 16 
+¡Ojo! pongo 16 porque la primera línea que sale es la de encabezado, no un proceso en sí.
+
+**49. Enunciado:** Crea una nueva carpeta llamada "archivos_personales" en tu carpeta de inicio y establece permisos para que solo tú puedas leer, escribir y ejecutar en ella.
+
+mkdir ~/archivos_personales
+chmod 700 ~/archivos_personales
+
+**50. Enunciado:** Copia el archivo "importante.doc" desde tu carpeta de inicio a una carpeta llamada "documentos" en tu carpeta de inicio.
+
+mkdir ~/documentos
+touch ~/importante.doc
+cp ~/importante.doc ~/documentos/
+
+**51. Enunciado:** Muestra el contenido del archivo `/etc/passwd` en páginas de 20 líneas usando `more`.
+
+more -20 /etc/passwd
+
+**52. Enunciado:** Muestra el espacio en disco utilizado por cada carpeta en tu carpeta de inicio.
+
+du -h --max-depth=1 ~/
+
+**53. Enunciado:** Cambia la contraseña del usuario "nuevo_usuario" como administrador.
+
+sudo passwd nuevo_usuario
+Pasa lo mismo que en ejercicios anteriores del mismo tipo.
+
+**54. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio, incluyendo detalles como permisos, propietario y grupo.
+
+ls -l ~
+
+**55. Enunciado:** Crea un archivo llamado "notas.txt" en tu carpeta de inicio y permite solo la lectura para el propietario y el grupo.
+
+touch ~/notas.txt
+chmod 440 ~/notas.txt
+
+**56. Enunciado:** Cambia el nombre del archivo "viejo.txt" en tu carpeta de inicio a "nuevo.txt".
+
+touch ~/viejo.txt
+mv ~/viejo.txt ~/nuevo.txt
+
+**57. Enunciado:** Crea una carpeta llamada "archivos" en tu carpeta de inicio y copia todos los archivos con la extensión ".txt" en ella.
+
+mkdir ~/archivos
+cp *.txt ~/archivos/
+
+**58. Enunciado:** Crea un archivo vacío llamado "recordatorio.txt" en tu carpeta de inicio y agrega una línea de texto a él.
+
+touch ~/recordatorio.txt
+echo “Recordatorio para Diana" >> ~/recordatorio.txt
+
+**59. Enunciado:** Muestra los primeros 5 procesos en ejecución ordenados por uso de memoria.
+
+ps aux --sort=-%mem | head -n 6
+
+Como en la actividad 48 pongo -n 6 porque el primer resultado es un encabezado y no un proceso.
+
+
+**60. Enunciado:** Comprime un directorio llamado "documentos" en un archivo "documentos.tar".
+
+tar -cvf documentos.tar documentos
+
+**61. Enunciado:** Borra todos los archivos con la extensión ".log" en tu carpeta de inicio.
+
+rm ~/ *.log
+
+**62. Enunciado:** Muestra las 10 últimas líneas del archivo "registro.log".
+
+tail -n 10 ~/registro.log
+El comando está bien, pero no va a salir nada porque en la actividad anterior hemos borrado 
+todos los archivos con extensión .log
+
+**63. Enunciado:** Crea un archivo llamado "nombres.txt" con una lista de nombres separados por saltos de línea.
+
+echo -e "Moisés\nAna\nNando\nDiana" > ~/nombres.txt
+
+**64. Enunciado:** Encuentra y muestra todos los archivos en tu carpeta de inicio que han sido modificados en los últimos 7 días.
+
+find ~/ -maxdepth 1 -type f -mtime -7
+Limita la búsqueda a la carpeta de inicio, sin incluir subdirectorios, como si ocurre en la actividad 95.
+
+
+**65. Enunciado:** Muestra el uso de memoria RAM y swap en tiempo real con actualizaciones cada 3 segundos.
+
+watch -n 3 free -m
+
+**66. Enunciado:** Crea un nuevo usuario llamado "nuevo_usuario" y asigna una contraseña.
+
+sudo adduser nuevo_usuario
+
+**67. Enunciado:** Muestra una lista de los comandos más recientes que has ejecutado en la terminal.
+
+history
+
+**68. Enunciado:** Copia todos los archivos con la extensión ".jpg" de una carpeta llamada "fotos" a otra carpeta llamada "backup_fotos".
+
+Como no existen, primero creamos la carpeta fotos con sus correspondientes archivos:
+mkdir fotos
+touch fotos/foto1.jpg fotos/foto2.jpg fotos/foto3.jpg
+
+Luego creamos la carpeta "backup_fotos":
+mkdir backup_fotos
+
+Y finalmente, hacemos lo que solicita la actividad:
+cp fotos/*.jpg backup_fotos/
+
+**69. Enunciado:** Crea un enlace duro del archivo "documento1.txt" en tu carpeta de inicio a "documento2.txt".
+
+El archivo no existe por lo que primero lo creo:
+echo "Documento de prueba creado para la actividad 69" > ~/documento1.txt
+Y luego:
+ln ~/documento1.txt ~/documento2.txt
+
+**70. Enunciado:** Muestra el espacio en disco disponible en todas las particiones montadas en tu sistema.
+
+df -h
+
+**71. Enunciado:** Cambia el grupo del archivo "archivo1.txt" en tu carpeta de inicio al grupo "nuevo_grupo".
+
+sudo chown :nuevo_grupo ~/archivo1.txt
+
+**72. Enunciado:** Muestra una lista de los archivos ocultos en tu carpeta de inicio y sus detalles.
+
+ls -la ~
+
+**73. Enunciado:** Crea una carpeta llamada "trabajo" en tu carpeta de inicio y establece permisos de solo lectura y ejecución para todos los demás usuarios.
+
+mkdir ~/trabajo
+chmod 755 ~/trabajo
+Entiendo que al referirse a "todos los demas usuarios" y no decir únicamente "otros usuarios", es porque se inorporan también a los grupos.
+
+**74. Enunciado:** Comprime un directorio llamado "informes" en un archivo "informes.zip" y establece una contraseña para protegerlo.
+
+Como no existe, creo primero el directorio con algunos archivos de ejemplo:
+mkdir informes
+echo "Contenido de ejemplo del informe 1" > informes/informe1.txt
+echo "Contenido de ejemplo del informe 2" > informes/informe2.txt
+Y ahora si ejecuto lo que se pide en esta actividad:
+zip -er informes.zip informes
+La opción -e permite establecer la contraseña. Al ejecutar este comando, me pide que la ingrese y la confirme para crearla.
+
+**75. Enunciado:** Muestra la fecha y hora actual en un formato personalizado (por ejemplo, "YYYY-MM-DD HH:MM:SS").
+
+date +"%Y-%m-%d %H:%M:%S"
+
+**76. Enunciado:** Encuentra y muestra todos los archivos con el nombre "documento.txt" en tu carpeta de inicio y sus subdirectorios.
+
+find ~ -name "documento.txt"
+
+**77. Enunciado:** Muestra los procesos en ejecución, ordenados por uso de CPU, pero limitados a los 10 primeros.
+
+ps aux --sort=-%cpu | head -n 11
+¡Ojo!Como ocurre en la actividad 48, pongo 11 porque la primera línea es de encabezado y no un proceso.
+Lo seguiré haciendo en las actividades posteriores pero no lo volveré a señalar para evitar reiterarme.
+
+**78. Enunciado:** Comprime un archivo llamado "documento.pdf" en un archivo ZIP llamado "documento.zip".
+
+zip documento.zip documento.pdf
+
+**79. Enunciado:** Crea un archivo llamado "numeros.txt" que contenga una secuencia de números del 1 al 10, uno por línea.
+
+seq 1 10 > ~/numeros.txt
+
+**80. Enunciado:** Muestra la lista de usuarios en el sistema.
+
+cut -d: -f1 /etc/passwd
+
+**81. Enunciado:** Cambia el nombre del archivo "antiguo.txt" en tu carpeta de inicio a "nuevo_nombre.txt".
+
+Como el archivo no existe, primero lo creo:
+touch ~/antiguo.txt
+Y luego hago lo que solicita la actividad:
+mv ~/antiguo.txt ~/nuevo_nombre.txt
+
+**82. Enunciado:** Muestra una lista de los archivos y carpetas en tu carpeta de inicio junto con sus tamaños en un formato legible para humanos.
+
+ls -lh --group-directories-first ~/ 
+
+**83. Enunciado:** Muestra el uso de espacio en disco de la carpeta "archivos" en tu carpeta de inicio.
+
+du -h ~/archivos
+
+**84. Enunciado:** Crea un archivo llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de acceso personalizada.
+
+touch -a -t 202401251930 nuevo_archivo.txt
+
+**85. Enunciado:** Encuentra y muestra todos los archivos que se han accedido en los últimos 3 días en tu carpeta de inicio.
+
+find ~ -atime -3
+
+Similar al ejercicio 64, pero aquí estamos buscando archivos accedidos en lugar de modificados.
+
+
+**86. Enunciado:** Muestra el número total de archivos en tu carpeta de inicio y subdirectorios.
+
+find ~ -type f | wc -l
+Me sale 60 el cálculo.
+
+**87. Enunciado:** Copia todos los archivos de texto en tu carpeta de inicio a una carpeta llamada "textos".
+
+Como no existe la carpeta, la creo primero:
+mkdir ~/textos
+Y luego continuo con el enunciado:
+cp ~/*.txt ~/textos/
+
+Sería así, pero tengo los permisos denegados.
+
+**88. Enunciado:** Muestra la hora actual en tu zona horaria.
+
+date
+
+Similar al ejercicio 26, pero aquí mostramos solo la hora actual sin formato adicional.
+
+
+**89. Enunciado:** Encuentra y muestra los archivos en tu carpeta de inicio con un tamaño superior a 1 MB.
+
+find ~ -size +1M
+
+Similar al ejercicio 64, pero aquí buscamos archivos basados en su tamaño en lugar de su fecha de modificación.
+
+**90. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y permite solo la escritura para el propietario y solo la lectura para otros.
+
+chmod 244 ~/fotos
+
+**91. Enunciado:** Borra todos los archivos con la extensión ".temp" en tu carpeta de inicio y subdirectorios.
+
+find ~ -name "*.temp" -delete
+
+**92. Enunciado:** Muestra los primeros 15 procesos en ejecución, ordenados por el consumo de memoria.
+
+Encuentro dos posibles comandos según como se entienda "consumo de memoria"
+Si el enunciado se refiere a uso de memoria en términos de % usado, sería:
+
+ps aux --sort=-%mem | head -n 16
+
+Pero si se refiere a cantidad real de memoria utilizada, sería:
+
+ps aux --sort=-rss | head -n 16
+
+**93. Enunciado:** Comprime una carpeta llamada "informacion" en un archivo tar llamado "info.tar.gz".
+
+**94. Enunciado:** Muestra la fecha y hora actual en un formato personalizado (por ejemplo, "DD/MM/YYYY HH:MM:SS").
+
+**95. Enunciado:** Encuentra y muestra todos los archivos modificados en los últimos 7 días en tu carpeta de inicio y subdirectorios.
+
+**96. Enunciado:** Cambia el nombre de la carpeta "vieja_carpeta" en tu carpeta de inicio a "nueva_carpeta".
+
+**97. Enunciado:** Encuentra y muestra todos los archivos que pertenecen al grupo "nuevo_grupo".
+
+**98. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio y sus detalles, ordenados por tamaño en orden ascendente.
+
+**99. Enunciado:** Cambia el grupo del archivo "archivo1.txt" en tu carpeta de inicio al grupo "nuevo_grupo".
+
+**100. Enunciado:** Muestra el contenido del archivo "/etc/hosts" utilizando el comando `cat`**81. Enunciado:** Cambia el nombre del archivo "antiguo.txt" en tu carpeta de inicio a "nuevo_nombre.txt".
+
+
+

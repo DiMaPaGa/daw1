@@ -59,12 +59,12 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
         ****
          */
 
-        System.out.println("¿Qué texto desea incluir en el encabezado?");
+       /* System.out.println("¿Qué texto desea incluir en el encabezado?");
         String texto= scan.nextLine();
         System.out.println("¿Cuántos asteriscos quiere?");
         int estrellas= scan.nextInt();
 
-        encabezado(texto, estrellas);
+        encabezado(texto, estrellas);*/
 
         /*
         7.	Crear un método estático que reciba un número e imprima la tabla de multiplicar de dicho número con
@@ -79,10 +79,101 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
         2 x 10 = 20
          */
 
-        System.out.println("Indique un número");
-        tabla(scan.nextInt()) ;
+        /*System.out.println("Indique un número");
+        tabla(scan.nextInt()) ;*/
+
+        /*
+        8.	Crear un método estático de nombre esPositivo, que reciba un número entero y devuelva un valor
+        booleano indicando si el número es positivo (true) o no (false).
+         */
+
+      /*  System.out.println("Incorpora un número");
+        System.out.println(esPositivo(scan.nextInt()));*/
+
+        /*
+        9.	Crear un método estático de nombre contarPositivos. Este método lee por pantalla números enteros
+        continuamente, y para únicamente cuando el usuario introduce un cero. Cuando esto ocurre, el método
+        devuelve (=return) la cantidad de números positivos que el usuario ha introducido por pantalla.
+         */
+        /*System.out.println("Ha introducido "+ contarPositivos()+ " numeros positivos.");*/
+
+        //variacion mia del 9= Mostrando los números positivos.
+
+       /* System.out.println("Los números positivos introducidos han sido: " + contarPositi());*/
+
+        /*
+        10.	Crear un método estático que reciba la base y la altura de un rectángulo y devuelva su área.
+
+         */
+        System.out.println("indicame tamaño de la base");
+        float base= scan.nextFloat();
+        System.out.println("indicame tamaño de la altura");
+        float altura= scan.nextFloat();
+
+        System.out.println(areaRectangulo(base, altura));
+
 
     }//class
+
+    public static float areaRectangulo(float base, float altura){
+        float area= base * altura;
+        return area;
+    }
+
+    public static String contarPositi (){
+        Scanner scanm =new Scanner(System.in);
+        int valor;
+        int contador=0;
+        String cadena="";
+
+        do{
+            System.out.println("Introduce un número");
+            valor=scanm.nextInt() ;
+            if (valor>0){
+                contador++;
+                cadena+=valor+" ";
+            }
+
+        }while (valor!=0);
+
+        System.out.println(contador);
+
+        return cadena;
+
+
+    }
+    public static int contarPositivos (){
+        Scanner scanm =new Scanner(System.in);
+        int valor;
+        int contador=0;
+
+        do{
+            System.out.println("Introduce un número");
+            valor=scanm.nextInt();
+            if (valor>0){
+               contador++;
+            }
+
+        }while (valor!=0);
+
+        return contador;
+
+
+    }
+
+    public static boolean esPositivo (int numero){
+        boolean positivo;
+
+        if (numero>=0){
+            positivo=true;
+        } else{
+            positivo=false;
+        }
+
+        return positivo;
+
+
+    }
 
     public static void tabla (int multiplicando){
         int veces=25;
