@@ -102,7 +102,7 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
        /* System.out.println("Los números positivos introducidos han sido: " + contarPositi());*/
 
         /*
-        10.	Crear un método estático que reciba la base y la altura de un rectángulo y devuelva su área.
+        10.	Crear un método estático que reciba la base y la altura de un rectángulo y devuelva (como dice devuelva es return, si fuera imprima=void)su área.
 
          */
         System.out.println("indicame tamaño de la base");
@@ -113,7 +113,7 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
         System.out.println(areaRectangulo(base, altura));
 
 
-    }//class
+    }//main
 
     public static float areaRectangulo(float base, float altura){
         float area= base * altura;
@@ -238,5 +238,5 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
     }
 
 
-}//main
+}//class
 
