@@ -496,19 +496,41 @@ ps aux --sort=-rss | head -n 16
 
 **93. Enunciado:** Comprime una carpeta llamada "informacion" en un archivo tar llamado "info.tar.gz".
 
+Creo la carpeta que aun no existe:
+mkdir informacion
+Añado algunos archivos en ella:
+echo "Contenido para archivo1" > informacion/archivo1.txt
+echo "Contenido para archivo2" > informacion/archivo2.txt
+Y ya formalizo el enunciado de la tarea:
+tar -czvf info.tar.gz informacion
+
 **94. Enunciado:** Muestra la fecha y hora actual en un formato personalizado (por ejemplo, "DD/MM/YYYY HH:MM:SS").
+
+date +"%d/%m/%Y %H:%M:%S"
 
 **95. Enunciado:** Encuentra y muestra todos los archivos modificados en los últimos 7 días en tu carpeta de inicio y subdirectorios.
 
+find ~/ -type f -mtime -7
+
 **96. Enunciado:** Cambia el nombre de la carpeta "vieja_carpeta" en tu carpeta de inicio a "nueva_carpeta".
+
+mkdir ~/vieja_carpeta && mv ~/vieja_carpeta ~/nueva_carpeta
 
 **97. Enunciado:** Encuentra y muestra todos los archivos que pertenecen al grupo "nuevo_grupo".
 
+find ~ -group nuevo_grupo
+
 **98. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio y sus detalles, ordenados por tamaño en orden ascendente.
+
+ls -lS ~
 
 **99. Enunciado:** Cambia el grupo del archivo "archivo1.txt" en tu carpeta de inicio al grupo "nuevo_grupo".
 
-**100. Enunciado:** Muestra el contenido del archivo "/etc/hosts" utilizando el comando `cat`**81. Enunciado:** Cambia el nombre del archivo "antiguo.txt" en tu carpeta de inicio a "nuevo_nombre.txt".
+sudo chown :nuevo_grupo ~/archivo1.txt
+
+**100. Enunciado:** Muestra el contenido del archivo "/etc/hosts" utilizando el comando `cat`.
+
+cat /etc/hosts
 
 
 

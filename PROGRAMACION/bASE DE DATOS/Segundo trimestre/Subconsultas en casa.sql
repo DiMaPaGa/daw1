@@ -102,4 +102,56 @@ Where ReportsTo Not IN
 SELECT *
 FROM employees
 Where ReportsTo !=
-(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller") or ReportsTo is null -- "or ReportsTo is null" se puede poner para eliminar a los nulos;
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller") or ReportsTo is null; -- "or ReportsTo is null" se puede poner para eliminar a los nulos;
+
+-- 15. Recuperar los ID de productos con un
+-- precio unitario superior al precio unitario medio.
+SELECT ProductID 
+FROM products 
+WHERE UnitPrice >
+(SELECT avg(UnitPrice) FROM products);
+
+-- 16. Subconsulta para obtener los nombres de categorias
+-- con un número de productos superior al número de
+-- productos que pertenecen a la categoría 'condiments'.
+
+SELECT CategoryName 
+FROM categories
+WHERE (SELECT count(*) FROM products where products.CategoryID = categories.CategoryID) >
+(SELECT count(*) FROM products WHERE CategoryID =
+(SELECT CategoryID FROM categories WHERE CategoryName = "Condiments"));
+
+-- 17. Subconsulta para obtener los ID de aquellos
+-- empleados que tienen un número de pedidos superior
+-- a la media de pedidos por empleado.
+
+SELECT EmployeeID
+FROM orders
+GROUP BY EmployeeID
+HAVING COUNT(*) > (
+    SELECT AVG(recuento)
+    FROM (SELECT EmployeeID, COUNT(*) as recuento FROM orders GROUP BY EmployeeID) AS subconsulta);
+
+SELECT EmployeeID
+FROM orders
+GROUP BY EmployeeID
+HAVING COUNT(*) > 
+(SELECT COUNT(*)/(select COUNT(*) FROM employees) FROM orders);
+    
+-- 18: productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock
+-- de los productos de la categoría 1 y 3.
+
+SELECT *
+FROM products
+WHERE UnitsInStock >
+(SELECT max(UnitsInStock) FROM products WHERE CategoryID IN (1,3));
+
+-- 19: escribir una consulta para recuperar todos los datos de los empleados que tienen una edad inferior
+-- a la edad de Anne Dodsworth o Janet Leverling. INFERIOR A LA MAS JOVEN.
+
+SELECT *
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) <
+(SELECT min(timestampdiff(year, BirthDate, curdate())) FROM employees Where concat(FirstName,' ',Lastname) IN ('Anne Dodsworth', 'Janet Leverling'));
+
+
