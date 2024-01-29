@@ -1,5 +1,5 @@
-﻿BOLETIN 1
 
+BOLETIN 1
 
 **1. Enunciado:** Muestra el contenido de tu carpeta de inicio.
 
@@ -12,7 +12,6 @@ touch ~/miarchivo.txt
 **3. Enunciado:** Intenta crear un archivo en la carpeta de inicio de otro usuario.
 
 sudo -u sergiovela bash -c 'touch ~/miarchivo.txt'  Esto es lo más correcto, pero no me deja hacerlo sin contraseña (sin la misma, no tengo permiso para entrar).
-¡OJO! Con sudo, al elevar el privilegio, me solicita mi contraseña de usuario, no la del root, pero no está permitida.
 
 **4. Enunciado:** Cambia el directorio a tu carpeta de inicio.
 
@@ -34,7 +33,7 @@ confirmo que la tengo creada.
 
 **7. Enunciado:** Intenta copiar un archivo a la carpeta de inicio de otro usuario.
 
-sudo -u sergiovela bash -c 'cp ~/README.TXT'   Vuelve a pasar lo mismo que en el ejercicio 3.
+sudo -u sergiovela bash -c 'cp ~/README.TXT'   Vuelve a pasar lo mismo que en el ejercicio 3, no tengo contraseña.
 
 **8. Enunciado:** Muestra el contenido de una subcarpeta dentro de tu carpeta de inicio.
 
@@ -53,7 +52,6 @@ mv ~/README.txt ~/LEEME.txt
 
 mkdir ~/misdocumentos
 chmod 200 ~/misdocumentos
-¡Ojo! Rectifico en actividad 13, ver aclaración allí.
 
 **12. Enunciado:** Intenta crear un archivo en la carpeta `misdocumentos` de otro usuario.
 
@@ -62,7 +60,7 @@ sudo -u sergiovela bash -c 'mkdir ~/misdocumentos'   Vuelve a pasar lo mismo que
 **13. Enunciado:** Cambia al directorio `misdocumentos` en tu carpeta de inicio.
 
 cd ~/misdocumentos
-Como en el ejercicio 11 entendí que tenía que darme "unicamente a mí" permiso de solo escritura ahora me sale permiso denegado
+Como en el ejercicio 11 entendí que tenía que darme "unicamente a mi" permiso de solo lectura, ahora me sale permiso denegado
 Lo resuelvo con:
 chmod 700 ~/misdocumentos
 y luego
@@ -71,7 +69,7 @@ Y ya puedo acceder
 
 **14. Enunciado:** Intenta cambiar al directorio `misdocumentos` de otro usuario.
 
-sudo -u sergiovela bash -c 'cd ~/misdocumentos' Pero no me deja sin la contraseña.
+sudo -u sergiovela bash -c 'cd ~/misdocumentos' Pero no me deja sin la contraseña root.
 
 **15. Enunciado:** Copia un archivo desde otro lugar en tu carpeta de inicio a `misdocumentos`.
 
@@ -94,10 +92,10 @@ ls ~/misdocumentos
 
 mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN.txt
 
+
 **20. Enunciado:** Intenta cambiar el nombre de un archivo en `misdocumentos` desde fuera de tu carpeta de inicio.
 
 mv ~/misdocumentos/README.txt ~/misdocumentos/READMEAGAIN2.txt
-
 
 **21. Enunciado:** Muestra la lista de tus procesos en ejecución.
 
@@ -135,8 +133,8 @@ more LEEME.txt | head -n 20
 
 **26. Enunciado:** Muestra las últimas 15 líneas del archivo "registro.txt" con `tail`.
 
-Esto es lo que pide el enunciado: tail -n 15 registro.txt
-por lo que selecciono uno de los archivos txt: tail -n 15 LEEME.txt
+tail -n 15 registro.txt
+tail -n 15 LEEME.txt
 
 
 **27. Enunciado:** Copia un archivo "documento.txt" a una carpeta llamada "respaldo".
@@ -147,7 +145,7 @@ Creo la carpeta respaldo
 mkdir respaldo
 Y como no tengo un documento que se llame "documento.txt", copio el documento README.txt a la carpeta "respaldo"
 renombrándolo como "documentos.txt":
-cp README.txt respaldo/documentos.txt
+cp LEEME.txt respaldo/documentos.txt
 
 **28. Enunciado:** Crea un nuevo directorio llamado "proyectos" con permisos de lectura y escritura para el usuario y solo lectura para otros.
 
@@ -169,6 +167,8 @@ du -h --max-depth=1 ~/ | sort -hr
 **32. Enunciado:** Crea una copia de seguridad de tu carpeta de inicio en un archivo comprimido llamado "respaldo.tar.gz".
 
 tar czf respaldo.tar.gz ~
+mkdir /home/respaldo.tar.gz
+He utilizado los dos comandos anteriores, pero en ambos me indican que tengo premiso denegado ara crear directorio.
 
 **33. Enunciado:** Crea un enlace duro del archivo "datos.txt" en tu carpeta de inicio a "datos_enlace.txt".
 
@@ -178,21 +178,27 @@ ln datos.txt datos_enlace.txt
 **34. Enunciado:** Encuentra todos los archivos con la extensión ".jpg" en tu carpeta de inicio y sus subdirectorios.
 
 find ~ -name "*.jpg"
+No tengo ninguno pero el comando funciona.
 
 **35. Enunciado:** Crea un nuevo grupo llamado "proyecto" y agrega a tu usuario a ese grupo.
 
 sudo groupadd proyecto
 sudo usermod -aG proyecto miusuario
+Estos comandos deberían valer, pero no me encuentro con los privilegios para poder crear y agregar usuarios
+si utilizo mi contraseña de usuario.
+
 
 **36. Enunciado:** Cambia el propietario del archivo "archivo1.txt" en tu carpeta de inicio al usuario "nuevo_usuario".
 
 touch archivo1.txt
 sudo chown nuevo_usuario:nuevo_usuario archivo1.txt
+Vuelve a ocurrir lo mismo, el mensaje exacto es: dianamaria is not in the sudoers file.  This incident will be reported.
 
 **37. Enunciado:** Cambia el grupo del archivo "archivo2.txt" en tu carpeta de inicio al grupo "proyecto".
 
 touch archivo2.txt
 sudo chgrp proyecto archivo2.txt
+Creo que los comandos son los correctos, pero vuelve a salir el mismo mensaje que en la actividad 36.
 
 **38. Enunciado:** Crea un archivo vacío llamado "nuevo_archivo.txt" en tu carpeta de inicio y establece una fecha de modificación personalizada.
 
@@ -202,8 +208,10 @@ touch -m -t 202401251920 ~/nuevo_archivo.txt
 **39. Enunciado:** Cambia la contraseña de tu usuario.
 
 passwd
-Si no pudiera: 
+Me permite poner la contraseña pero da error de autenticación de token.
+Pruebo
 sudo passwd dianamaria
+Pero tampoco... 
 
 **40. Enunciado:** Crea un archivo llamado "lista.txt" que contenga una lista numerada de archivos en tu carpeta de inicio.
 
@@ -228,7 +236,7 @@ ln -s ~/documento.pdf ~/enlace.pdf
 
 **44. Enunciado:** Muestra información detallada de todos los dispositivos de red en tu sistema.
 
-ifconfig -a
+ip a
 
 **45. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y establece permisos de solo lectura para todos los demás usuarios.
 
@@ -268,11 +276,12 @@ more -20 /etc/passwd
 
 **52. Enunciado:** Muestra el espacio en disco utilizado por cada carpeta en tu carpeta de inicio.
 
-du -h --max-depth=1 --summarize ~/ | sort -h
+du -h --max-depth=1 ~/
 
 **53. Enunciado:** Cambia la contraseña del usuario "nuevo_usuario" como administrador.
 
 sudo passwd nuevo_usuario
+Pasa lo mismo que en ejercicios anteriores del mismo tipo.
 
 **54. Enunciado:** Muestra una lista de los archivos en tu carpeta de inicio, incluyendo detalles como permisos, propietario y grupo.
 
@@ -285,7 +294,7 @@ chmod 440 ~/notas.txt
 
 **56. Enunciado:** Cambia el nombre del archivo "viejo.txt" en tu carpeta de inicio a "nuevo.txt".
 
-touch ~/nuevo.txt
+touch ~/viejo.txt
 mv ~/viejo.txt ~/nuevo.txt
 
 **57. Enunciado:** Crea una carpeta llamada "archivos" en tu carpeta de inicio y copia todos los archivos con la extensión ".txt" en ella.
@@ -443,13 +452,16 @@ Similar al ejercicio 64, pero aquí estamos buscando archivos accedidos en lugar
 **86. Enunciado:** Muestra el número total de archivos en tu carpeta de inicio y subdirectorios.
 
 find ~ -type f | wc -l
+Me sale 60 el cálculo.
 
 **87. Enunciado:** Copia todos los archivos de texto en tu carpeta de inicio a una carpeta llamada "textos".
 
 Como no existe la carpeta, la creo primero:
 mkdir ~/textos
 Y luego continuo con el enunciado:
-cp ~/ *.txt ~/textos
+cp ~/*.txt ~/textos/
+
+Sería así, pero tengo los permisos denegados.
 
 **88. Enunciado:** Muestra la hora actual en tu zona horaria.
 
@@ -466,7 +478,6 @@ Similar al ejercicio 64, pero aquí buscamos archivos basados en su tamaño en l
 
 **90. Enunciado:** Crea una carpeta llamada "fotos" en tu carpeta de inicio y permite solo la escritura para el propietario y solo la lectura para otros.
 
-mkdir ~/fotos
 chmod 244 ~/fotos
 
 **91. Enunciado:** Borra todos los archivos con la extensión ".temp" en tu carpeta de inicio y subdirectorios.
@@ -483,7 +494,6 @@ ps aux --sort=-%mem | head -n 16
 Pero si se refiere a cantidad real de memoria utilizada, sería:
 
 ps aux --sort=-rss | head -n 16
-
 
 **93. Enunciado:** Comprime una carpeta llamada "informacion" en un archivo tar llamado "info.tar.gz".
 

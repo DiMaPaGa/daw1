@@ -8,13 +8,13 @@ public class Metodos2 {
         //11.	Crear un método estático que reciba el lado de un cuadrado y devuelva su área.
 
 
-        float lado = 5f;
+      /*  float lado = 5f;
 
-        System.out.println(areaCuadrado(lado));
+        System.out.println(areaCuadrado(lado));*/
 
         //12. Triángulo
 
-        System.out.println("indicame tamaño de la base");
+       /* System.out.println("indicame tamaño de la base");
         float base = scan.nextFloat();
         System.out.println("indicame tamaño de la altura");
         float altura = scan.nextFloat();
@@ -26,12 +26,12 @@ public class Metodos2 {
         System.out.println("indicame valor en euros");
         float euros = scan.nextFloat();
 
-        System.out.println(conversorDolares(euros));
+        System.out.println(conversorDolares(euros));*/
 
         //17.	Crear un método estático que reciba un número entero y una posición, y devuelva el dígito que
 //        se encuentra en dicha posición.
 
-        String numero;
+       /* String numero;
         boolean valido;
 
         do {
@@ -56,10 +56,79 @@ public class Metodos2 {
         int numFinal = Integer.parseInt(numero);
         int posFinal = Integer.parseInt(posicion);
 
-        devolverPosicion(numFinal, posFinal);
+        devolverPosicion(numFinal, posFinal);*/
 
+        //18.	Crear un método estático que reciba un String, y lo devuelva del revés.
+
+      /* System.out.println("Introduce texto");
+        String cadenaDada=scan.next();
+        System.out.println(cadenareversa(cadenaDada));*/
+
+       // 19.	Crear un método estático que reciba un String, y compruebe si es un palíndromo. Debe usar el método del ejercicio anterior.
+       /* String frase="aabbaa";
+        System.out.println(comprobacion(frase));*/
+
+       // 23.	Crear un método estático que reciba un array de algún tipo primitivo y lo imprima por pantalla.
+
+       /* int [] datos= {4,3,5,6,7};
+        array(datos);*/
+
+        //24.	Cree un método que reciba un array de enteros, y por cada entero del array imprima su tabla de multiplicar.
+
+        int [] tablas= {4,3,5,6,7};
+        ejer24(tablas);
 
     }//main
+
+    public static void ejer24 (int [] tablas){
+        for (int i = 0; i < tablas.length; i++) {
+            System.out.println("TABLA DE MULTIPLICAR DEL "+ i);
+            int multiplicador=10;
+            for (int j = 0; j <= multiplicador; j++) {
+                System.out.println(multiplicador+ " x "+i+ " = "+ (multiplicador*i));
+            }
+
+        }
+
+    }
+
+
+
+    public static void array (int [] datos){
+        for (int var : datos) {
+            System.out.println(var+ " "); }
+
+        }
+
+    public static void tabla (int multiplicando){
+
+        System.out.println("TABLA DE MULTIPLICAR DEL "+ multiplicando);
+        int multiplicador=10;
+        for (int i = 0; i <= multiplicador; i++) {
+            System.out.println(multiplicando+ " x "+i+ " = "+ (multiplicando*i));
+        }
+    }
+
+
+    public static boolean comprobacion (String frase){
+        boolean comprobacion = false;
+        //String reves = cadenareversa();pero me lo puedo ahorrar...
+        if (frase.equals(cadenareversa(frase))){
+            comprobacion= true;
+        }
+        return comprobacion;
+    }
+
+    public static String cadenareversa (String cadenaDada){
+
+        String reversa= "";
+
+        for (int i = cadenaDada.length()-1; i>=0 ; i--) {
+            reversa+=cadenaDada.charAt(i);
+        }
+
+        return reversa;
+    }
 
     public static char devolverPosicion(int numero, int posicion) {
         String num = numero + "";

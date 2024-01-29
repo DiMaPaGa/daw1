@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:element name="vehiculos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="vehiculo" minOccurs="0" maxOccurs="unbouded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string" />
+                        <xs:element name="modelo" type="xs:string" />
+                        <xs:element name="fabricacion">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="inicio">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="dia" type="xs:gDay" />
+                                                <xs:element name="mes" type="xs:gMonth" />
+                                                <xs:element name="anyo" type="xs:gYear" />
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="fin">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="dia" type="xs:gDay" />
+                                                <xs:element name="mes" type="xs:gMonth" />
+                                                <xs:element name="anyo" type="xs:gYear" />
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="modificaciones">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="modificacion" type="string" />
+                                </xs:sequence>    
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>           
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
