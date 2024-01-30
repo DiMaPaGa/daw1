@@ -75,11 +75,95 @@ public class Metodos2 {
 
         //24.	Cree un método que reciba un array de enteros, y por cada entero del array imprima su tabla de multiplicar.
 
-        int [] tablas= {4,3,5,6,7};
-        ejer24(tablas);
+        /*int valorArray= (int)(Math.random() * (15-5+1)+5);
+        int [] tablas = new int[valorArray];
+        tablas= rellenarArray(tablas);
+        System.out.println("\n Mi array es de "+ valorArray +" espacios.");
+
+
+        ejer24(tablas);*/
+
+       // 25.	Crear un método que reciba un array 1D de enteros y lo ordene.
+
+        /*int array= new int[10];
+        array= rellenarArray2(array);
+        rellenarArray2(array);
+        array=ordenarArrayInt(array);
+        rellenarArray2(array);
+*/
+
+        /*28.	Crear un método que reciba un array de enteros, un número y una posición, y devuelva un nuevo array que tenga los mismos contenidos del original, pero con sus elementos desplazados a partir de la posición especificada, donde se almacenará además el número pasado en el segundo argumento.
+
+        Por ejemplo, si el método recibe los siguientes datos:
+
+[3, 8, 9]
+        Número: 13
+        Posición: 1
+
+        El nuevo array devuelto por el método debe ser el siguiente:
+
+[3, 13, 8, 9]*/
+
+        int valorArray= (int)(Math.random()*(15-5+1)+5);
+        int [] matrizPrevia = new int[valorArray];
+        matrizPrevia=rellenarArray(matrizPrevia);
+
+        int valor= (int)(Math.random() * (30-1+1)+1);
+
+        int posicion= (int)(Math.random() * (matrizPrevia.length-1+1)+1);
+
+        integresarNumero(matrizPrevia, valor, posicion);
+
 
     }//main
 
+    public static int[] integresarNumero (int[] array, int valor, int posicion){
+        int nuevaMatriz()
+
+
+    }
+
+
+
+
+
+    public static int [] ordenarArrayInt (int [] arrayOrdenar){
+        int valor1;
+        int valor2;
+
+        int contador;
+        int posicion ;
+        for (int j = 0; j < 10; j++) {
+            contador =10-j;
+            posicion = 0;
+            do {
+                valor1 = arrayOrdenar[posicion];
+                valor2 = arrayOrdenar[posicion+1];
+                if (valor1 > valor2) {
+                    arrayOrdenar[posicion] = valor2;
+                    arrayOrdenar[posicion + 1] = valor1;
+                }
+                contador--;
+                posicion++;
+            } while (contador > 1);
+        }
+        return arrayOrdenar;
+    }
+    public static int[] rellenarArray2(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            array[i]=(int)(Math.random() *(100-1+1)+1);
+            System.out.print(array[i]+" ");
+        }
+        return array;
+    }
+
+    public static int[] rellenarArray(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            array[i]=(int)(Math.random() *(9-1+1)+1);
+            System.out.print(array[i]+" ");
+        }
+        return array;
+    }
     public static void ejer24 (int [] tablas){
         int multiplicador=10;
         for (int i = 0; i < tablas.length; i++) {

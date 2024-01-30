@@ -154,4 +154,51 @@ FROM employees
 WHERE timestampdiff(year, BirthDate, curdate()) <
 (SELECT min(timestampdiff(year, BirthDate, curdate())) FROM employees Where concat(FirstName,' ',Lastname) IN ('Anne Dodsworth', 'Janet Leverling'));
 
+-- 20: escribir una consulta para recuperar los paises que tiene mas proveedores que la suma
+-- de proveedores que tienen Brasil y España.
+SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT count(*) FROM suppliers WHERE Country IN ('Brazil', 'Spain'));
+
+
+SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT sum(clientes) FROM (SELECT Country, count(*) as clientes from suppliers group by Country) as b WHERE b.Country IN ('Brazil', 'Spain'));
+
+ 
+-- 21: escribir una consulta para recuperar el nombre de la compañía e ID de proveedor
+-- de aquellos proveedores que viven en un país que tiene mas proveedores que la suma
+-- de proveedores que tienen Brasil y España.
+
+Select companyname, supplierID 
+from suppliers 
+where country in 
+(Select country from suppliers group by country having count(*) > 
+(Select sum(a.suppliers) from (Select count(*) as "suppliers" from suppliers group by country having country like "brazil" or country like "spain") as a));
+
+-- intenta sacarlo con count unicamente en lugar de con sum-
+SELECT companyname, supplierID 
+from suppliers 
+where country in 
+SELECT Country FROM suppliers GROUP BY Country Having count(recuento)>
+(SELECT count(*) AS recuento FROM suppliers WHERE Country IN ('Brazil', 'Spain'));
+
+-- 22: ciudades que tienen más clientes que Madrid.
+SELECT City
+FROM customers
+GROUP BY City 
+Having count(*) >
+(SELECT count(*) FROM customers WHERE City LIKE 'Madrid');
+
+-- 23: ciudades que tienen más clientes que Madrid y SevillA. Hacer con MAX.
+
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT MAX(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla') GROUP BY City) AS a);
+
+-- 24: ciudades que tienen más clientes que Madrid y Sevilla o Seville. Hacer con la SUMA
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')) AS a);
+
+-- 25: ciudades que tienen más clientes que la suma de clientes de Madrid, Sevilla o Seville y Lisboa.
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla', 'Lisboa')) AS a);
+
 
