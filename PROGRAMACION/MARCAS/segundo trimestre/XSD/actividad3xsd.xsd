@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- elementos complejos definidos por mi: Tipo persona e info-->
+
+    <xs:complexType name="tipoPersona">
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="dni" type="xs:string"/>
+                <xs:element name="comentario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="nacimiento" type="xs:date" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="info">
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="dni" type="xs:string"/>
+            </xs:sequence>
+    </xs:complexType>
+
+    <!-- declaración elementos complejos-->
+
+    <xs:element name="persona" type="tipoPersona"/>
+
+    <xs:element name="datos" type="info"/>
+    
+</xs:schema>

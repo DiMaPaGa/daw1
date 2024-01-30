@@ -81,11 +81,11 @@ public class Metodos2 {
     }//main
 
     public static void ejer24 (int [] tablas){
+        int multiplicador=10;
         for (int i = 0; i < tablas.length; i++) {
-            System.out.println("TABLA DE MULTIPLICAR DEL "+ i);
-            int multiplicador=10;
+            System.out.println("\n Tabla del " + tablas[i]+"\n");
             for (int j = 0; j <= multiplicador; j++) {
-                System.out.println(multiplicador+ " x "+i+ " = "+ (multiplicador*i));
+            System.out.println(tablas[i]+ " x "+ j+ " = "+ (j*tablas[i]));
             }
 
         }

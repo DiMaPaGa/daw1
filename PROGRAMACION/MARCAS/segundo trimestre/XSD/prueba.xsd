@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del tipo de dato "tipoPersona" -->
+  <xs:complexType name="tipoPersona">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellidos" type="xs:string"/>
+      <xs:element name="dni" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definición del tipo de dato "info" -->
+  <xs:complexType name="info">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellidos" type="xs:string"/>
+      <xs:element name="dni" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definición del elemento "persona" -->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Elemento "datos" de tipo "tipoPersona" -->
+        <xs:element name="datos" type="tipoPersona"/>
+        
+        <!-- Elemento opcional "comentario" -->
+        <xs:element name="comentario" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <!-- Atributo "nacimiento" de tipo "date" -->
+      <xs:attribute name="nacimiento" type="xs:date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
