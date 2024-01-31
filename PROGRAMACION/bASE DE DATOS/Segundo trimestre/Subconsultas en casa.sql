@@ -178,8 +178,10 @@ where country in
 SELECT companyname, supplierID 
 from suppliers 
 where country in 
-SELECT Country FROM suppliers GROUP BY Country Having count(recuento)>
-(SELECT count(*) AS recuento FROM suppliers WHERE Country IN ('Brazil', 'Spain'));
+(SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT count(*) FROM suppliers WHERE Country IN ('Brazil', 'Spain')));
+
+
 
 -- 22: ciudades que tienen más clientes que Madrid.
 SELECT City
@@ -188,17 +190,57 @@ GROUP BY City
 Having count(*) >
 (SELECT count(*) FROM customers WHERE City LIKE 'Madrid');
 
--- 23: ciudades que tienen más clientes que Madrid y SevillA. Hacer con MAX.
+-- 23: ciudades que tienen más clientes que Madrid o SevillA. Hacer con MAX.
 
 SELECT City FROM customers GROUP by City having count(*) > 
-(SELECT MAX(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla') GROUP BY City) AS a);
+(SELECT MAX(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')GROUP BY City) AS a);
 
 -- 24: ciudades que tienen más clientes que Madrid y Sevilla o Seville. Hacer con la SUMA
 SELECT City FROM customers GROUP by City having count(*) > 
-(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')) AS a);
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')GROUP BY City) AS a);
 
 -- 25: ciudades que tienen más clientes que la suma de clientes de Madrid, Sevilla o Seville y Lisboa.
 SELECT City FROM customers GROUP by City having count(*) > 
-(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla', 'Lisboa')) AS a);
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla', 'Lisboa')GROUP BY City) AS a);
+
+-- 26: Escribir una consulta para imprimir el nombre, apellidos y edad de aquellos empleados
+-- que tienen una edad igual o superior a la edad media.
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) FROM employees Where timestampdiff(year, BirthDate, curdate()) >=
+(Select AVG(timestampdiff(year, BirthDate, curdate())) FROM employees);
+
+-- 27: Escribir una consulta para imprimir el nombre, apellidos y edad de aquellos empleados
+-- que tienen una edad igual o superior a la edad media de los empleados con el cargo Sales Representative.
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) FROM employees Where timestampdiff(year, BirthDate, curdate()) >=
+(Select AVG(timestampdiff(year, BirthDate, curdate())) FROM employees Where employees.Title = "Sales Representative");
 
 
+-- 28: Productos cuyo valor de unidades en stock sea superior al valor mínimo de unidades en stock de los productos
+-- de la categoría 4 o superior al valor mínimo de unidades en stock de los productos
+-- de la categoría 6.
+
+Select * FROM products where UnitsInStock > 
+(SELECT min(UnitsInStock) FROM products Where CategoryID in (4,6));
+
+select * from products where UnitsInStock >
+(select min(UnitsInStock) from products where CategoryID = 4  or UnitsInStock >
+(select min(UnitsInStock) from products where CategoryID = 6));
+
+-- 29: Productos cuya categoría empieza por la letra C o D.
+
+
+select ProductName from products where CategoryID  in
+(select CategoryID from categories where CategoryName like "C%" or CategoryName like"D%");
+
+-- 30: Ciudades que tienen menos clientes (customers)
+-- que la ciudad de Buenos Aires y Munich.
+
+SELECT customers.City, count(*) FROM customers GROUP BY customers.City hAVING count(*) <
+(SELECT count(City) FROM customers Where City IN ('Buenos Aires', 'M?nchen'));
+
+
+-- 31: empleados que son más jóvenes que Margaret, Laura y Michael.
+
+SELECT *
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) <
+(SELECT min(timestampdiff(year, BirthDate, curdate())) FROM employees Where FirstName IN ('Margaret', 'Laura', 'Michael'));

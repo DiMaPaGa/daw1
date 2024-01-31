@@ -106,25 +106,109 @@ public class Metodos2 {
 
 [3, 13, 8, 9]*/
 
-       int valorArray= (int)(Math.random()*(15-5+1)+5);
+      /* int valorArray= (int)(Math.random()*(15-5+1)+5);
         int [] matrizPrevia = new int[valorArray];
         System.out.println("Mi matriz es: ");
         matrizPrevia=rellenarArray(matrizPrevia);
 
         int valor= (int)(Math.random() * (30-1+1)+1);
         System.out.println("El valor es: " + valor);
-        int posicion= (int)(Math.random() * (matrizPrevia.length-1+1)+1);
+        int posicion= (int)(Math.random() * (matrizPrevia.length+1));
         System.out.println("La posición es: " + posicion);
 
         //int []nuevaMatriz= crearNuevaMatriz(matrizPrevia, valor, posicion);
 
         //imprimirArray(nuevaMatriz);
 
-        imprimirArray(crearNuevaMatriz(matrizPrevia, valor, posicion));
+        imprimirArray(crearNuevaMatriz(matrizPrevia, valor, posicion));*/
+
+    /*29.	Crear un método que reciba dos arrays y un entero, y copie tantos elementos del segundo array en el
+    primer array como diga el entero, comenzando desde la posición cero en ambos. Suponga que no se saldrá de los límites.
+
+Por ejemplo, si array1 = [7,2,1,0] y array2 = [3,2,2,7,6] y entero=3, al acabar el método el primer array se modificará y su
+contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han modificado).*/
+
+      int tamanoArray1= (int)(Math.random()*(15-5+1)+5);
+        int tamanoArray2= (int)(Math.random()*(15-5+1)+5)+tamanoArray1;
+        int numero= 2 ;//(int)(Math.random()*(15-5+1)+5)-(tamanoArray2-tamanoArray1);
+        int posicionArray2= 2;// (int)(Math.random()*(tamanoArray2-1+1)+1);
+        int posicionArray1= 2;
+
+        int [] array1= {7,2,1,0}; //new int [tamanoArray1];
+        int [] array2= {3,2,2,7,6}; //new int [tamanoArray2];
+
+        //System.out.println("numero es valor= "+ numero);
+        //array1= rellenarArray2(array1);
+        //array2= rellenarArray2(array2);
 
 
 
+
+
+
+
+       /* int [] array1={7,2,1,0};
+        int [] array2={3,2,2,7,6};
+        int entero= 1;*/
+
+
+
+       /* intercambioArrays(array1, array2, entero);*/
+
+
+       // 30.	Repetir lo anterior, pero añadiendo un cuarto argumento, que indique la posición del segundo array a partir de la cual se empezará.
+        copiarArray30 (array1, array2, numero, posicionArray2);
+        imprimirArray(array1);
+
+       // imprimirArray(array1);
+
+
+       // 31.	Repetir lo anterior, pero añadiendo un quinto argumento, que indique la posición del primer array a partir de la cual se empezará
+
+        int [] array3= {7,2,1,0}; //new int [tamanoArray1];
+        int [] array4= {3,2,2,7,6}; //new int [tamanoArray2];
+
+        copiarArray31 (array3, array4, numero, posicionArray2, posicionArray1);
+        imprimirArray(array3);
     }//main
+
+
+    public static void copiarArray31 (int[] array1, int[] array2, int numero, int posicionArray2, int posicionArray1) {
+        for (int i = posicionArray1; i < (posicionArray1+numero); i++) {
+            array1[i] = array2[posicionArray2];
+
+            posicionArray2++;
+        }
+    }
+
+    public static void copiarArray30 (int[] array1, int[] array2, int numero, int posicionArray2) {
+        for (int i = 0; i < numero; i++) {
+            array1[i] = array2[posicionArray2-1+i];
+        }
+    }
+
+    public static void copiarArray(int[] array1, int[] array2, int numero) {
+        for (int i = 0; i < numero; i++) {
+            array1[i] = array2[i];
+        }
+    }
+
+    public static void intercambioArrays (int[]array1, int[] array2, int entero){
+
+        for (int i = 0; i < array1.length; i++) {
+
+            if (i < entero) {
+                array1[i] = array2[i];
+                System.out.print(array1[i] + " ");
+
+            } else {
+                System.out.print(array1[i] + " ");
+            }
+
+        }
+
+
+    }
 
     public static int[] crearNuevaMatriz (int[] array, int valor, int posicion){
         int [] nuevaMatriz= new int[array.length+1];
@@ -143,10 +227,28 @@ public class Metodos2 {
         return nuevaMatriz;
     }
 
+    /*otra solucion
+    public static int[] introducirValor(int[] array, int numero, int posicion) {
+        int[] nuevoArray = new int[array.length + 1];
+        for (int i = 0; i < nuevoArray.length; i++) {
+            if (i < posicion) {
+                nuevoArray[i] = array[i];
+            } else if (i == posicion) {
+                nuevoArray[i] = numero;
+            } else {
+                nuevoArray[i] = array[i - 1];
+            }
+        }
+
+        return nuevoArray;
+    }*/
+
+
     public static void imprimirArray (int[] nuevaMatriz){
         for (int var : nuevaMatriz) {
             System.out.print(var+ " ");
         }
+        System.out.println();
 
     }
 
