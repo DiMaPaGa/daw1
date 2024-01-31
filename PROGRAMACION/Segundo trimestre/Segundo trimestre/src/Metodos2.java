@@ -85,14 +85,16 @@ public class Metodos2 {
 
        // 25.	Crear un método que reciba un array 1D de enteros y lo ordene.
 
-        /*int array= new int[10];
+       /* int [] array= new int[10];
         array= rellenarArray2(array);
-        rellenarArray2(array);
-        array=ordenarArrayInt(array);
-        rellenarArray2(array);
-*/
+        array=ordenarArrayInt2(array);
+        imprimirArray(array);*/
 
-        /*28.	Crear un método que reciba un array de enteros, un número y una posición, y devuelva un nuevo array que tenga los mismos contenidos del original, pero con sus elementos desplazados a partir de la posición especificada, donde se almacenará además el número pasado en el segundo argumento.
+
+
+        /*28.	Crear un método que reciba un array de enteros, un número y una posición, y devuelva un nuevo array que tenga los
+        mismos contenidos del original, pero con sus elementos desplazados a partir de la posición especificada, donde se almacenará
+        además el número pasado en el segundo argumento.
 
         Por ejemplo, si el método recibe los siguientes datos:
 
@@ -104,27 +106,49 @@ public class Metodos2 {
 
 [3, 13, 8, 9]*/
 
-        int valorArray= (int)(Math.random()*(15-5+1)+5);
+       int valorArray= (int)(Math.random()*(15-5+1)+5);
         int [] matrizPrevia = new int[valorArray];
+        System.out.println("Mi matriz es: ");
         matrizPrevia=rellenarArray(matrizPrevia);
 
         int valor= (int)(Math.random() * (30-1+1)+1);
-
+        System.out.println("El valor es: " + valor);
         int posicion= (int)(Math.random() * (matrizPrevia.length-1+1)+1);
+        System.out.println("La posición es: " + posicion);
 
-        integresarNumero(matrizPrevia, valor, posicion);
+        //int []nuevaMatriz= crearNuevaMatriz(matrizPrevia, valor, posicion);
+
+        //imprimirArray(nuevaMatriz);
+
+        imprimirArray(crearNuevaMatriz(matrizPrevia, valor, posicion));
+
 
 
     }//main
 
-    public static int[] integresarNumero (int[] array, int valor, int posicion){
-        int nuevaMatriz()
+    public static int[] crearNuevaMatriz (int[] array, int valor, int posicion){
+        int [] nuevaMatriz= new int[array.length+1];
 
+        for (int i = 0; i < nuevaMatriz.length-1; i++) {
 
+            if(i<posicion){
+                nuevaMatriz[i]=array[i];
+            } else {
+                nuevaMatriz[i] = valor;
+                valor=array[i];
+            }
+
+        }
+
+        return nuevaMatriz;
     }
 
+    public static void imprimirArray (int[] nuevaMatriz){
+        for (int var : nuevaMatriz) {
+            System.out.print(var+ " ");
+        }
 
-
+    }
 
 
     public static int [] ordenarArrayInt (int [] arrayOrdenar){
@@ -149,11 +173,27 @@ public class Metodos2 {
         }
         return arrayOrdenar;
     }
+
+    public static int[] ordenarArrayInt2 (int[] arrayOrdenar){
+        for (int i = 0; i < arrayOrdenar.length-1 ; i++) {
+            for (int j = 0; j < (arrayOrdenar.length-1)-i; j++) {
+                if (arrayOrdenar[j] > arrayOrdenar[j + 1]) {
+                    int mochila = arrayOrdenar[j];
+                    arrayOrdenar[j] = arrayOrdenar[j + 1];
+                    arrayOrdenar[j + 1] = mochila;
+                }
+
+            }
+        }
+
+        return arrayOrdenar;
+    }
     public static int[] rellenarArray2(int[] array){
         for (int i = 0; i < array.length; i++) {
             array[i]=(int)(Math.random() *(100-1+1)+1);
             System.out.print(array[i]+" ");
         }
+        System.out.println();
         return array;
     }
 
