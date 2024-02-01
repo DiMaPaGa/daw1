@@ -157,15 +157,15 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
 
 
        // 30.	Repetir lo anterior, pero añadiendo un cuarto argumento, que indique la posición del segundo array a partir de la cual se empezará.
-        copiarArray30 (array1, array2, numero, posicionArray2);
-        imprimirArray(array1);
+       /*copiarArray30 (array1, array2, numero, posicionArray2);
+        imprimirArray(array1);*/
 
        // imprimirArray(array1);
 
 
        // 31.	Repetir lo anterior, pero añadiendo un quinto argumento, que indique la posición del primer array a partir de la cual se empezará
 
-        int [] array3= {7,2,1,0}; //new int [tamanoArray1];
+       int [] array3= {7,2,1,0}; //new int [tamanoArray1];
         int [] array4= {3,2,2,7,6}; //new int [tamanoArray2];
 
         copiarArray31 (array3, array4, numero, posicionArray2, posicionArray1);
@@ -176,14 +176,13 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
     public static void copiarArray31 (int[] array1, int[] array2, int numero, int posicionArray2, int posicionArray1) {
         for (int i = posicionArray1; i < (posicionArray1+numero); i++) {
             array1[i] = array2[posicionArray2];
-
             posicionArray2++;
         }
     }
 
     public static void copiarArray30 (int[] array1, int[] array2, int numero, int posicionArray2) {
         for (int i = 0; i < numero; i++) {
-            array1[i] = array2[posicionArray2-1+i];
+            array1[i] = array2[posicionArray2+i];
         }
     }
 

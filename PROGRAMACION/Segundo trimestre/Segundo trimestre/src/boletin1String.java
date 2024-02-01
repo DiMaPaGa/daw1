@@ -48,8 +48,8 @@ public class boletin1String {
         /*4. Del siguiente String “La lluvia en Sevilla es una maravilla” cuenta cuántas vocales hay en
         total (recorre el String con un bucle y charAt).*/
 
-      /*  String frase= "La lluvia en Sevilla es una maravilla";
-        int contador=0;
+        //String frase= "La lluvia en Sevilla es una maravilla";
+        /*int contador=0;
 
         for (int i=0; i<frase.length();i++){
             char letra= frase.toLowerCase().charAt(i);
@@ -75,7 +75,7 @@ public class boletin1String {
        /* String frase2 = frase.replace("a","e");
         System.out.println(frase2);*/
 
-        /*System.out.println(sevilla.replace('a','e')); también y más corto"*/
+       /* System.out.println(frase.replace('a','e')); //también y más corto"*/
 
 
         /*6. Dada una cadena mostrar por pantalla la cantidad de vocales que tiene. Ejemplo:
@@ -141,8 +141,9 @@ public class boletin1String {
         /*System.out.println("Introduce una cadena:");
         String cad = scan.next().toLowerCase();
 
+        Scanner scan2 = new Scanner(System.in);
         System.out.println("Introduce un carácter:");
-        char car = scan.next().toLowerCase().charAt(0);
+        char car = scan2.next().toLowerCase().charAt(0);
 
         int contadorCaracter=0;
         for (int i = 0; i < cad.length(); i++) {
@@ -176,28 +177,33 @@ public class boletin1String {
         int codigoASCIICaracter = (int) caracterEntrada;
         System.out.println("El código ASCII de '" + caracterEntrada + "' es: " + codigoASCIICaracter);*/
 
-        /* clase
-        sout
+        // clase
+        /*System.out.println("Introduce un carácter:");
         char diez=scan.next().charAt(0);
-        sout (int)
-         */
+        System.out.println("El código ASCII es " + (int)diez);*/
+
+
 
 
         /* 11. Recorre un String y transforma cada carácter a su código ASCII. Muéstralos en línea
-        recta, separados por un espacio entre cada carácter.
+        recta, separados por un espacio entre cada carácter.*/
 
-        System.out.println("Introduce una cadena:");
+        /*System.out.println("Introduce una cadena:");
         String cadena = scan.next();
         for (int i = 0; i < cadena.length(); i++) {
             int codigoASCIIChar = (int) cadena.charAt(i);
             System.out.print(codigoASCIIChar + " ");
         }*/
 
-        /*String word=scan.nextLine();
+
+       /* System.out.println("Introduce una cadena:");
+        String word=scan.nextLine();
         int car=word.length();
-        for(int
-        char
-         */
+        for(int i=0; i< car; i++){
+            char codigo= word.charAt(i);
+            int ASCII = (int)codigo;
+            System.out.print(ASCII + " ");
+        }*/
 
 
         /*12. Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int,
@@ -272,9 +278,7 @@ public class boletin1String {
         } else if ("^".equals(signo)){
             for (int i=0; i<operando2v; i++){
                 resulta=resulta*operando1v;
-            }
-        } else if }
-        } else if ("%".equals(signo)){
+            } else if ("%".equals(signo)){
             resulta=(operando2v*100)/operando1v;
         }
         System.out.println("RESULTADO DE LA OPERACION = "+resulta);*/

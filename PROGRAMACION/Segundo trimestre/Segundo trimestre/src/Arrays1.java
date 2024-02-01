@@ -229,14 +229,14 @@ public class Arrays1 {
             }
         }*/
 // 12.	Repetir escribiendo un mensaje de tipo: Juan esta en el array en la posición 2.
-        /* String[] alumnos = {"Jesus", "Sergio", "Alejandro"};
+      /*  String[] alumnos = {"Jesus", "Sergio", "Alejandro"};
         System.out.println("Introduce un nombre: ");
-        String alumnos= scan.next();
+        String nombre= scan.next();
         boolean esta= false;
-        int posicion= 1-;
+        int posicion= 1;
 
         for (int i = 0; i <alumnos.length; i++) {
-            if (alumnos[i].equals(nombre)){
+            if (alumnos[i].equalsIgnoreCase(nombre)){
                 esta =true;
                 posicion= i;
                 break;
@@ -245,9 +245,9 @@ public class Arrays1 {
         }
 
         if (esta) {
-            System.out.println(nombre + " está en el array"+ posicion);
+            System.out.println(nombre + " está en el array en la posición "+ posicion);
         } else {
-            System.out.println(nombre + " NO está en el array" + posicion);
+            System.out.println(nombre + " NO está en el array");
         }*/
 
 
@@ -291,6 +291,8 @@ public class Arrays1 {
                 valor++;
             }
         }
+
+        System.out.println("El nuevo array es de tamaño: "+ valor+ " y sus valores son: ");
         int[] newarray= new int[valor];
         valor=0;
 
@@ -301,7 +303,7 @@ public class Arrays1 {
             }
         }
 
-        System.out.println("El nuevo array es de tamaño: "+ valor+ " y sus valores son: ");
+
 
         for (int var: newarray) {
             System.out.print(var+" ");

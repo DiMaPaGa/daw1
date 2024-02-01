@@ -254,16 +254,16 @@ public class arrayMultidimensional {
             System.out.println();
         }*/
 
-        //Leer por pantalla un caracter y un numero n, e imprimir por pantalla.
+        //10.Leer por pantalla un caracter y un numero n, e imprimir por pantalla.
 
-     /*   System.out.println("Escribe un carácter");
+       /*System.out.println("Escribe un carácter");
         String caracter= scan.next();
         System.out.println("Escribe un número");
         int numero= scan.nextInt();
 
-        String [][] matrix= new String [numero][numero];
+        String [][] matrix= new String [numero][numero];*/
 
-        for (int i = 0; i < matrix.length ; i++) {
+        /*for (int i = 0; i < matrix.length ; i++) {
             for (int j = 0; j <matrix.length ; j++) {
                 if (i==0 || j==0){
                     matrix[i][j]=caracter;
@@ -285,7 +285,7 @@ public class arrayMultidimensional {
         0 0 0 a
         a a a a
          */
-      /*  System.out.println("\nActividad 5\n");
+      /* System.out.println("\nActividad 5\n");
 
         for (int i = 0; i < matrix.length ; i++) {
             for (int j = 0; j <matrix.length ; j++) {
@@ -504,7 +504,7 @@ public class arrayMultidimensional {
         1010
          */
 
-        /*System.out.println("incorpora un número");
+       /* System.out.println("incorpora un número");
         int number = scan.nextInt();
 
         int[][] arr1 = new int[number][number];
