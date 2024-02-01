@@ -128,14 +128,29 @@ public class Metodos2 {
 Por ejemplo, si array1 = [7,2,1,0] y array2 = [3,2,2,7,6] y entero=3, al acabar el método el primer array se modificará y su
 contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han modificado).*/
 
-      int tamanoArray1= (int)(Math.random()*(15-5+1)+5);
-        int tamanoArray2= (int)(Math.random()*(15-5+1)+5)+tamanoArray1;
+      //int tamanoArray1= (int)(Math.random()*(15-5+1)+5);
+        //int tamanoArray2= (int)(Math.random()*(15-5+1)+5)+tamanoArray1;
         int numero= 2 ;//(int)(Math.random()*(15-5+1)+5)-(tamanoArray2-tamanoArray1);
         int posicionArray2= 2;// (int)(Math.random()*(tamanoArray2-1+1)+1);
         int posicionArray1= 2;
 
-        int [] array1= {7,2,1,0}; //new int [tamanoArray1];
+
+//en clase se hace la solucin con escaner
+
+
+      /*  int [] array1= {7,2,1,0}; //new int [tamanoArray1];
         int [] array2= {3,2,2,7,6}; //new int [tamanoArray2];
+        int entero;
+        int posicion;
+        imprimirArray(array1)
+        do{
+            System.out.println("Introduce cuantos enteros quieres copiar");
+            entero=scan.nextInt();
+            System.out.println("Introduce la posicion");
+            posicion= scan.nextInt();
+
+        }while ((entero+ posicion) >array1.length);*/
+
 
         //System.out.println("numero es valor= "+ numero);
         //array1= rellenarArray2(array1);
@@ -168,9 +183,38 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
        int [] array3= {7,2,1,0}; //new int [tamanoArray1];
         int [] array4= {3,2,2,7,6}; //new int [tamanoArray2];
 
-        copiarArray31 (array3, array4, numero, posicionArray2, posicionArray1);
-        imprimirArray(array3);
+       /* copiarArray31 (array3, array4, numero, posicionArray2, posicionArray1);
+        imprimirArray(array3);*/
+
+
+
+        //Métodos que reciba dos arrays y los devuelva concatenados.
+
+      /*  int [] arrayFinal= devolverarraycomplejo(array3, array4);
+
+       imprimirArray(arrayFinal);*/
+
+
     }//main
+
+    public static int[] devolverarraycomplejo (int[] array1, int[]array2){
+        int [] nuevaarray= new int[array1.length + array2.length];
+
+        for (int i = 0; i < nuevaarray.length ; i++) {
+            if (i<array1.length){
+                nuevaarray[i]= array1[i];
+            } else {
+                nuevaarray[i]= array2[i- array1.length];
+
+            }
+
+        }
+
+
+        return nuevaarray; //para almacenar en el método la nueva array;
+    }
+
+
 
 
     public static void copiarArray31 (int[] array1, int[] array2, int numero, int posicionArray2, int posicionArray1) {
