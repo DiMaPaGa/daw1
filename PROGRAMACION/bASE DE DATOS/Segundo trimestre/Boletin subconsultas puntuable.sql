@@ -4,6 +4,17 @@ SELECT CustomerID
 FROM orders
 WHERE date(OrderDate) = (Select date(OrderDate) FROM orders Order By OrderDate desc Limit 1);
 
+SELECT CustomerID
+FROM orders
+WHERE OrderDate = (Select OrderDate FROM orders Order By OrderDate desc Limit 1);
+
+-- SOLUCION DE CLASE
+SELECT CustomerID
+FROM orders
+WHERE orderdate =
+(select max(orderdate) FROM orders);
+
+
 -- 2. Mostrar el nombre de las empresas que realizaron compras despues de la fecha '01/01/1995'.
 SELECT CompanyName
 FROM customers
@@ -14,7 +25,7 @@ Where CustomerID IN
 
 SELECT FirstName, LastName 
 FROM employees 
-WHERE employees.EmployeeID IN
+WHERE EmployeeID IN
 (SELECT EmployeeID From employeeterritories Where TerritoryID IN
 (SELECT TerritoryID FROM territories WHERE TerritoryDescription ='New York'));
 
@@ -46,6 +57,9 @@ Where ProductID in
 (SELECT ProductID From orderdetails WHERE OrderID in 
 (SELECT OrderID FROM orderdetails group by OrderID having count(*)>1));
 
+SELECT ProductID, ProductName from products Where ProductID in
+(SELECT ProductID From orderdetails group by ProductID having count(*)>1);
+
 -- 8. Mostrar los pedidos que contienen productos que nunca han sido pedidos antes.
 -- Entiendo que se refiere a aquellos pedidos que contienen algun artículo que solo se haya pedido en una ocasión.
 
@@ -53,6 +67,7 @@ SELECT OrderID
 FROM orderdetails
 WHERE ProductID IN 
 (SELECT ProductID FROM orderdetails GROUP BY ProductID HAVING COUNT(*) = 1);
+
 
 -- 9. Mostrar los clientes que han realizado pedidos de productos con existencia (UnitsInStock) inferior al promedio.
 
