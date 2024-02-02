@@ -18,8 +18,6 @@ public class metodos3 {
 
 
 
-
-
     }//main
 
     public static int [] arraySumado (int [] primero, int [] segundo){
@@ -50,7 +48,6 @@ public class metodos3 {
 
         return arraysumada;
     }
-
 
 
 
