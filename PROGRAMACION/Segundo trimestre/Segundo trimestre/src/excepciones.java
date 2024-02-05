@@ -1,6 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+//ATRIBUTOS ESTÁTICOS
+
 public class excepciones {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

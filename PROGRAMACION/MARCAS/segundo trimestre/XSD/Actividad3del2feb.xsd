@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="modeloCoche">
+                <xs:complexType mixed="true">
+                    <xs:all>
+                        <xs:element name="modeloMotor"/>
+                    
+                    </xs:all>
+                    <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="idModeloCoche" use="required">
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-z][a-z]\d{3}"/>              
+                                    </xs:restriction>
+                                </xs:attribute>
+                            </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
