@@ -86,3 +86,6 @@ WHERE UnitsInStock <
 (SELECT AVG(UnitsInStock) FROM Products AS a
 WHERE products.CategoryID = a.CategoryID);
 
+Select productID from products where UnitsInStock < 
+(Select avg(UnitsInStock) from products as b group by CategoryID having b.CategoryID = products.CategoryID);
+
