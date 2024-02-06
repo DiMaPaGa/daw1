@@ -3,23 +3,33 @@
     <xs:element name="concesionario">
         <xs:complexType>
             <xs:sequence>
-            <xs:element name="modeloCoche">
-                <xs:complexType mixed="true">
-                    <xs:all>
-                        <xs:element name="modeloMotor"/>
-                    
-                    </xs:all>
-                    <xs:simpleContent>
+                <xs:element name="modeloCoche" maxOccurs="unbounded">
+                    <xs:complexType mixed="true">
+                        <xs:simpleContent>
                             <xs:extension base="xs:string">
                                 <xs:attribute name="idModeloCoche" use="required">
-                                    <xs:restriction base="xs:string">
-                                        <xs:pattern value="[a-z][a-z]\d{3}"/>              
-                                    </xs:restriction>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="[a-z][a-z]\d{3}"/>
+                                        </xs:restriction>   
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="idsRefModeloCoche">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="[a-z][a-z]\d{3} [a-z][a-z]\d{3}"/>              
+                                        </xs:restriction> 
+                                    </xs:simpleType>
                                 </xs:attribute>
                             </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modeloMotor" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute name="idModeloCoche" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
