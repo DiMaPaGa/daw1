@@ -1,4 +1,5 @@
 -- Ciudad que tienen menos cliente que la ciudad de buenos aires
+
 SELECT City, count(*) 
 FROM customers  
 GROUP BY city 
