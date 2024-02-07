@@ -7,9 +7,19 @@ public class Persona {
     private float altura;
     private float peso;
 
+    private static String apellido= "Pastrana"; //no son del objeto, sino de la clase
+
 
 
     //constructores
+
+    public static String getApellido() {
+        return apellido;
+    }
+
+    public static void setApellido(String apellido) {
+        Persona.apellido = apellido;
+    }
 
     public Persona(){
         this.nombre="DEFAULT";
@@ -85,5 +95,19 @@ public class Persona {
                 ", altura=" + altura +
                 ", peso=" + peso +
                 '}';
+    }
+
+
+    public boolean equals(Object obj){
+        Persona persona = (Persona) obj; //convertimos un objeto en otro objeto casteandole el objeto que queremos
+        boolean nombreIgual = this.nombre.equals(persona.nombre);//aqui puede ponerse equalsIgnoreCase(persona.nombre)
+        boolean edadIgual = this.edad ==persona.edad;
+        boolean sexoIgual = this.sexo.equals(persona.sexo);
+
+        return nombreIgual && edadIgual && sexoIgual;
+    }
+
+    public void cumplirAnios (){
+        this.edad+=1;
     }
 }

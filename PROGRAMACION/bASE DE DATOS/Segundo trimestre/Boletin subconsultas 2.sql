@@ -17,11 +17,18 @@ WHERE p.ProductID = o.ProductID
 group by p.ProductName
 order by UnidadesTotalesVendidas desc Limit 1;
 
+SELECT ProductName FROM northwind.products
+WHERE productid =
+(SELECT productid FROM northwind.orderdetails GROUP BY productid ORDER BY SUM(quantity) DESC LIMIT 1);
+
+Select ProductName  from products where ProductID =
+(SELECT ProductID from products order By UnitsOnOrder desc limit 1);
+
 -- 3. Clientes que han realizado pedidos en más de un país
 SELECT CustomerID 
 from customers
 WHERE CustomerID IN
-(SELECT CustomerID from orders group by CustomerID having count(distinct orders.Shipcountry)>1);
+(SELECT CustomerID from orders group by CustomerID having count(distinct Shipcountry)>1);
 
 
 
