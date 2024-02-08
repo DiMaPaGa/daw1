@@ -1,3 +1,5 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class CCC {
 
     //atributos=propiedades
@@ -6,79 +8,60 @@ public class CCC {
 
     private String nombreDelTitular;
 
-    private long numeroDeCuenta= (long) Math.random()*(99999999-10000000+1)+10000000;
+    private long numeroDeCuenta;
 
-    private double ingresos;
-
-    private double reintegros;
 
 
 
     //constructorer
 
 
-    public CCC(){
-        this.saldoDeCuenta=0;
-        this.nombreDelTitular=" ";
-        this.numeroDeCuenta=0;
+    public CCC(){ //quitaría lo de dentro
+
     }
     public CCC (String nombreDelTitular, double saldoDeCuenta){
-        this();
+        //this();
         this.nombreDelTitular = nombreDelTitular;
         this.saldoDeCuenta = saldoDeCuenta;
+        this.numeroDeCuenta= ThreadLocalRandom.current().nextLong(10000000000000000L,99999999999999999L+1L);
 
 
     }
 
     public double getSaldoDeCuenta() {
-        return saldoDeCuenta;
-    }
-
-    public String getNombreDelTitular() {
-        return nombreDelTitular;
-    }
-
-    public long getNumeroDeCuenta() {
-        return numeroDeCuenta;
-    }
-
-    public void setIngresos(double ingresos) {
-        this.ingresos = ingresos;
-    }
-
-    public void setReintegros(double reintegros) {
-        this.reintegros = reintegros;
-    }
-
-    public void realizarTrasferenciasEntreCuentas (double reintegros, Object cuentaOrigen, Object cuentafinal){
-
-        saldoDeCuentaOrigen(cuentaOrigen);
-        saldoDeCuentaFinal(cuentafinal);
-
-    }
-
-    private double saldoDeCuentaOrigen(Object cuentaOrigen) {
-
-        this.saldoDeCuenta-=reintegros;
 
         return saldoDeCuenta;
     }
 
-    private double saldoDeCuentaFinal(Object cuentaFinal) {
-
-        this.saldoDeCuenta+=reintegros;
-
-        return saldoDeCuenta;
-    }
-
-    @Override
-    public String toString() {
+    public String getDatosGenerales() {
         return "CCC{" +
                 "saldoDeCuenta=" + saldoDeCuenta +
                 ", nombreDelTitular='" + nombreDelTitular + '\'' +
                 ", numeroDeCuenta=" + numeroDeCuenta +
-                ", ingresos=" + ingresos +
-                ", reintegros=" + reintegros +
                 '}';
     }
+
+    public void setIngresos(double ingresos) {
+
+        this.saldoDeCuenta += ingresos;
+    }
+
+    public void setReintegros(double reintegros) {
+        if (this.saldoDeCuenta>reintegros){
+        this.saldoDeCuenta -= reintegros;
+        }else {
+            System.out.println("No tiene saldo suficiente para realizar la operación");
+        }
+    }
+
+    public void realizarTrasferenciasEntreCuentas (double reintegros, CCC cuentaReceptora){
+
+        this.setReintegros(reintegros);
+        cuentaReceptora.setIngresos(reintegros);
+
+    }
+
+
+
+
 }
