@@ -1,18 +1,22 @@
 public class Main {
     public static void main(String[] args) {
 
-        CCC cuenta1= new CCC("Diana", 2000);
-        CCC cuenta2= new CCC("Moises",2500);
+        CCC ccc_1= new CCC("Diana", 2000);
+        CCC ccc_2= new CCC("Moises",2500);
 
-        System.out.println(cuenta1.getDatosGenerales());
-        System.out.println(cuenta2.getDatosGenerales());
+        System.out.println(ccc_1.getDatosGenerales());
+        System.out.println(ccc_1.getSaldoDeCuenta());
+        System.out.println(ccc_2.getDatosGenerales());
+        System.out.println(ccc_2.getSaldoDeCuenta());
 
 
-        cuenta2.realizarTrasferenciasEntreCuentas(500, cuenta1);
+        ccc_1.realizarTrasferenciasEntreCuentas(500, ccc_2);
 
 
-        System.out.println(cuenta1.getDatosGenerales());
-        System.out.println(cuenta2.getDatosGenerales());
+        System.out.println(ccc_1.getDatosGenerales());
+        System.out.println(ccc_2.getDatosGenerales());
+        System.out.println(ccc_1.getSaldoDeCuenta());
+        System.out.println(ccc_2.getSaldoDeCuenta());
 
 
     }

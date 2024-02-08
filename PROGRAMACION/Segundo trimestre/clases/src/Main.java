@@ -33,13 +33,13 @@ public class Main {
         Persona.setApellido("Pascual");
         System.out.println(Persona.getApellido());
         System.out.println(diana.getEdad());
+
         diana.cumplirAnios();
         System.out.println(diana.getEdad());
         System.out.println(moi.getEdad());
         moi.cumplirAnios();
         moi.cumplirAnios();
         System.out.println(moi.getEdad());
-
 
     }
 }

@@ -13,7 +13,7 @@ public class CCC {
 
 
 
-    //constructorer
+    //constructores
 
 
     public CCC(){ //quitaría lo de dentro
@@ -24,7 +24,7 @@ public class CCC {
         this.nombreDelTitular = nombreDelTitular;
         this.saldoDeCuenta = saldoDeCuenta;
         this.numeroDeCuenta= ThreadLocalRandom.current().nextLong(10000000000000000L,99999999999999999L+1L);
-
+            //(long)(Math.random()+9_999_999 + 999_999 + 1);
 
     }
 
@@ -35,18 +35,18 @@ public class CCC {
 
     public String getDatosGenerales() {
         return "CCC{" +
-                "saldoDeCuenta=" + saldoDeCuenta +
-                ", nombreDelTitular='" + nombreDelTitular + '\'' +
-                ", numeroDeCuenta=" + numeroDeCuenta +
+                "saldoDeCuenta=" + this.saldoDeCuenta +
+                ", nombreDelTitular='" + this.nombreDelTitular + '\'' +
+                ", numeroDeCuenta=" + this.numeroDeCuenta +
                 '}';
     }
 
-    public void setIngresos(double ingresos) {
+    public void setIngresos(float ingresos) {
 
         this.saldoDeCuenta += ingresos;
     }
 
-    public void setReintegros(double reintegros) {
+    public void setReintegros(float reintegros) {
         if (this.saldoDeCuenta>reintegros){
         this.saldoDeCuenta -= reintegros;
         }else {
@@ -54,7 +54,7 @@ public class CCC {
         }
     }
 
-    public void realizarTrasferenciasEntreCuentas (double reintegros, CCC cuentaReceptora){
+    public void realizarTrasferenciasEntreCuentas (float reintegros, CCC cuentaReceptora){
 
         this.setReintegros(reintegros);
         cuentaReceptora.setIngresos(reintegros);

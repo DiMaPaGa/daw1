@@ -12,34 +12,12 @@ FROM products
 WHERE UnitPrice >
 (Select AVG(UnitPrice) from products p2 Where products.CategoryID = p2.CategoryID);
 
--- 3. Empleados que tienen un salario superior al promedio de salarios en su departamento(no puede hacerse)
-
 
 -- 4. Clientes que han realizado pedidos en todas las regiones
-Select DISTINCT CustomerID 
-from orders 
-where CustomerID IN
-	(Select CustomerID 
-    from orders
-	Join employees using (EmployeeID) -- se puede quitar al ser un JOIN
-	JOIN employeeterritories using (EmployeeID)
-	JOIN territories using(TerritoryID)
-    Group by CustomerID
-    having count(distinct territories.RegionID) = (sELECT count(distinct region.RegionID) FROM region));
 
-SELECT DISTINCT CustomerID 
-FROM Orders
-WHERE CustomerID IN (
-    SELECT CustomerID 
-    FROM Orders
-    JOIN EmployeeTerritories USING (EmployeeID)
-    JOIN Territories USING (TerritoryID)
-    GROUP BY CustomerID
-    HAVING COUNT(DISTINCT Territories.RegionID) = (
-        SELECT COUNT(DISTINCT RegionID) 
-        FROM Region
-    )
-);
+SELECT DISTINCT(orders.CustomerID) FROM orders where CustomerID IN
+(SELECT CustomerID FROM orders GROUP BY CustomerID HAVING COUNT(DISTINCT(ShipRegion)) = 
+(SELECT COUNT(DISTINCT(ShipRegion))FROM orders));
 
 -- 5. Productos que nunca han sido pedidos
 
