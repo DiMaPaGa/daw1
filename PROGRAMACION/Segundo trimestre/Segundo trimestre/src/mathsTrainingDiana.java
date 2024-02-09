@@ -24,14 +24,38 @@ public class mathsTrainingDiana {
             long startTime= System.nanoTime();
             System.out.println("COMENCEMOS");
             boolean b;
+            long tiempo=0;
             do {
                 int n= (int) Math.floor(Math.random() * 101);
                 int m= (int) Math.floor(Math.random() *(100-1)+1);
                 String operaciones= "+-*/%";
                 int azar=(int) Math.floor(Math.random() * 5);
                 char operacion=operaciones.charAt(azar);
-                float solReal=n+operacion+m;
-                System.out.println(n+operacion+m+ " = : ");
+
+                float solReal;
+                switch (operaciones) {
+                    case "+":
+                        solReal = n + m;
+                        break;
+                    case "-":
+                        solReal = n - m;
+                        break;
+                    case "*":
+                        solReal = n * m;
+                        break;
+                    case "/":
+                        solReal = (float) n / m; // División de números enteros
+                        break;
+                    case "%":
+                        solReal = n % m;
+                        break;
+                    default:
+                        System.out.println("Error");
+
+                        break;
+                }
+                float solReal= n + operacion + m;
+                System.out.println(n + operacion + m + " = ");
                 float solUsuario= scan.nextFloat();
                 b=(solReal==solUsuario);
                 if (b) {
@@ -40,14 +64,28 @@ public class mathsTrainingDiana {
                 } else {
                     System.out.println("Game Over");
                     long endTime=System.nanoTime();
-                    long tiempo= ((startTime - endTime)/ 1000000000);
-                    System.out.println("Game Over");
-
+                    tiempo= ((endTime-startTime)/ 1000000000);
+                    System.out.println("Has fallado. La solución era "+ solReal);
+                    System.out.println("Tu puntuación es de "+ cont + " aciertos en "+ tiempo+ " segundos");
                 }
             }while(b);
-                    System.out.println("¿Quieres seguir jugando?");
-        }
+
+            if (cont>record){
+                record= cont;
+                recordTiempo= tiempo;
+            } else if (cont==record && tiempo<recordTiempo){
+                recordTiempo= tiempo;
+
+            }
+
+            System.out.println("Record de aciertos en esta sesión son: "+record+  " en "+ recordTiempo + " segundos");
+
+
+            System.out.println("¿Quieres seguir jugando?");
             res=scan.next().toUpperCase();
+        }
+
+
 
         System.out.println("Has finalizado el juego");
         System.out.println("Record de aciertos en esta sesión: "+ record +" en "+ recordTiempo + " segundos");

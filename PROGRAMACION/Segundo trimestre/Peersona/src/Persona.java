@@ -30,9 +30,7 @@ public class Persona {
     }
 
     public Persona(String nombre, int edad, char sexo,float peso, float altura ){
-        this.nombre=nombre;
-        this.edad=edad;
-        this.sexo= comprobarSexo(sexo);
+        this(nombre, edad, sexo);
         this.dni=generarDNI();
         this.peso=peso;
         this.altura=altura;
@@ -56,7 +54,8 @@ public class Persona {
     }
 
     public boolean esMayorEdad (){
-           return this.edad>=18;
+
+        return this.edad>=18;
     }
 
     private char comprobarSexo (char sexo){

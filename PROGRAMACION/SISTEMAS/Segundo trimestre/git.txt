@@ -1,0 +1,25 @@
+Actividad 1
+
+git commit
+
+Actividad 2 
+
+git branch nombre
+git checkout nombre; git commit
+
+Actividad 3
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix
+
+actividad 4 
+
+git branch bugFix
+git commit
+git checkout main
+git commit
+git checkout bugFix
+git rebase main
