@@ -1,44 +1,48 @@
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Persona {
+    private final static char SEXO_POR_DEFECTO ='H';
 
     private String nombre;
     private int edad;
-    private String dni= generarDNI();
+    private String dni;
     private char sexo;
-
-    private final char sexopordef='H';
     private float peso;
     private float altura;
 
 
-
+//CONSTRUCTORES
     public Persona(){
-        this.sexo=this.sexopordef;
+        this.sexo= comprobarSexo(sexo);
+        this.dni=generarDNI();
+
 
     }
 
     public Persona(String nombre, int edad, char sexo ){
         this.nombre=nombre;
         this.edad=edad;
-        this.sexo=sexo;
+        this.sexo=comprobarSexo(sexo);
+        this.dni=generarDNI();
+
 
 
     }
 
-    public Persona(String nombre, int edad, char sexo, String dni,float peso, float altura ){
+    public Persona(String nombre, int edad, char sexo,float peso, float altura ){
         this.nombre=nombre;
         this.edad=edad;
-        this.sexo=sexo;
-        this.dni=dni;
+        this.sexo= comprobarSexo(sexo);
+        this.dni=generarDNI();
         this.peso=peso;
         this.altura=altura;
+
 
     }
 
     public int calcularIMC (float peso, float altura){
         int valor;
-        float imc=((this.peso)/(this.altura*this.altura));
+        float imc=((peso)/(altura*altura));
         if (imc<20){
             valor=-1;
         }else if (imc>25){
@@ -51,17 +55,15 @@ public class Persona {
         return valor;
     }
 
-    public boolean esMayorEdad (int edad){
-            boolean mayor= false;
-            if(edad>=18){
-                mayor=true;
-            }
-           return mayor;
+    public boolean esMayorEdad (){
+           return this.edad>=18;
     }
 
-    private void comprobarSexo (char sexo){
-        if(sexo!='H'&& sexo!='M'){
-            this.sexo=sexopordef;
+    private char comprobarSexo (char sexo){
+        if(sexo=='H'|| sexo=='M'|| sexo=='h'|| sexo=='m'){
+            return sexo;
+        } else {
+            return SEXO_POR_DEFECTO;
         }
 
     }
@@ -84,10 +86,8 @@ public class Persona {
 
         long num= ThreadLocalRandom.current().nextLong(10000000L,99999999L+1L);
         int codigoAscii = (int)Math.floor(Math.random()*(122 - 97)+97);
-        String dni= "";
-        dni += " "+num+ (char)codigoAscii;
-
-        return dni;
+        //String dni = ""+num+ (char)codigoAscii;
+        return ""+num+ (char)codigoAscii;
 
     }
 
@@ -100,7 +100,7 @@ public class Persona {
     }
 
     public void setSexo(char sexo) {
-        this.sexo = sexo;
+        this.sexo = comprobarSexo(sexo);
     }
 
     public void setPeso(float peso) {

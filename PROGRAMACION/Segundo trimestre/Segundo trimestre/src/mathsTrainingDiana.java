@@ -6,14 +6,58 @@ public class mathsTrainingDiana {
 
         Scanner scan =new Scanner(System.in);
 
-        System.out.println("¡Bienvenido/a a Maths Training!\n ¿Desea jugar? Indique SI o No");
-        String res=scan.next();
+        int record=0;
+        long recordTiempo=0;
 
 
 
+        System.out.println("¡Bienvenido/a a Maths Training!");
+        String res;
+    do{
+        System.out.println("¿Desea jugar? (SI/NO)): ");
+        res=scan.next().toUpperCase();
+
+    } while (!res.equals("SI") && !res.equals("NO"));
+
+        while (res.equals("SI")){
+            int cont=0;
+            long startTime= System.nanoTime();
+            System.out.println("COMENCEMOS");
+            boolean b;
+            do {
+                int n= (int) Math.floor(Math.random() * 101);
+                int m= (int) Math.floor(Math.random() *(100-1)+1);
+                String operaciones= "+-*/%";
+                int azar=(int) Math.floor(Math.random() * 5);
+                char operacion=operaciones.charAt(azar);
+                float solReal=n+operacion+m;
+                System.out.println(n+operacion+m+ " = : ");
+                float solUsuario= scan.nextFloat();
+                b=(solReal==solUsuario);
+                if (b) {
+                    System.out.println("¡Felicidades! Has acertado.");
+                    cont++;
+                } else {
+                    System.out.println("Game Over");
+                    long endTime=System.nanoTime();
+                    long tiempo= ((startTime - endTime)/ 1000000000);
+                    System.out.println("Game Over");
+
+                }
+            }while(b);
+                    System.out.println("¿Quieres seguir jugando?");
+        }
+            res=scan.next().toUpperCase();
+
+        System.out.println("Has finalizado el juego");
+        System.out.println("Record de aciertos en esta sesión: "+ record +" en "+ recordTiempo + " segundos");
 
 
 
+    }//class
 
-    }
-}
+
+
+        }//main
+
+
