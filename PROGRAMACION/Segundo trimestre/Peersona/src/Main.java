@@ -8,11 +8,11 @@ public class Main {
 
 
         System.out.println("introduce Nombre");
-        String nombre= lectura.next();
+        String nombre= lectura.nextLine();
         System.out.println("introduce edad");
         int edad= scan.nextInt();
         System.out.println("introduce sexo");
-        char sexo=scan.next().charAt(0);
+        char sexo=lectura.nextLine().charAt(0);
         System.out.println("introduce peso en KG");
         float peso= scan.nextFloat();
         System.out.println("introduce altura en Metros");
@@ -69,6 +69,28 @@ public class Main {
 
 
     }
+
+    /*public static void mostrarPeso(Persona persona){
+
+        switch (calcularIMC()){
+
+            case 1:
+                System.out.println("Tiene sobrepeso");
+                break;
+            case 0:
+                System.out.println("Está en su peso ideal");
+                break;
+            case -1:
+                System.out.println("Está por debajo de su peso ideal");
+                break;
+            default:
+                System.out.println("Hay un error");
+                break;
+
+        }
+
+        }
+    }*/
 
 
 
