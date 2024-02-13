@@ -31,22 +31,21 @@ public class mathsTrainingDiana {
                 String operaciones= "+-*/%";
                 int azar=(int) Math.floor(Math.random() * 5);
                 char operacion=operaciones.charAt(azar);
-
-                float solReal;
-                switch (operaciones) {
-                    case "+":
+                float solReal=0;
+                switch (operacion) {
+                    case '+':
                         solReal = n + m;
                         break;
-                    case "-":
+                    case '-':
                         solReal = n - m;
                         break;
-                    case "*":
+                    case '*':
                         solReal = n * m;
                         break;
-                    case "/":
-                        solReal = (float) n / m; // División de números enteros
+                    case '/':
+                        solReal = (float) n / m;
                         break;
-                    case "%":
+                    case '%':
                         solReal = n % m;
                         break;
                     default:
@@ -54,8 +53,8 @@ public class mathsTrainingDiana {
 
                         break;
                 }
-                float solReal= n + operacion + m;
-                System.out.println(n + operacion + m + " = ");
+
+                System.out.println(n +""+ operacion+"" + m + " = ");
                 float solUsuario= scan.nextFloat();
                 b=(solReal==solUsuario);
                 if (b) {
@@ -92,10 +91,10 @@ public class mathsTrainingDiana {
 
 
 
-    }//class
+    }
 
 
 
-        }//main
+        }
 
 
