@@ -8,15 +8,16 @@ public class Password {
 
     //CONSTRUCTOR
 
-    public Password() {
-        this.longitud=LONGITUD_POR_DEFECT0;
-        this.contrasenia=generarContrasenia(LONGITUD_POR_DEFECT0);
+    private Password() {
+        this.longitud = LONGITUD_POR_DEFECT0;// hasta aqui en clase
+        this.contrasenia = generarContrasenia(LONGITUD_POR_DEFECT0);
 
     }
 
-    public Password (int longitud){
-        this.longitud= longitud;
-        this.contrasenia=generarContrasenia(longitud);
+    public Password(int longitud) {
+        //this();
+        this.longitud = longitud;
+        this.contrasenia = generarContrasenia(longitud);// generarContrasenia()
 
 
     }
@@ -24,38 +25,123 @@ public class Password {
     //METODOS
 
     public boolean esFuerte() {
-        int mayusculas=0;
-        int minusculas=0;
-        int numeros=0;
+        int mayusculas = 0;
+        int minusculas = 0;
+        int numeros = 0;
 
         for (int i = 0; i < contrasenia.length(); i++) {
-            if ("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".indexOf(contrasenia.charAt(i))!=-1){
+            if ("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".indexOf(contrasenia.charAt(i)) != -1) {
                 mayusculas++;
-            } else if ("abcdefghijklmnñopqrstuvwxyz".indexOf(contrasenia.charAt(i))!=-1){
+            } else if ("abcdefghijklmnñopqrstuvwxyz".indexOf(contrasenia.charAt(i)) != -1) {
                 minusculas++;
 
-            } else if ("1234567890".indexOf(contrasenia.charAt(i))!=-1){
+            } else if ("1234567890".indexOf(contrasenia.charAt(i)) != -1) {
                 numeros++;
             }
 
         }
-        return mayusculas >2 && minusculas>1 && numeros>5;
+        return mayusculas > 2 && minusculas > 1 && numeros > 5;
 
     }
+
+    /*public boolean esFuerte(){
+
+    boolean tieneMayus= comprobarMayus();
+    boolean tieneMinus= comprobarMinus();
+    boolean tieneNumeros= comprobarNumeros();
+
+
+    return tieneMayus && tieneMinus && tieneNumeros;
+    }
+
+    private boolean comprobarMayus(){
+    int contadorMayus=0;
+
+    for (int i=0; i< this.password.length(); i++){
+    if (this.password.charAt(i)>='A'&& this.password.charAt8i)<='Z'){
+    contadorMayus++;
+    }
+
+   if (contadorMayus >2){
+   break;}
+
+
+    }
+
+    return contadorMayus>2;
+    }
+
+    private boolean comprobarMinus(){
+    int contadorMinus=0;
+
+    for (int i=0; i< this.password.length(); i++){
+    if (this.password.charAt(i)>='a'&& this.password.charAt8i)<='z'){
+    contadorMinus++;
+    }
+
+   if (contadorMinus >1){
+   break;}
+
+
+    }
+
+    return contadorMayus>2;
+    }
+
+     private boolean comprobarNumeros(){
+    int contadorNumeros=0;
+
+    for (int i=0; i< this.password.length(); i++){
+    if (CHARACTER.ISdIGIT(THIS.PASSWORD.CharAt(i)))
+
+    contadorNumeros++;
+    }
+
+   if (contadorNumeros >5){
+   break;}
+
+
+    }
+
+    return contadornumeros>5;
+    }
+
+
+
+
+    */
+
+
 
     public String generarContrasenia(int longitud) {
 
-        String caracteres= "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz0123456789";
+        String caracteres = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz0123456789";
 
-        String contrasenia="";
+        String contrasenia = "";
         for (int i = 0; i < longitud; i++) {
-            int caracterAleatorio = (int) (Math.random() * 64);
+            int caracterAleatorio = (int) (Math.random() * caracteres.length());
             contrasenia += caracteres.charAt(caracterAleatorio);
         }
 
-            return contrasenia;
+        return contrasenia;
 
     }
+
+    /*private void generarPassword(){
+
+    String caracteres= "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz0123456789";
+
+    for (int i=0; i< this.longitud; i++){
+     posicion= (int)Math.random()*caracteres.length();
+     password+= caracteres.charAt(posicion);
+
+    }
+
+    this.password=password;
+
+
+
+}*/
 
 
     public int getLongitud() {
@@ -68,5 +154,6 @@ public class Password {
 
     public void setLongitud(int longitud) {
         this.longitud = longitud;
+        //generarPassword();
     }
 }
