@@ -13,7 +13,7 @@ public class Libro {
 
     //Constructores
 
-public Libro(){
+private Libro(){
 
 }
 
@@ -27,7 +27,7 @@ public Libro(String isbn, String titulo, String autor){
 }
 
 public Libro(String isbn, String titulo, String autor, int numeroPaginas, String editorial){
- this (isbn, titulo, autor);
+ this (isbn, titulo, autor);//en un principio ha puesto todos this.Aquí tb.
  setNumeroPaginas(numeroPaginas);
  setEditorial(editorial);
 
@@ -57,9 +57,9 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
     if (contieneNulo(isbn)) {
         throw new NullPointerException("ISBN no válido");
     }
-    if(isbn.length()<10 || isbn.length()>13){
-        throw new IllegalArgumentException ("El ISBN solo comprende de 10 a 13 dígitos");
-    }
+    if(isbn.length() !=10 && isbn.length()!=13){
+        throw new IllegalArgumentException ("El ISBN solo comprende 10 ó 13 dígitos");
+    }//si meto eto en el método de contine digitos, me evito una comprobación y puedo llamar al método ISBNvalido;
     if (!contieneDigitos(isbn)){
         throw new InputMismatchException("el ISBN solo puede contener dígitos");
     }
@@ -72,6 +72,9 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         if (contieneNulo(titulo)) {
             throw new NullPointerException("Título no válido");
         }
+        if (titulo.equals("")){
+            throw new IllegalArgumentException ("Título no incorporado");
+        }
 
         this.titulo = titulo;
     }
@@ -79,6 +82,9 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
     public void setAutor(String autor) {
         if (contieneNulo(autor)) {
             throw new NullPointerException("Autor no válido");
+        }
+        if (titulo.equals("")){
+            throw new IllegalArgumentException ("Autor no incorporado");
         }
         this.autor = autor;
     }
@@ -95,16 +101,25 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         if (contieneNulo(editorial)) {
             throw new NullPointerException("editorial no válida");
         }
+        if (titulo.equals("")){
+            throw new IllegalArgumentException ("Editorial no incorporado");
+        }
 
         this.editorial = editorial;
     }
 
-    @Override
+    //borrar el Override
     public String toString() {
-        return "Título: " + titulo + " - ISBN: " + isbn + " - AUTOR: "+ autor + " - PÁGINAS=" + numeroPaginas;
+        return "Título: " + this.titulo + " - ISBN: " + this.isbn + " - AUTOR: "+ this.autor + " - PÁGINAS=" + this.numeroPaginas;
     }
 
     private boolean contieneDigitos (String isbn){
+
+    // Incorpora aquí también la comprobacion de la longitud.
+        //if(isbn.length() !=10 && isbn.length()!=13){
+        //        return false;
+        //    }
+
         for (int i = 0; i < isbn.length() ; i++) {
             if (!Character.isDigit(isbn.charAt(i))){
                 return false;
@@ -114,10 +129,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
     }
 
     private boolean contieneNulo (String prueba){
-     if (prueba==null){
-         return true;
-     }
-     return false;
+     return prueba==null;
     }
 
 
