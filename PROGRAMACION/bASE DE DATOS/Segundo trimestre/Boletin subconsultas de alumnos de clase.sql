@@ -67,7 +67,6 @@ where ProductID in
 
 -- . Selecciona los productos en el que la media de la cantidad pedida sea menor a la del producto propio y el id del producto este entre 8 y 20
 
-
 -- . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
 
 
