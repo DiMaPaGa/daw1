@@ -1,64 +1,73 @@
--- . Seleccionar el nombre de los empleados que hayan atendido pedidos para Francia
+-- 1. Seleccionar el nombre de los empleados que hayan atendido pedidos para Francia
 SELECT Firstname
 FROM employees
 WHERE EmployeeID IN
 (Select EmployeeID from orders where ShipCountry = 'France');
 
--- . Muestra los nombres de las categorías que tengan productos cuyos nombres comiencen por la letra C o S.
+-- 2. Muestra los nombres de las categorías que tengan productos cuyos nombres comiencen por la letra C o S.
 Select CategoryName
 from categories
 where CategoryID in
 (Select CategoryID from products where ProductName Like 'C%' or ProductName like 'S%');
 
--- . Seleccionar los proveedores cuyos productos se envían a USA
-Select SupplierID from suppliers where SupplierID in
+-- 3. Seleccionar los proveedores cuyos productos se envían a USA
+Select * from suppliers where SupplierID in
 (Select SupplierID from products where ProductID in
 (Select ProductID from orderdetails where OrderID in
 (SELECT OrderID from orders where ShipCountry = 'USA')));
 
 
--- . Selecciona el nombre de las compañias cuyo pedido lo atendio un empleado con ID 1 al 4
+-- 4. Selecciona el nombre de las compañias cuyo pedido lo atendio un empleado con ID 1 al 4
 SELECT CompanyName 
 from customers
 where CustomerID IN
 (Select CustomerID from orders where EmployeeID BETWEEN 1 and 4);
 
--- . Muestra los 3 productos con las unidades más altas usando subconsulta
+-- 5. Muestra los 3 productos con las unidades más altas usando subconsulta
 
 Select ProductName
 from products
 where UnitsInStock in
-(Select UnitsInStock from products Where UnitsInStock ORDER BY UnitsInStock desc)
-limit 3;
+(Select UnitsInStock from products) ORDER BY UnitsInStock desc limit 3;
 
--- . Ciudades que tienen menos (customers) que la ciudad de Barcelona
+Select ProductName
+from products
+where ProductID in
+(Select ProductID from products) ORDER BY UnitsInStock desc limit 3;
+
+Select ProductName from products where ProductID IN
+(Select ProductID from (Select ProductID from orderdetails group by ProductID order By sum(Quantity) desc limit 3) as top);
+
+
+
+-- 6. Ciudades que tienen menos (customers) que la ciudad de Barcelona
 Select City
 from customers
 group by city
 having count(*)<
 (Select count(*) as recuento from customers where City = 'Barcelona');
 
--- . Mostrar el apellido, rango y número de departamento (address) de los trabajadores que no tengan empleados a su cargo.
+-- 7. Mostrar el apellido, rango y número de departamento (address) de los trabajadores que no tengan empleados a su cargo.
 SELECT LastName, Title, Address
 from employees
 where EmployeeID not IN
 (Select ReportsTo from employees o where employees.EmployeeID = o.ReportsTo); 
 
 
--- . Muestra el ID, el nombre y el precio de los productos cuyo precio sea inferior al precio promedio.
+-- 8. Muestra el ID, el nombre y el precio de los productos cuyo precio sea inferior al precio promedio.
 Select ProductID, ProductName, UnitPrice
 from products
 where UnitPrice <
 (Select AVG(UnitPrice) from products);
 
--- . Productos  que no han sido nunca comprados que solo tenga 4 letras y empiece por 'R'
+-- 9. Productos  que no han sido nunca comprados que solo tenga 4 letras y empiece por 'R'
 Select ProductName
 from products
 where ProductID not in
 (Select DISTINCT(ProductID) from orderdetails)
 and length(ProductName)=4 and ProductName like 'R%';
 
--- . Seleccionar el nombre de los productos que hayan tenido un descuento en algún pedido
+-- 10. Seleccionar el nombre de los productos que hayan tenido un descuento en algún pedido
 Select ProductName 
 from products 
 where ProductID in
@@ -66,7 +75,11 @@ where ProductID in
 
 
 -- . Selecciona los productos en el que la media de la cantidad pedida sea menor a la del producto propio y el id del producto este entre 8 y 20
+Select ProductID
+From products
+where ProductID IN
 
+Select avg(Quantity) from orderdetails
 -- . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
 
 

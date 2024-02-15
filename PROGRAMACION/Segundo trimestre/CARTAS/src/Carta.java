@@ -1,32 +1,44 @@
 public class Carta {
 
-    private int numero;
     private String palo;
+    private int numero;
 
 
-    public Carta(){
-
-    }
-
-    public Carta(int numero, String palo){
-        this.numero=numero;
-        this.palo=palo;
-
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public String getPalo() {
-        return palo;
+    public Carta(String palo, int numero) {
+        this.palo = palo;
+        this.numero = numero;
     }
 
     @Override
     public String toString() {
-        return "Carta{" +
-                "numero=" + numero +
-                ", palo='" + palo + '\'' +
-                '}';
+        String impresion = " _______ \n";
+        switch (numero) {
+            case 1:
+                impresion += "| A |\n";break;
+            case 10:
+                impresion += "| J |\n";break;
+            case 11:
+                impresion += "| Q |\n";break;
+            case 12:
+                impresion += "| K |\n";break;
+            default:
+                impresion += "| " + numero + " |\n";break;
+        }
+        impresion += "| |\n";
+        switch (palo) {
+            case "Diamantes":
+                impresion += "| <> |\n"; break;
+            case "Corazones":
+                impresion += "| <3 |\n";break;
+            case "Picas":
+                impresion += "| {> |\n";break;
+            case "Treboles":
+                impresion += "| -% |\n";break;
+            default:
+                break;
+        }
+        impresion += "|_______|";
+
+        return impresion;
     }
 }
