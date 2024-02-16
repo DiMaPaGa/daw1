@@ -1,0 +1,83 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="resultado">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:integer" name="totalCount"/>
+                <xs:element type="xs:integer" name="start"/>
+                <xs:element type="xs:integer" name="rows"/>
+                <xs:element name="result">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="especie-en-parque" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:integer" name="id"/> <!--Toda especie necesita un único ID-->
+                                        <xs:element type="xs:string" name="common" minOccurs="1" maxOccurs="unbounded"/> <!--Toda especie tiene un nombre común, aquí no he limitado el máximo ya que un mismo árbol puede tener diferentes nombres según la jerga o el idioma-->
+                                        <xs:element type="xs:string" name="commonName" minOccurs="1" maxOccurs="unbounded"/>
+                                        <xs:element type="xs:string" name="scientificName"/> <!-- Sin embargo, el nombre científico es único-->
+                                        <xs:element type="xs:string" name="family" /> <!-- Y la familia también-->
+                                        <xs:element name="type"> <!-- He creado una lista que limita la cadena introducida, permitiendo únicamente los tipos de especies que aparecen en el XML -->
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Frondosos"/>
+                                                    <xs:enumeration value="Coniferas"/>
+                                                    <xs:enumeration value="Arbustos"/>
+                                                    <xs:enumeration value="Frutales"/>
+                                                    <xs:enumeration value="Palmeras"/>
+                                                    <xs:enumeration value="Trepadoras"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element type="xs:anyURI" name="photo"/> <!-- Las fotos, al estar en formato URL las he limitado a que siga el formato de un enlace-->
+                                        <xs:element type="xs:byte" name="numberOfPhotos"/>
+                                        <xs:element type="xs:string" name="shortDescription"/>
+                                        <xs:element name="description"> <!-- En la descripciones aparecen saltos de línea mostrados como <br/> por lo que es un elemento mixto-->
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="br" maxOccurs="unbounded" minOccurs="0"/> <!--Este es el elemento adicional que hace que description sea mixto, no tiene por qué aparecer, pero en caso de que lo haga puede aparecer tantas veces como se desee "unbounded"-->
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="geometry">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="type" default="Point"> <!-- Ya que la unica opción que hay es "Point" haré que su valor sea el predeterminado al ser la opción más común-->
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="Point"/>
+                                                                <xs:enumeration value="Pyramidal"/>
+                                                                <xs:enumeration value="Full-crowned"/>
+                                                                <xs:enumeration value="Vase"/>
+                                                                <xs:enumeration value="Fountain"/>
+                                                                <xs:enumeration value="Spreading"/>
+                                                                <xs:enumeration value="Layered"/>
+                                                                <xs:enumeration value="Columnar"/>
+                                                                <xs:enumeration value="Weeping"/>
+                                                                <!-- En el XML únicamente existe una forma geométrica "Point", sin embargo
+                                                                he investigado acerca de las formas geométricas de los diferentes tipos de
+                                                                árboles, ya que una opción como esta debería estar limitada a unas pocas
+                                                                opciones |
+                                                                -> FUENTE: https://westportlandtrust.org/2023/01/10/natures-architecture-trees-structure-and-identification/ -->
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="coordinates"> 
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="\d+\.\d+,\d+\.\d+"/> <!-- Esta restricción limitará el formato al de las coordenadas, siguiendo las bases del XML, permitiendo unicamente cadenas como "678253.0,4611593.56" y nada más.-->
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

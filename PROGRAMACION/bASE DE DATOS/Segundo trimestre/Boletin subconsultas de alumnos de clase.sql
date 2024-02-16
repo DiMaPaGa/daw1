@@ -63,9 +63,9 @@ where UnitPrice <
 -- 9. Productos  que no han sido nunca comprados que solo tenga 4 letras y empiece por 'R'
 Select ProductName
 from products
-where ProductID not in
-(Select DISTINCT(ProductID) from orderdetails)
-and length(ProductName)=4 and ProductName like 'R%';
+where char_length(ProductName)=4 and ProductName like 'R%'
+and ProductID not in
+(Select ProductID from orderdetails);
 
 -- 10. Seleccionar el nombre de los productos que hayan tenido un descuento en algún pedido
 Select ProductName 
@@ -80,6 +80,10 @@ From products
 where ProductID between 8 and 20
 and ProductID in
 (Select ProductID from orderdetails Where Quantity < (Select avg(Quantity) from orderdetails));
+
+
+Select products.productID, a.ProductID, avg(a.Quantity), products.UnitsInStock from products, 
+(Select quantity, orderdetails.productID from orderdetails) as a where a.productID = products.productID and products.productID between 8 and 20 group by products.productID having products.UnitsInStock <  avg(a.Quantity);
 -- 12 . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
 
 SELECT TerritoryID from territories where RegionID in
@@ -87,34 +91,42 @@ SELECT TerritoryID from territories where RegionID in
 
 -- 13 . Mostrar los clientes de la tabla orders que realizaron pedidos en el día registrado menos reciente
 
-Select CustomerID
-from orders
-where OrderDate in
-(Select OrderDate from orders) order by OrderDate asc limit 1;
+select CustomerID from orders where OrderDate in (select min(OrderDate) from orders);
 
 -- 1. Obtener el nombre y la cantidad de productos de la categoría "Condiments" que tienen un precio superior al precio promedio de todos los productos
 
-Select ProductName, count(*)
-from products
-group by ProductName
-having CategoryID in (Select CategoryID from categories where CategoryName like 'Condiments')
-and UnitPrice> (Select avg(UnitPrice) from products);
+SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN(
+SELECT CategoryID FROM categories WHERE CategoryName = "Condiments") AND UnitPrice > (SELECT avg(UnitPrice) FROM products);
 
 
 -- 2. Selecciona los nombres de los productos que han sido pedidos por clientes que tienen un historial de compras 
 -- superior al promedio de compras de todos los clientes
 
+select ProductName from products where ProductID in
+(select distinct(ProductID) from orderdetails where OrderID in
+(select OrderID from orders where CustomerID in 
+(Select CustomerID from orders group by CustomerID having count(*)>
+(select avg(compras) from (select CustomerID, count(*) as compras from orders group by CustomerID) as ClientesCompras))));
 
 -- 3.  Seleccionar los nombres de los productos que se han vendido en más de 5 pedidos
-
+Select ProductName
+from products
+where ProductID IN
+(Select ProductID from orderdetails group by ProductID HAVING count(*)>5);
 
 -- 4. Mostrar los empleados que no han realizado ninguna venta
-
+Select EmployeeID
+from employees
+where EmployeeID not in 
+(Select EmployeeID from orders where employees.EmployeeID = orders.EmployeeID);
 
 -- 5. Mostrar el nombre de los productos y sus cantidades disponibles en la categoría 'Seafood'
+SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN(
+SELECT CategoryID FROM categories WHERE CategoryName = "Seafood");
 
 
 -- 6. Muestra el ID de los empleados que han manejado pedidos con productos que tienen un precio unitario superior a 50
+SELECT Employees
 
 
 -- 7. Muestra el nombre y el apellido de los empleados que fueron contratados el mismo mes que la fecha en la que se pidio el pedido más reciente.

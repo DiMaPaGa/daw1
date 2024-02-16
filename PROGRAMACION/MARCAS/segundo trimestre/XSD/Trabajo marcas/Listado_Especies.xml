@@ -1,0 +1,3102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Listado_Especies.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<resultado>
+    <totalCount>139</totalCount>
+    <start>0</start>
+    <rows>200</rows>
+    <result>
+        <especie-en-parque>
+            <id>43</id>
+            <common>CASTAÑO DE INDIAS ROJO</common>
+            <commonName>CASTAÑO DE INDIAS ROJO - CASTAÑO HÍBRIDO</commonName>
+            <scientificName>Aesculus x carnea Hayne </scientificName>
+            <family>HIPOCASTANÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/aesculus_carnea.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Aesculus es el nombre latino de una encina. El específico carnea, de color carne o rosado por el color de sus flores. <br/>Es un híbrido entre las especies Aesculus hippocastanum x Aesculus pavia.<br/>Hojas opuestas, palmaticompuestas, generalmente formadas por 5 foliolos dentados, casi romboidales, sentados sobre un peciolo fuerte y más anchos en su zona media<br/>Flores entre rosadas y rojizas con tonos amarillentos. Frutos en cápsula (no comestibles).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676215.61,4611978.37</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>44</id>
+            <common>CASUARINA</common>
+            <commonName>CASUARINA - PINO AUSTRALIANO | PINO MARÍTIMO</commonName>
+            <scientificName>Casuarina equisetifolia (L.) J. R. Forst. Forst.</scientificName>
+            <family>CASUARINÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/casuarina_equisetifolia.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 25/30 m. - Fl. : sep. - oct.
+    </shortDescription>
+            <description>
+    El nombre genérico alude al ave corredora Casuar, de Australia, cuyo plumaje se asemeja al follaje de algunos miembros del género.<br/>El nombre específico equisetifolia hace referencia al parecido de sus hojas con los tallos del género Equisetum (Cola de caballo).<br/>Esta especie se extiende por Australia, Nueva Guinea y sureste asiático. Sus frutos, que flotan, son transportados por las corrientes marinas contribuyendo así a una amplia distribución. Árbol muy apreciado por su madera, dura y resistente.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677495.47,4613313.6</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>45</id>
+            <common>CATALPA</common>
+            <commonName>CATALPA - ÁRBOL DE LOS CIGARROS | ÁRBOL INDIO</commonName>
+            <scientificName>Catalpa bignonioides Walt.</scientificName>
+            <family>BIGNONIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/catalpa_bignonioides.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva de la tribu Catawba, indios nativos de Carolina del Sur en Estados Unidos (de donde es originaria la especie) y que nombraban catawba a estos árboles. <br/>El específico bignonioides, se refiere al parecido de las flores con los de una Bignonia. Sus flores son blancas con tonos amarillos y morados.<br/>Sus frutos, que suelen permanecer durante el invierno, son unas cápsulas muy alargadas (como puros) que contiene numerosas semillas aladas con pelos blancos en los extremos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676806.86,4612382.16</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>46</id>
+            <common>CHITALPA</common>
+            <commonName>CHITALPA</commonName>
+            <scientificName>x Chitalpa tashkentensis T. S. Elias Wisura </scientificName>
+            <family>BIGNONIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/chitalpa_task.jpg
+    </photo>
+            <numberOfPhotos>8</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/12 m. - Fl. : jun. - sep.
+    </shortDescription>
+            <description>
+    Chitalpa es la unión de los nombres de los géneros Chilopsis y Catalpa.<br/>Tashkentensis alude a Tashkent, capital de Uzbekistán en Asia Central, ciudad donde se obtuvo por primera vez este híbrido en 1963 por el botánico Nikolai Rusanov.<br/>Procede de las especies Chilopsis linearis y Catalpa bignonioides (híbrido intergenérico) ambas de procedencia norteamericana.<br/>Se multiplica por esquejes, ya que al ser un híbrido intergenérico no se reproduce por semillas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675228.09,4615148.02</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>47</id>
+            <common>CHOPO</common>
+            <commonName>CHOPO - CHOPERA</commonName>
+            <scientificName>Populus nigra L. </scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_nigra.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Los romanos denominaba a los chopos arbor populi, &quot;árbol del pueblo&quot;; de ello deriva el nombre genérico Populus. <br/>El específico nigra, &quot;negro&quot;, se refiere a la coloración de la corteza.<br/>Se extiende por el sur, centro y este de Europa, centro y oeste de Asia (hasta el centro de Siberia) y norte de África. Como ornamental y árbol de sombra se utilizó desde antiguo.<br/>La corteza contiene salicina y taninos, por lo que se ha utilizado como curtiente.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674930.24,4615053.97</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>48</id>
+            <common>CHOPO LOMBARDO</common>
+            <commonName>CHOPO LOMBARDO - CHOPO DE ITALIA</commonName>
+            <scientificName>Populus nigra L. &apos;Italica&apos; Du Roi </scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_nigra_pyramid.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Es un árbol de rápido crecimiento; muy rústico en cuanto a suelo. Fue introducido en Lombardía (Italia) en 1745, desde Persia o Afganistán, donde es espontáneo<br/>Tiene un porte columnar muy elegante que ocupa poco espacio. Sus flores masculinas aunque poco vistosas por el tamaño, son de color rojo vivo, debido a los estambres, las femeninas son de color verdoso o amarillento.<br/>Se usa mucho en paisajismo para resaltar otros elementos del paisaje o arquitectónicos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675122.66,4615216.41</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>49</id>
+            <common>CEDRO DEL ATLAS</common>
+            <commonName>CEDRO DEL ATLAS</commonName>
+            <scientificName>
+    Cedrus atlantica (Endlicher) G. Manetti ex Carrière
+    </scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cedrus_atlantica.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 30/40 m. - Fl. : ago. - sep.
+    </shortDescription>
+            <description>
+    El nombre Cedrus proviene del griego kédros, término que se utilizaba para designar una conífera. El nombre específico hace referencia a la zona de origen: la cordillera del Atlas en Marruecos.<br/>Los cedros tienen las hojas en forma de aguja (aciculares), dispuestas en una especie de brocha corta. También pueden estar verticiladas en los extremos de las ramas.<br/>Se introdujo en Francia a mediados del siglo XIX. El cedro es el árbol más citado en la Biblia.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674701.57,4612343.42</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>50</id>
+            <common>CEDRO DEL HIMALAYA</common>
+            <commonName>CEDRO DEL HIMALAYA - CEDRO LLORÓN | CEDRO DEODAR</commonName>
+            <scientificName>Cedrus deodara (Roxburgh ex D. Don) G. Don</scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cedrus_deodara.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA HOJA PERENNE - Alt. : 40/50 m. - Fl. : sep. - oct.
+    </shortDescription>
+            <description>
+    Cedrus proviene del griego, kédros, aplicado por los griegos a algunos enebros y al cedro. Deodara significa &quot;dedicado a Dios&quot; en sánscrito. Nativo de las montañas de Asia Central. <br/>Fue introducido en Europa hacia 1840. La madera es excelente y muy aromática. Tiene un característico porte piramidal y es muy longevo, hasta 1000 años.<br/>Las propiedades curativas de esta especie son bien conocidas y son múltiples sus usos. Sus aplicaciones abarcan: perfumes, aromaterapia, aerosoles, ceras, insecticidas...
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673978.58,4612813.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>51</id>
+            <common>CEDRO DE INCIENSO</common>
+            <commonName>
+    CEDRO DE INCIENSO - LIBOCEDRO, CALOCEDRO | CEDRO DE CALIFORNIA
+    </commonName>
+            <scientificName>Calocedrus decurrens (Torrey) Florin</scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/calocedrus_decurrens.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 30/40 m - Fl. : dic. - ene.
+    </shortDescription>
+            <description>
+    Según algunos autores modernos, este árbol, clasificado hasta ahora en el género Libocedrus, hay que situarlo actualmente en el género Calocedrus.<br/>El nombre Libocedrus deriva del griego libanos, &quot;incienso&quot;, por el olor resinoso de su madera, y de cedrus, &quot;cedro&quot;, por la similitud en su silueta con el cedro.<br/>El nombre específico decurrens se debe a la forma decurrente de la base de las hojas, es decir, aplicada contra el eje de la rama.<br/>Es originario de Oregón y del sur de California, donde fue descubierto en el año 1853.<br/>Su corteza se quemaba como incienso, de ahí su nombre común &quot;cedro del incienso&quot;; su madera aromática se usó tradicionalmente, al igual que la del cedro, para fabricar lápices.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673977.48,4612887.59</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>52</id>
+            <common>CELINDA</common>
+            <commonName>
+    CELINDA - CELINDO | JERINGUILLA | FILADELFO | FALSO NARANJO
+    </commonName>
+            <scientificName>Philadelphus coronarius L.</scientificName>
+            <family>HIDRANGEÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/philadelphus_coronarius.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 2/4 m. - Fl. : abr. - jun.
+    </shortDescription>
+            <description>
+    Su nombre genérico proviene de la palabra griega philadelphos, philos, &quot;amor&quot;, y adelphos, &quot;hermano&quot;: amor fraternal. Al parecer, su origen se remonta a un faraón de origen griego: Ptolomeo II Philadelphus, que reinó en el siglo III a.C. y que se casó con su hermana.<br/>El específico deriva del latín corona, ya que las ramas florecidas servían para hacer coronas.<br/>Cultivado desde hace mucho tiempo, se desconoce con precisión su área de origen, aceptándose como más probable la zona sur de Europa y la oriental del Mediterráneo.<br/>El principal atractivo de esta especie son sus flores que desprenden un olor dulce que recuerda al del azahar, de ahí uno de sus nombres comunes: falso naranjo.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673929.5,4612849.43</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>1</id>
+            <common>ABEDUL</common>
+            <commonName>ABEDUL - ABEDUL BLANCO | ABEDUL PÉNDULO</commonName>
+            <scientificName>Betula pendula Roth. </scientificName>
+            <family>BETULÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/betula_pendula.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Betula es el nombre en latín del abedul y pendula se refiere a que sus ramillas son colgantes en sus extremos. <br/>Es la especie del género Betula más común en Europa. En los países boreales, de donde es originario, las culturas indígenas le dan los más variados usos. <br/>La corteza del abedul se usaba para escribir sobre ella. Mediante la destilación de su corteza se obtiene una brea que se emplea para la elaboración de pomadas para enfermedades de la piel. Con sus hojas se elaboran infusiones con propiedades diuréticas. <br/>Se distribuye por gran parte de Europa y Asia.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677028.77,4613219.39</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>2</id>
+            <common>ABETO DE MASJOAN</common>
+            <commonName>ABETO DE MASJOAN</commonName>
+            <scientificName>Abies x masjoani Masf. </scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/abies_mashoani.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Este híbrido existe en España desde el año 1910 aproximadamente pero en los catálogos divulgativos se consideró siempre como A. pinsapo Boiss., hasta que en el 2000 fueron identificados y dados a conocer como A. x masjoannis. Al principio se le llamó Abies x masjoanni Masf. en referencia a la finca donde apareció hibridado naturalmente: finca Masjoan de Juan Masferrer, en Espinelves (Girona). Éste observó que habían nacido plantas con rasgos intermedios entre A. alba y A. pinsapo, de semillas sembradas en su vivero, en 1947, procedentes de un pinsapo plantado hacia 1860. Posteriormente, en 2004 se describió como Abies x masjoannis D. Soto, J. I. García Viñas Pérez Bujarrabal.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>678253.0,4611593.56</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>3</id>
+            <common>ACACIA DE CONSTANTINOPLA</common>
+            <commonName>ACACIA DE CONSTANTINOPLA - ÁRBOL DE LA SEDA</commonName>
+            <scientificName>Albizia julibrissin Durazz.</scientificName>
+            <family>MIMOSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/albizia_julibrissin.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10 /12 m. - Fl. : jun. - oct.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del Filippo d&apos;Albizzi, naturalista florentino del siglo XVIII, que hacia 1740 llevó a Florencia el árbol proveniente de uno de sus viajes a Constantinopla.<br/>El específico julibrissin proviene del vocablo Gul-i-Abrisham que significa &quot;flor de seda&quot;. <br/>La flor tiene numerosos estambres color rosado, que son los que le dan aspecto sedoso.\nEl fruto es una legumbre lineal, comprimida y membranosa. La corteza se utiliza para sanar heridas y contra enfermedades parasitarias.<br/>Es originaria del sureste y este de Asia, desde el este de Irán hasta China y Corea.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675436.74,4612209.48</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>4</id>
+            <common>ACACIA DEL JAPÓN </common>
+            <commonName>ACACIA DEL JAPÓN - ÁRBOL DE LAS PAGODAS | SÓFORA</commonName>
+            <scientificName>Sophora japonica L.</scientificName>
+            <family>FABÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sophora_jap.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20 /25 m. - Fl. : jul. - sep.
+    </shortDescription>
+            <description>
+    El nombre del género Sophora deriva de &quot;sufayra&quot;, nombre árabe de una leguminosa de cierto parecido. El nombre específico se debe al lugar de procedencia, debido a que al principio se creyó que era de Japón.<br/>Especie procedente de China y Corea, se introdujo en Europa en 1747 por Bernard de Jussieu, médico y botánico francés, a través de unas semillas que le envió, desde China, el jesuita Incarville. <br/>El fruto presenta estrechamientos muy marcados entre sus semillas de color negro.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675261.82,4611490.11</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>5</id>
+            <common>ACACIA TRES ESPINAS</common>
+            <commonName>ACACIA TRES ESPINAS - FALSO ALGARROBO</commonName>
+            <scientificName>Gleditsia triacanthos L.</scientificName>
+            <family>CESALPINIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/gleditsia_triacanthos.jpg
+    </photo>
+            <numberOfPhotos>16</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25 /30 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El género Gleditsia, dedicado a J.Gottlieb Gleditsch, profesor de Botánica en Berlín (s. XVIII). Triacanthos, proviene del griego, y significa &quot;con tres espinas&quot;, debido a las espinas que presenta el tronco y las ramas. Procede del este de Norteamérica y norte de Méjico. <br/>El fruto es una legumbre aplanada rica en proteínas que se ha utilizado para la alimentación del ganado en épocas de escasez. Su madera, muy resistente e imputrescible en contacto con el agua, se utilizaba para fabricar ruedas de carros y actualmente en ebanistería.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677035.95,4615164.24</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>6</id>
+            <common>ACEBO</common>
+            <commonName>ACEBO</commonName>
+            <scientificName>Ilex aquifolium L. </scientificName>
+            <family>AQUIFOLIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ilex_aquifolium.jpg
+    </photo>
+            <numberOfPhotos>6</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 4/6 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico Ilex proviene del nombre de la encina (Quercus ilex) por la semejanza de sus hojas. El específico aquifolium, es el nombre clásico del acebo (acepción latina acifolium), acus &quot;aguja&quot; y folium &quot;hoja&quot;.<br/>Hojas elípticas u ovales, muy coriáceas, lustrosas, verde oscuras brillantes y pálidas por el envés, provistas de dientes espinosos a lo largo del margen ondulado, aunque también pueden ser lisas o casi lisas en algunas variedades o en los árboles más viejos.<br/>La corteza, hojas y frutos se han usado con fines medicinales, si bien los frutos son tóxicos. La especie se distribuye por gran parte de Europa y sureste de Asia.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675401.96,4611539.34</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>7</id>
+            <common>ACEROLLO</common>
+            <commonName>ACEROLLO - AZAROLO | SORBO</commonName>
+            <scientificName>Sorbus domestica L. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sorbus_domestica.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Sorbus es el nombre en latín de los frutos. El específico domestica, hace referencia a la casa, debido a que se plantaban cerca de la casa para recoger los frutos.<br/>Los frutos son un pomo (fruto carnoso simple) en forma de pequeña pera, comestibles cuando están sobremadurados.<br/>Se utilizan para hacer mermelada y algunas bebidas alcohólicas fermentadas.<br/>Vive natural en la Europa occidental y mediterránea y en el norte de África.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677879.13,4614161.33</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>8</id>
+            <common>ADELFA</common>
+            <commonName>ADELFA - OLEANDRO</commonName>
+            <scientificName>Nerium oleander L. </scientificName>
+            <family>APOCINÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/neriun_oleander.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 3/5 m. - Fl. : jun. - sep.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del griego nerón &quot;húmedo&quot;, porque la adelfa crece de manera natural en ramblas y torrentes.<br/>El término oleander significa parecido a olea, el olivo, por su cierta semejanza con respecto a las hojas.<br/>Planta muy tóxica cuyas hojas contienen sustancias utilizadas como componentes de productos raticidas. Semillas provistas de un penacho de pelos.<br/>De origen mediterráneo, es muy resistente a la sequía.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676810.78,4612429.43</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>9</id>
+            <common>AILANTO</common>
+            <commonName>AILANTO - ÁRBOL DEL CIELO | FALSO ZUMAQUE</commonName>
+            <scientificName>Ailanthus altissima (Mill.) Swingle</scientificName>
+            <family>SIMARUBÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ailanthus_altissima.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre procede de la denominación indígena de las Islas Molucas, ailanto, que significa Árbol del Cielo, y que se le da a un árbol similar y con el que se confunde (A. moluccana).<br/>El nombre específico altissima hace referencia a la altura que puede alcanzar. <br/>El misionero jesuita Incarville envió semillas a Londres en 1751, desde donde se extendió por toda Europa y América.<br/>Debemos tener precaución con su savia, ya que ésta es irritante. En China, sus hojas se\nutilizan como alimento de un gusano que produce seda.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675342.3,4611600.1</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>10</id>
+            <common>ÁLAMO BLANCO</common>
+            <commonName>ÁLAMO BLANCO - CHOPO BLANCO | CHOPO ALBAR</commonName>
+            <scientificName>Populus alba L.</scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_alba.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Los romanos designaban a los álamos o chopos con el nombre de arbor populi, árbol del pueblo, y de él ha derivado el de Populus. El nombre específico alba hace referencia al color blanquecino del tronco y el envés de las hojas.<br/>Estos árboles fueron muy utilizados tanto por griegos como por romanos. Se cuenta que Heracles (Hércules), al final de su duodécima tarea, cuando capturó al Can Cerbero (perro guardián de el Hades) fue recompensado con una corona hecha de ramas de álamo blanco.<br/>Como ornamental, se utiliza la variedad piramidal, Populus alba &apos;Bolleana&apos; , syn. Populus alba &apos;Pyramidalis&apos;, denominada así, en honor al botánico Karl August Bolle (1821-1909).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675224.36,4611524.63</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>11</id>
+            <common>ÁLAMO BOLEANA</common>
+            <commonName>ÁLAMO BOLEANA - ÁLAMO PLATEADO | ÁLAMO PIRAMIDAL</commonName>
+            <scientificName>Populus alba L. &apos;Pyramidalis&apos; Bunge</scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_alba_PY.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/35 m. - Fl. : feb. - abr.
+    </shortDescription>
+            <description>
+    En la antigüedad griega era tanta la veneración que se tenía al álamo que los animales ofrecidos en sacrificio a Zeus, sólo podían ser incinerados con madera de este árbol.<br/>En algunos pueblos aragoneses todavía se realiza la celebración del &quot;mayo&quot; en honor de la cosecha. Se elige un &quot;chopo&quot; que es cortado y llevado a hombros por los vecinos para erguirlo en la plaza del pueblo. La operación requiere de gran fuerza y pericia.<br/>El cultivo del chopo se ha desarrollado hasta el punto de dar lugar a una ciencia propia, la Populicultura, contando Zaragoza con un centro de investigación (Campus de Aula Dei).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677908.2,4613640.4</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>12</id>
+            <common>ÁLAMO CHINO</common>
+            <commonName>ÁLAMO CHINO - CHOPO PERAL | CHOPO DE SIMÓN</commonName>
+            <scientificName>Populus simonii Carrière </scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_simonii.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 12/15 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    El nombre específico es en honor de Gabriel Eugene Simón, cónsul francés del siglo XIX coleccionista de plantas.<br/>Originario de China, esta especie no alcanza la altura ni la edad de otros chopos. Las hojas recuerdan a las del peral, de ahí uno de sus nombres comunes.<br/>La corteza es bastante lisa en contraste con otros populus, si bien se termina agrietando un poco en los ejemplares viejos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674202.71,4612826.68</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>13</id>
+            <common>ÁLAMO GRIS</common>
+            <commonName>
+    ÁLAMO GRIS - ÁLAMO CANO | ÁLAMO GRIS DE PICARDÍA | ÁLAMO BASTARDO
+    </commonName>
+            <scientificName>Populus x canescens (Aiton) Sm. </scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/populus_canescens.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Considerada por algunos autores como híbrido entre Populus alba y Populus tremula. Su área de distribución se extiende por gran parte de Europa y Asia occidental.<br/>Canescens del latín &quot;blanquear&quot; o &quot;encanecer&quot; refiriéndose seguramente al vello que cubre las yemas además de las hojas que tienen el envés blanquecino o plateado (cano).<br/>Tiene rasgos intermedios y a simple vista nos parece un P. alba, aunque de hojas más pequeñas. También la corteza tiene lenticelas (protuberancias) horizontales negruzcas
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675584.47,4611651.71</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>14</id>
+            <common>ALBARICOQUERO</common>
+            <commonName>ALBARICOQUERO - ALBERGERO | DAMASCO | PRISCO</commonName>
+            <scientificName>Prunus armeniaca L. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/prunus_armeniaca.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA (FRUTAL) - Alt. : 8/10 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Cultivado desde hace siglos, sus frutos han mejorado respecto a las formas silvestres por selección artificial. <br/>La especie procede del norte de China, aunque su nombre específico se refiere a Armenia, que es de donde se introdujo a Europa por los romanos hacia el año 70 a. C.<br/>Es un frutal muy apreciado, pues su fruto está muy considerado para hacer compotas y mermeladas. También se deseca para su conservación.<br/>Los frutos, muy aromáticos, están cubiertos de una fina vellosidad. El hueso, que es liso y provisto de una cresta, contiene una sola semilla amarga y con componentes venenosos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676882.6,4613078.19</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>16</id>
+            <common>ALIGUSTRE DEL JAPÓN</common>
+            <commonName>ALIGUSTRE DEL JAPÓN - TROANA JAPONESA</commonName>
+            <scientificName>Ligustrum japonicum Thunb. </scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ligustrum_japonicum.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 4/6 m. - Fl. : may. - jul.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del verbo latino ligare, unir, atar, ya que sus ramas jóvenes se utilizaban para atar, gracias a su flexibilidad. <br/>El específico alude a su lugar de origen. Desde Japón se introdujo en China y desde allí entró en el continente europeo en 1845.<br/>Los frutos son bayas de color negro-azulado agrupadas en racimos, muy buscadas por las aves pero tóxicos para el hombre. Con porte arbóreo son raros de ver en nuestra ciudad, sí merecen mencionarse los ubicados en la Rosaleda del Parque Grande J. A. Labordeta.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675378.65,4611371.53</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>17</id>
+            <common>ALISO ITALIANO</common>
+            <commonName>
+    ALISO ITALIANO - ALISO DE HOJA ACORAZONADA | ALISO NAPOLITANO
+    </commonName>
+            <scientificName>Alnus cordata (Loisel.) Desf. </scientificName>
+            <family>BETULÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/alnus_cordata.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : feb. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico es el latino Alnus. El específico cordata hace referencia a la forma acorazonada de sus hojas. Es nativo del sur de Italia, Córcega y Cerdeña.<br/>Se introdujo en jardinería en 1820, empleado como ornamental por su follaje. Soporta nuestros suelos secos y calizos aunque prefiere los frescos y profundos.<br/>Los pilares o postes de algunos edificios de Venecia están hechos de esta madera.<br/>Sus frutos recuerdan a las piñas de las coníferas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674464.11,4611585.83</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>20</id>
+            <common>ALMEZ</common>
+            <commonName>ALMEZ - LITONERO | ALMECINO</commonName>
+            <scientificName>Celtis australis L. </scientificName>
+            <family>ULMÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/celtis_australis.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre Celtis procede del nombre antiguo latino celthis-is, aplicado por Plinio a un árbol africano diferente, y que Linneo adoptó para el género.<br/>El nombre específico australis, por ser una especie del área meridional de Europa, sureste de Asia y norte de África, desde Túnez a Marruecos.<br/>Sus frutos, las celtinas, son comestibles. Tienen sabor a miel y se fabricaba vino dulce con ellas. La madera, apreciada para trabajos de torneado, se usaba para hacer fustas y látigos. De los árboles jóvenes las horcas para ahuecar el heno.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677603.71,4613359.45</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>21</id>
+            <common>ALMEZ DE CHINA</common>
+            <commonName>ALMEZ DE CHINA</commonName>
+            <scientificName>Celtis sinensis Pers. </scientificName>
+            <family>ULMÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/celtis_sinensis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Originario del noroeste de China (de ahí sinensis), Corea y Japón. Se diferencia de C. australis más común de ver en Zaragoza en las hojas algo brillantes y sin bellosidad o muy poca.<br/>Sus frutos van del verde claro al rojo anaranjado a diferencia de C. australis que va del verde claro al casi negro. La corteza es menos lisa presentando algunas rugosidades.<br/>Es la especie menos difundida con diferencia del género Celtis de las que podemos ver en Zaragoza: C. australis, C. occidentalis y la que nos ocupa C. sinensis.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677224.37,4611982.76</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>22</id>
+            <common>ÁRBOL DEL AMOR</common>
+            <commonName>
+    ÁRBOL DEL AMOR - ÁRBOL DE JUDEA | CICLAMOR | CEDRELO
+    </commonName>
+            <scientificName>Cercis siliquastrum L.</scientificName>
+            <family>FABÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cercis_siliquastrum.jpg
+    </photo>
+            <numberOfPhotos>15</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 6/12 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del griego kerkis, &quot;lanzadera de tejedor&quot;, ya que la forma de barca de sus legumbres se asemeja a esta herramienta de tejer.<br/>El nombre específico siliquastrum hace referencia al fruto que aun siendo una legumbre, recuerda a una silicua (fruto de las crucíferas).<br/>El nombre común árbol del amor se debe a la forma de corazón de las hojas. <br/>En medicina popular, los frutos se han utilizado como astringentes. Se introdujo en Europa en la época de las Cruzadas, año 1200, y su primer destino fue Francia.<br/>La especie procede del Mediterráneo oriental.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675222.78,4611504.72</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>23</id>
+            <common>ÁRBOL DE JÚPITER </common>
+            <commonName>ÁRBOL DE JÚPITER - LILA DEL SUR</commonName>
+            <scientificName>Lagerstroemia indica L.</scientificName>
+            <family>LITRÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/lagerstroemia_indica.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/12 m. - Fl. : jul. - ago.
+    </shortDescription>
+            <description>
+    El nombre genérico fue asignado por Linneo en recuerdo del sueco Magnus Von Lagerström (1691-1759), amigo suyo, director de la Compañía de las Indias. El nombre específico indica nos recuerda su lugar de origen: el Extremo Oriente (India y China).<br/>Una característica del tronco de este árbol es que cuando se desprende la corteza, (ritidoma), aparece una madera muy fina como si hubiese sido lijada y lacada en mate.<br/>Aunque su introducción en Zaragoza es reciente, consultados los archivos municipales, consta que había un ejemplar en el antiguo Jardín Botánico en el año 1914.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675432.24,4611511.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>24</id>
+            <common>ÁRBOL DEL PARAÍSO</common>
+            <commonName>
+    ÁRBOL DEL PARAÍSO - OLIVO DE BOHEMIA | OLIVO FALSO | BARDO
+    </commonName>
+            <scientificName>Elaeagnus angustifolia L.</scientificName>
+            <family>ELEAGNÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/elaeagnus_angustifolia.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA SEMIPERENNE - Alt. : 10/12 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre eleagnus proviene de dos palabras griegas: eleia, (olivo) y gennao, (originar algo similar) y hace referencia a la similitud de las hojas de éste árbol con las del olivo.<br/>El nombre específico angustifolia nos describe el estrecho limbo que presenta la hoja.<br/>Con las flores se preparan siropes y licores utilizándose también en cosmética. <br/>Con los frutos, llamados en la antigua Persia Támaras de Trebisonda, se elabora en los países orientales una bebida alcohólica, consumiéndose también secos, como los dátiles. Con su pulpa harinosa se preparaban potajes y pasteles.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676807.79,4610865.37</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>25</id>
+            <common>ARCE BLANCO</common>
+            <commonName>ARCE BLANCO - FALSO PLÁTANO | SICOMORO</commonName>
+            <scientificName>Acer pseudoplatanus L. </scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_pseudoplatanus.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Los arces es un género representado por unas 120 especies, la mayoría de ellas (unas 100) procedentes de Asia y Japón. El arce blanco es muy apreciado por su densa sombra.<br/>El nombre específico pseudoplatanus, hace referencia al parecido de sus hojas con el plátano de sombra. Especie originaria del centro y sur de Europa y suroeste de Asia.<br/>Como de otros arces se obtiene un líquido azucarado agradable de beber. El sirope de savia de arce es un edulcorante natural. Aparece en la composición de los donuts, crepes, helados, caramelos, pasteles, etc. preferentemente de la especie Arce de azúcar (Acer saccharum).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676568.17,4611165.54</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>26</id>
+            <common>ARCE MENOR</common>
+            <commonName>ARCE MENOR - ACIRÓN | ARCE CAMPESTRE</commonName>
+            <scientificName>Acer campestre L. </scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_campestris.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Especie muy extendida por Europa y oeste de Asia y algunas zonas del norte de África.<br/>Su madera es apreciada en carpintería. Resiste bien el ataque de los insectos. Empleada en la elaboración de instrumentos musicales siendo Stradivarius el primero que la utilizó.<br/>Tiene propiedades medicinales como astringente que se aprovecha para elaborar productos cosméticos. Algunas especies presentan un colorido follaje otoñal (Acer rubrum).<br/>El Acer saccharum (especie muy común en Norteamérica) es utilizado para la extracción de la savia, que tras ser hervida, produce el jarabe de arce con el que se hacen caramelos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675212.65,4611250.4</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>27</id>
+            <common>ARCE DE MONTPELLIER</common>
+            <commonName>ARCE DE MONTPELLIER</commonName>
+            <scientificName>Acer monspessulanum L. </scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_monspesulanum.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : abr. - jun.
+    </shortDescription>
+            <description>
+    Debe su nombre específico a la ciudad francesa donde fue descrito por primera vez. En Montpellier se creo uno de los primeros y más prestigiosos jardines botánicos de Europa.<br/>Es una especie de arce nativo de la región mediterránea. En España parece ser la especie de arce más común de ver en bosques naturales, especialmente en la mitad norte.<br/>La traducción &quot;Montpellier - Monte de pieles&quot; indica que donde abunda este árbol hay ganado lanar y cabrío.<br/>Su madera de alta calidad (aunque escasa, por su poca talla) es muy apreciada en ebanistería para objetos de lujo. Hojas pequeñas algo coriáceas con interesante color otoñal.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677672.25,4614470.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>28</id>
+            <common>ARCE NEGUNDO</common>
+            <commonName>ARCE NEGUNDO - ARCE DE HOJAS DE FRESNO | NEGUNDO</commonName>
+            <scientificName>Acer negundo L. </scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_negundo.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Acer es el nombre latino del arce que significa &quot;duro&quot; en referencia a la dureza de su madera que servía para hacer puntas de lanzas.<br/>El nombre específico negundo proviene del sánscrito bengalí nurgundi palabra que se utiliza para designar un árbol de hoja similar (Vitex negundo).<br/>Sus hojas son muy diferentes a los demás arces y las únicas del género que son compuestas. Hay variedades ornamentales con hojas de distintos tonos (flamingo, violaceum, elegans, variegatun, etc.). Procedente de Norteamérica, es el arce más frecuente de ver en Zaragoza.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675440.8,4611335.92</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>29</id>
+            <common>ARCE PLATEADO</common>
+            <commonName>ARCE PLATEADO - ARCE BLANCO AMERICANO</commonName>
+            <scientificName>Acer saccharinum L. </scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_saccharinum.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El arce plateado está estrechamente emparentado con el arce rojo Acer rubrum, y pueden hibridarse, y el híbrido se conoce como &quot;arce del hombre libre&quot; (Acer x freemanii), popular arce ornamental del que podemos ver un grupo únicamente en el Parque del Agua.<br/>El nombre específico saccharinum proviene del latín saccharum y significa &quot;azúcar&quot;, ya que se puede obtener de su savia azúcar como de otros arces aunque para ello los más adecuados son el arce de azúcar (Acer saccharum) y el arce negro (Acer nigrum).<br/>El auténtico jarabe de arce proviene de Canada y del norte de los Estados Unidos y conviene distinguirlo de muchas imitaciones. La hoja de arce aparece en la bandera de Canada.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675487.68,4612226.7</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>30</id>
+            <common>ARCE PÚRPURA</common>
+            <commonName>ARCE PÚRPURA</commonName>
+            <scientificName>Acer platanoides L. &apos;Crimson King&apos;</scientificName>
+            <family>ACERÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acer_platanoides_C.K.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    La procedencia del nombre del género es incierta. Acer: tenaz, duro. Según otros autores su nombre deriva de la voz celta ac: espina o punta, por haberse utilizado para fabricar puntas de lanza. El arce púrpura procede de América del Norte.<br/>Las hojas de esta variedad poseen un espectacular color púrpura brillante. <br/>Las especies del género acer son una importante fuente de polen y néctar a principios de primavera para las abejas, en particular las abejas melíferas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675257.94,4611430.02</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>31</id>
+            <common>AVELLANO TURCO</common>
+            <commonName>
+    AVELLANO TURCO - AVELLANO MEDITERRÁNEO | AVELLANO ARBÓREO
+    </commonName>
+            <scientificName>Corylus colurna L. </scientificName>
+            <family>BETULÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/corylus_colurna.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : feb. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del griego kóris, &quot;casco&quot;, refiriéndose a la cubierta foliosa que envuelve el fruto. El específico procede del vocablo latino colurnus, &quot;hecho de avellano&quot;.<br/>Es un árbol originario del sureste de Europa y suroeste de Asia, desde los Balcanes a través del norte de Turquía hasta el norte de Irán.<br/>La mayoría de los avellanos comerciales (cultivados por sus frutos) se injertan sobre pies de avellano turco, ya que no emite chupones.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675458.16,4611313.41</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>32</id>
+            <common>BERBERIS ROJO</common>
+            <commonName>BERBERIS ROJO - AGRACEJO ROJO</commonName>
+            <scientificName>Berberis thunbergii D C. &apos;Atropurpurea&apos; Chenault </scientificName>
+            <family>BERBERIDÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/berberis_thunbergii_atro.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 1/2 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre específico thunbergii hace referencia al botánico y explorador sueco Carl Peter Thunberg sustituto de Linneo tras su fallecimiento en la Universidad de Uppsala (Suecia) como profesor de medicina e historia natural (1781).<br/>La especie procede de Japón y Asia occidental, se introdujo en Europa en 1864.<br/>Posee un porte arbustivo denso, espinoso, muy disuasorio, utilizándose como seto vivo. Hojas pequeñas, ovaladas de color púrpura, lo que le da un gran valor ornamental.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674024.75,4609399.64</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>33</id>
+            <common>BOLA DE NIEVE</common>
+            <commonName>BOLA DE NIEVE - MUNDILLO | SAUQUILLO</commonName>
+            <scientificName>Viburnum opulus L.</scientificName>
+            <family>CAPRIFOLIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/viburnum_opulus.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 4/6 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Viburnum parece derivar del verbo latino vieo &quot;atar con junco u otra ligadura flexible&quot;, dado que sus ramas muy flexibles se usaban en otros tiempos para realizar ataduras.<br/>Opulus se refiere al parecido de sus hojas con el arce (Acer opalus).<br/>Hojas divididas en 3-5 lóbulos dentados y que en otoño toman un bonito color escarlata.<br/>El fruto es una baya de color rojo brillante. y traslúcida. La mayoría de especies de Viburnum tienen frutos tóxicos para la ingestión humana, no para los animales.<br/>Nativo en Europa, Noroeste de África, Asia Menor, Cáucaso y Asia Central.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675435.15,4611480.37</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>34</id>
+            <common>BONETERO DEL JAPÓN</common>
+            <commonName>BONETERO DEL JAPÓN - EVÓNIMO</commonName>
+            <scientificName>Euonymus japonicus Thunb. </scientificName>
+            <family>CELASTRÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/evonymus_jap.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 5/8 m. - Fl. : may. - jul.
+    </shortDescription>
+            <description>
+    Esta especie la solemos ver en forma arbustiva, pero en algunos casos alcanza porte de pequeño árbol. Admite muy bien la poda utilizándose para hacer setos geométricos<br/>Sus ramas son esbeltas, están colocadas unas muy cerca de las otras, de forma que toma un aspecto muy compacto y denso. El aceite de las semillas se utiliza en ocasiones para hacer jabón. Con sus ramillas se fabrica carboncillo de dibujo.<br/>La planta procede del Japón y Noroeste de China.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675381.17,4611152.45</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>35</id>
+            <common>BRACHICHITO</common>
+            <commonName>BRACHICHITO - ÁRBOL BOTELLA</commonName>
+            <scientificName>
+    Brachychiton populneus (Schott /; Endlicher) R. Brown.
+    </scientificName>
+            <family>ESTERCULIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/brachychiton.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 10/15 m. - Fl. : may. - jul.
+    </shortDescription>
+            <description>
+    Brachychiton deriva del griego brachys &quot;corto&quot; y chiton &quot;túnica&quot; o &quot;cubierta&quot;, en referencia a la capa de pelos finos y cortos que cubren la semilla. <br/>El nombre específico populneus se relaciona con el parecido que presenta la hoja a la de algunas especies del género Populus, los álamos y los chopos. Especie procedente de Australia es la más difundida del género Brachychiton. <br/>Las flores, en forma de campana, son variables de color pálido a rosa, mientras que las hojas varían considerablemente en forma.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675452.13,4611485.82</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>36</id>
+            <common>BUDLEIA</common>
+            <commonName>
+    BUDLEIA - ARBUSTO DE LAS MARIPOSAS | LILO DE VERANO
+    </commonName>
+            <scientificName>Buddleia davidii Franch. </scientificName>
+            <family>BUDLEIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/budleia_davidi.jpg
+    </photo>
+            <numberOfPhotos>8</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA SEMICADUCA - Alt. : 4/6 m. - Fl. : may. - sep.
+    </shortDescription>
+            <description>
+    El nombre genérico Buddleia está dedicado al clérigo inglés del siglo XVII Adam Buddle, apasionado del cultivo de plantas ornamentales.<br/>Especie procedente de China, su nombre específico recuerda al famoso naturalista y misionero que trabajó en ese país, el padre David, (Armand David, 1826 -1900).<br/>Existen muchas variedades con colores de las flores muy llamativos. Muchas especies de mariposas acuden a sus flores, de ahí uno de sus nombres comunes.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675376.03,4612249.62</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>37</id>
+            <common>BUGANVILLA</common>
+            <commonName>
+    BUGANVILLA - FLOR DE PAPEL | SANTA RITA | PAPELILLO
+    </commonName>
+            <scientificName>Bougainvillea spectabilis Willd. </scientificName>
+            <family>NICTAGINÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/buganvillea_spectabilis.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    TREPADORA DE HOJA PERENNE - Alt. : ??/?? m. - Fl. : jun. - nov.
+    </shortDescription>
+            <description>
+    El género está dedicado al navegante francés Louis de Bougainville (1729-1811), que también destacó en las matemáticas y el derecho, y fue el primer francés en organizar una expedición para dar la vuelta al mundo en 1766 - 69. <br/>En las zonas tropicales de América del Sur, de donde procede, florece todo el año. Tal belleza le ha valido a la planta el nombre específico de spectabilis. <br/>Produce toda gama de colores en sus &quot;flores&quot;, que en realidad son hojas modificadas. Sus flores son mucho más pequeñas, de color amarillento y rodeadas por las hojas modificadas llamadas brácteas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675352.48,4611625.06</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>38</id>
+            <common>BUTIA</common>
+            <commonName>BUTIA - PALMA YATAY</commonName>
+            <scientificName>Butia yatay (Martius) Beccari </scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/butia_yatai.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 12/16 m. - Fl. : jul. - ago.
+    </shortDescription>
+            <description>
+    El nombre genérico Butia proviene de mbo tia, y significa diente curvo (refiriéndose a los dientes laterales de la hoja). Yataí, significa &quot;fruto duro, pequeño&quot; en lengua guaraní.<br/>Es nativa del sur de Brasil, Paraguay, Uruguay y el noreste argentino. Es una palmera sumamente longeva, y formaba grandes palmerales en su región de origen antes de la deforestación de tierras para el cultivo. Protegida por la ley desde 1939.<br/>Los frutos, de abundante pulpa agridulce y perfumada, se utilizan para alimentación y en licorerías para la elaboración del &quot;licor de yatay&quot;.<br/>Pertenece al grupo de palmeras de hojas pinnadas, con los foliolos dispuestos a los lados del raquis (nervio central) como las barbas de una pluma.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673955.09,4615233.09</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>39</id>
+            <common>CAMPSIS</common>
+            <commonName>
+    CAMPSIS - ENREDADERA DE TROMPETA | JAZMÍN HÍBRIDO DE VIRGINIA
+    </commonName>
+            <scientificName>Campsis x tagliabuana (Vis.) Rehder </scientificName>
+            <family>BIGNONIÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/campsis.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO TREPADOR DE HOJA CADUCA - Alt. : -- - Fl. : jun. - sep.
+    </shortDescription>
+            <description>
+    Híbrido artificial de las especies Campsis grandiflora y Campsis radicans que se obtuvo en Italia a mediados del siglo XIX.<br/>Las especies progenitoras proceden de Virginia (EE. UU.) y Corea respectivamente.<br/>Se cultivan por sus llamativas y abundantes flores en forma de trompeta, que en los climas cálidos se producen muchos meses del año. Se usa para cubrir muros, pérgolas, etc.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675422.72,4611459.48</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>40</id>
+            <common>CAQUI</common>
+            <commonName>CAQUI - PALOSANTO</commonName>
+            <scientificName>Diospyros kaki L. f. </scientificName>
+            <family>EBENÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/diospyros_kaki.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    La denominación diospyros deriva del griego dios &quot;divino&quot; y pyros &quot;fruto&quot; es decir &quot;fruto divino&quot;.<br/>Muy probablemente su origen está en China, dado que se han encontrado formas silvestres de caqui en este país, y documentos del siglo V sobre su cultivo.<br/>Desde China, el caqui se difundió por Corea, Japón y otros países de oriente. Género con más de 300 especies<br/>El tono rojizo de sus hojas en otoño y sus frutos colgantes del árbol desnudo en invierno, lo hacen muy decorativo como ornamental además de la importancia de sus frutos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675384.75,4611496.4</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>41</id>
+            <common>CARANDAY</common>
+            <commonName>CARANDAY</commonName>
+            <scientificName>Trithrinax campestris (Burmeist.) Drude </scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/tritrinax_campestris.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 4/8 m. - Fl. : oct. - dic.
+    </shortDescription>
+            <description>
+    El nombre genérico Trithinax proviene del latín tri &quot;tres&quot; y del griego thrinax &quot;tridente&quot;, refiriéndose a sus hojas que son extremadamente punzantes y a su silueta que recuerda a un tridente. Son verde azuladas de pequeño tamaño y muy rígidas y son quizás las más duras de todas las hojas de palmera.<br/>La fibra extraída de las hojas se utiliza para la confección de sombreros cuerdas y otros útiles. Los frutos no se comen, pero de su fermentación se elabora una bebida alcohólica.<br/>Su origen se encuentra en Argentina y Uruguay.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673728.24,4615171.89</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>42</id>
+            <common>CASTAÑO DE INDIAS</common>
+            <commonName>CASTAÑO DE INDIAS - FALSO CASTAÑO</commonName>
+            <scientificName>Aesculus hippocastanum L.</scientificName>
+            <family>HIPOCASTANÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/aesculus_hipocastanum.jpg
+    </photo>
+            <numberOfPhotos>16</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/40 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Aunque se le llama Castaño de Indias, la especie es originaria de Europa Oriental, los Balcanes y el Cáucaso. Se le llamó así porque se creía que era el Aesculus indica, especie originaria de la India.<br/>Antiguamente la corteza se utilizaba como febrífuga (antitérmica) y de las semillas se obtenía un aceite para preparar emulsiones, detergentes y cremas de afeitar; pero la utilidad preferente del árbol es como ornamental, sobre todo como árbol de sombra. <br/>Cabe decir que este árbol no es realmente un castaño, ni proviene de la India (nombre que se les daba a las regiones tropicales de América) y, por tanto, su nombre común nos puede aportar más de un error.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675485.25,4612251.2</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>103</id>
+            <common>PARROTIA</common>
+            <commonName>PARROTIA - ÁRBOL DE HIERRO</commonName>
+            <scientificName>Parrotia persica (D C.) C. A. Mey.</scientificName>
+            <family>HAMAMELIDÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/parrotia_persica.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    El nombre del género Parrotia está dedicado a Friedrich W. Parrot, naturalista y explorador alemán. Persica, del latín, significa &quot;natural de Persia&quot; (Irán) de donde procede.<br/>Género de una sola especie. No le afectan plagas ni enfermedades. Atractivo follaje otoñal.<br/>Floración en densos racimos, predominando el color rojizo de los estambres. Hojas ovoides, en forma de lengua. El fruto es una cápsula que contiene dos semillas. La madera es muy apreciada por su dureza, de ahí el nombre común: árbol de hierro.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675421.06,4611471.13</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>104</id>
+            <common>PITOSPORO</common>
+            <commonName>PITOSPORO - AZAHAR DE CHINA</commonName>
+            <scientificName>Pittosporum tobira (Thunb.) W. T. Aiton</scientificName>
+            <family>PITOSPORÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/pittosporun_tobira.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 6/8 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del griego pitta, &quot;resina&quot;, y sporos, &quot;semilla&quot;, haciendo referencia al revestimiento resinoso de las semillas.<br/>El nombre específico, tobira, corresponde al nombre indígena de la planta.<br/>Esta planta es originaria de China y Japón. Fue introducida en Europa en el año 1804 en los Kew Gardens (Inglaterra). En el Parque Grande de Zaragoza hay enormes ejemplares.<br/>Las semillas, de color rojo, contienen una resina pegajosa (pito-sporo).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675496.78,4611610.31</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>105</id>
+            <common>PLÁTANO DE SOMBRA</common>
+            <commonName>PLÁTANO DE SOMBRA - PLÁTANO DE PASEO</commonName>
+            <scientificName>Platanus x hispanica Miller </scientificName>
+            <family>PLATANÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/platanus_hispanica.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/40 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del griego platýs, &quot;ancho&quot;, haciendo referencia a la anchura de su copa. El nombre específico hispanica, recuerda que los ingleses le llamaban plátano de España porque pensaban que este híbrido procedía de los Jardines de Aranjuez.<br/>El árbol procede del cruce entre el plátano oriental, nativo del suroeste de Asia, y el occidental, nativo de la zona atlántica de Estados Unidos (P. orientalis x P. occidentalis).<br/>En 1971 el Apolo XIV llevó semillas de este género a la Luna, y las trajo de vuelta a casa. En la Universidad de Arizona prospera con normalidad un ejemplar procedente de estas semillas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674234.33,4611524.92</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>106</id>
+            <common>PLÁTANO ORIENTAL</common>
+            <commonName>PLÁTANO ORIENTAL - PLÁTANO DE ORIENTE</commonName>
+            <scientificName>Platanus orientalis L. </scientificName>
+            <family>PLATANÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/platanus_orientalis.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : xx/xx m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Es un árbol ilustre mencionado por escritores clásicos como Platón, Heródoto, Plinio, etc..<br/>Cultivado como árbol de sombra desde antiguo. El porte en los ejemplares viejos es imponente y pueden llegar a ser muy longevos.<br/>Parecido al plátano de sombra, sus hojas, algo más lobuladas y la base de la hoja con un ángulo más cerrado.<br/>En Zaragoza hay muy pocos ejemplares de esta especie.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676259.62,4611448.25</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>107</id>
+            <common>ROBINIA</common>
+            <commonName>ROBINIA - FALSA ACACIA</commonName>
+            <scientificName>Robinia pseudoacacia L.</scientificName>
+            <family>FABÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/robinia_pseudoacia.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico está dedicado al botánico Jean Robin que la trajo de las colonias americanas a Francia en 1601. Originaria de los Montes Apalaches (Estados Unidos) y muy extendida por toda Europa. <br/>El nombre específico se refiere a la semejanza con las verdaderas acacias. Si bien todos hemos comido de pequeños su flor (los llamados angelitos), las hojas y las semillas son tóxicas.<br/>Su madera fue muy utilizada en carretería, de elevada resistencia y muy buena durabilidad. Las raíces, tienen la capacidad, como todas las leguminosas, de fijar el nitrógeno atmosférico.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675062.14,4611784.72</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>108</id>
+            <common>ROBINIA UNIFOLIA</common>
+            <commonName>ROBINIA UNIFOLIA - ACACIA UNIFOLIA</commonName>
+            <scientificName>Robinia pseudoacacia L. &apos;Unifolia&apos; Talou</scientificName>
+            <family>FABÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/robinia_pseudoacacia_uni.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : abr. - jun.
+    </shortDescription>
+            <description>
+    Variedad de Robinia pseudoacacia de reciente introducción en Zaragoza. Se trajo a raíz de la Expo 2008. <br/>La única diferencia es la hoja bastante diferente. Son compuestas pero con 2 - 3 foliolos en vez de 9 - 19 de la robinia, o a veces uno solo con lo que serían hojas simples de ahí el nombre de la variedad. También se le denomina Monophylla.<br/>A diferencia de la R. pseudoacacia, el cultivar Unifolia, carece de espinas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677809.72,4613625.98</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>109</id>
+            <common>ROSAL SIN ESPINAS</common>
+            <commonName>ROSAL SIN ESPINAS - ROSAL DE BANKS</commonName>
+            <scientificName>Rosa banksiae Ait. &apos;Lutea&apos; Lindl.</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/rosa_banksiae.jpg
+    </photo>
+            <shortDescription>
+    ARBUSTO TREPADOR HOJA CADUCA - Alt. : -- m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del latín rosa, que es como se denominaba esta especie en latín, conservando su nomenclatura latina. El nombre específico banksiae, en honor de Lady Banks, esposa de Sir Joseph Banks (1743-1820), botánico famoso director de Kew Garden.<br/>La característica de este rosal trepador es que carece de espinas (aunque no totalmente) y sus flores son pequeñas y muy abundantes. Procede del centro y oeste de China.<br/>Se encuentra en regiones montañosas a altitudes comprendidas entre 500 y 2200 metros.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676236.67,4611657.92</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>110</id>
+            <common>ROSA DE SIRIA</common>
+            <commonName>ROSA DE SIRIA - ALTEA | HIBISCO</commonName>
+            <scientificName>Hibiscus syriacus L. </scientificName>
+            <family>MALVÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/hibiscus_syriacus.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO O ÁRBOL DE HOJA CADUCA - Alt. : 4/6 m. - Fl. : jun. - oct.
+    </shortDescription>
+            <description>
+    \nEl nombre genérico deriva de hibiscum antiguo nombre de la malva. El nombre específico syriacus significa &quot;procedente de Siria&quot;. Aunque es muy abundante en Siria y Lineo la creyó procedente de allí, en realidad es originaria del continente asiático (India y China).<br/>Es la flor nacional de Corea del Sur, apareciendo en diversos emblemas nacionales.<br/>Especie muy ornamental por sus flores dobles o simples de colores blanco, azul, violeta, rosa o púrpura, en función de la variedad. Su fruto es una cápsula.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677254.33,4612010.18</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>111</id>
+            <common>SABAL</common>
+            <commonName>SABAL</commonName>
+            <scientificName>
+    Sabal palmetto (Walt.) Loddiges ex J. A. H. Schultes
+    </scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sabal_palmetto.jpg
+    </photo>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : jul. - ago.
+    </shortDescription>
+            <description>
+    Las hojas tienen el peciolo sin espinas (inerme) penetrando mucho en el limbo, arqueándose y dándole a la hoja una curvatura característica.<br/>Es extremadamente tolerante a sal, creciendo cerca de la costa, y también tolerante al frío, sobreviviendo cortos periodos de temperaturas de -14° C. <br/>Su origen es el Sureste de los EE.UU. (Carolina, Florida) hasta el oeste de Cuba. Es el árbol estandarte de los estados de Carolina del Sur y de Florida.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673924.29,4615172.35</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>112</id>
+            <common>SABINA ALBAR</common>
+            <commonName>
+    SABINA ALBAR - SABINA BLANCA | SABINA DE INCIENSO | TABRINA,
+    </commonName>
+            <scientificName>Juniperus thurifera L. </scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/juniperus_thurifera.jpg
+    </photo>
+            <numberOfPhotos>16</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : nov. - feb.
+    </shortDescription>
+            <description>
+    El nombre genérico es el antiguo nombre en latín del enebro. El específico thurifera significa &quot;productora de incienso&quot; debido a que su madera es muy aromática y desprende un olor resinoso agradable. Es una especie protegida.<br/>El mayor sabinar albar de Europa, se extiende entre las provincias de Soria y Guadalajara.<br/>Es especialmente conocido el sabinar de Calatañazor, en Soria.<br/>Tronco, corto y grueso algo retorcido y tortuoso en los ejemplares viejos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675179.05,4611018.23</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>113</id>
+            <common>SAUCE LLORÓN</common>
+            <commonName>SAUCE LLORÓN - SAUCE DE BABILONIA | DESMAYO</commonName>
+            <scientificName>Salix babylonica L.</scientificName>
+            <family>SALICÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/salix_babylonica.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    Árbol de gran valor ornamental presente en la mayoría de parques de las zonas templadas de casi todo el mundo. La especie procede de China sin poderse precisar, pues se cultiva desde tiempos remotos.<br/>De la corteza de los sauces se extrae el ácido salicílico, componente principal de la famosa aspirina. La salicina, principio activo que se encuentra en los sauces, tiene cualidades terapéuticas, para calmar la fiebre y aliviar el dolor.<br/>El sauce llorón está cargado de leyendas y simbologías; en China se planta como árbol sagrado junto a templos, monasterios y cementerios. Se cree que fue uno de los árboles existentes en los jardines colgantes de Babilonia.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675794.49,4614654.72</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>114</id>
+            <common>SAUCO</common>
+            <commonName>SAUCO - SAUCO NEGRO</commonName>
+            <scientificName>Sambucus nigra L. </scientificName>
+            <family>CAPRIFOLIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sambucus_nigra.jpg
+    </photo>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 8/10 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico es el correspondiente al latín para denominar al sauco. El nombre específico nigra hace referencia al color de sus frutos.<br/>Nativo de Europa, Siberia, noroeste de África, sudoeste de Asia.<br/>Su corteza es agrietada, de color pardo-grisáceo y de aspecto que recuerda al corcho.<br/>El hombre se ha valido del saúco desde la edad de piedra,como alimento, medicina, en ritos religiosos y mágicos, como planta de jardín, para fabricar silbatos valiéndose de su madera hueca. Las hojas quemadas se usaban como insecticida.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675082.33,4612458.0</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>115</id>
+            <common>SECUOYA GIGANTE</common>
+            <commonName>SECUOYA GIGANTE - WELLINGTONIA | ÁRBOL DE MAMUT</commonName>
+            <scientificName>Sequoiadendron giganteum (Lindl.) J. Buchholz </scientificName>
+            <family>TAXODIÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sequoiadendrom_gigant.jpg
+    </photo>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 60/100 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Esta especie es el organismo vegetal más grande del mundo en volumen, siendo también uno de los más altos y de los más longevos. La secuoyas gigantes tuvieron su momento álgido en el Cretácico. Hoy su hábitat natural se reduce a pequeñas zonas de California.<br/>Las primeras semillas que llegaron a Europa para su cultivo fueron en 1853 por John Scotsman D. Matthew, que reunió una cantidad pequeña de semillas en la Arboleda de Calaveras (California), llevándolas consigo a Escocia. Especie muy longeva, unos 3000 años.<br/>Muy famoso es el desaparecido ejemplar de &quot;Mariposa Grove&quot;, en el Parque Nacional de Yosemite, que tenía un túnel en su tronco por el que pasaba una carretera.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676356.26,4616812.49</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>116</id>
+            <common>TAXODIO</common>
+            <commonName>TAXODIO - CIPRÉS DE LOS PANTANOS | CIPRÉS CALVO</commonName>
+            <scientificName>Taxodium distichum (L.) Richard</scientificName>
+            <family>TAXODIÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/taxodium_distichum.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Es originario de las zonas pantanosas del sureste de Norteamérica, de ahí el nombre común de ciprés de los pantanos. Es el árbol oficial del estado de Louisiana desde 1963.<br/>El nombre genérico, Taxodium, hace alusión al parecido con el tejo: del latín taxus, nombre del tejo; y del griego Eidos &quot;semejante a&quot;.<br/>El nombre específico, distichum, del griego distichos &quot;ordenación en dos filas&quot;, relativo a la disposición de las hojas en las ramillas.<br/>En su hábitat natural, la base del tronco está ensanchada, apareciendo unas protuberancias leñosas huecas llamadas neumatóforos, que sirven para que las raíces puedan respirar en las zonas pantanosas. Es una de las pocas coníferas que pierden la hoja.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674998.97,4615294.5</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>117</id>
+            <common>TEJO</common>
+            <commonName>TEJO - TAXO</commonName>
+            <scientificName>Taxus baccata L.</scientificName>
+            <family>TAXÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/taxus_baccata.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : feb. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Taxus, deriva del griego taxis, &quot;ordenación en dos filas&quot; por la aparente disposición de las hojas. El nombre específico, baccata, del latín baccatus, &quot;lleno de bayas&quot;, nos quiere recordar la similitud de los frutos con las auténticas bayas.<br/>Árbol muy longevo, puede vivir 2000 años. Existe la costumbre de plantar un tejo cuando se construyen edificios monumentales para que sirva de testigo mudo de los avatares del tiempo. Ampliamente distribuido por toda Europa.<br/>Las semillas desarrollan en la madurez una cubierta carnosa de color rojo que se llama arilo.<br/>Las hojas, las ramas y las semillas son tóxicas para el hombre y el ganado. Sin embargo, el arilo es inocuo y, a menudo, ingerido por los pájaros.<br/>La madera de tejo no tiene resinas, es compacta, dura y resistente.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676738.35,4613228.53</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>118</id>
+            <common>TILO COMÚN</common>
+            <commonName>TILO COMÚN</commonName>
+            <scientificName>Tilia x vulgaris Hayne </scientificName>
+            <family>TILIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/tilia_vulgaris.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 35/40 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    Es un árbol que crece disperso en gran parte de Europa, preferentemente en bosques frescos y umbríos. Los frutos son globulosos y ligeramente carinados (con las costillas poco marcadas) a diferencia de T. cordata.<br/>En la antigüedad, las tribus germánicas se servían con frecuencia de los tilos centenarios como lugar de encuentro para conmemorar distintos actos sociales. <br/>Aguanta muy bien el frío pero es algo sensible al calor.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676523.96,4613530.27</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>119</id>
+            <common>TILO DE HOJA PEQUEÑA</common>
+            <commonName>TILO DE HOJA PEQUEÑA - TILO NORTEÑO</commonName>
+            <scientificName>Tilia cordata Mill. </scientificName>
+            <family>TILIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/tilia_cordata.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/35 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El origen de su nombre no está claro. Para unos deriva del latín&quot;telum&quot;, venablo, por usarse esta madera para fabricarlos; para otros viene del griego &quot;ptilon&quot;, ala, por la bráctea en forma de lengua delgada que acompaña a las flores (y después a los frutos), que facilita su dispersión.<br/>El nombre específico cordata, se refiere a la forma acorazonada de las hojas.<br/>Flores olorosas con mucho néctar, se utiliza en infusiones relajantes (la tila). La madera es excelente para tallar, tornear y para tablas de resonancia de pianos y órganos. <br/>La momia glaciar &quot;Ötzi&quot; (la momia humana natural más antigua de Europa), y que tiene alrededor de 5.200 años, llevaba varios útiles hechos con la corteza interna de tilo.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675441.79,4611474.02</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>120</id>
+            <common>TILO PLATEADO</common>
+            <commonName>TILO PLATEADO - TILO HÚNGARO</commonName>
+            <scientificName>Tilia tomentosa Moench. </scientificName>
+            <family>TILIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/tilia_tomentosa.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/35 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre específico tomentosa hace alusión al envés blanquecino (plateado) de las hojas. Originario de los Balcanes, Hungría y suroeste de Rusia. <br/>En esta especie, se ha encontrado una mayor proporción de compuestos químicos activos. <br/>Tiene múltiples usos curativos y artesanales. En Ansó se emplea para fabricar los aros que dan forma al típico queso de esta localidad. También se obtiene una miel excelente y casi transparente. Su crecimiento es más rápido que el de otras especies del género.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675407.71,4611471.29</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>121</id>
+            <common>TULÍPERO</common>
+            <commonName>
+    TULÍPERO - TULÍPERO DE VIRGINIA | ÁRBOL DE LOS TULIPANES
+    </commonName>
+            <scientificName>Liriodendron tulipifera L. </scientificName>
+            <family>MAGNOLIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/liriodendron_tulipifera.jpg
+    </photo>
+            <numberOfPhotos>8</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/35 m. - Fl. : may. - jul.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del griego leirion, &quot;azucena&quot;, y dendron, &quot;árbol&quot;.<br/>El específico alude al parecido de las hojas con las flores de tulipán. Procede del este de Norteamérica. La madera, fácil de trabajar, era usada por los indios para hacer sus canoas.<br/>De la corteza se extrae la tulipiferina, alcaloide estimulante del corazón y sistema nervioso.<br/>Se introdujo en Europa a finales del siglo XVII y todavía viven algunos de los primeros ejemplares plantados. Las cajas de los puros son de esta madera.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675430.06,4611479.89</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>122</id>
+            <common>TUYA</common>
+            <commonName>TUYA - ÁRBOL DE LA VIDA | BIOTA</commonName>
+            <scientificName>Thuja orientalis L.</scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/thuya_orientalis.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 5/12 m. - Fl. : feb. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Thuja, deriva del griego thyón o thía, árbol productor de resina o incienso, debido al olor de incienso que desprendía la resina cuando se quemaba en las antiguas ceremonias religiosas.<br/>Procede del norte de China, Manchuria y Corea (de ahí su nombre específico) y fue introdu-cida en Europa por el médico alemán Engelbert Kaempfer a finales del siglo XVII.<br/>Durante mucho tiempo se ha empleado como planta para setos y cerramientos aunque en la actualidad ha sido desplazada por otras especies.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>672308.02,4613106.68</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>123</id>
+            <common>TUYA OCCIDENTAL</common>
+            <commonName>TUYA OCCIDENTAL</commonName>
+            <scientificName>Thuja occidentalis L. </scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/thuya_occidentalis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 10/15 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre específico alude a su lugar de origen, las Montañas Rocosas de Estados Unidos. <br/>Fue de las primeras especies en exportarse a Europa para utilizarse en jardinería. Se tiene constancia de su existencia en París en 1536. Su madera es muy resistente, pero también fácil de trabajar por lo que los indios la utilizaban para hacer sus canoas.<br/>Todas las partes del árbol tienen gran cantidad de tujona, un aceite etéreo muy venenoso que antiguamente se extraía de sus ramas con fines médicos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673976.11,4612394.69</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>124</id>
+            <common>VIBURNO DE HOJA RIZADA</common>
+            <commonName>VIBURNO DE HOJA RIZADA</commonName>
+            <scientificName>Viburnum rhytidophyllum L. </scientificName>
+            <family>CAPRIFOLIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/viburnum_rhytidophyllum.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 3/4 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    Algunos autores sostienen que el nombre genérico viburnum deriva de viere, &quot;atar&quot;, en referencia a la flexibilidad de las ramas de este género, utilizadas para atar.<br/>A diferencia de los otros viburnos cultivados en Zaragoza, no tolera la sequedad.<br/>Especie procedente del centro y sur de China.<br/>Hojas largas y estrechas con nervaduras muy marcadas de color verde intenso más claras en el envés y ásperas al tacto.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675375.64,4611239.12</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>125</id>
+            <common>YUCA</common>
+            <commonName>YUCA - BAYONETA ESPAÑOLA | YUCA DE HOJA DE ÁLOE</commonName>
+            <scientificName>Yucca aloifolia L. </scientificName>
+            <family>AGAVÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/yuca_aloifolia.jpg
+    </photo>
+            <shortDescription>
+    PALMIFORME DE HOJA PERENNE - Alt. : 4/6 m. - Fl. : jul. - nov.
+    </shortDescription>
+            <description>
+    Yucca proviene del nombre caribeño de la raíz de la mandioca. El nombre específico aloifolia, por la semejanza con las hojas de áloe. <br/>Una peculiaridad de las yucas en general, es que son polinizadas únicamente por una especie concreta de polilla conocida como &quot;polilla de la yuca&quot;. <br/>Entre las aplicaciones de la yuca en la industria está la obtención de fibras resistentes para fabricar cuerdas y tejidos bastos. El fruto es comestible.<br/>Nativa del sureste de Estados Unidos; también de Méjico y las Antillas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675220.48,4612380.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>126</id>
+            <common>ZELKOVA</common>
+            <commonName>
+    ZELKOVA - ZELKOVA JAPONESA | KEAKI | OLMO DE SIBERIA
+    </commonName>
+            <scientificName>Zelkova serrata (Thunb.) Makino </scientificName>
+            <family>ULMÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/zelkova_serrata.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Las ramas son numerosas, generalmente ascendiendo vigorosamente del tronco para dar lugar a una alta corona abovedada. Nativa de Japón, Taiwan y el Este de Asia continental.<br/>Su nombre japonés significa extendido como una mano, refiriéndose a la silueta del árbol. El primer árbol cultivado fuera de Asia fue debido a Philipp Franz von Siebold (médico alemán que fue el primer occidental en cultivar té), quien lo introdujo en Holanda en 1830.<br/>Su madera es muy valorada en Japón y utilizada a menudo en la fabricación de muebles tansu (armarios tradicionales japoneses). Especie muy utilizada en técnicas de bonsai.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677689.9,4613320.99</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>127</id>
+            <common>FOTINIA ROJA</common>
+            <commonName>FOTINIA ROJA</commonName>
+            <scientificName>Photinia x fraseri Dress &apos;Red Robin&apos;</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/photinia_fraserii.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 1/3 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Reúne, salvo en su porte más pequeño, características similares a las de P. serrulata. Tan solo las hojas algo más suaves y pequeñas y la mayor cantidad de hojas de color rojo en brotación nos ayudarán a distinguirlas. <br/>Durante el año va sufriendo una metamorfosis de color: rojo en primavera,violáceo en verano y verde en invierno. <br/>Para conseguir el colorido rojizo es conveniente podar a menudo.<br/>Durante el año va sufriendo una metamorfosis de color: rojo en primavera,violáceo en verano y verde en invierno. Para conseguir el colorido rojizo es conveniente podar a menudo.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675305.86,4611063.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>128</id>
+            <common>FRESNO COMÚN</common>
+            <commonName>
+    FRESNO COMÚN - FRESNO DE HOJA ESTRECHA | FRESNO DE LA TIERRA
+    </commonName>
+            <scientificName>Fraxinus angustifolia Vahl.</scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/fraxinus_angustifolia.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : ene. - mar.
+    </shortDescription>
+            <description>
+    Es una especie propia de los bosques de ribera del sur de Europa y norte de África.<br/>El nombre específico angustifolia se refiere a la estrechez de sus hojas. <br/>Su madera es resistente y elástica, por lo que tiene muchos usos.<br/>Las hojas se utilizaban como forraje para el ganado. Tanto las hojas como la corteza se han usado popularmente en múltiples aplicaciones terapéuticas (laxante y diurético entre otras).<br/>Las flores son pequeñas y de color púrpura que se vuelve amarillo verdosas cuando se abren las anteras. Son poco vistosas y carecen de cáliz y corola.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675528.37,4611531.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>130</id>
+            <common>GINGO</common>
+            <commonName>
+    GINGO - ÁRBOL DE LOS 40 ESCUDOS | ÁRBOL DE LAS PAGODAS
+    </commonName>
+            <scientificName>Ginkgo biloba L.</scientificName>
+            <family>GINGOÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ginkgo_biloba.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 30/40 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico del Ginkgo proviene del término japonés ginkyo y éste, a su vez, del chino yah-chio, que quiere decir pie de pato debido a la forma de la hoja.<br/>El nombre específico biloba hace referencia a los dos lóbulos que forman algunas hojas.<br/>Árbol originario de la zona oriental de China. Se considera al gingo un fósil viviente. Con más de 150 millones de años de historia, se sitúa evolutivamente entre los helechos y las coníferas, siendo el único superviviente de las prefanerógamas. <br/>Se creía que si la especie ha sobrevivido hasta ahora era gracias a los monasterios chinos que lo conservaban como árbol sagrado; pero, recientemente, se ha encontrado en estado natural en un valle de la parte oriental de China, confirmando que la especie ha podido perdurar en estado silvestre.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675620.49,4613518.03</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>131</id>
+            <common>NARANJO AMARGO</common>
+            <commonName>NARANJO AMARGO</commonName>
+            <scientificName>Citrus aurantium L.</scientificName>
+            <family>RUTÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/citrus_aurantium.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 4/8 m. - Fl. : abr. - jun.
+    </shortDescription>
+            <description>
+    El nombre genérico Citrus proviene del griego kytros, y significa limón. El nombre específico aurantium hace referencia al color dorado de sus frutos.<br/>Autóctono de China e India, fue introducido en la península Ibérica por los musulmanes.<br/>Es uno de los más antiguos árboles ornamentales en España, pues se encontraba en uno de los primeros recintos ajardinados del país, la mezquita de Córdoba en el siglo X.<br/>El fruto, la naranja amarga, se utiliza en la fabricación de mermeladas y confituras y en cosmética. Las flores desprenden un fuerte aroma a azahar a mediados de primavera. De ellas se destila un aceite esencial, aceite de nerolí; y, su infusión tiene propiedades sedantes.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675362.31,4611605.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>53</id>
+            <common>CEREZO JAPONÉS</common>
+            <commonName>CEREZO JAPONÉS</commonName>
+            <scientificName>Prunus serrulata Lindl. &apos;Kanzan&apos;</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/prunus_serrulata.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre específico serrulata del latín, &quot;aserrado con pequeños dientes&quot; , refiriéndose a sus hojas. Su área natural es China y Corea y de ahí se extendió a Japón.<br/>Se trajo a Europa en el siglo XIX. Durante mucho tiempo este árbol estuvo perdido (se conocía solo por pinturas) y fue redescubierto por Ingram Collingwood, autoridad botánica en cerezos.<br/>Popular árbol por su vistosa floración. En Japón es un árbol considerado emblema nacional y forma parte del patrimonio del país. Existen unas 120 variedades.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675362.58,4611121.83</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>54</id>
+            <common>CIPRÉS AZUL</common>
+            <commonName>CIPRÉS AZUL</commonName>
+            <scientificName>Cupressus glabra Sudworth</scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressus_glabra.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : feb. - may.
+    </shortDescription>
+            <description>
+    No es seguro el origen de la palabra cupressus. Se cree que proviene del griego cyparissos, &quot;ciprés&quot;, aunque también hay quien opina que viene de Cupros, Chipre, isla en la que este árbol es muy abundante.<br/>El nombre específico glabra, del latín glaber (sin pelo), hace referencia a la corteza, la cual, cuando se desprenden las escamas es lisa.<br/>Este ciprés, es muy similar al Cupressus arizonica, pero de hecho son dos especies diferentes y fáciles de diferenciar. Mientras que la corteza del Ciprés de Arizona se desprende en tiras, la del Ciprés azul lo hace en escamas. Desgraciadamente, esta confusión todavía existe en jardinería.<br/>Originario de las montañas del centro de Arizona (Estados Unidos) donde se descubrió en el año 1907; aunque se introdujo antes en Europa el Cupressus arizonica, allá por el año 1882.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676251.09,4611782.68</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>55</id>
+            <common>CIPRÉS DE CACHEMIRA</common>
+            <commonName>CIPRÉS DE CACHEMIRA - CIPRÉS LLORÓN</commonName>
+            <scientificName>Cupressus cashmeriana Carrière</scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressus_cashmeriana.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 20/30 m. - Fl. : nov. - mar.
+    </shortDescription>
+            <description>
+    La palabra cupressus, se cree que proviene del griego cyparissos, ciprés, aunque también hay quien opina que viene de Cupros, Chipre, isla en la que este árbol es muy abundante. <br/>El nombre específico, cashmeriana, hace referencia a su descubrimiento en Cachemira en 1838 por el cirujano y botánico británico John Forbes Royle que identificó 900 especies.<br/>Originario del este del Himalaya es considerado como el árbol nacional del Reino de Bután.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675042.04,4612496.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>56</id>
+            <common>CIPRÉS COMÚN</common>
+            <commonName>CIPRÉS COMÚN</commonName>
+            <scientificName>Cupressus sempervirens L. </scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressus_sempervirens.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 25/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    No se conoce con precisión su lugar de origen, pero se cree que es el este del mediterráneo.<br/>Es muy longevo, conociéndose ejemplares de más de 1000 años. Se ha utilizado en la construcción de casas y barcos por la resistencia de su madera a la acción del mar.<br/>Cultivado desde antiguo como árbol ornamental es típico de los cementerios. Los egipcios conservaban sus momias en cofres de ciprés, que estaba consagrado al dios de la muerte.<br/>Griegos y romanos grabaron leyes y documentos en tablas de ciprés como signo de permanencia. Sempervirens indica la persistencia del follaje, siempre de color verde.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675139.28,4611150.55</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>57</id>
+            <common>CIPRÉS DE LEYLAND</common>
+            <commonName>CIPRÉS DE LEYLAND - LEILANDI | CIPRÉS HÍBRIDO</commonName>
+            <scientificName>
+    x Cupressocyparis leylandii (A. B. Jackson ) Dallimore
+    </scientificName>
+            <family>CUPRESÁCEAS </family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressocyparis_leylandi.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    Obtenida por hibridación espontánea entre dos especies de cupresáceas de géneros distintos, Cupressus macrocarpa y Chamaecyparis nootkatensis.<br/>Se originó a finales del siglo XIX en el país de Gales (Reino Unido), por el viverista C. J. Leyland a pesar de que las especies parentales no son nativas de las Islas Británicas.<br/>Especie rústica y vigorosa que crece bien en una gran cantidad de climas templados y subtropicales. El principal destino de los leylandi es para la confección de setos tupidos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674055.14,4613004.5</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>58</id>
+            <common>CIPRÉS MACROCARPA</common>
+            <commonName>
+    CIPRÉS MACROCARPA - CIPRÉS DE MONTERREY | CIPRÉS DE LAMBERT
+    </commonName>
+            <scientificName>Cupressus macrocarpa Hartweg ex Gordon </scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressus_macrocarpa.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 30/35 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre específico macrocarpa proviene del griego macrós, &quot;grande&quot;, y karpós, &quot;fruto&quot;.<br/>Nativo de la Bahía de Monterrey en California (EE.UU.). <br/>La distribución natural de esta especie es muy reducida (cuando se descubrió apenas había 1500 ejemplares) en cambio hoy se encuentra cultivado por todo el mundo.<br/>Su silueta columnar y tupida se ensancha y desordena con la edad. Las hojas desprenden un agradable olor a limón al ser frotadas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673356.07,4613664.6</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>59</id>
+            <common>CIPRÉS DE PORTUGAL</common>
+            <commonName>
+    CIPRÉS DE PORTUGAL - CIPRÉS DE BUÇACO | CIPRÉS MEJICANO
+    </commonName>
+            <scientificName>Cupressus lusitanica Miller </scientificName>
+            <family>CUPRESÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cupressus_lusitanica.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 25/30 m. - Fl. : ene. - mar.
+    </shortDescription>
+            <description>
+    Su nombre común hace referencia a que ya se cultivaba en Portugal hacia 1634.<br/>Sin embargo la especie es originaria de México y de Centroamérica: Guatemala, El Salvador y Honduras. Se planta para fines de producción de madera, control de erosión y como ornamental en gran cantidad de países de todo el mundo.<br/>La madera se usa para construcciones interiores y exteriores, muebles finos, embalajes, lápices, artesanías, postes, y en barcos y construcciones marinas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675397.03,4611177.09</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>60</id>
+            <common>CIRUELO</common>
+            <commonName>CIRUELO</commonName>
+            <scientificName>Prunus domestica L.</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/prunus_domestica.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA (FRUTAL) - Alt. : 8/12 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    El nombre latín prunus era utilizado por los romanos para denominar no sólo al ciruelo silvestre sino también a otros árboles similares como el cerezo, almendro o albaricoquero. Todos ellos se agrupan actualmente en el género Prunus.<br/>El nombre específico, del latín domestica, de casa, doméstico, hace alusión a su condición de domesticado, cultivado. Sus frutos son muy variados, de distintos colores y tamaños, cubiertos de una capa cerosa. <br/>El ciruelo produce frutos, las ciruelas, que se consumen en fresco o bien se producen zumos y mermeladas; como secas son de un alto valor nutritivo. Tienen un efecto laxante y la decocción de las flores, diurético.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676816.5,4615072.32</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>61</id>
+            <common>CIRUELO PÚRPURA</common>
+            <commonName>CIRUELO PÚRPURA - CIRUELO DE PISSARD</commonName>
+            <scientificName>
+    Prunus cerasifera Ehrh. &apos;Pissardii&apos; (Carrière) L. H. Bailey
+    </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/prunus_cerasifera_pissar.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    El nombre específico cerasifera hace referencia al parecido de sus frutos con las verdaderas cerezas. Deriva del término cerasus, que toma el nombre de la ciudad de Cerasus (la actual Kerasun) en Asia Menor, cerca del Mar Negro, desde donde se importaba el cerezo antes de nuestra época hacia Europa.<br/>El nombre de la variedad pissardii está dedicado a Pissard, Jardinero Mayor del Sha de Persia, que fue el primero que descubrió esta variedad de hojas púrpura en los jardines de Tabritz; el nombre de la variedad atropurpurea es debido al color púrpura de sus hojas. <br/>Esta variedad fue introducida en Europa por Francia hacia 1880, a raíz de un pedido hecho por un viverista a Pissard.<br/>Es originario desde Asia central, hasta el Cáucaso y la región de Irán.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676580.14,4613032.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>62</id>
+            <common>CORNEJO COMÚN</common>
+            <commonName>CORNEJO COMÚN - SANGUINO</commonName>
+            <scientificName>Cornus sanguinea L. </scientificName>
+            <family>CORNÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cornus_sanguinea.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 6/8 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Cornus es el nombre latino de la planta y significa cuerno, haciendo referencia a la dureza del fruto y de su madera. El nombre específico sanguinea alude al color de las ramillas.<br/>Es originario de casi toda Europa y Oriente Próximo.<br/>La madera es de calidad excelente, de color blanco rosado, muy dura y resistente. Se utilizaba para hacer mangos de herramientas y pequeñas piezas torneadas.<br/>Las hojas de color verde se convierten en rojizas en otoño. Las ramas delgadas se utilizaban para cestería.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>672502.97,4612942.62</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>63</id>
+            <common>COTONEASTER BLANCO</common>
+            <commonName>COTONEASTER BLANCO - GRIÑOLERA BLANCA</commonName>
+            <scientificName>Cotoneaster lacteus W. Smith. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cotoneaster_lacteus.jpg
+    </photo>
+            <numberOfPhotos>8</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 2/4 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre del género Cotoneaster procede del latín cotoneus, &quot;membrillo&quot;, y aster, que indica &quot;parecido imperfecto&quot; aludiendo al parecido de las hojas de algunas especies con las del membrillero (Cydonia oblonga). <br/>El específico lacteus, por el envés blanquecino de las hojas.<br/>Procede del oeste y sur de China donde existen numerosas especies endémicas del género, que es uno de los más complejos entre las rosáceas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677314.49,4611691.88</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>64</id>
+            <common>DRÁCENA</common>
+            <commonName>DRÁCENA - CORDILINA | ÁRBOL REPOLLO</commonName>
+            <scientificName>Cordyline australis (G. Forst.) Endl. </scientificName>
+            <family>AGAVÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cordyline_australis.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    MONOCOTILEDÓNEA ARBÓREA - Alt. : 6/10 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico procede del griego Kordyle, &quot;maza&quot;, refiriéndose a sus raices anchas y carnosas. Procedente de Nueva Zelanda, no es una palmera, aunque su aspecto nos las recuerda. Fue introducida en Europa en el primer cuarto del siglo XIX.<br/>Posee un peculiar aspecto que la hace muy ornamental. Hojas en forma de espada que se curvan y se agrupan a modo de roseta. Sus flores son perfumadas.<br/>Es de crecimiento muy lento, primero con tallo único, para luego ramificarse profusamente.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675351.84,4611641.68</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>65</id>
+            <common>DURILLO</common>
+            <commonName>DURILLO - TINO | BARBADILLO</commonName>
+            <scientificName>Viburnum tinus L. </scientificName>
+            <family>CAPRIFOLIÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/viburnum_tinus.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 4/6 m. - Fl. : ene. - mar.
+    </shortDescription>
+            <description>
+    Arbusto denso que puede también crecer como un pequeño árbol. Su área natural es la región mediterránea. Cultivado en Europa desde al menos el siglo XVIII.<br/>Tiene hojas opuestas, algo coriáceas y brillantes por el haz; el margen de las hojas es entero y suavemente pubescente.<br/>Las flores se agrupan en corimbos, es decir, nacen en distintos puntos pero llegan a la misma altura. El fruto de color azul metálico o casi negruzco tiene un solo hueso.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675446.0,4611467.89</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>66</id>
+            <common>ENCINA</common>
+            <commonName>ENCINA - CARRASCA | CHAPARRO</commonName>
+            <scientificName>Quercus ilex L. </scientificName>
+            <family>FAGÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/quercus_ilex.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Sus hojas son gruesas, duras y elípticas, aunque variables; de borde entero las situadas a mayor altura del suelo y de borde dentado-espinoso las situadas más cerca del suelo para evitar ser ramoneadas por los animales.<br/>Se distribuye por el norte y sur del Mediterráneo. Es el árbol forestal más extendido de la Península. Algunas variedades son comestibles (tanto crudas como asadas) y son el mejor alimento para el ganado porcino.<br/>El ganado posee un vínculo muy estrecho con la encina, ya que las conocidas como Dehesas españolas son una &quot;simbiosis&quot; entre la ganadería, agricultura y selvicultura.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677537.21,4613281.28</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>67</id>
+            <common>ESPINO DE JERUSALÉN</common>
+            <commonName>ESPINO DE JERUSALÉN - PALO VERDE</commonName>
+            <scientificName>Parkinsonia aculeata L.</scientificName>
+            <family>FABÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/parkinsonia_aculeata.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/12 m. - Fl. : jun. - jul.
+    </shortDescription>
+            <description>
+    El nombre genérico Parkinsonia, está dedicado al botánico inglés John Parkinson (1567-1629).La corteza, de color verde, realiza la fotosíntesis al igual que las hojas. Éstas tienen tres espinas en su base, de ahí el nombre específico de aculeata.<br/>La especie procede de América, extendiéndose desde el suroeste de Estados Unidos a Sudamérica.<br/>Es una planta melífera, por la abundancia de su floración. Las flores y la pulpa de los frutos son dulces, llegando a contener los frutos hasta un 60% de azúcar.<br/>La infusión de sus hojas tiene propiedades medicinales febrífugas y sudoríficas, siendo también reconstituyente.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677449.29,4611603.15</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>68</id>
+            <common>ESPINO ORNAMENTAL</common>
+            <commonName>ESPINO ORNAMENTAL - MAJUELO</commonName>
+            <scientificName>Crataegus monogyna Jacq. &apos;Rosea&apos; (Wild) K. Koch.</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/crataegus_monogyna.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 5/10 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    En las ciudades, el espino es muy valorado por su resistencia a crecer en suelos pobres y ambientes polucionados. La madera es dura, compacta y pesada, susceptible de un bonito pulido. Se utiliza para escultura y tornería.<br/>Las flores tienen un solo cárpelo, de ahí el nombre monogyna. Proporciona a los pájaros abundantes bayas de color rojo a final del verano.<br/>Sus frutos, ricos en vitamina C , son comestibles aunque su sabor harinoso y la escasa pulpa que tienen no los hacen sabrosos. Las hojas se añaden en ensaladas y tienen ligero sabor a nueces; además las podemos usar en infusión sustituyendo al té.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675148.29,4611890.7</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>69</id>
+            <common>EUCALIPTO ROJO</common>
+            <commonName>EUCALIPTO ROJO - GOMERO ROJO</commonName>
+            <scientificName>Eucalyptus camaldulensis Dehnhardt</scientificName>
+            <family>MIRTÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/eucalyptus_camaldulensis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 30/40 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre genérico es la transcripción latina del griego éu, &quot;bien&quot;, y kaliptos, &quot;cubrir&quot;, hace referencia a la estructura leñosa que cubre y da protección a los pies florales.<br/>El nombre específico, camaldulensis, procede de la localidad de Camaldoli en la Toscana (Italia), donde se cree que fueron introducidos por primera vez estos árboles.<br/>Antiguamente las hojas del eucalipto eran usadas en infusión para tratar bronquitis o procesos catarrales debido al eucaliptol, compuesto que se usa para la descongestión y desinfección de las vías respiratorias. Original de Australia.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674909.14,4615051.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>70</id>
+            <common>FALSO PIMENTERO</common>
+            <commonName>FALSO PIMENTERO - LENTISCO DEL PERÚ | AGUARIBAY</commonName>
+            <scientificName>Schinus molle L. </scientificName>
+            <family>ANACARDIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/schinus_molle.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 12/15 m. - Fl. : ago. - nov.
+    </shortDescription>
+            <description>
+    Schinus, es el nombre griego del lentisco, otro arbolito de esta misma familia.<br/>Molle, proviene de su nombre nativo peruano. Crece de forma natural en el continente americano, desde el sur de Méjico hasta el norte de Chile y principalmente en Perú, llegando hasta los 3900 m. de altitud en los Andes. Aspecto llorón de las ramas.<br/>Se trata de una planta ampliamente utilizada por la medicina tradicional. A su corteza y resina se le han atribuido propiedades tónicas, antiespasmódicas y cicatrizantes.<br/>Sus hojas, muy aromáticas, huelen como la pimienta. Las semillas molidas se usan como sucedáneo de pimienta blanca y las enteras como pimienta rosada.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675325.01,4611790.2</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>71</id>
+            <common>FOTINIA</common>
+            <commonName>FOTINIA - ACEROLO CHINO</commonName>
+            <scientificName>Photinia serratifolia (Desf.) Kalkman. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/photinia_serratifolia.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO O ÁRBOL DE HOJA PERENNE - Alt. : 6/10 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Photinia deriva del griego, &quot;reluciente&quot;, en referencia a su brillante follaje.\nEl nombre específico serratifolia, se debe al borde de la hoja que es suavemente aserrado.<br/>Llama la atención su decorativo follaje con hojas verdes acompañadas de algunas de color rojo que corresponde a las hojas viejas. Permanecen unos tres años en la planta.<br/>Como curiosidad, y al menos en Zaragoza, muchos ejemplares están injertados sobre un pie de membrillero (Cydonia oblonga) y a veces podemos ver brotar sus hojas en la base.<br/>La planta procede de China, Japón y Formosa.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675381.96,4611226.23</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>72</id>
+            <common>FRESNO DE FLOR</common>
+            <commonName>FRESNO DE FLOR - ORNO</commonName>
+            <scientificName>Fraxinus ornus L.</scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/fraxinus_ornus.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Fraxinus es el nombre latino del fresno que proviene de su antiguo nombre griego phraxo, &quot;separación&quot;, &quot;cierre&quot;, debido a que se utilizaba para la construcción de cierres y para separar márgenes.<br/>Ornus es el nombre latino dado por Virgilio y Homero para designar a este fresno. <br/>En el sur de Italia y Sicilia se cultiva para la obtención del &quot;maná&quot;, bebida azucarada muy apreciada por sus propiedades laxantes. Para ello, se sangra el árbol durante el verano haciendo unas incisiones en la corteza por las que fluye este líquido.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673396.26,4613442.55</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>73</id>
+            <common>FRESNO DE HOJA ANCHA</common>
+            <commonName>FRESNO DE HOJA ANCHA - FRESNO COMÚN</commonName>
+            <scientificName>Fraxinus excelsior L. </scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/fraxinus_excelsior.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El fresno, que se distribuye naturalmente por el continente europeo, tiene múltiples usos medicinales. Es diurético y antiinflamatorio, empleándose en afecciones reumáticas.<br/>El nombre específico excelsior (superior) se refiere a su magnificencia. <br/>Su madera es de color pardo amarillento, es pesada y dura, elástica, y se usa para fabricar muebles y en la industria aeronáutica.<br/>Sus yemas negras en vez de marrones nos ayudan a distinguirlo de los otros fresnos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>678282.68,4613738.82</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>74</id>
+            <common>GLICINA</common>
+            <commonName>GLICINA - VISTERIA CHINA | FLOR DE PLUMA</commonName>
+            <scientificName>Wisteria sinensis (Sims) D C. </scientificName>
+            <family>FABÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/wisteria_sinensis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO TREPADOR DE HOJA CADUCA - Long. : 20/30 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del médico americano Caspar Wistar, de principios del S. XIX.La planta procede de China y se introdujo en Europa en 1816, viviendo todavía uno de los primeros ejemplares plantados en el Jardín Botánico de Kew, en Londres.<br/>La flor tiene la estructura amariposada de las leguminosas en general. Sus flores se agrupan en racimos colgantes de forma piramidal. Sus legumbres y semillas son muy venenosas.<br/>Sus troncos envuelven los soportes en el sentido contrario de las agujas del reloj, (si miramos desde arriba) a diferencia de la mayoría de las especies que lo hacen al revés.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674047.61,4612873.56</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>75</id>
+            <common>GRANADO</common>
+            <commonName>GRANADO</commonName>
+            <scientificName>Punica granatum L.</scientificName>
+            <family>PUNICÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/punica_granatun.jpg
+    </photo>
+            <shortDescription>
+    \nÁRBOL DE HOJA CADUCA (FRUTAL) - Alt. : 5/8 m. - Fl. : may. - jun.\n
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del término latín punicus, cartaginés, refiriéndose a la región del norte de África (la antigua Cartago) donde es muy abundante.<br/>El nombre específico granatum se refiere al tipo de fruto, formado por numerosos granos.<br/>Es un árbol conocido por los egipcios, 2500 años antes de Cristo y en la antigua China. Formaba parte de los famosos jardines colgantes de Babilonia.<br/>Una parte de su utilidad es la ornamental, aunque el granado también se utiliza como árbol frutal. Con el jugo de sus granos se prepara un jarabe, la granadina, empleado como refresco y contra las afecciones de garganta. La cáscara y las flores, una vez secas, se utilizan como astringentes debido a su alto contenido en taninos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677665.35,4612305.54</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>76</id>
+            <common>HIEDRA</common>
+            <commonName>HIEDRA</commonName>
+            <scientificName>Hedera helix L. </scientificName>
+            <family>ARALIÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/hedera_helix.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    TREPADORA DE HOJA PERENNE - Long. : 15/20 m. - Fl. : ago. - oct.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene, según algunos autores, del celta hedra, &quot;cuerda&quot;; y, según otros, de haerere, &quot;adherirse&quot;, haciendo referencia los dos nombres a la capacidad que tiene la planta para adherirse en cualquier tipo de soporte. Esta especie se ha usado en jardinería desde muy antiguo y cuenta con más de 100 variedades. <br/>Aunque normalmente es trepadora, también puede crecer como un pequeño árbol sin necesidad de soporte (foto 3). Sus hojas, coriáceas y lobuladas, son muy variables.<br/>Se encuentra en toda Europa, gran parte de Asia y norte de África.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675341.03,4611363.17</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>77</id>
+            <common>HIGUERA</common>
+            <commonName>HIGUERA</commonName>
+            <scientificName>Ficus carica L.</scientificName>
+            <family>MORÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ficus_carica.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA (FRUTAL) - Alt. : 10/15 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Su lugar de origen se sitúa en Oriente Próximo. Extendido desde la antigüedad por toda la región Mediterránea, es uno de los primeros árboles cultivados por el hombre.<br/>La reproducción de las higueras constituye un proceso complejo, desconociéndose todavía algunos de sus detalles. Sus flores no son visibles externamente ya que están dentro del receptáculo, pareciendo un pequeño higo que, con el tiempo, se va hinchando. <br/>Los griegos cebaban sus ocas con higos, así les aumentaban los hígados. A esta operación se le denominaba hepar sykoton (hígado con higos) que traducido al latín es ficatum hepar, de ahí ficus. Las hojas y las ramas tienen látex que se utiliza para combatir verrugas y para aliviar picaduras y mordeduras de insectos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674086.19,4615544.95</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>78</id>
+            <common>JABONERO DE CHINA</common>
+            <commonName>JABONERO DE CHINA - ÁRBOL DE LOS FAROLILLOS</commonName>
+            <scientificName>Koelreuteria paniculata Laxm.</scientificName>
+            <family>SAPINDÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/koelreuteria_paniculata.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    \nÁRBOL DE HOJA CADUCA - Alt. : 10/12 m. - Fl. : jun. - jul.\n
+    </shortDescription>
+            <description>
+    El nombre genérico, Koelreuteria, está dedicado a Joseph G. Koelreuter (1722-1806),\nprofesor de Historia Natural en Alemania y pionero en los estudios sobre hibridaciones.<br/>El nombre específico se debe al tipo de inflorescencia, en panícula (de aspecto piramidal).<br/>Procedente de China y Corea, introducido en Japón desde la antigüedad.<br/>También se le denomina comúnmente el árbol de los farolillos, debido a la multitud de frutos que cuelgan (cápsulas ovoides infladas) de sus ramas a modo de pequeños farolillos, como de papel, que al moverse con el viento producen un sonido peculiar.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676675.64,4613148.4</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>79</id>
+            <common>LAUREL</common>
+            <commonName>LAUREL - LAURO, LAUREL DE APOLO, LAUREL DE DAFNE</commonName>
+            <scientificName>Laurus nobilis L. </scientificName>
+            <family>LAURÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/laurus_nobilis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    \nARBUSTO O ÁRBOL DE HOJA PERENNE - Alt. : 10/15 m. - Fl. : feb. - abr.\n
+    </shortDescription>
+            <description>
+    El nombre genérico Laurus es el que designa al laurel en latín. El específico nobilis, &quot;notable&quot;, &quot;célebre&quot;, por su excelencia y fama, comparado con otros congéneres.<br/>Las hojas del laurel son muy aromáticas y se usan en multitud de platos, guisos y adobos como condimento. Los frutos se utilizan en medicina popular.<br/>El laurel es símbolo de triunfo en las culturas mediterráneas.<br/>Es originario de la cuenca mediterránea y el Cáucaso. Tolera muy bien la poda.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676159.18,4612682.67</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>80</id>
+            <common>LAUREL CEREZO</common>
+            <commonName>LAUREL CEREZO - LAUROCERASO</commonName>
+            <scientificName>Prunus laurocerasus L. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/prunus_laurocerasus.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 4/8 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico es el antiguo nombre en latín del ciruelo. <br/>El específico laurocerasus de laurus &quot;laurel&quot; y cerasus &quot;cerezo&quot; hace referencia a que se asemeja a un cerezo con hojas de laurel.<br/>Es una planta medicinal aunque venenosa en grandes cantidades.<br/>Las semillas, por su contenido en ácido cianhídrico, son altamente tóxicas y tienen el sabor de las almendras amargas.<br/>Las hojas han sido usadas por los coleccionistas de mariposas, ya que estrujadas y colocadas dentro de un frasco hermético, matan a los lepidópteros allí encerrados y los mantiene por largo tiempo sin alterar. Especie nativa del suroeste de Asia y sureste de Europa.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675398.93,4611476.49</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>81</id>
+            <common>LILO</common>
+            <commonName>LILO - LILA | LILERO</commonName>
+            <scientificName>Syringa vulgaris L. </scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/syringa_vulgaris.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 3/5 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre del género Syringa deriva del griego «syrinx», &quot;flauta&quot;, ya que con su madera se fabricaban flautas. Nativa del sureste europeo y Oriente Próximo.<br/>Sus flores, muy olorosas, atraen a muchas mariposas e insectos. El aceite esencial de las flores se utiliza en la elaboración de perfumes. Las flores son comestibles y se pueden emplear para adornar platos o ensaladas. Existen cientos de variedades con distintos colores de flores.<br/>Los frutos son unas cápsulas verdes, después pardas, ovaladas con dos semillas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674007.25,4612886.41</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>82</id>
+            <common>LIMPIATUBOS</common>
+            <commonName>LIMPIATUBOS - CALISTEMON | ÁRBOL CEPILLO</commonName>
+            <scientificName>Callistemon spp. </scientificName>
+            <family>MIRTÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/callistemon.jpg
+    </photo>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 6/8 m. - Fl. : may. - oct.
+    </shortDescription>
+            <description>
+    El nombre genérico Callistemon deriva del griego kalli (bello) y stemon (estambre), debido a la belleza de sus flores.<br/>Género con muchas especies algunas difíciles de distinguir entre ellas. Hojas con glándulas esenciales de pequeño tamaño y aromáticas. Las especies más cultivadas en Zaragoza son: C. citrinus y C. viminalis. Los frutos leñosos crecen directamente en las ramas.<br/>Dichos frutos permanecen cerrados durante años y solo se abren con el calor de los incendios.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676747.74,4612171.55</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>83</id>
+            <common>LIQUIDÁMBAR</common>
+            <commonName>LIQUIDÁMBAR - OCOZOL | ESTORAQUE</commonName>
+            <scientificName>Liquidambar styraciflua L. </scientificName>
+            <family>HAMAMELIDÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/liquidambar_styraciflua.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 20/25 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre específico styraciflua, significa rico en sustancias gomosas. Su lugar de origen se encuentra en oeste de Norteamérica, Méjico y Guatemala. Se introdujo en Europa en 1681. <br/>Sus hojas al frotarlas desprenden un olor balsámico. Es un árbol ornamental apreciado por sus tonalidades otoñales que presentan un cromatismo muy variado e intenso. Su tronco y también las ramas tienen un aspecto suberoso (como corcho). <br/>Es una planta medicinal de uso muy antiguo que coincide con el actual en su aplicación contra la caries, garganta y afecciones de la piel, lo que da una idea de su efectividad.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676990.35,4615603.01</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>84</id>
+            <common>LIQUIDÁMBAR ORIENTAL</common>
+            <commonName>LIQUIDÁMBAR ORIENTAL</commonName>
+            <scientificName>Liquidambar orientalis L.</scientificName>
+            <family>HAMAMELIDÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/liquidambar_orientalis.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico deriva del latín liquidus, &quot;líquido&quot;, y del árabe, ambar debido a la secreción de una sustancia resinosa y aromática que exuda.<br/>El nombre específico hace referencia al lugar de origen, oriente del mediterráneo (Turquía).<br/>La corteza, separada del tronco, hervida y exprimida rápidamente, produce una sustancia resinosa muy aromática que se utiliza en la fabricación de aromas y perfumes (en jabones, pastillas contra la tos, etc.), y en preparaciones terapéuticas, sobre todo para el tratamiento de enfermedades de la piel.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675554.0,4611691.51</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>85</id>
+            <common>MADRESELVA</common>
+            <commonName>MADRESELVA - CHUPAMIEL</commonName>
+            <scientificName>Lonicera japonica Thunb. </scientificName>
+            <family>CAPRIFOLIÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/lonicera_japonica.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA SEMIPERENNE - Alt. : -- - Fl. : may. - sep.
+    </shortDescription>
+            <description>
+    El nombre genérico Lonicera está dedicado a Adam Lonitczer, médico y botánico alemán.<br/>Es nativa del este de Asia: Japón, Corea, norte y este de China.<br/>Las flores son doble-lenguadas, abren blancas y cierran amarillo, son dulcemente fragantes utilizándose en perfumería y en la medicina tradicional china.<br/>No tan beneficiosas son sus bayas negras que pueden resultar tóxicas en caso de ingerirse.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675424.31,4614999.92</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>86</id>
+            <common>MADROÑO</common>
+            <commonName>MADROÑO - MADROÑERO</commonName>
+            <scientificName>Arbutus unedo L.</scientificName>
+            <family>ERICÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/arbutus_unedo.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO O ÁRBOL DE HOJA PERENNE - Alt. : 10/15 m. - Fl. : oct. - dic.
+    </shortDescription>
+            <description>
+    El nombre genérico según algunos autores deriva del término en latín arbutus, diminutivo de arbor, &quot;árbol pequeño&quot;, haciendo alusión a su porte habitual. Otros autores opinan que la palabra arbutus deriva del celta arbois, &quot;fruto de superficie áspera&quot;.<br/>El termino unedo es el antiguo nombre en latín del arbusto y del fruto. <br/>El fruto tarda un año en madurar y en esta época aparecen ya las flores en la planta de la siguiente producción; son carnosos y de gusto agradable cuando son maduros. Contienen alcohol, por lo que su consumo en exceso puede producir una sensación de embriaguez. Con sus frutos se realizan mermeladas y el famoso &quot;licor de madroño&quot; alicantino.<br/>Las hojas y la corteza son ricas en taninos, por lo que tiene propiedades medicinales, principalmente astringentes. Se encuentra natural en la Europa Meridional y mediterráneo.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675398.67,4611483.46</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>87</id>
+            <common>MAGNOLIO</common>
+            <commonName>MAGNOLIO - MAGNOLIO COMÚN</commonName>
+            <scientificName>Magnolia grandiflora L.</scientificName>
+            <family>MAGNOLIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/magnolia_grandiflora.jpg
+    </photo>
+            <numberOfPhotos>15</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : jun. - jul.
+    </shortDescription>
+            <description>
+    El nombre de Magnolia se le dio como homenaje a Pierre Magnol, quien fue director del Jardín Botánico de Montpellier en el siglo XVII.<br/>El nombre específico grandiflora hace referencia al tamaño de sus flores.<br/>Este árbol es originario de la zona suroriental de los Estados Unidos.<br/>El magnolio es una de las angiospermas más primitivas que se conocen, porque se asegura que ya existían durante el período cretácico en la Era Secundaria o Era Mesozoica.<br/>Los magnolios son árboles longevos y de crecimiento lento. La madera es dura y pesada, habiéndose utilizado en la fabricación de muebles.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675398.52,4611622.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>88</id>
+            <common>MELIA</common>
+            <commonName>MELIA - AGRIAZ | PARAÍSO | CINAMOMO | LILO INDIO</commonName>
+            <scientificName>Melia azedarach L.</scientificName>
+            <family>MELIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/melia.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    El nombre genérico Melia proviene del griego melis, que significa fresno, dada la semejanza de las hojas entre ambos árboles.<br/>El nombre específico azedarach corresponde al nombre indígena de este árbol.<br/>Es originario del norte de India y el centro y occidente de China. Hoy en día se encuentra naturalizado en numerosas regiones tropicales y subtropicales.<br/>La corteza y las hojas tienen propiedades medicinales, siendo un buen sucedáneo de la quinina que sirve para el tratamiento de la malaria y es un componente de la tónica.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675384.62,4612303.2</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>89</id>
+            <common>MEMBRILLO</common>
+            <commonName>MEMBRILLO - MEMBRILLERO</commonName>
+            <scientificName>Cydonia oblonga Mill. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/cydonia_oblonga.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    \nÁRBOL DE HOJA CADUCA (FRUTAL) - Alt. : 6/8 m. - Fl. : mar. - abr.\n
+    </shortDescription>
+            <description>
+    El nombre genérico alude a la ciudad de Cydon, en la isla de Creta, donde se cultivó de forma abundante y se difundió como el manzano de Cydon.<br/>El específico hace referencia la forma oblonga de las hojas. Originario de Asia, ha sido cultivado desde antiguo por las civilizaciones del mediterráneo. El fruto, muy aromático, tiene la superficie cubierta de una borra, sobretodo cuando aún no ha madurado.<br/>La palabra mermelada deriva del nombre portugués del membrillero, &quot;marmeleiro&quot;.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675239.65,4611557.33</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>92</id>
+            <common>METASECUOYA </common>
+            <commonName>METASECUOYA - FALSA SECOYA | SECOYA CADUCA</commonName>
+            <scientificName>Metasequoia glyptostroboides Hu G. Cheng</scientificName>
+            <family>TAXODIÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/metasequoia_glyptostro.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA CADUCA - Alt. : 35/50 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico se compone de dos vocablos: del griego meta, &quot;semejante&quot; y de\nsequoia, por su parecido a las secuoyas. El nombre específico hace referencia a su semejanza con plantas del género Glyptostrobus, de la misma familia botánica.<br/>La metasecuoya es originaria de China y se creía extinguida, conociéndose sólo en registros fósiles, del Período Plioceno, hace dos millones de años.<br/>En 1945, el profesor Hu encontró estas coníferas junto a un templo de Sezchuan, en el valle del río Yangtze. Los lugareños ya la conocían desde hacía más de 2000 años.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673247.39,4612376.24</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>93</id>
+            <common>MIMOSA</common>
+            <commonName>MIMOSA - MIMOSA PLATEADA | AROMO FRANCÉS</commonName>
+            <scientificName>Acacia dealbata Link. </scientificName>
+            <family>MIMOSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/acacia_dealbata.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 8/15 m. - Fl. : ene. - mar.
+    </shortDescription>
+            <description>
+    La especie procede del este de Australia y Tasmania. Se introdujo en Europa en 1824.<br/>Acacia procede del griego akis &quot;punta&quot;, aludiendo a las espinas de otras especies de acacias africanas ya que las australianas, por lo general, no las tienen.<br/>Las hojas están cubiertas de un revestimiento céreo muy tenue y blanquecino que le da a la hoja un tono verde claro con matices grisáceos, derivando de ahí el nombre científico dealbata &quot;blanquecino&quot; en latín.<br/>Es planta muy rica en taninos, produce una especie de goma arábiga y se han utilizado sus flores aromáticas en perfumería. Australia tiene como emblema nacional a la mimosa.<br/>La miel de las flores de las acacias es considerada como una delicia, por tener un gusto suave a flor, buena textura y además es una de las pocas mieles que no cristalizan.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673893.67,4611858.96</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>94</id>
+            <common>MIRTO</common>
+            <commonName>MIRTO - ARRAYÁN | MURTA | MYRTA</commonName>
+            <scientificName>Myrtus communis L. </scientificName>
+            <family>MIRTÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/myrtus_communis.jpg
+    </photo>
+            <numberOfPhotos>7</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA PERENNE - Alt. : 2/4 m. - Fl. : may. - ago.
+    </shortDescription>
+            <description>
+    El nombre genérico Myrtus es el dado por los romanos y proviene del griego myrtos que significa perfume. El específico denota lo común o corriente de la especie.<br/>Toda la planta es muy olorosa y aromática; su madera, también aromática, se utiliza para la fabricación de muebles y utensilios de madera, así como en ebanistería, ya que es dura y compacta. Especie originaria de Europa meridional y el norte de África. <br/>Planta muy famosa en la antigüedad, cuando se consideraba símbolo del amor y la belleza. Con coronas de mirto se honraba a los campeones olímpicos.<br/>Los frutos son bayas globosas comestibles de color azul negruzco con numerosas semillas.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675376.16,4611530.57</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>95</id>
+            <common>MORERA BLANCA</common>
+            <commonName>MORERA BLANCA</commonName>
+            <scientificName>Morus alba L. </scientificName>
+            <family>MORÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/morus_alba.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    La morera blanca se cultiva por sus hojas, único alimento de los gusanos de seda, cuyos capullos se utilizan para fabricar seda. En las ciudades se planta por su amplia sombra.<br/>La industria de la seda existe en China desde hace más de 5000 años y se mantuvo en secreto su elaboración por mucho tiempo. Según la leyenda, los huevos de los gusanos de seda fueron llevados a Europa en los primeros tiempos del cristianismo por dos monjes.<br/>Los frutos son las moras, que son pequeñas agrupaciones de varias drupas (bayas) carnosas de color blanco o rojizo y hasta negro. Son comestibles pero poco sabrosas comparadas con las exquisitas moras que da Morus nigra.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675254.89,4611147.95</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>96</id>
+            <common>MORERA JAPONESA</common>
+            <commonName>MORERA JAPONESA - MORERA DE HOJAS DE PLÁTANO</commonName>
+            <scientificName>Morus kagayamae Koidz. </scientificName>
+            <family>MORÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/morus_kagayamae.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Se distingue de la morera blanca en sus hojas más grandes y marcadamente lobuladas, aunque variables, como algunas especies del género (higuera por ejemplo).<br/>También la distinguiremos por su porte muy abierto ideal para dar sombra. <br/>Es un árbol nativo de Japón, su nombre específico hace referencia a un nombre japonés.<br/>Aún en invierno fluye del árbol un látex como el de las higueras.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675517.76,4614923.89</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>97</id>
+            <common>MORERA DE PAPEL</common>
+            <commonName>MORERA DE PAPEL</commonName>
+            <scientificName>Broussonetia papyrifera (L.) Vent. </scientificName>
+            <family>MORÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/brousonetia_papyrifera.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : abr. - jun.
+    </shortDescription>
+            <description>
+    El nombre genérico está dedicado al francés Broussonet, botánico que introdujo esta especie en Francia en el siglo XVIII.<br/>Papyrifera viene del latín, y significa &quot;productora de papel&quot;, ya que su corteza se emplea para la fabricación de papel y tejidos parecidos al lino.<br/>Las hojas presentan dos formas distintas muy marcadas, incluso en la misma rama como otras especies de esta familia: higuera (Ficus carica) o morera (Morus alba). <br/>Los ejemplares de mayor tamaño se pueden ver en el Parque Bruil introducidos en la segunda mitad del siglo XIX, seguramente por el jardinero francés del parque, Lorenzo Racaud.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677563.2,4613361.16</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>98</id>
+            <common>NOGAL</common>
+            <commonName>NOGAL - NOGUERA</commonName>
+            <scientificName>Juglans regia L. </scientificName>
+            <family>JUGLANDÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/juglans_regia.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    A las nueces, los romanos las llamaban jovis glans, &quot;bellotas de Júpiter&quot;, y de este término\nderiva el nombre genérico Juglans. El específico regia significa real.<br/>Originario de Asia menor y del sudeste de Europa.<br/>Es cultivado por la madera, el fruto comestible y también como ornamental.<br/>Tanto sus hojas como la cubierta carnosa que protege el fruto (la nuez, de alto valor nutritivo) son agradablemente aromáticas. Madera de calidad, se usa en acabados de lujo.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>672650.02,4613007.15</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>99</id>
+            <common>NOGAL NEGRO</common>
+            <commonName>NOGAL NEGRO - NOGAL NEGRO AMERICANO</commonName>
+            <scientificName>Juglans nigra L. </scientificName>
+            <family>JUGLANDÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/juglans_nigra.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 35/40 m. - Fl. : may. - jun.
+    </shortDescription>
+            <description>
+    Especie muy extendida en Norteamérica, también se cultiva ampliamente por el sur de Europa, el Sur de Sudamérica y Asia oriental.<br/>El nogal negro fue introducido en Europa en 1629 donde se cultiva como ornamental y, en muchas regiones, se realiza su cultivo industrialmente por la alta calidad de su madera: densa, dura y fuerte. El nombre específico nigra hace referencia a la corteza y al fruto.<br/>Su nuez es comestible, su cáscara muy dura, más que la del nogal común.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676861.88,4612776.43</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>100</id>
+            <common>OLMO PÉNDULO</common>
+            <commonName>OLMO PÉNDULO</commonName>
+            <scientificName>Ulmus glabra Hudson &apos;Pendula&apos; (Laud.) Rehder </scientificName>
+            <family>ULMÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ulmus_glaba_pen.jpg
+    </photo>
+            <numberOfPhotos>5</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 4/6 m. - Fl. : ene. - feb.
+    </shortDescription>
+            <description>
+    El nombre específico glabra alude a que la corteza permanece lisa durante varios años a diferencia con otros olmos.<br/>Catón o Virgilio, en sus escritos sobre agricultura, aconsejaban emplear este árbol como soporte de la vid.<br/>Las hojas son de tacto áspero y como la mayoría de los olmos asimétricas en su base.<br/>La especie se distribuye por gran parte de Europa y Asia Menor.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675442.68,4611484.9</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>101</id>
+            <common>PALMERA DE CALIFORNIA</common>
+            <commonName>
+    PALMERA DE CALIFORNIA - PALMERA DE FALDAS | PALMERA DE ABANICO
+    </commonName>
+            <scientificName>Washingtonia filifera (Linden ex André) H. Wendl.</scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/washintonia_filifera.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : jul. - ago.
+    </shortDescription>
+            <description>
+    El nombre genérico está dedicado a Georges Washington, fundador de los Estados Unidos de América. Su origen está en las áreas de California, Arizona y Baja California.<br/>El nombre específico filifera, del latín filum, &quot;hilo&quot; y fero, &quot;llevar&quot;, haciendo alusión a los filamentos que tienen en los bordes de las hojas.<br/>En su lugar de origen se utilizan las hojas para construir cabañas, y sus fibras, para elaborar cestas y sandalias. Pertenece al grupo de palmeras con hojas de forma palmeada o palmatiformes (semejantes a una mano abierta).
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676256.18,4611495.53</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>102</id>
+            <common>PALMITO ENANO</common>
+            <commonName>
+    PALMITO ENANO - PALMITO EUROPEO | MARGALLÓN | PALMA DE ESCOBA
+    </commonName>
+            <scientificName>Chamaerops humilis L. </scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/chamaerops_humilis.jpg
+    </photo>
+            <numberOfPhotos>9</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 6 /10 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del griego &quot;chamae&quot;, pequeño, que toca tierra y de &quot;rhops&quot;, matorral.<br/>El específico proviene del latín y significa pequeño, humilde, en referencia a su tamaño.<br/>El ejemplar cultivado con más años de palmito que se conoce está en Padua (Italia), y fue plantado alrededor de 1585.<br/>Las hojas se aprovechan en cestería, para fabricar escobas y tejidos bastos y las fibras que se extraen de ellas en la industria papelera. Son palmeadas y muy rígidas.<br/>La parte más apreciada es el cogollo terminal que se consume en ensaladas. En España es una especie protegida y este aprovechamiento no está permitido.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675348.47,4611538.75</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>133</id>
+            <common>OLIVO</common>
+            <commonName>OLIVO - ACEBUCHE | ACEITUNO</commonName>
+            <scientificName>Olea europaea L.</scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/olea_europaea.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 8/12 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico proviene del latín olea, y éste del griego elaia, &quot;alisado&quot;, por la virtud que tiene el aceite de alisar las cosas untadas.<br/>El nombre específico hace referencia a la zona geográfica donde se ha cultivado desde hace miles de años.<br/>Actualmente el olivo es una especie muy cultivada por los países mediterráneos para la obtención del aceite de oliva, aditivo indispensable en cualquier gastronomía y de gran valor nutritivo. <br/>La madera del olivo es de las más duras y compactas que se conocen, con densidades\nincluso superiores a la unidad. Se utiliza para la ebanistería de lujo y en tornería.<br/>Es un símbolo antiguo de la sabiduría; también es símbolo de la paz; para los hebreos, es el símbolo entre Yahvé y los hombres; en el Islam es el eje del mundo, árbol de la vida.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>673913.97,4615340.0</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>134</id>
+            <common>OLMO COMÚN </common>
+            <commonName>OLMO COMÚN - NEGRILLO</commonName>
+            <scientificName>Ulmus minor Mill. </scientificName>
+            <family>ULMÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ulmus_minor.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 25/30 m. - Fl. : feb. - mar.
+    </shortDescription>
+            <description>
+    Ulmus es el nombre latino antiguo del olmo. Minor, del latín &quot;menor&quot;, aludiendo al tamaño de sus hojas, las más pequeñas de las especies de olmo europeas.<br/>El área originaria de la especie parece ser Europa, norte de África y Asia occidental. Cultivado desde tiempos remotos fue muy utilizado por los romanos por su amplia sombra.<br/>El olmo florece y desarrolla sus frutos (sámaras) antes de que hayan salido las hojas.\nTiene el inconveniente de sufrir con frecuencia grafiosis. Esta enfermedad prácticamente ha diezmado los ejemplares autóctonos de la Península Ibérica y gran parte de Europa.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676731.35,4610952.69</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>135</id>
+            <common>PALMERA CANARIA</common>
+            <commonName>PALMERA CANARIA</commonName>
+            <scientificName>Phoenix canariensis Hort. ex Chabaud</scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/phoenix_canariensis.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 15/20 m. - Fl. : ene. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico Phoenix proviene del griego Phoenicia (Fenicia), lugar donde se cree que se vieron por primera vez este tipo de palmeras.<br/>Esta palmera crece de forma natural en las islas Canarias, y es allí (isla de la Gomera) donde se produce la miel de palma o guarapo que algunos llaman &quot;gomerón&quot; .<br/>Pertenece al grupo de palmeras con hojas de forma pinnada (pluma): hoja compuesta, que presenta los foliolos dispuestos a ambos lados del raquis o nervio central.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675262.17,4611621.08</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>136</id>
+            <common>PALMITO ELEVADO</common>
+            <commonName>PALMITO ELEVADO - PALMERA DE FORRO</commonName>
+            <scientificName>Trachycarpus fortunei (Hook.) H. Wendl.</scientificName>
+            <family>ARECÁCEAS</family>
+            <type>Palmeras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/trachycarpus_fortunei.jpg
+    </photo>
+            <numberOfPhotos>13</numberOfPhotos>
+            <shortDescription>
+    PALMERA DE HOJA PERENNE - Alt. : 10/15 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico Trachycarpus viene del griego trachys, &quot;áspero&quot;, y karpós, &quot;fruto&quot;; por el aspecto y tacto de sus frutos. El nombre específico fortunei, está dedicado al botánico inglés\nRobert Fortune (1812-1880) que exploró China y Japón.<br/>Las hojas, que son de forma palmeada (semejante a una mano abierta) se utilizan para fabricar cestos, sombreros y escobas. Con las fibras del tronco (llamado en las palmeras estípete o estipe) se hacen capas impermeables, felpudos, cuerdas, escobas y cepillos.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675109.45,4613994.43</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>137</id>
+            <common>PAULONIA</common>
+            <commonName>PAULONIA - ÁRBOL DE LA EMPERATRIZ</commonName>
+            <scientificName>Paulownia tomentosa (Thunb.) Sieb. ex Stend.</scientificName>
+            <family>ESCROFULARIÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/paulonia_tomentosa.jpg
+    </photo>
+            <numberOfPhotos>15</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 15/20 m. - Fl. : mar. - may.
+    </shortDescription>
+            <description>
+    El nombre del género recuerda a Anna Paulownia, princesa de los Países Bajos. El nombre de la especie, tomentosa, hace referencia a los brotes y hojas que están recubiertos de pelos.<br/>Es una especie del sudeste asiático. El fruto es una cápsula prolongada en un estrecho espolón con miles de semillas.<br/>En China, de donde es originario, está considerado como el árbol de la buena suerte. Se dice que cuando nace una hija, se planta una paulonia y cuando tenga que casarse, se cortará el árbol para fabricar los muebles de la dote.<br/>Las semillas, muy livianas y suaves, se usaban antiguamente para empaquetar material de porcelana china a modo de poliestireno.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674095.64,4612858.39</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>138</id>
+            <common>PERAL ORNAMENTAL</common>
+            <commonName>PERAL ORNAMENTAL</commonName>
+            <scientificName>Pyrus communis L. &apos;Beech Hill&apos;</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/pyrus_communis.jpg
+    </photo>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    El nombre genérico es el dado en la antigüedad al peral. El específico designa lo común de la especie. La especie procede de Europa oriental y Asia Menor. <br/>La madera pardo rojiza, gris y agrietada con la edad, es muy homogénea y compacta, de grano fino. Se emplea en ebanistería y escultura.<br/>Las variedades ornamentales que vemos en la ciudad dan frutos pequeños y de escasa pulpa. Sin embargo la floración es generosa.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>676661.1,4613147.06</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>139</id>
+            <common>PICEA</common>
+            <commonName>PICEA - ABETO ROJO</commonName>
+            <scientificName>Picea abies (L.) H. Karst. </scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/picea_abies.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 35/40 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    El nombre genérico Picea, deriva del latín pix, &quot;resina&quot;, debido a la cantidad de resina que desprende. El nombre específico abies, alude al parecido existente de este árbol con los verdaderos abetos. Es originaria del centro y norte de Europa.<br/>Muchos de los instrumentos musicales de resonancia, entre ellos principalmente el violín, son fabricados con madera de este árbol. Los violines Stradivarius y Guamieri son de madera de pícea que posee gran resonancia y produce buenas vibraciones.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675431.73,4611293.65</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>140</id>
+            <common>SERBAL DE LOS CAZADORES</common>
+            <commonName>SERBAL DE LOS CAZADORES - SERBAL SILVESTRE</commonName>
+            <scientificName>Sorbus aucuparia L. </scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/sorbus_aucuparia.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA CADUCA - Alt. : 10/15 m. - Fl. : mar. - abr.
+    </shortDescription>
+            <description>
+    Sorbus, es el nombre latino de los frutos del árbol. El específico aucuparia, del latín aucupor, &quot;coger pájaros&quot;, haciendo referencia a sus frutos que atraen a los pájaros.<br/>Sus frutos, similares a cerezas, son dulces y ácidos a la vez, con alto contenido en vitamina C.<br/>Se emplean en mermeladas y compotas. El aguardiente de estos frutos sirve para fabricar los buenos vodkas.<br/>Se distribuye por toda Europa, de Islandia a Rusia y la Península Ibérica.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674160.37,4612581.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>141</id>
+            <common>TAMARIZ</common>
+            <commonName>TAMARIZ - TAMARISCO | TARAY</commonName>
+            <scientificName>Tamarix gallica L. </scientificName>
+            <family>TAMARICÁCEAS</family>
+            <type>Arbustos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/tamarix_gallica.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO DE HOJA CADUCA - Alt. : 6/10 m. - Fl. : abr. - ago.
+    </shortDescription>
+            <description>
+    Muchos estudiosos han identificado el maná bíblico con una secreción que producen unas conchinchillas cuando chupan la savia de una especie de este género. Todavía se emplea como alimento entre los beduinos de Arabia y Jordania (maná del beduino).<br/>Se caracteriza por su aspecto ligero y plumoso. Flores blancas o rosadas. El fruto es una cápsula más o menos cónica que libera al abrirse unas diminutas semillas con unos pelos sedosos que ayuda a su dispersión. Su origen es el oeste de la zona mediterránea. <br/>Útil para estabilizar suelos arenosos ya que sus profundas raíces contribuyen a fijar el terreno.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675418.75,4611484.59</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>142</id>
+            <common>PINO CARRASCO</common>
+            <commonName>PINO CARRASCO - PINO DE ALEPO.</commonName>
+            <scientificName>Pinus halepensis Miller. </scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/pinus_halepensis.jpg
+    </photo>
+            <numberOfPhotos>14</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : feb. - jul.
+    </shortDescription>
+            <description>
+    El nombre especifico halepensis se refiere a la ciudad de Aleppo (Haleb) en Siria.\r\n\r\nNatural en las regiones de África, Asía y Europa que rodean el Mediterráneo. Abunda especialmente en península ibérica y las Islas Baleares de donde podría ser originario.\r\n\r\nLos griegos llamaban a Ibiza y Formentera, islas Pitiusas, del griego pithys, &quot;pino&quot;.\r\n\r\nÁrbol exigente de luz y calor, soporta bien la sequía. Podemos verlo junto al mar literalmente colgado sobre riscos y barrancos o sobre la misma playa.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>675639.57,4611286.99</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>143</id>
+            <common>PINO PIÑONERO</common>
+            <commonName>PINO PIÑONERO - PINO PARASOL | PINO DONCEL |</commonName>
+            <scientificName>Pinus pinea L. </scientificName>
+            <family>PINÁCEAS</family>
+            <type>Coniferas</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/pinus_pinea.jpg
+    </photo>
+            <numberOfPhotos>11</numberOfPhotos>
+            <shortDescription>
+    CONÍFERA DE HOJA PERENNE - Alt. : 20/25 m. - Fl. : abr. - may.
+    </shortDescription>
+            <description>
+    Pino cuyo origen es probable que sea la península ibérica. Natural de toda la franja mediterránea. Es un árbol longevo y se conocen ejemplares de más de 400 años.<br/>Su nombre específico pinea, nos recuerda que este pino produce piñones comestibles.<br/>Los piñones, se usan en pastelería, ensaladas y guisos. España es el primer productor mundial gracias a la comarca Tierra de Pinares, en Valladolid.<br/>La madera de este pino se utiliza para fabricar pasta de papel y para obtener resina.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677290.74,4614951.19</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>15</id>
+            <common>ALIGUSTRE ÁRBOREO</common>
+            <commonName>ALIGUSTRE ÁRBOREO</commonName>
+            <scientificName>Ligustrum lucidum W. T. Aiton </scientificName>
+            <family>OLEÁCEAS</family>
+            <type>Frondosos</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/ligustrum_lucidum.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 8/12 m. - Fl. : jun. - jul.
+    </shortDescription>
+            <description>
+    Es una especie de planta nativa de la mitad sur de China.<br/>El nombre específico lucidum se refiere a la brillantez de sus hojas.<br/>La principal diferencia con L. japonicum son las hojas, que son menos coriáceas. <br/>Los frutos son tóxicos para el hombre pero se usaron en la medicina tradicional China.<br/>Soporta muy bien la polución del tráfico y es la tercera especie más presente en Zaragoza. Algunos de los ejemplares que vemos del Parque del Oeste, fueron trasplantados desde la Plaza San Francisco en los años 80.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>672265.83,4613041.71</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>129</id>
+            <common>FLOR DE LA PASIÓN</common>
+            <commonName>FLOR DE LA PASIÓN</commonName>
+            <scientificName>Passiflora caerulea L.</scientificName>
+            <family>PASIFLORÁCEAS</family>
+            <type>Trepadoras</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/passiflora_caerulea.jpg
+    </photo>
+            <numberOfPhotos>10</numberOfPhotos>
+            <shortDescription>
+    ARBUSTO TREPADOR DE HOJA PERENNE - Lon. : 15/20 m. - Fl. : may. - dic.
+    </shortDescription>
+            <description>
+    El nombre genérico Passiflora proviene del latín flos passionis que significa literalmente flor del sufrimiento (en alusión a la Pasión de Cristo).<br/>El nombre específico caerulea significa azul cielo en lengua guaraní.<br/>La inusual forma de las flores ha sido motivo de asociación con la simbología cristiana de la Pasión de Jesús: sus tres estigmas florales representan los tres clavos usados para clavar a Jesús en la cruz; el ovario y su base representa el cáliz de la Última Cena; las cinco anteras representan las cinco heridas; la corola representa la Santa corona; los diez pétalos, los apóstoles (salvo Judas Iscariote el traidor y Pedro el negador).<br/>Las hojas viejas representan las manos de aquellos que lo persiguieron, las hojas nuevas, la punta de la lanza usada para atravesarlo; y, los zarcillos, los látigos con los que lo azotaron.<br/>El nombre específico caerulea significa azul cielo en lengua guaraní.<br/>La inusual forma de las flores ha sido motivo de asociación con la simbología cristiana de la Pasión de Jesús: sus tres estigmas florales representan los tres clavos usados para clavar a Jesús en la cruz; el ovario y su base representa el cáliz de la Última Cena; las cinco anteras representan las cinco heridas; la corola representa la Santa corona; los diez pétalos, los apóstoles (salvo Judas Iscariote el traidor y Pedro el negador).<br/>Las hojas viejas representan las manos de aquellos que lo persiguieron, las hojas nuevas, la punta de la lanza usada para atravesarlo; y, los zarcillos, los látigos con los que lo azotaron.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>677181.54,4612021.93</coordinates>
+            </geometry>
+        </especie-en-parque>
+        <especie-en-parque>
+            <id>132</id>
+            <common>NÍSPERO</common>
+            <commonName>NÍSPERO</commonName>
+            <scientificName>Eriobotrya japonica (Thunb.) Lindl.</scientificName>
+            <family>ROSÁCEAS</family>
+            <type>Frutales</type>
+            <photo>
+    //www.zaragoza.es/cont/paginas/medioambiente/parques/img/especies/eryobotria_jap.jpg
+    </photo>
+            <numberOfPhotos>12</numberOfPhotos>
+            <shortDescription>
+    ÁRBOL DE HOJA PERENNE - Alt. : 8/12 m. - Fl. : nov. - ene.
+    </shortDescription>
+            <description>
+    El nombre genérico Eriobotrya proviene de dos vocablos griegos: erion, &quot;lana&quot; y botrys,<br/>&quot;racimo&quot;, haciendo referencia a la inflorescencia tomentosa (cubierta de pelillos).<br/>El nombre específico japonica hace referencia a Japón, si bien, su lugar de origen es China.<br/>Árbol muy versátil, utilizado en ocasiones como ornamental aunque su utilidad es como frutal, dando unos frutos llamados nísperos, más sabrosos y de mejor calidad que los de su homólogo europeo llamados níspolas.<br/>Fue descubierto en 1784 por el botánico sueco Carl Peter Thunberg y tres años más tarde lo envió desde Cantón (China) al Jardin des Plantes de París.
+    </description>
+            <geometry>
+                <type>Point</type>
+                <coordinates>674426.62,4611902.94</coordinates>
+            </geometry>
+        </especie-en-parque>
+    </result>
+</resultado>

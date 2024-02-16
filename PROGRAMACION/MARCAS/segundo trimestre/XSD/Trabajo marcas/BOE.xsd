@@ -12,7 +12,7 @@
     <xs:element name="epigrafe">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="item" maxOccurs="unbounded"/>
+                <xs:element ref="item" minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="nombre" type="xs:string" use="required"/>
         </xs:complexType>
