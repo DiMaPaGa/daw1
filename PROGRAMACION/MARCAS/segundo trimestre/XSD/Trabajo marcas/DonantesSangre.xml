@@ -1,0 +1,19 @@
+<?xml-model href="DonantesSangre.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<channel>
+    <title>Donantes Sangre Cordoba - Nivel Reservas Grupos Sanguineos</title>
+    <link href="http://www.donantescordoba.org/online/stock.xml" rel="self"
+        type="application/rss+xml" />
+    <link>http://www.donantescordoba.org</link>
+    <description>Nivel de Reservas del Centro Regional de Transfusion Sanguinea de Cordoba</description>
+    <lastBuildDate>lu., 12 feb. 2024 06:00:00 +0000</lastBuildDate>
+    <language>es-es</language>
+    <item>
+        <title>Reserva GRUPOS SANGUINEOS al 12/02/2024 06:00</title>
+        <description>Reserva GRUPOS SANGUINEOS al 12/02/2024 06:00 Critico O+ O- A- .Bajo A+ .</description>
+        <link>http://www.donantescordoba.org</link>
+        <pubDate>lu., 12 feb. 2024 06:00:00 +0000</pubDate>
+        <creator>crtscordoba</creator>
+        <guid isPermaLink="false">202402120600 at http://www.donantescordoba.org/</guid>
+    </item>
+</channel>

@@ -74,19 +74,31 @@ where ProductID in
 (Select ProductID from orderdetails where Discount >0);
 
 
--- . Selecciona los productos en el que la media de la cantidad pedida sea menor a la del producto propio y el id del producto este entre 8 y 20
-Select ProductID
+-- 11. Selecciona los productos en el que la media de la cantidad pedida sea menor a la del producto propio y el id del producto este entre 8 y 20
+Select ProductID, ProductName
 From products
-where ProductID IN
+where ProductID between 8 and 20
+and ProductID in
+(Select ProductID from orderdetails Where Quantity < (Select avg(Quantity) from orderdetails));
+-- 12 . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
 
-Select avg(Quantity) from orderdetails
--- . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
+SELECT TerritoryID from territories where RegionID in
+(Select RegionID from region where RegionDescription !='Eastern');
 
+-- 13 . Mostrar los clientes de la tabla orders que realizaron pedidos en el día registrado menos reciente
 
--- . Mostrar los clientes de la tabla orders que realizaron pedidos en el día registrado menos reciente
-
+Select CustomerID
+from orders
+where OrderDate in
+(Select OrderDate from orders) order by OrderDate asc limit 1;
 
 -- 1. Obtener el nombre y la cantidad de productos de la categoría "Condiments" que tienen un precio superior al precio promedio de todos los productos
+
+Select ProductName, count(*)
+from products
+group by ProductName
+having CategoryID in (Select CategoryID from categories where CategoryName like 'Condiments')
+and UnitPrice> (Select avg(UnitPrice) from products);
 
 
 -- 2. Selecciona los nombres de los productos que han sido pedidos por clientes que tienen un historial de compras 

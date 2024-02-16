@@ -1,0 +1,123 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+    <!-- Generamos tipo definido propio para las fechas en formato dd/mm/yyyy-->
+    <xs:simpleType name="fechaFormato">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}/\d{2}/\d{4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Generamos otros elementos que a lo largo del documento pueden comportarse de maneras distintas -->
+
+    <xs:element name="epigrafe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="item" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="item">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="urlPdf">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:anyURI">
+                                <xs:attribute name="szBytes" type="xs:integer" use="required"/>
+                                <xs:attribute name="szKBytes" type="xs:integer" use="required"/>
+                                <xs:attribute name="numPag" type="xs:integer" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="urlHtm" type="xs:string"/>
+                <xs:element name="urlXml" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Continuamos ya definiendo nuestro xsd -->
+    <xs:element name="sumario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="meta">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="pub" type="xs:string"/>
+                            <xs:element name="fecha" type="fechaFormato"/> <!-- Incorporamos nuestro tipo en las fechas-->
+                            <xs:element name="fechaAnt" type="fechaFormato"/> <!-- Incorporamos nuestro tipo en las fechas-->
+                            <xs:element name="fechaSig" type="fechaFormato"/> <!-- Incorporamos nuestro tipo en las fechas-->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="diario">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sumario_nbo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="urlPdf">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:anyURI">
+                                                        <xs:attribute name="szBytes" type="xs:integer"/>
+                                                        <xs:attribute name="szKBytes" type="xs:integer"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="seccion" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="departamento" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:choice minOccurs="0" maxOccurs="unbounded"> <!-- Seleccionamos esto porque se puede dar la situación de que aparezca epigrafe o no, y de que aparezca item bajo epígrafe, o sin necesidad de epígrafe(solo item), una o varias veces-->
+                                                        <xs:element ref="epigrafe"/> <!--Como lo hemos definido antes, utilizamos ref para referirnos a epígrafe -->
+                                                        <xs:element name="item">
+                                                            <xs:complexType>
+                                                                <xs:sequence>
+                                                                    <xs:element name="titulo" type="xs:string"/>
+                                                                    <xs:element name="urlPdf">
+                                                                        <xs:complexType>
+                                                                            <xs:simpleContent>
+                                                                                <xs:extension base="xs:string">
+                                                                                    <xs:attribute name="szBytes" type="xs:integer" use="required"/>
+                                                                                    <xs:attribute name="szKBytes" type="xs:integer" use="required"/>
+                                                                                    <xs:attribute name="numPag" type="xs:integer" use="required"/>
+                                                                                </xs:extension>
+                                                                            </xs:simpleContent>
+                                                                        </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="urlHtm" type="xs:string"/>
+                                                                    <xs:element name="urlXml" type="xs:string"/>
+                                                                </xs:sequence>
+                                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                    </xs:choice>
+                                                </xs:sequence>
+                                                <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="num" type="xs:string" use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nbo" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

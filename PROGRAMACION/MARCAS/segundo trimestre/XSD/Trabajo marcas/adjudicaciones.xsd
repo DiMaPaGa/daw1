@@ -1,0 +1,20 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="entities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="entity" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="licitacion"/>
+              <xs:element type="xs:byte" name="tipologia"/> <!-- Se incorpora Byte en lugar de integer porque el dato que se incorpora en esta etiqueta siemopre se encuentra entre 0 y 255 (tamaño del Byte)-->
+              <xs:element type="xs:string" name="publicacion" minOccurs="0"/> <!--Lo hemos dejado como tipo String porque dado que no es una fecha simple y hora, sino que tiene incorporado otros caracteres que pueden cambiar entre publicaciones, e incluso no aparecer-->
+              <xs:element type="xs:string" name="departamento"/>
+              <xs:element type="xs:float" name="cuantia"/>
+              <xs:element type="xs:string" name="adjudicatarioName"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -3,9 +3,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         Baraja baraja = new Baraja();
-        baraja.barajar();
-        jugar(baraja);
+       /* baraja.barajar();
+        jugar(baraja);*/
+
+        JuegoNaipes juego= new JuegoNaipes();
+
+        juego.registrarJugador("Juan", "Perez","García");
+        juego.registrarJugador("Maria", "Lopez", "García");
+        juego.registrarJugador("Pedro", "Garcia", "García");
+        juego.registrarJugador("Ana", "Martinez", "García");
+
+
+        juego.mostrarJugadores();
+
+
+        juego.eliminarJugador("Pedro", "Garcia", "García");
+
+        juego.mostrarJugadores();
+
+        Jugador jugador = juego.getJugador("Maria", "Lopez", "García");
+        System.out.println("Jugador encontrado: " + jugador.getNombre() + " " + jugador.getApellido1()+" "+jugador.getApellido2() );
+
+
+
+
     }
+
+
 
     public static void jugar(Baraja baraja) throws Exception {
         Scanner scan = new Scanner(System.in);
@@ -38,7 +62,15 @@ public class Main {
                     continuar = false;break;
             }
         } while (continuar);
+
+
+
+
+
     }
+
+
+
 
 
 

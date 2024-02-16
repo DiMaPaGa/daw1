@@ -1,0 +1,146 @@
+<entities>
+    <entity>
+        <licitacion>20214815 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2022-09-22T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>128573.78</cuantia>
+        <adjudicatarioName>TOMAS CASTILLO UCEDA CONSTRUCCIONES, SL </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>2021296 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2021-05-07T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>15489.87</cuantia>
+        <adjudicatarioName>PROYECTOS Y CONSTRUCCIONES VICTORIA, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20211300 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2021-04-26T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>320</cuantia>
+        <adjudicatarioName>ALUMINIOS Y FERRALLAS GARDEL, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20222058 </licitacion>
+        <tipologia>50</tipologia>
+        <publicacion>2022-06-21T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>1613.64</cuantia>
+        <adjudicatarioName>FRANCISCO CANTILLO JIMÉNEZ </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20212184 </licitacion>
+        <tipologia>2</tipologia>
+        <publicacion/>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>1110</cuantia>
+        <adjudicatarioName>GESTIÓN DE ACTUANTES MÚSICA, S.L.U. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20222577 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2022-07-28T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>13380.3</cuantia>
+        <adjudicatarioName>papeleria,imprenta e informatica informcenter sl </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20224608 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2022-11-01T23:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>45117.35</cuantia>
+        <adjudicatarioName>Antonio Ramirez Miranda, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>202182 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2021-01-14T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>1844.63</cuantia>
+        <adjudicatarioName>RCM GASOIL, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20211615 </licitacion>
+        <tipologia>2</tipologia>
+        <publicacion>2021-04-23T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>1584</cuantia>
+        <adjudicatarioName>SECURITAS DIRECT, S.A.U. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20212576 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion/>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>1652.89</cuantia>
+        <adjudicatarioName>MANUEL GÁLVEZ MUÑOZ </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>2021175 </licitacion>
+        <tipologia>50</tipologia>
+        <publicacion>2021-12-01T23:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>120000</cuantia>
+        <adjudicatarioName>Rosalía María Maestre Pérez </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20214815 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2022-09-22T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>128573.78</cuantia>
+        <adjudicatarioName>TOMAS CASTILLO UCEDA CONSTRUCCIONES, SL </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20211526 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2021-04-15T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>2604</cuantia>
+        <adjudicatarioName>HORMIGONES SANTAELLA, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>2021883 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2021-03-10T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>335</cuantia>
+        <adjudicatarioName>FERNANDO HENS ROMERO </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20214815 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2022-09-22T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>128573.78</cuantia>
+        <adjudicatarioName>TOMAS CASTILLO UCEDA CONSTRUCCIONES, SL </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20211421 </licitacion>
+        <tipologia>1</tipologia>
+        <publicacion>2021-04-07T00:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>4000</cuantia>
+        <adjudicatarioName>RAFAELA GARCÍA ORTIZ </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20221110 </licitacion>
+        <tipologia>8</tipologia>
+        <publicacion>2022-04-28T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>20200</cuantia>
+        <adjudicatarioName>Producciones Vidalegre, S.L. </adjudicatarioName>
+    </entity>
+    <entity>
+        <licitacion>20214815 </licitacion>
+        <tipologia>3</tipologia>
+        <publicacion>2022-09-22T22:00:00.000Z</publicacion>
+        <departamento>Alcaldía de Ayuntamiento de la Victoria </departamento>
+        <cuantia>128573.78</cuantia>
+        <adjudicatarioName>TOMAS CASTILLO UCEDA CONSTRUCCIONES, SL </adjudicatarioName>
+    </entity>
+</entities>
