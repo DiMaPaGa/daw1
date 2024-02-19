@@ -10,7 +10,7 @@ public class Password {
 
     private Password() {
         this.longitud = LONGITUD_POR_DEFECT0;// hasta aqui en clase
-        this.contrasenia = generarContrasenia(LONGITUD_POR_DEFECT0);
+        this.contrasenia = generarContrasenia(LONGITUD_POR_DEFECT0);//no, porque en el ejercicio no hace falta en el método incorporar la longitud. Se hace en el set.
 
     }
 
@@ -85,7 +85,7 @@ public class Password {
 
     }
 
-    return contadorMayus>2;
+    return contadorMinus>1;
     }
 
      private boolean comprobarNumeros(){

@@ -95,11 +95,11 @@ e implementarlo: el método debe devolver el valor num multiplicado por 2.*/
         continuamente, y para únicamente cuando el usuario introduce un cero. Cuando esto ocurre, el método
         devuelve (=return) la cantidad de números positivos que el usuario ha introducido por pantalla.
          */
-        /*System.out.println("Ha introducido "+ contarPositivos()+ " numeros positivos.");*/
+        System.out.println("Ha introducido "+ contarPositivos()+ " numeros positivos.");
 
         //variacion mia del 9= Mostrando los números positivos.
 
-       /* System.out.println("Los números positivos introducidos han sido: " + contarPositi());*/
+       System.out.println("Los números positivos introducidos han sido: " + contarPositi());
 
         /*
         10.	Crear un método estático que reciba la base y la altura de un rectángulo y devuelva (como dice devuelva es return, si fuera imprima=void)su área.

@@ -59,7 +59,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
     }
     if(isbn.length() !=10 && isbn.length()!=13){
         throw new IllegalArgumentException ("El ISBN solo comprende 10 ó 13 dígitos");
-    }//si meto eto en el método de contine digitos, me evito una comprobación y puedo llamar al método ISBNvalido;
+    }//si meto esto en el método de contine digitos, me evito una comprobación y puedo llamar al método ISBNvalido;
     if (!contieneDigitos(isbn)){
         throw new InputMismatchException("el ISBN solo puede contener dígitos");
     }
@@ -91,7 +91,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
 
     public void setNumeroPaginas(int numeroPaginas) {
     if (numeroPaginas<=0){
-        throw new IllegalArgumentException("Número de páginas  válido");
+        throw new IllegalArgumentException("Número de páginas no válido");
     }
 
         this.numeroPaginas = numeroPaginas;

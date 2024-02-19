@@ -70,9 +70,9 @@ public class Main {
 
     }
 
-    /*public static void mostrarPeso(Persona persona){
+    public static void mostrarPeso(Persona persona){
 
-        switch (calcularIMC()){
+        switch (persona.calcularIMC()){
 
             case 1:
                 System.out.println("Tiene sobrepeso");
@@ -90,8 +90,7 @@ public class Main {
         }
 
         }
-    }*/
+    }
 
 
-
-}
+    

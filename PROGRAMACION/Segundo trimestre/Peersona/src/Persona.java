@@ -53,6 +53,19 @@ public class Persona {
 
     }
 
+    public int calcularIMC() {
+
+        float imc = ((this.peso) / (this.altura * this.altura));
+        if (imc < 20) {
+            return PESO_POR_DEBAJO;
+        } else if (imc > 25) {
+            return PESO_POR_EXCESO;
+        } else {
+            return PESO_IDEAL;
+        }
+
+    }
+
     public boolean esMayorEdad() {
 
         return this.edad >= 18;
@@ -101,7 +114,7 @@ public class Persona {
     }
 
     /* private void generarDNI(){
-    int numdni=generarNumDIN();
+    int numdni=generarNumDNI();
     String letraDNI= generarLetraDNI(numDNI);
 
     this.dni=numDNI + letraDNI;

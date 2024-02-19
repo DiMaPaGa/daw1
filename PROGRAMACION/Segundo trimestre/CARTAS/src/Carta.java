@@ -14,26 +14,26 @@ public class Carta {
         String impresion = " _______ \n";
         switch (numero) {
             case 1:
-                impresion += "| A |\n";break;
+                impresion += "|   A   |\n";break;
             case 10:
-                impresion += "| J |\n";break;
+                impresion += "|   J   |\n";break;
             case 11:
-                impresion += "| Q |\n";break;
+                impresion += "|   Q   |\n";break;
             case 12:
-                impresion += "| K |\n";break;
+                impresion += "|   K   |\n";break;
             default:
                 impresion += "| " + numero + " |\n";break;
         }
         impresion += "| |\n";
         switch (palo) {
             case "Diamantes":
-                impresion += "| <> |\n"; break;
+                impresion += "|   <>   |\n"; break;
             case "Corazones":
-                impresion += "| <3 |\n";break;
+                impresion += "|   <3   |\n";break;
             case "Picas":
-                impresion += "| {> |\n";break;
+                impresion += "|   {>   |\n";break;
             case "Treboles":
-                impresion += "| -% |\n";break;
+                impresion += "|   -%   |\n";break;
             default:
                 break;
         }

@@ -31,7 +31,7 @@ public class Metodos2 {
         //17.	Crear un método estático que reciba un número entero y una posición, y devuelva el dígito que
 //        se encuentra en dicha posición.
 
-       /* String numero;
+        String numero;
         boolean valido;
 
         do {
@@ -44,10 +44,10 @@ public class Metodos2 {
 
         valido = false;
 
-        String posicion = "";
+        String posicion;
         do {
-            System.out.println("Introduce un número: ");
-            numero = scan.nextLine();
+            System.out.println("Introduce una posición: ");
+            posicion = scan.nextLine();
             if (esNumero(posicion) && esValido(numero, posicion)) {
                 valido = true;
             }
@@ -56,7 +56,7 @@ public class Metodos2 {
         int numFinal = Integer.parseInt(numero);
         int posFinal = Integer.parseInt(posicion);
 
-        devolverPosicion(numFinal, posFinal);*/
+        System.out.println(devolverPosicion(numFinal, posFinal));
 
         //18.	Crear un método estático que reciba un String, y lo devuelva del revés.
 
@@ -130,11 +130,12 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
 
       //int tamanoArray1= (int)(Math.random()*(15-5+1)+5);
         //int tamanoArray2= (int)(Math.random()*(15-5+1)+5)+tamanoArray1;
-        int numero= 2 ;//(int)(Math.random()*(15-5+1)+5)-(tamanoArray2-tamanoArray1);
+       // int numero= 2 ;//(int)(Math.random()*(15-5+1)+5)-(tamanoArray2-tamanoArray1);
         int posicionArray2= 2;// (int)(Math.random()*(tamanoArray2-1+1)+1);
         int posicionArray1= 2;
 
-
+       /*Ejemplo: copiarArray(array3,array4,3);
+        imprimirArray(array3);*/
 //en clase se hace la solucin con escaner
 
 
@@ -169,7 +170,8 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
 
 
        /* intercambioArrays(array1, array2, entero);*/
-
+        /*copiarArray(array3,array4,3);
+        imprimirArray(array3);*/
 
        // 30.	Repetir lo anterior, pero añadiendo un cuarto argumento, que indique la posición del segundo array a partir de la cual se empezará.
        /*copiarArray30 (array1, array2, numero, posicionArray2);
@@ -193,6 +195,7 @@ contenido será array1 = [3,2,2,0] (en negrita están las posiciones que se han 
       /*  int [] arrayFinal= devolverarraycomplejo(array3, array4);
 
        imprimirArray(arrayFinal);*/
+
 
 
     }//main

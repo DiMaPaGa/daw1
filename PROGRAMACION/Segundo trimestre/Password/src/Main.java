@@ -23,7 +23,7 @@ public class Main {
         for (int i = 0; i < tamanyoArray; i++) {
             arrayPasswords[i]= new Password(longitud);
             arrayBooleans[i]= arrayPasswords[i].esFuerte();
-            System.out.println("Contraseña"+(i+1)+" "+arrayPasswords[i].getContrasenia()+ " "+arrayBooleans[i]);
+            System.out.println("Contraseña"+(i+1)+" "+arrayPasswords[i].getContrasenia()+ "_"+arrayBooleans[i]);
         }
 
 

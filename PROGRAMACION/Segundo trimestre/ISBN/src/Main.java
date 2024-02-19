@@ -8,7 +8,7 @@ public class Main {
         //try{
             Libro libro1= new Libro("123456789009", "20000 leguas de viaje Submarino", "Julio Verne", 40, "Tauro");
             System.out.println(libro1);
-            Libro libro2= new Libro("123789009", "20000 leguas de viaje Submarino", "Julio Verne");
+            Libro libro2= new Libro("1237890091", "20000 leguas de viaje Submarino", "Julio Verne");
             System.out.println(libro2);
             Libro libro3= new Libro("123789009", "20000 leguas de viaje Submarino", "4");
             System.out.println(libro3);

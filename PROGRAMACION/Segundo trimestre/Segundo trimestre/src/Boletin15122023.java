@@ -41,7 +41,7 @@ public class Boletin15122023 {
 
         //3. Crear un programa que te pida una cadena e indique cuántos caracteres distintos tiene, es decir, cuántos números tiene, cuántos espacios y cuántas letras.
 
-       /* System.out.println("Introduce un texto");
+      /*System.out.println("Introduce un texto");
         String texto= scan.nextLine();
         char espacio=' ';
         int letras=0;
@@ -66,6 +66,8 @@ public class Boletin15122023 {
 
         System.out.println("La cadena tiene "+ letras + " letras, "+ numeros+ " números y "+ espacios+ " espacios");*/
 
+
+
  /* System.out.println("Introduce un texto");
         String texto = scan.nextLine();
         char espacio = ' ';
@@ -77,12 +79,14 @@ public class Boletin15122023 {
         for (int i = 0; i < texto.length(); i++) {
             caracter = texto.charAt(i);
 
-            if (caracter == espacio) {
+            if (Character.isWhitespace(caracter)) {
                 espacios++;
             } else if (Character.isDigit(caracter)) {
                 numeros++;
             } else if (Character.isLetter(caracter)) {
                 letras++;
+            } else {
+                especiales++;
             }
         }
 
@@ -197,7 +201,7 @@ public class Boletin15122023 {
  Después imprima por pantalla si el número tiene una, dos o tres cifras.*/
 
         boolean esNumero;
-        String numero="";
+       String numero="";
         do {
             esNumero=true;
             System.out.println("Escribe una número");
