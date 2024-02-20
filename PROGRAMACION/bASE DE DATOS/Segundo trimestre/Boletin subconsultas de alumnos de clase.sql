@@ -115,15 +115,23 @@ where ProductID IN
 (Select ProductID from orderdetails group by ProductID HAVING count(*)>5);
 
 -- 4. Mostrar los empleados que no han realizado ninguna venta
+
 Select EmployeeID
 from employees
 where EmployeeID not in 
-(Select EmployeeID from orders where employees.EmployeeID = orders.EmployeeID);
+(Select EmployeeID from orders group by EmployeeID);
+
+SELECT EmployeeID, LastName, FirstName
+FROM Employees
+WHERE EmployeeID NOT IN (
+    SELECT DISTINCT EmployeeID
+    FROM Orders
+);
 
 -- 5. Mostrar el nombre de los productos y sus cantidades disponibles en la categoría 'Seafood'
-SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN(
-SELECT CategoryID FROM categories WHERE CategoryName = "Seafood");
 
+SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN
+(SELECT CategoryID FROM categories WHERE CategoryName = "Seafood");
 
 -- 6. Muestra el ID de los empleados que han manejado pedidos con productos que tienen un precio unitario superior a 50
 SELECT distinct(EmployeeID)
@@ -138,25 +146,37 @@ WHERE OrderID in
  where month(HireDate) in
  (Select month(OrderDate) from orders Where OrderDate = 
  (Select max(OrderDate) from orders));
+ 
+ Select FirstName, LastName
+ from employees
+ where month(HireDate) =
+ (Select month(OrderDate) from orders Order by OrderDate desc limit 1);
+ 
 
 -- 8. Nombre de contacto del cliente de aquellos clientes que hayan hecho hecho pedidos con un "freight" mayor a 80
+
 Select ContactName
 from customers
 where CustomerID in
-(Select distinct(CustomerID) from orders where Freight>80);
+(Select CustomerID from orders where Freight>80);
 
 -- 9. Obten el producto más caro de cada categoría
 
-SELECT ProductName, UnitPrice, CategoryID FROM Products WHERE (CategoryID, UnitPrice) IN 
+SELECT ProductName, UnitPrice, CategoryID FROM Products WHERE (CategoryID, UnitPrice) IN
 (SELECT CategoryID, MAX(UnitPrice) FROM Products GROUP BY CategoryID);
 
+SELECT ProductName, CategoryID FROM Products WHERE UnitPrice = 
+(SELECT MAX(UnitPrice) FROM Products as p where p.CategoryID = products.CategoryID);
+
 -- 10. Recupera el nombre de los empleados que hayan realizado ventas por encima del promedio de ventas totales, junto con el monto total de sus ventas
+
 Select FirstName, (Select count(*) from orders where orders.EmployeeID = e.EmployeeID) as TotalVentas
 from employees e
 Where (Select count(*) from orders where orders.EmployeeID = e.EmployeeID ) >
 (Select avg(recuento) from (select count(*) as recuento from orders group by EmployeeID) as recuento);
- 
+
 -- 11. Obtén los nombres de los productos y la cantidad en stock de aquellos productos que son suministrados por proveedores del Reino Unido
+
 Select ProductName, UnitsInStock
 from products
 where SupplierID in
@@ -169,29 +189,40 @@ Select ProductName, UnitsInStock
 from products
 where UnitsInStock < (Select max(UnitsInStock) from products where CategoryID =3 or CategoryID=5);
 
-Select ProductName, UnitsInStock
+SELECT ProductName, UnitsInStock
 from products
-where UnitsInStock < (Select max(UnitsInStock) from products where CategoryID =3) 
-and UnitsInStock< (Select max(UnitsInStock) from products where CategoryID=5);
+where UnitsInStock < (Select max(UnitsInStock) from products where CategoryID in (3,5));
 
 -- 13. Selecciona los pedidos cuyos empleados pertenecen al territorio de Orlando
+
 Select OrderID
 from orders
 where EmployeeID in
 (Select EmployeeID from employeeterritories where TerritoryID in
 (Select TerritoryID from territories where TerritoryDescription = 'Orlando'));
 
+Select OrderID
+from orders
+where EmployeeID in
+(Select EmployeeID from employeeterritories where TerritoryID in
+(Select TerritoryID from territories where TerritoryDescription LIKE 'Orlando'));
+
 -- 14. Mostrar los nombres de los clientes y la cantidad de pedidos que han realizado
 
 Select c.CompanyName, (Select count(*) from orders o where o.CustomerID= c.CustomerID) as CantidadPedidos
 from customers c;
 
+
 -- 15. Pedidos que superen los empleados de nacionalidad Francés. Lo he entendido como Pedidos cuyo recuento de artículos sea superado por el recuento de articulos de los pedidos realizados por empleados franceses.
+
 SELECT * FROM Orders WHERE 
 (SELECT COUNT(*) FROM OrderDetails WHERE OrderID = Orders.OrderID
 ) < ( SELECT COUNT(*) FROM OrderDetails WHERE OrderID IN 
 (SELECT OrderID FROM Orders WHERE EmployeeID IN 
 (SELECT EmployeeID FROM Employees WHERE Country = 'France')));
+
+SELECT OrderID from orders group by OrderID having count(*) >
+(Select count(*) from employees where Country like "France");
 
 -- 16. Obten la cantidad de productos con existencia menor a 10 en cada categoría
 
@@ -200,12 +231,21 @@ FROM Products p
 WHERE UnitsInStock < 10
 GROUP BY p.CategoryID;
 
+SElect CategoryID, count(*) from products where UnitsInStock < 10 group by CategoryID;
+
 -- 17. Seleccionar los nombres de los clientes que han realizado un pedido de un producto con un precio superior a 100
-Select CompanyName
+Select ContactName
 FROM customers
 WHERE CustomerID in
 (Select CustomerID from orders o where OrderID in
 (Select OrderID from orderdetails Where UnitPrice > 100));
+
+Select CompanyName
+FROM customers
+WHERE CustomerID in
+(Select CustomerID from orders o where OrderID in
+(Select OrderID from orderdetails Where ProductID in
+(Select ProductID from products where UnitPrice > 100)));
 
 
 -- 18. Productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock de los productos de la categoría 2
@@ -256,6 +296,7 @@ SELECT ProductName FROM products WHERE UnitPrice >
 (Select AVG(UnitPrice) from products);
 
 -- 25. Muestra el nombre y apellidos de aquellos empleados cuya región de actuación sea 'Southern';
+
 SELECT Firstname, LastName
 FROM employees
 where EmployeeID in 
@@ -288,6 +329,7 @@ and EmployeeID in
 (Select EmployeeID from employees where timestampdiff(year, Birthdate, o.Orderdate)< 65);
 
 -- 28. Mostrar el nombre de todos los productos cuyo descuento sea menor o nulo a la media
+
 Select ProductName
 from products
 where ProductID in
@@ -295,6 +337,7 @@ where ProductID in
 (Select AVG(Discount) from orderdetails));
 
 -- 29. Dame los nombres de los productos cuyo stock sea superior a la edad media de los empleados
+
 Select ProductName, UnitsInStock 
 from products
 where UnitsInStock >
@@ -308,6 +351,7 @@ where UnitPrice =
 
 
 -- 31. Mostrar los productos que tienen un UnitPrice superior al precio promedio los productos de la categoría 'Produce'
+
 Select ProductID, ProductName, Unitprice
 from products
 where Unitprice >
@@ -327,12 +371,12 @@ AND EmployeeID IN (SELECT EmployeeID FROM orders WHERE ShipCountry NOT IN
 (SELECT ShipCountry FROM (SELECT ShipCountry, COUNT(*) AS num_pedidos FROM orders GROUP BY ShipCountry ORDER BY COUNT(*) DESC LIMIT 1) AS top_region));
 
 -- 33. Dime el nombre de contacto de aquellos clientes que hayan ordenado productos con un unitprice mayor a la media
+
 Select ContactName from customers where CustomerID in
 (Select CustomerID from orders where OrderID in
 (Select OrderID from orderdetails where ProductID in
 (Select ProductID from products where UnitPrice >
 (Select avg(UnitPrice) from products))));
-
 
 -- 34. Muestra los nombres de los productos y los precios unitarios de aquellos productos suministrados por proveedores con números de teléfono que contienen '555'
 

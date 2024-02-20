@@ -1,0 +1,10 @@
+¿ Es viable la conversión entre formatos? 
+	La conversión entre formatos es viable utilizando herramientas y bibliotecas disponibles en varios lenguajes. Es más viable si los lenguajes utilizan los estándares abiertos de W3C, como por ejemplo lo utiliza el sistema RDF, al que pertenecen RDF/XML, JSON, Turtle y Sparql. 
+
+¿cómo se hace esta conversión?
+	Utilizando estas herramientas y bibliotecas, sin embargo algunas conversiones pueden requerir un mapeo más complejo, por la diferencia de estructuras y semántica de los formatos. 
+	De JSON a TURTLE/RDF/XML se pueden utilizar bibliotecas como JSONLD-JAVA en java o PyLD en Python. 
+	De TURTLE a JSON/RDF/XML la bibliotecas disponibles son RDFLib en Python para cargar los datos en formato Turtle y luego serializarlos en JSON-LD o RDF/XML. 
+	De XML a TURTLE/JSON/RDF las herramientas son XSLT, que define reglas de transformación para la conversión, o bibliotecas como RDFLib de Python. 
+	De CSV a TURTLE/JSON/RDF/XML esta conversión es más compleja porque CSV no tiene una estructura semántica definida. Puede utilizarse RDFLib de Python para cargar los datos CSV y definir un mapeo que convierta las columnas y filas en triples RDF. Luego se serializan los datos en formatos RDF. 
+	De SPARQL a TURTLE/JSON/RDF/XML. Al ser un lenguaje de consulta para RDF, puede usar librerías como RDFLib para ejecutar consultas y luego serializar los resultados en otros formatos. 
