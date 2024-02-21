@@ -4,7 +4,7 @@ public class Examen19022024 {
     public static void main(String[] args) {
 
 
-        char [][] array1 = {{'-','-','-'},{' ',' ',' '},{'-','-','-'}};
+        /*char [][] array1 = {{'-','-','-'},{' ',' ',' '},{'-','-','-'}};
         char [][] array2 = {{' ',' ',' '},{'X','T','I'},{' ',' ',' '}};
 
         imprimirArray(sumarArrayBidimensional(array1, array2));
@@ -51,9 +51,63 @@ public class Examen19022024 {
 
             }
             System.out.println();
-        }
+        }*/
+
+        char[][] array1 = {
+                {'-', '-', '-', '-', '-', '-'},
+                {'-', 'H', 'O', 'L', 'A', '-'},
+                {'-', ' ', ' ', ' ', ' ', '-'},
+                {'M', 'U', 'N', 'D', 'O', ' '}
+        };
+        char[][] array2 = {
+                {'*', '*', '*', '*', '*', '*'},
+                {'B', 'U', 'E', 'N', 'A', 'S'},
+                {'*', ' ', 'T', 'U', ' ', '*'},
+                {'*', '*', '*', '*', '*', '*'}
+        };
+
+        imprimirArray(array1);
+        System.out.println();
+        imprimirArray(array2);
+        System.out.println();
+        char[][] arrayFinal = solaparArrays(array1, array2);
+        imprimirArray(arrayFinal);
+
+        // EJERCICIO 2
+
+        CorredorDeMaraton corredor = new CorredorDeMaraton("30263977W", "Juan Carlos", "Salés", "31/3/2000");
+        System.out.println(corredor);
+        System.out.println(corredor.getEdad());
 
     }
+
+
+    public static char[][] solaparArrays(char[][] array1, char[][] array2) {
+        char[][] arraySolapado = array1;
+        for (int i = 0; i < arraySolapado.length; i++) {
+            for (int j = 0; j < arraySolapado[i].length; j++) {
+                if (arraySolapado[i][j] == ' ') {
+                    arraySolapado[i][j] = array2[i][j];
+                }
+            }
+        }
+
+        return arraySolapado;
+    }
+
+    public static void imprimirArray(char[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+
+}
+
+
 
 
 

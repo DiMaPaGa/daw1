@@ -231,7 +231,7 @@ FROM Products p
 WHERE UnitsInStock < 10
 GROUP BY p.CategoryID;
 
-SElect CategoryID, count(*) from products where UnitsInStock < 10 group by CategoryID;
+SElect CategoryID, count(*) from products where UnitsInStock < 10 group by CategoryID;-- este
 
 -- 17. Seleccionar los nombres de los clientes que han realizado un pedido de un producto con un precio superior a 100
 Select ContactName
@@ -267,11 +267,10 @@ Where CustomerID in
 
 -- 20. Listado de idclientes y la cantidad de pedidos de aquellos clientes que realizaron mas de 2 pedidos y fueron atendidos por empleados de San Francisco (TerritoryDescription).
 
-Select CustomerID, COUNT(*) from orders where CustomerID in
-(Select CustomerID from orders group by CustomerID having count(*) > 2) and
-EmployeeID in (Select EmployeeID from employeeterritories where TerritoryID in
-(Select TerritoryID from territories where TerritoryDescription= 'San Francisco'))
-group by CustomerID;
+Select customerID, count(orderID) from orders where employeeID in 
+(Select employeeID from employeeterritories where TerritoryID in 
+(Select territoryid from territories where TerritoryDescription like "San Francisco")) 
+group by customerID having count(orderID) > 2;
 
 -- 21. Mostrar los nombres de todos los productos que pertenecen a la categoría 'Beverages' 
 
@@ -285,10 +284,10 @@ where CategoryID in
 Select CompanyName from customers where CustomerID in
 (Select CustomerID from orders where year(OrderDate)=1997)
 and CustomerID not in 
-(Select CustomerID from orders where year(OrderDate) !=1997);
+(Select CustomerID from orders where year(OrderDate)!=1997);
 
 -- 23. Mostrar los productos con el precio más alto en cada categoría
-SELECT ProductName, CategoryID, UnitPrice FROM products a WHERE UnitPrice in
+SELECT ProductID,ProductName, CategoryID, UnitPrice FROM products a WHERE UnitPrice in
 (Select max(UnitPrice) from products b where a.CategoryID= b.CategoryID);
 
 -- 24. Mostrar los productos que tienen un precio superior al promedio de todos los productos
@@ -316,10 +315,11 @@ SELECT ContactName from customers where CustomerID in
 
 Select o.OrderID, (Select c.CompanyName from customers c where c.CustomerID= o.CustomerID) as CompanyName
 from orders o
-where month(OrderDate)=8
+where month(OrderDate)=8 
 and ShipCountry ='USA'
 and EmployeeID in
 (Select EmployeeID from employees where timestampdiff(year, Birthdate, curdate())< 65);
+-- También podría haberse hecho con monthname(OrderDate)='August'
 
 Select o.OrderID, (Select c.CompanyName from customers c where c.CustomerID= o.CustomerID) as CompanyName
 from orders o
@@ -344,6 +344,7 @@ where UnitsInStock >
 (Select avg(edad) from (Select timestampdiff(year, BirthDate, curdate()) as edad from employees) as edades);
 
 -- 30. Muestra el producto con el precio unitario más alto usando subconsulta
+
 Select ProductID, ProductName, UnitPrice
 From products
 where UnitPrice =

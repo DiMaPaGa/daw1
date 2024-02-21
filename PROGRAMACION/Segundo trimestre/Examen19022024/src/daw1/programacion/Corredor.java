@@ -2,7 +2,7 @@ package daw1.programacion;
 
 public class Corredor {
 
-    //atributos
+  /*  //atributos
 
     private String nombre;
     private String apellido1;
@@ -244,5 +244,232 @@ public class Corredor {
                 ", peso=" + peso +
                 ", altura=" + altura +
                 '}';
+    }*/
+
+
+    public class CorredorDeMaraton {
+
+        private String nombre;
+        private String apellido;
+        private final String dni;
+        private final String fechaDeNacimiento;
+        private float velocidadMaxima;
+        private int dorsal;
+        private float peso;
+        private float altura;
+        private int anyoNacimiento;
+
+
+
+        public CorredorDeMaraton(String dni) throws Exception {
+            if (comprobarDNI(dni)) {
+                this.dni = dni;
+            } else {
+                throw new Exception("DNI no valido");
+            }
+            this.fechaDeNacimiento = "1/1/1990";
+            this.anyoNacimiento = 1990;
+        }
+
+        public CorredorDeMaraton(String dni, String nombre, String apellido) throws Exception {
+            this(dni);
+            setNombre(nombre);
+            setApellido(apellido);
+        }
+
+        public CorredorDeMaraton(String dni, String nombre, String apellido, String fechaDeNacimiento) throws Exception {
+            if (comprobarDNI(dni)) {
+                this.dni = dni;
+            } else {
+                throw new Exception("DNI no valido");
+            }
+            setNombre(nombre);
+            setApellido(apellido);
+            if (comprobarFechaDeNacimiento(fechaDeNacimiento)) {
+                this.fechaDeNacimiento = fechaDeNacimiento;
+            } else {
+                throw new Exception("Fecha no valida");
+            }
+        }
+
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(String nombre) throws Exception {
+            if (nombre != null) {
+                this.nombre = nombre;
+            } else {
+                throw new Exception("Nombre no valido");
+            }
+        }
+
+        public String getApellido() {
+            return apellido;
+        }
+
+        public void setApellido(String apellido) throws Exception {
+            if (apellido != null) {
+                this.apellido = apellido;
+            } else {
+                throw new Exception("Apellido no valido");
+            }
+        }
+
+        public String getDni() {
+            return dni;
+        }
+
+        public String getFechaDeNacimiento() {
+            return fechaDeNacimiento;
+        }
+
+        public float getVelocidadMaxima() {
+            return velocidadMaxima;
+        }
+
+        public void setVelocidadMaxima(float velocidadMaxima) throws Exception {
+            if (velocidadMaxima > 0) {
+                this.velocidadMaxima = velocidadMaxima;
+            } else {
+                throw new Exception("velocidad no valida");
+            }
+        }
+
+        public int getDorsal() {
+            return dorsal;
+        }
+
+        public void setDorsal(int dorsal) throws Exception {
+            if (dorsal > 0) {
+                this.dorsal = dorsal;
+            } else {
+                throw new Exception("Dorsal no valido");
+            }
+        }
+
+        public float getPeso() {
+            return peso;
+        }
+
+        public void setPeso(float peso) throws Exception {
+            if (peso > 0) {
+                this.peso = peso;
+            } else {
+                throw new Exception("Peso no valido");
+            }
+        }
+
+        public float getAltura() {
+            return altura;
+        }
+
+        public void setAltura(float altura) throws Exception {
+            if (altura > 0) {
+                this.altura = altura;
+            } else {
+                throw new Exception("Altura no valida");
+            }
+        }
+
+
+        private boolean comprobarDNI(String dni) {
+            if (dni.length() != 9) {
+                return false;
+            }
+            String numeros = dni.substring(0, 8);
+            char letra = dni.charAt(8);
+
+            for (int i = 0; i < numeros.length(); i++) {
+                if (!Character.isDigit(numeros.charAt(i))) {
+                    return false;
+                }
+            }
+            String abecedario = "TRWAGMYFPDXBNJZSQVHLCKE";
+            int numeroDNI = Integer.parseInt(numeros);
+            int posLetra = numeroDNI % 23;
+            if (letra != abecedario.charAt(posLetra)) {
+                return false;
+            }
+
+            return true;
+        }
+
+
+        private boolean comprobarFechaDeNacimiento(String fechaDeNacimiento) {
+            String diaSt = "";
+            String mesSt = "";
+            String anyoSt = "";
+            int contador = 0;
+
+            for (int i = 0; i < fechaDeNacimiento.length(); i++) {
+                if (fechaDeNacimiento.charAt(i) == '/') {
+                    contador++;
+                } else if (contador == 0) {
+                    diaSt += fechaDeNacimiento.charAt(i);
+                } else if (contador == 1) {
+                    mesSt += fechaDeNacimiento.charAt(i);
+                } else {
+                    anyoSt += fechaDeNacimiento.charAt(i);
+                }
+            }
+
+            int dia = Integer.parseInt(diaSt);
+            int mes = Integer.parseInt(mesSt);
+            int anyo = Integer.parseInt(anyoSt);
+
+            if (dia < 1 || anyo < 1900 || anyo > 2023) {
+                return false;
+            }
+            switch (mes) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if (dia > 31) {
+                        return false;
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if (dia > 30) {
+                        return false;
+                    }
+                    break;
+                case 2:
+                    if (dia > 28) {
+                        return false;
+                    }
+                    break;
+                default:
+                    return false;
+            }
+            this.anyoNacimiento = anyo;
+
+            return true;
+        }
+
+        public int getEdad() {
+
+            return 2024 - this.anyoNacimiento;
+        }
+
+        @Override
+        public String toString() {
+            return "CorredorDeMaraton{" +
+                    "nombre='" + nombre + '\'' +
+                    ", apellido='" + apellido + '\'' +
+                    ", dni='" + dni + '\'' +
+                    ", fechaDeNacimiento='" + fechaDeNacimiento + '\'' +
+                    ", velocidadMaxima=" + velocidadMaxima +
+                    ", dorsal=" + dorsal +
+                    '}';
+        }
     }
 }
