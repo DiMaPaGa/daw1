@@ -4,9 +4,6 @@ private float precio;
 
 
 
-
-
-
 public CestaDeCompra(){
     this.precio=0;
 
@@ -18,7 +15,7 @@ public void añadirProducto (Producto producto){
 
 }
 
-    public float getPrecio() {
+public float getPrecio() {
         return precio;
     }
 }

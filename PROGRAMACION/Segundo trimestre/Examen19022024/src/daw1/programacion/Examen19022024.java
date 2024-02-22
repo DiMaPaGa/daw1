@@ -1,7 +1,7 @@
 package daw1.programacion;
 
 public class Examen19022024 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
         /*char [][] array1 = {{'-','-','-'},{' ',' ',' '},{'-','-','-'}};
@@ -103,14 +103,6 @@ public class Examen19022024 {
             System.out.println();
         }
     }
-
-
-}
-
-
-
-
-
 
 
 }

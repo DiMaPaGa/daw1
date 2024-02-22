@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "720e2143-14a4-4027-bdc8-7b3cf0c95eef",
+		"name": "Star Wars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32639094"
+	},
+	"item": [
+		{
+			"name": "Manual de uso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/documentation",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"documentation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado de personajes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Durante mi búsqueda encontré la funcionalidad del Postbot de Postman, que permite, por ejemplo, añadir descripciones de la consulta concreta realizada. Este es el producto que genera al pedirle que lo haga de esta consulta:\n\n\"This endpoint makes an HTTP GET request to retrieve a list of people from the Star Wars API. The response will contain information about the count, next and previous pages, and a list of people with their respective details such as name, height, mass, hair color, and more.\""
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda personaje específico por numeracion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/3/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						"3",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "R2-D2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda personajes por páginas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://swapi.dev/api/people?page=2",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Búsqueda personaje por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/?search=Luke",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Luke"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda personaje favorito guardándolo en variable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/?search={{people}}",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "{{people}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado planetas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Búsqueda de planeta específico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?search=Tatooine",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Tatooine"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar planeta Shili",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?search={{name}}",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "{{name}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado vehículos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/vehicles",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado naves",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/starships",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"starships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incorporación ficha personaje",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ahsoka Tano\",\r\n  \"height\": \"170\",\r\n  \"mass\": \"119\",\r\n  \"hair_color\": \"white and blue\",\r\n  \"skin_color\": \"orange\",\r\n  \"eye_color\": \"blue\",\r\n  \"birth_year\": \"36ABY\",\r\n  \"gender\": \"female\",\r\n  \"homeworld\": \"https://swapi.dev/api/planets/58/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://swapi.dev/api/people/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Búsqueda nave por nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/starships/?search=Millennium Falcon",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"starships",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Millennium Falcon"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado especies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/species/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"species",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Búsqueda especie concreta por parámetro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/species?name=Togruta",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"species"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Togruta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comprobación fallida",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/species?{{classification}}=mammal",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"species"
+					],
+					"query": [
+						{
+							"key": "{{classification}}",
+							"value": "mammal"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "planet",
+			"value": "Shili",
+			"type": "string"
+		},
+		{
+			"key": "people",
+			"value": "Ahsoka",
+			"type": "string"
+		},
+		{
+			"key": "name",
+			"value": "Shili"
+		},
+		{
+			"key": "classification",
+			"value": "mammal"
+		}
+	]
+}

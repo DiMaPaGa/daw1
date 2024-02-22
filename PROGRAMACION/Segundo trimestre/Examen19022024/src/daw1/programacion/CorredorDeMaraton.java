@@ -1,8 +1,8 @@
 package daw1.programacion;
 
-public class Corredor {
+/*public class Corredor {
 
-  /*  //atributos
+    //atributos
 
     private String nombre;
     private String apellido1;
@@ -472,4 +472,4 @@ public class Corredor {
                     '}';
         }
     }
-}
+
