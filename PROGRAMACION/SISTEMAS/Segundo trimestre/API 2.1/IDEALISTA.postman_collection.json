@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0d5704e6-27ee-41be-a906-a13d7ff6c290",
+		"_postman_id": "3c382b35-c8ee-4411-a452-6a850b4d94a5",
 		"name": "IDEALISTA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32639094"
@@ -181,7 +181,7 @@
 			"response": []
 		},
 		{
-			"name": "Búsqueda de viviendas a la venta en la que el filtro de sort en el body",
+			"name": "Búsqueda de viviendas a la venta en la que el filtro de sort en la propia request",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -229,7 +229,7 @@
 			"response": []
 		},
 		{
-			"name": "Búsqueda de viviendas a la venta en la que el filtro de sort en la propia request",
+			"name": "Búsqueda de viviendas a la venta en la que el filtro de sort en el body",
 			"request": {
 				"method": "POST",
 				"header": [],
