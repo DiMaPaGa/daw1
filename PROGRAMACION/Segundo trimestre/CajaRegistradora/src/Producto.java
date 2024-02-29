@@ -1,4 +1,6 @@
-public class Producto Comparable<Producto>{
+import java.util.Objects;
+
+public class Producto{
 
     //Atributos
     private String id;
@@ -8,13 +10,23 @@ public class Producto Comparable<Producto>{
     private int numeroUnidades;
 
 
+
     //Constructores
 
     public Producto (){
+        this.id=" ";
+
+    }
+    public Producto (String id){
+        this.id=id;
 
     }
 
     public Producto (String id, String nombreDeProducto, float precioUnitario, int numeroUnidades){
+        this.id=id;
+        this.nombreDeProducto=nombreDeProducto;
+        this.precioUnitario=precioUnitario;
+        this.numeroUnidades=numeroUnidades;
 
     }
 
@@ -53,10 +65,9 @@ public class Producto Comparable<Producto>{
     @Override
     public String toString() {
         return "Producto{" +
-                "id='" + id + '\'' +
                 ", nombreDeProducto='" + nombreDeProducto + '\'' +
-                ", precioUnitario=" + precioUnitario +
                 ", numeroUnidades=" + numeroUnidades +
+                ", precioUnitario=" + precioUnitario +
                 '}';
     }
 
@@ -65,13 +76,29 @@ public class Producto Comparable<Producto>{
 
     }
 
+    public float calcularPrecioTotalProducto (){
+        return this.precioUnitario*this.numeroUnidades;
+    }
+
+    public void imprimirPrecioTotalProductos(){
+        System.out.println(calcularPrecioTotalProducto());
+    }
+
+
+    /*public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return id.equals(producto.id);
+    }*/
 
     public boolean equals(Producto producto) {
-        return Producto.equals(producto);
+        if (producto== null) return false;
+       /* if (this == producto) return true;*///solo devolverá true si se le pasa el mismo objeto(referencia)ej: mismo melon
+
+        return this.id.equals(producto.getId());
     }
 
-    @Override
-    public int compareTo(Producto o) {
-        return 0;
-    }
+
+
 }

@@ -5,6 +5,9 @@ public class Tarea {
 
     private boolean completada;
 
+    public Tarea (){
+    }
+
     public Tarea (String nombre, String descripcion){
         this.nombre=nombre;
         this.descripcion=descripcion;

@@ -7,7 +7,7 @@ public class Main {
         Tarea tarea4=new Tarea("Doblar ropa", "Doblarla adecuadamente");
         Tarea tarea5=new Tarea("Guardar ropa", "guardarla en sus respectivos lugares");
 
-        Tarea [] tarea={tarea1, tarea2, tarea3, tarea4};
+        Tarea [] tarea={tarea1, tarea2, tarea3, tarea4, tarea5};
 
         imprimirLista(tarea);
 

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Cancion {
 
     private String nombreCancion;
@@ -25,5 +27,20 @@ public class Cancion {
 
     public void setDuracionCancion(String duracionCancion) {
         this.duracionCancion = duracionCancion;
+    }
+
+
+    public boolean equals(Cancion tema) {
+        if (this == tema) return true;
+        if (tema == null) return false;
+        return nombreCancion.equals(tema.nombreCancion);
+    }
+
+    @Override
+    public String toString() {
+        return "Cancion{" +
+                "nombreCancion='" + nombreCancion + '\'' +
+                ", duracionCancion='" + duracionCancion + '\'' +
+                '}';
     }
 }
