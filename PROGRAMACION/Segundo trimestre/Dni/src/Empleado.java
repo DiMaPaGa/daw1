@@ -12,12 +12,12 @@ public class Empleado {
 
     private static float importeHora;
 
-    private Empleado(){//porque en el indicador dice que se podrán crear por defecto
-        this.nombre="";
-        this.apellido="";
-        this.nif=new Nif(30229753);
+    public Empleado(){//porque en el indicador dice que se podrán crear por defecto
+        this.nombre="Miguel";
+        this.apellido="Sánchez";
+        this.nif=new Nif (14635273);
         this.estaCasado=false;
-        this.sueldoBase=1196;
+        this.sueldoBase=1;
         this.horasExtras=0;
 
 
@@ -34,7 +34,9 @@ public class Empleado {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre!=null && nombre.length()>0)
+        {this.nombre = nombre;
+        }
     }
 
     public String getApellido() {
@@ -42,14 +44,17 @@ public class Empleado {
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        if (apellido!=null && apellido.length()>0){
+        this.apellido = apellido;}
     }
 
     public Nif getNif() {
         return nif;
     }
 
-    public void setNif(Nif nif) { this.nif = nif;
+    public void setNif(Nif nif) {
+        if (nif!=null)
+        {this.nif = nif;}
     }
 
     public float getSueldoBase() {
@@ -57,7 +62,9 @@ public class Empleado {
     }
 
     public void setSueldoBase(float sueldoBase) {
-        this.sueldoBase = sueldoBase;
+        if (sueldoBase!=0){
+        this.sueldoBase = sueldoBase;}
+
     }
 
     public float getHorasExtras() {
@@ -65,7 +72,8 @@ public class Empleado {
     }
 
     public void setHorasExtras(int horasExtras) {
-        this.horasExtras = horasExtras;
+        if (horasExtras>=0){
+        this.horasExtras = horasExtras;}
     }
 
     public boolean isEstaCasado() {
@@ -81,7 +89,8 @@ public class Empleado {
     }
 
     public void setHijos(int hijos) {
-        this.hijos = hijos;
+        if (hijos>=0){
+        this.hijos = hijos;}
     }
 
     public static float getImporteHora() {
@@ -93,12 +102,14 @@ public class Empleado {
     }
 
     public float calcularSueldoBruto(){
-       float sueldoBruto= this.sueldoBase+(this.horasExtras*importeHora);
-       return sueldoBruto;
+
+       return this.sueldoBase+(this.horasExtras*Empleado.importeHora);
     }
 
     @Override
     public String toString() {
+
+
         return nif +" "+ nombre+" "+apellido+"\n"+"Sueldo base: "+sueldoBase+"\nHoras extras: "+horasExtras+"\nCasado: "+estaCasado+"\nNumero de hijos: "+hijos;
 
     }

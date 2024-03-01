@@ -20,8 +20,14 @@ public class Nif {
 
    public static void leer() {//pertenece a la clase y no al objeto
        Scanner scan=new Scanner(System.in);
-        System.out.println("Incorpore su número de dni");
-            int dni = scan.nextInt();
+       String pruebaLongitud="";
+       int dni;
+       do {
+           System.out.println("Incorpore su número de dni");
+           dni = scan.nextInt();
+           pruebaLongitud +=""+dni;
+       } while (pruebaLongitud.length() !=8);
+
        System.out.println(generarLetra(dni));
 
     }
@@ -49,7 +55,7 @@ public class Nif {
 
     @Override
     public String toString() {
-        return dni + "-" + letra;
+        return this.dni + "-" + this.letra;
     }
 }
 
