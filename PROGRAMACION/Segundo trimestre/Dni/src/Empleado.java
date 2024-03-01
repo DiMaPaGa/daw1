@@ -17,7 +17,7 @@ public class Empleado {
         this.apellido="";
         this.nif=new Nif(30229753);
         this.estaCasado=false;
-        this.sueldoBase=0;
+        this.sueldoBase=1196;
         this.horasExtras=0;
 
 
@@ -27,6 +27,7 @@ public class Empleado {
         this.nif= nif;
 
     }
+
 
     public String getNombre() {
         return nombre;
@@ -48,8 +49,7 @@ public class Empleado {
         return nif;
     }
 
-    public void setNif(Nif nif) {
-        this.nif = nif;
+    public void setNif(Nif nif) { this.nif = nif;
     }
 
     public float getSueldoBase() {
@@ -64,7 +64,7 @@ public class Empleado {
         return horasExtras;
     }
 
-    public void setHorasExtras(float horasExtras) {
+    public void setHorasExtras(int horasExtras) {
         this.horasExtras = horasExtras;
     }
 
@@ -93,6 +93,13 @@ public class Empleado {
     }
 
     public float calcularSueldoBruto(){
+       float sueldoBruto= this.sueldoBase+(this.horasExtras*importeHora);
+       return sueldoBruto;
+    }
+
+    @Override
+    public String toString() {
+        return nif +" "+ nombre+" "+apellido+"\n"+"Sueldo base: "+sueldoBase+"\nHoras extras: "+horasExtras+"\nCasado: "+estaCasado+"\nNumero de hijos: "+hijos;
 
     }
 }

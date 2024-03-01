@@ -12,8 +12,8 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element type="xs:integer" name="id"/> <!--Toda especie necesita un único ID-->
-                                        <xs:element type="xs:string" name="common" minOccurs="1" maxOccurs="unbounded"/> <!--Toda especie tiene un nombre común, aquí no he limitado el máximo ya que un mismo árbol puede tener diferentes nombres según la jerga o el idioma-->
-                                        <xs:element type="xs:string" name="commonName" minOccurs="1" maxOccurs="unbounded"/>
+                                        <xs:element type="xs:string" name="common" maxOccurs="unbounded"/> <!--Toda especie tiene un nombre común, aquí no he limitado el máximo ya que un mismo árbol puede tener diferentes nombres según la jerga o el idioma-->
+                                        <xs:element type="xs:string" name="commonName" maxOccurs="unbounded"/>
                                         <xs:element type="xs:string" name="scientificName"/> <!-- Sin embargo, el nombre científico es único-->
                                         <xs:element type="xs:string" name="family" /> <!-- Y la familia también-->
                                         <xs:element name="type"> <!-- He creado una lista que limita la cadena introducida, permitiendo únicamente los tipos de especies que aparecen en el XML -->
