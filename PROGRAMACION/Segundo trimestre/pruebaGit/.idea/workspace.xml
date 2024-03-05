@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31f6ec2e-a399-4c52-9af0-d756c5a8323a" name="Changes" comment="segundo commit con print nuevo">
-      <change beforePath="$PROJECT_DIR$/../Dni/src/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dni/src/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dni/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dni/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dni/src/Nif.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dni/src/Nif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pruebaGit.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="31f6ec2e-a399-4c52-9af0-d756c5a8323a" name="Changes" comment="segundo commit con print nuevo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2d5ebdieTyAIhmvxAhDr8M9oRPZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,6 +25,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/dpascual/Desktop/DEFINITIVA/daw1/PROGRAMACION/Segundo trimestre/JugadorEquipoLiga",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>

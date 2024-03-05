@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- 
+    El biblioteca es de tipo sequence porque es una sucesión de etiquetas Libro
+--> 
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" type="tipoLibro" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="url" type="xs:anyURI"/>
+        </xs:complexType>
+    </xs:element>
+<!-- 
+    el contenido complejo de los libros tambien en sequence debido a que aparece en el mismo orden siempre, hay un caso especial en el que el libro tiene dos autores 
+    por lo que se indica que tiene como minimo 1 o mas autores indicado con el minOccurs y el maxOccurs. al final viene indicado los dos atributos que contiene la etiqueta 
+    libro que seria el isbn y el año
+    -->
+    <xs:complexType name="tipoLibro">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" />
+                    <xs:element name="autor" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="apellido" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="2" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+            <xs:element name="editorial" type="mieditorial" minOccurs="1" maxOccurs="2" />
+            <xs:element name="precio" type="tipo-precio" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="año" type="añoLibro"/>
+        <xs:attribute name="isbn" type="patron"/>
+    </xs:complexType>
+
+ <!-- 
+      La primera de las restricciones esta relacionada como se indica la fecha simplemente con el año indicado por eso elegi gYear
+ -->
+    <xs:simpleType name="añoLibro">
+        <xs:restriction base="xs:gYear"/>
+    </xs:simpleType>
+ <!-- 
+      La siguiente restricción esta dedicada al patron del isbn y viene indicada con pattern y seguida de su expresión irregular que indica el numero de digitos que
+      contiene.
+ -->
+
+    <xs:simpleType name="patron">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}-\d{10}"/>
+            
+        </xs:restriction>
+    </xs:simpleType>
+ <!-- 
+     la siguiente viene debido a que se pedia en el examen que solo podian estar estas tres editoriales unicamente y las he ido enumerando. 
+ -->
+    <xs:simpleType name="mieditorial">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Addison-Wesley"/>
+            <xs:enumeration value="RA-MA S.A. Editorial y Publicaciones"/>
+            <xs:enumeration value="Morgan Kaufmann editorials"/>
+        </xs:restriction>
+    </xs:simpleType>
+<!-- 
+    Y por ultimo la restriccion relativa al precio indicado con formato decimal de dos digitos.  
+ -->
+    <xs:simpleType name="tipo-precio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

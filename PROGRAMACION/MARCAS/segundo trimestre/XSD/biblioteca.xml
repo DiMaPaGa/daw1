@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="biblioteca1.xsl"?>
+<biblioteca url="http://www.vedruna.es/servicios/biblioteca/">
+<libro año="2014" isbn="978-0321336316">
+<titulo>TCP/IP Illustrated</titulo>
+<autor>
+<apellido>Stevens</apellido>
+<nombre>W.</nombre>
+</autor>
+<editorial>Addison-Wesley</editorial>
+<precio>65.95</precio>
+</libro>
+<libro año="2009" isbn="978-8478979448">
+<titulo>UBUNTU: Linux</titulo>
+<autor>
+<apellido>Serrat Olmos </apellido>
+<nombre>Manuel David</nombre>
+</autor>
+<editorial>RA-MA S.A. Editorial y Publicaciones</editorial>
+<precio>65.95</precio>
+</libro>
+<libro año="2000">
+<titulo>Data on the Web</titulo>
+<autor>
+<apellido>Abiteboul</apellido>
+<nombre>Serge</nombre>
+</autor>
+<autor>
+<apellido>Buneman</apellido>
+<nombre>Peter</nombre>
+</autor>
+<autor>
+<apellido>Suciu</apellido>
+<nombre>Dan</nombre>
+</autor>
+<editorial>Morgan Kaufmann editorials</editorial>
+<precio>39.95</precio>
+</libro>
+<libro año="2009" isbn="">
+<titulo>Gestión de bases de datos</titulo>
+<autor>
+<apellido>Hueso Ibáñez Galindo</apellido>
+<nombre>Luis</nombre>
+</autor>
+<editorial>RA-MA S.A. Editorial y Publicaciones</editorial>
+<precio>28.40</precio>
+</libro>
+</biblioteca>

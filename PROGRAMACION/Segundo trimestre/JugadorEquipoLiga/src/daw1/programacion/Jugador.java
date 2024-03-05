@@ -74,7 +74,7 @@ public class Jugador {
     }
 
 
-
+/*Ojo que dice imprimirPerfil, imprime, mejor no como el toString sino public void imprimirPerfil()*/
     public String imprimirPerfil() {
         return "Jugador{" +
                 "nombre='" + nombre + '\'' +

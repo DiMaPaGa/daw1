@@ -56,6 +56,14 @@ and orderdetails.ProductID = products.ProductID
 and employees.EmployeeID IN
 (Select ReportsTo from employees o where employees.EmployeeID = o.ReportsTo);
 
+Select Distinct employees.*, products.*
+from employees, orders, orderdetails, products
+where employees.EmployeeID = orders.EmployeeID
+and orders.OrderID = orderdetails.OrderID
+and orderdetails.ProductID = products.ProductID
+and employees.EmployeeID IN
+(Select ReportsTo from employees o group by ReportsTo);
+
 -- 9. Por cada empleado, imprimir toda su información, el nombre y apellidos de su jefe concatenados, y los pedidos que ha realizado el empleado. Mostrar en ese orden.
 Select employees.*, concat_ws(" ", jefe.FirstName, jefe.LastName) as 'Jefe', orders.OrderID
 from employees, orders, employees as jefe
