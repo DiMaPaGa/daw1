@@ -53,7 +53,7 @@ public class Empleado {
     }
 
     public void setNif(Nif nif) {
-        if (nif!=null)
+        if (nif!=null && String.valueOf(nif).length()==8)
         {this.nif = nif;}
     }
 

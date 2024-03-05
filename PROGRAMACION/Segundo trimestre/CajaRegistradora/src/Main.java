@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-CajaRegitradora lista= new CajaRegitradora();
+CajaRegistradora lista= new CajaRegistradora();
 Producto boli= new Producto("Abc123", "Boligrafo",0.50f, 1);
 Producto lapiz= new Producto("Abc122", "Lápiz",0.20f, 1);
 Producto rotulador= new Producto("Abc124", "Rotulador",0.75f, 1);

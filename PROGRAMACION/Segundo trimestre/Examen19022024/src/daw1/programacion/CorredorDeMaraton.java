@@ -403,7 +403,14 @@ package daw1.programacion;
             String anyoSt = "";
             int contador = 0;
 
-            for (int i = 0; i < fechaDeNacimiento.length(); i++) {
+            String[] fecha=fechaDeNacimiento.split("/");
+
+            int dia=Integer.parseInt(fecha[0]);
+            int mes=Integer.parseInt(fecha[1]);
+            int anyo=Integer.parseInt(fecha[2]);
+
+
+            /*for (int i = 0; i < fechaDeNacimiento.length(); i++) {
                 if (fechaDeNacimiento.charAt(i) == '/') {
                     contador++;
                 } else if (contador == 0) {
@@ -417,7 +424,7 @@ package daw1.programacion;
 
             int dia = Integer.parseInt(diaSt);
             int mes = Integer.parseInt(mesSt);
-            int anyo = Integer.parseInt(anyoSt);
+            int anyo = Integer.parseInt(anyoSt);*/
 
             if (dia < 1 || anyo < 1900 || anyo > 2023) {
                 return false;

@@ -1,9 +1,9 @@
-public class CajaRegitradora {
+public class CajaRegistradora {
 
     private Producto[]productos;
 
 
-    public CajaRegitradora(){
+    public CajaRegistradora(){
         Producto[]productos=null;
 
     }

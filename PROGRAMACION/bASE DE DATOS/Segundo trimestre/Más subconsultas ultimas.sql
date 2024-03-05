@@ -16,7 +16,7 @@ WHERE UnitPrice >
 -- 4. Clientes que han realizado pedidos en todas las regiones
 
 SELECT DISTINCT(orders.CustomerID) FROM orders where CustomerID IN
-(SELECT CustomerID FROM orders GROUP BY CustomerID HAVING COUNT(DISTINCT(ShipRegion)) = 
+(SELECT CustomerID FROM orders GROUP BY CustomerID HAVING COUNT(DISTINCT(ShipRegion)) in
 (SELECT COUNT(DISTINCT(ShipRegion))FROM orders));
 
 -- 5. Productos que nunca han sido pedidos

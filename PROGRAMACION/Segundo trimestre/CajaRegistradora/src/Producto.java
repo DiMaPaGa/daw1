@@ -23,7 +23,7 @@ public class Producto{
     }
 
     public Producto (String id, String nombreDeProducto, float precioUnitario, int numeroUnidades){
-        this.id=id;
+        this(id);
         this.nombreDeProducto=nombreDeProducto;
         this.precioUnitario=precioUnitario;
         this.numeroUnidades=numeroUnidades;

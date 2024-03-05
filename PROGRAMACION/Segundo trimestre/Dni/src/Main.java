@@ -42,6 +42,7 @@ public class Main {
         System.out.println("¿Cúando es el importe de la hora extra?");
        Empleado.setImporteHora(scan.nextFloat());
 
+       
         imprimirArray(empleados);
 
        empleadoMasCobra(empleados);

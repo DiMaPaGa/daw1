@@ -30,8 +30,6 @@ from customers
 WHERE CustomerID IN
 (SELECT CustomerID from orders group by CustomerID having count(distinct Shipcountry)>1);
 
-
-
 -- 4. Empleados que han manejado pedidos de más de un cliente
 
 SELECT EmployeeID
@@ -72,6 +70,7 @@ SELECT ProductName, UnitPrice, (select avg(UnitPrice) from products where Catego
 FROM products
 WHERE CategoryID = 6
 GROUP BY ProductName, UnitPrice;
+
 
 
 

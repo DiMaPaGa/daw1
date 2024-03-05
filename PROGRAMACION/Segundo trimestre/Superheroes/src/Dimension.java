@@ -11,7 +11,7 @@ public class Dimension {
         this.profundidad=0;
     }
 
-    private Dimension(double alto, double ancho, double profundidad){
+    public Dimension(double alto, double ancho, double profundidad){
         this.alto=alto;
         this.ancho=ancho;
         this.profundidad=profundidad;

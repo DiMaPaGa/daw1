@@ -30,9 +30,10 @@ public class Superheroe {
         this.descripcion = descripcion;
     }
 
-    public boolean isCapa() {
+    public boolean tieneCapa() {
         return capa;
     }
+
 
     public void setCapa(boolean capa) {
         this.capa = capa;

@@ -27,7 +27,7 @@ public Libro(String isbn, String titulo, String autor){
 }
 
 public Libro(String isbn, String titulo, String autor, int numeroPaginas, String editorial){
- this (isbn, titulo, autor);//en un principio ha puesto todos this.Aquí tb.
+ this (isbn, titulo, autor);
  setNumeroPaginas(numeroPaginas);
  setEditorial(editorial);
 
@@ -53,7 +53,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         return editorial;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(String isbn) throws Exception {  
     if (contieneNulo(isbn)) {
         throw new NullPointerException("ISBN no válido");
     }
@@ -68,7 +68,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
     }
 
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(String titulo) throws Exception{
         if (contieneNulo(titulo)) {
             throw new NullPointerException("Título no válido");
         }
@@ -79,7 +79,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         this.titulo = titulo;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor) throws Exception{
         if (contieneNulo(autor)) {
             throw new NullPointerException("Autor no válido");
         }
@@ -89,7 +89,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         this.autor = autor;
     }
 
-    public void setNumeroPaginas(int numeroPaginas) {
+    public void setNumeroPaginas(int numeroPaginas) throws Exception {
     if (numeroPaginas<=0){
         throw new IllegalArgumentException("Número de páginas no válido");
     }
@@ -97,7 +97,7 @@ public Libro(String isbn, String titulo, String autor, int numeroPaginas, String
         this.numeroPaginas = numeroPaginas;
     }
 
-    public void setEditorial(String editorial) {
+    public void setEditorial(String editorial) throws Exception {
         if (contieneNulo(editorial)) {
             throw new NullPointerException("editorial no válida");
         }

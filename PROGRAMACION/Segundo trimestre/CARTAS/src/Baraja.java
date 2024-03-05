@@ -27,7 +27,9 @@ public class Baraja {
 
     public void mostrarBaraja() {
         for (Carta carta:this.baraja) {
-            System.out.println(carta);
+            if (carta != null) {
+                System.out.println(carta);
+            }
         }
     }
 

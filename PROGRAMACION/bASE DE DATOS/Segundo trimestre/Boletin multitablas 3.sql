@@ -11,6 +11,10 @@ SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice,
 FROM orders, orderdetails, products, employees 
 Where orders.EmployeeID = employees.EmployeeID and products.ProductID = orderdetails.ProductID and orders.OrderID = orderdetails.OrderID;
 
+SELECT orders.OrderID, orders.OrderDate, orderdetails.ProductID, orderdetails.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.FirstName, employees.LastName) as "Nombre empleado" 
+FROM orders, orderdetails, employees 
+Where orders.EmployeeID = employees.EmployeeID and orders.OrderID = orderdetails.OrderID;
+
 SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, CONCAT_WS(" ", employees.FirstName, employees.LastName) AS "Nombre empleado"
 FROM orders
 JOIN orderdetails ON orders.OrderID = orderdetails.OrderID

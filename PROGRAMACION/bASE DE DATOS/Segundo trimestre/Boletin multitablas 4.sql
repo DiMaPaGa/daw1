@@ -132,15 +132,14 @@ JOIN employees USING (EmployeeID)
 WHERE employees.LastName IN ('King', 'Davolio', 'Fuller') AND employees.FirstName IN ('Robert', 'Nancy', 'Andrew'); -- Aquí incluyo otra forma de hacer la misma criba sin emplear concat, por si resulta más clara.
 
 -- 10. Obtener todos los productos(codigo,nombre,precio,stock) de la orden 10257.
--- Producto cartesiano -- mirar en casa de nuevo que al parecer solo se necesitan dos tablas(products y orderdetails)
-SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
-FROM products, orderdetails, orders
-WHERE products.ProductID = orderdetails.ProductID and orderdetails.OrderID = orders.OrderID 
-AND orders.OrderID=10257;
+-- Producto cartesiano -- mirar en casa de nuevo que al parecer solo se necesitan dos tablas
 
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM products, orderdetails
+WHERE products.ProductID = orderdetails.ProductID 
+AND orderdetails.OrderID=10257;
 -- JOIN
 SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
 FROM products
 JOIN orderdetails USING (ProductID) 
-JOIN orders USING (OrderID)
-WHERE orders.OrderID=10257;
+WHERE orderdetails.OrderID=10257;

@@ -29,7 +29,7 @@ WHERE EmployeeID IN
 (SELECT EmployeeID From employeeterritories Where TerritoryID IN
 (SELECT TerritoryID FROM territories WHERE TerritoryDescription ='New York'));
 
--- 4. Mostrar los clientes y sus pedidos que tengan un valor de peso (Freight) superior al promedio. LO ENTIENDO COMO EL IDENTIFICADOR DE CRIENTE Y
+-- 4. Mostrar los clientes y sus pedidos que tengan un valor de peso (Freight) superior al promedio. LO ENTIENDO COMO EL IDENTIFICADOR DE ClIENTE Y
 SELECT CustomerID, OrderID
 FROM orders
 WHERE Freight > 
