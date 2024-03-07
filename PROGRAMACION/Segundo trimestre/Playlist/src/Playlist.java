@@ -124,6 +124,7 @@ public class Playlist {
     }
 
 
+
     public void reproducir() {
         if (canciones == null || canciones.length == 0) {
             System.out.println("La lista de reproducción está vacía.");

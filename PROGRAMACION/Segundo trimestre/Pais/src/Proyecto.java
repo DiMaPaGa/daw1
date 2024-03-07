@@ -38,7 +38,7 @@ public class Proyecto {
 
     public float calculoSalario(){
 
-      return getDuracion()*getSueldoDiario();
+      return this.duracion*this.sueldoDiario;
     }
 
 

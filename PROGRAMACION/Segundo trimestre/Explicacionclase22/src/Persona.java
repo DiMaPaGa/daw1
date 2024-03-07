@@ -1,4 +1,4 @@
-public class Persona /*implements Comparable<Persona>*/{
+public class Persona implements Comparable<Persona>{
 
     public String nombre;
     public String apellido;
@@ -52,11 +52,11 @@ public class Persona /*implements Comparable<Persona>*/{
     }
 
 
-   /* public int compareTo(Persona persona) {
+   public int compareTo(Persona persona) {
         return this.edad- persona.edad;
     }
 
-   public int compareTo(Persona persona) {
+   /*public int compareTo(Persona persona) {
         return this.nombre.compareTo(persona.nombre);
     }*/
 

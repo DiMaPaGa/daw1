@@ -1,0 +1,228 @@
+// EJERCICIO 1
+
+// MAIN
+¡OJOOOO! -----------------public static void main(String[] args) throws Exception {
+/*
+        Crea una clase llamada País.
+
+                La clase debe tener los siguientes parámetros (recuerda que los parámetros deben
+        ser declarados como privados por cuestiones de seguridad):
+
+            ● nombre (tipo String): Es el nombre del pais.
+            ● población (tipo long): Número de habitantes del pais.
+            ● PIB (tipo double): Representa el producto interior bruto en millones de €
+
+        La clase tiene un único constructor con todos los parámetros.
+
+        La clase tiene todos los métodos getters y setters.
+
+                Además, tendrá un método que devuelva el PIB per cápita, calculado dividiendo el
+        PIB en € por la población. (Ten en cuenta que tienes que usar el PIB en €).
+         */
+
+
+//        Pais espanya = new Pais("España", 45_000_000, 10_000_000);
+//
+//        System.out.println(espanya);
+//        System.out.println(espanya.calcularPibPerCapita());
+
+
+
+// CLASE PAIS
+
+public class Pais {
+
+
+    private String nombre;
+    private long poblacion;
+    private double pib;
+
+
+    private Pais() {
+        this.nombre = "default";
+        this.poblacion = 1;
+        this.pib = 1;
+    }
+
+
+    public Pais(String nombre, long poblacion, double pib) throws Exception {
+        this();
+        setNombre(nombre);
+        setPoblacion(poblacion);
+        setPib(pib);
+    }
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) throws Exception {
+        if (nombre != null && !nombre.equals("")) {
+            this.nombre = nombre;
+        } else {
+            throw new Exception("Nombre no valido");
+        }
+    }
+
+    public long getPoblacion() {
+        return poblacion;
+    }
+
+    public void setPoblacion(long poblacion) throws Exception {
+        if (poblacion > 0) {
+            this.poblacion = poblacion;
+        } else {
+            throw new Exception("Poblacion no valida");
+        }
+    }
+
+    public double getPib() {
+        return pib;
+    }
+
+    public void setPib(double pib) throws Exception {
+        if (pib > 0) {
+            this.pib = pib;
+        } else {
+            throw new Exception("PIB no valido");
+        }
+    }
+
+
+    public double calcularPibPerCapita() {
+
+        return this.pib / this.poblacion;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Pais{" +
+                "nombre='" + nombre + '\'' +
+                ", poblacion=" + poblacion +
+                ", pib=" + pib +
+                '}';
+    }
+
+}
+
+
+
+
+
+// EJERCICIO 2
+
+// MAIN
+
+/*
+        Ejercicio 2
+        Crea un clase llamada proyecto con los siguientes parámetros, que puedes
+        llamarlos como quieras:
+
+            ● Primer parámetro: Descripción del Proyecto.
+            ● Segundo parámetro: Duración del Proyecto en días.
+            ● Tercer parámetro: El dinero que ganas trabajando un día en ese Proyecto. Es
+            decir, el sueldo diario.
+
+        La clase Proyecto tendrá un constructor con los tres parámetros, que tienen que ser
+        declarados como privados. Con lo que tendrás que implementar los métodos getters
+        y setters.
+
+        La clase cuenta también con un método que calcula el dinero que ganarás
+        trabajando en el Proyecto. Para este cálculo, sencillamente multiplicas el Segundo
+        parámetro por el tercero.
+         */
+
+
+//        Proyecto proyecto1 = new Proyecto("Trabajo de clase", 30, 100);
+//        System.out.println(proyecto1);
+//
+//        System.out.println(proyecto1.calcularSueldo());
+
+// CLASE PROYECTO
+
+
+public class Proyecto {
+
+
+    private String descripcion;
+    private int duracion;
+    private float sueldoDiario;
+
+
+    private Proyecto() {
+        this.descripcion = "default";
+        this.duracion = 1;
+        this.sueldoDiario = 1;
+    }
+
+
+    public Proyecto(String descripcion, int duracion, float sueldoDiario) throws Exception {
+        this();
+        setDescripcion(descripcion);
+        setDuracion(duracion);
+        setSueldoDiario(sueldoDiario);
+    }
+
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) throws Exception {
+        if (descripcion != null && !descripcion.equals("")) {
+            this.descripcion = descripcion;
+        } else {
+            throw new Exception("Descripcion no válida");
+        }
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) throws Exception {
+        if (duracion > 0) {
+            this.duracion = duracion;
+        } else {
+            throw new Exception("Duración no válida");
+        }
+    }
+
+    public float getSueldoDiario() {
+        return sueldoDiario;
+    }
+
+    public void setSueldoDiario(float sueldoDiario) throws Exception {
+        if (sueldoDiario > 0) {
+            this.sueldoDiario = sueldoDiario;
+        } else {
+            throw new Exception("Sueldo inválido");
+        }
+    }
+
+
+    public float calcularSueldo() {
+
+        return this.duracion * this.sueldoDiario;
+    }
+
+    @Override
+    public String toString() {
+        return "Proyecto{" +
+                "descripcion='" + descripcion + '\'' +
+                ", duracion=" + duracion +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Proyecto proyecto = (Proyecto) o;
+        return Objects.equals(descripcion, proyecto.descripcion);
+    }
+
+}
