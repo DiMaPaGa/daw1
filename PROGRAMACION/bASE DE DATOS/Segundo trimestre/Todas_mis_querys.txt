@@ -1,0 +1,1892 @@
+1. [[CONSULTA MULTITABLA]]
+
+-- Dos métodos : Por producto cartesiano o por JOIN
+-- POR PRODUCTO CARTESIANO
+-- SELECT* FROM EMPLEADOS, ESTUDIOS; rESULTADO, LAS DOS TABLAS CONCATENANDO TODOS LOS RESULTADOS
+-- ¿Cuantas filas tendrá el producto cartesiano de las tablas Region y Territories?
+SELECT * FROM region, territories; -- 212 FILAS Y 5 COLUMNAS REGION 4 Y TERRITORIES 53, POR CADA FILA DE UNA TABLA TE SALEN TODAS LAS OTRAS comparaciones
+-- ¿Cuantas filas tendrá el producto cartesiano de las tablas Customers, Employees y Orders?
+SELECT * FROM customers, employees, orders;-- 679770 Y 43 COLUMNAS
+-- ¿Cuantas filas tendrá el producto cartesiano de las tablas Categories, Products, Shippers y Suppliers?
+SELECT * FROM categories, products, shippers, suppliers;-- 53592 Y 29 COLUMNAS
+SELECT * FROM orders, employees where orders.EmployeeID = employees.EmployeeID; -- pasan de 7470 filas a 830, no se repiten datos.
+SELECT employees.EmployeeID FROM orders, employees where orders.EmployeeID = employees.EmployeeID; -- iNDICAR EL DATO DE QUE TABLA LO QUEREMOS
+SELECT OrderID, LastName, FirstName FROM orders, employees where orders.EmployeeID= employees.EmployeeID;-- Como OrderID sólo está en una tabla, no se especifica. Pero el profesor recomienda siempre ponerlo.
+-- EJERCICIO 1: realizar una consulta donde obtengamos el ID de los pedidos asociados a la empleada Nancy Davolio.
+SELECT OrderID FROM orders, employees where orders.EmployeeID = employees.EmployeeID and FirstName= "Nancy" and LastName= "Davolio"; -- podemos comprobarlo con select OrderID from orders where EmployeeID =1;
+
+-- EJERCICIO 2: recuperar todos los campos de la tabla Orders, imprimiendo además la compañía del cliente.
+SELECT orders.*, customers.CompanyName FROM orders, customers where orders.CustomerID = customers.CustomerID; -- resultado da 830
+
+-- EJERCICIO 3: por cada producto, mostrar el nombre del producto y el nombre de la compañía que lo provee.
+SELECT p.ProductName, s.CompanyName  FROM products as p, suppliers as s where p.SupplierID = s.SupplierID; -- da 77. Buscar siempre el nombre de columna igual o en su defecto datos llamados "diferentes" que se refieran a lo mismo. Si se renombran las columnas, cambiar también al inicio y al final.
+
+SELECT OrderID, LastName, FirstName FROM orders, employees 
+WHERE orders.EmployeeID = employees.EmployeeID;
+
+-- JOIN
+
+SELECT OrderId, LastName, FirstName FROM orders JOIN employees ON (orders.EmployeeID = employees.EmployeeID);
+SELECT OrderID, LastName, FirstName FROM orders JOIN employees using (EmployeeID); -- FORMA MÁS SENCILLA AL USAR USING, SOLO PONGO EL NOMBRE DE LA COLUMNA QUE SE LLAMA IGUAL.
+
+
+
+2. [[BOLETIN MULTITABLAS 12122023]]
+
+-- 1. Obtener todos los pedidos hechos por el empleado King, Robert.
+SELECT OrderID FROM orders, employees where orders.EmployeeID = employees.EmployeeID and FirstName= "Robert" and LastName= "King"; 
+SELECT orders.* FROM orders, employees where orders.EmployeeID = employees.EmployeeID and FirstName= "Robert" and LastName= "King"; 
+
+-- 2. Obtener todos los pedidos hechos por el empleado King, Robert Davolio, Nancy y Fuller, Andrew.
+SELECT orders.OrderID FROM orders, employees where orders.EmployeeID = employees.EmployeeID and ((FirstName= "Robert" and LastName= "King") or (FirstName= "Nancy" and LastName= "Davolio") or (FirstName= "Andrew" and LastName= "Fuller")); -- Ojo, muy importante los dos paréntesis... esto es lo más correcto.
+select orders.OrderID from orders, employees where employees.FirstName in ("Robert", "Nancy", "Andrew") and employees.LastName in ("King", "Davolio", "Fuller") and orders.EmployeeID = employees.EmployeeID;
+
+-- 3. Obtener todos los pedidos del cliente cuyo nombre de contacto es "Bernardo Batista".
+SELECT orders.* FROM orders, customers where orders.CustomerID = customers.CustomerID and ContactName="Bernardo Batista"; 
+
+-- 4. Obtener todos los productos(codigo de poducto, nombre, precio, stock) del pedido 10257.
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock FROM products, orderdetails where products.ProductID= orderdetails.ProductID and OrderID=10257; 
+
+-- 5. Obtener todos los productos(codigo de producto, nombre, precio, stock) de los pedidos hechos desde 1997 hasta la fecha de hoy.
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock FROM products, orderdetails, orders where products.ProductID= orderdetails.ProductID and orderdetails.OrderID=orders.OrderID and (year(OrderDate)>=1997); 
+
+-- 6. Mostar el ID del pedido, fecha del pedido y el total de productos de cada pedido.
+SELECT orders.OrderID, orders.OrderDate, count(*) as "total de productos" FROM orders, orderdetails where orders.OrderID = orderdetails.OrderId Group by OrderID; 
+Select orders.OrderID,orders.Orderdate,count(*)'Total de Productos por pedido' from orderdetails join orders using (OrderID) group by orders.OrderID;
+
+-- 7. Obtener el nombre de todas las categorias y los nombres de sus productos, precio y stock.
+SELECT categories.CategoryName, products.ProductName, products.UnitPrice, products.UnitsInStock  FROM categories, products  where categories.CategoryID=products.CategoryID; 
+
+-- 8. Obtener el número de productos por cada categoría mostrando el nombre de la categoría, solamente para las categorías 3, 5 y 8. Ordenar por el nombre de la categoría.
+SELECT count(*) as "Numero de productos", categories.CategoryName FROM categories, products  where categories.CategoryID = products.CategoryID and categories.CategoryID in ("3", "5", "8") group by categories.CategoryName ORDER BY categories.CategoryName; 
+SELECT count(*) as "Numero de productos", categories.CategoryName FROM categories join products using (CategoryID) where categories.CategoryID in ("3", "5", "8") group by categories.CategoryName ORDER BY categories.CategoryName; 
+
+
+3. [[BOLETIN MULTITABLAS 2]]
+
+-- 10. Por cada pedido, obtener el ID de pedido, ID de producto, ID de proveedor y el nombre de la compañía.
+SELECT northwind.orderdetails.OrderID, northwind.orderdetails.ProductID, northwind.suppliers.SupplierID, northwind.suppliers.CompanyName FROM northwind.orderdetails, northwind.products, northwind.suppliers where orderdetails.ProductID= products.ProductID and products.SupplierID= suppliers.SupplierID; 
+
+-- 11. Por cada pedido, obtener el ID de pedido, ID de empleado y el nombre de empleado.
+SELECT northwind.orders.OrderID, northwind.employees.EmployeeID, northwind.employees.FirstName FROM northwind.orders, northwind.employees where orders.EmployeeID= employees.EmployeeID;
+
+-- 12. Por cada producto, obtener el ID de producto, ID de categoría y el nombre de categoría.
+SELECT products.ProductID, products.CategoryID, categories.CategoryName FROM northwind.products, northwind.categories where products.CategoryID = categories.CategoryID;
+
+-- 13. Por cada empleado, imprimir el ID de empleado, nombre, apellido e ID de territorio.
+SELECT northwind.employees.EmployeeID, northwind.employees.FirstName, northwind.employees.LastName, northwind.employeeterritories.TerritoryID FROM northwind.employees, northwind.employeeterritories WHERE employees.EmployeeID = employeeterritories.EmployeeID;
+
+-- 14. Por cada cliente, mostrar el ID de cliente, nombre de contacto y pedidos que ha hecho.
+SELECT northwind.customers.CustomerID, northwind.customers.ContactName, northwind.orders.OrderID  FROM northwind.customers, northwind.orders WHERE customers.CustomerID = orders.CustomerID;
+
+-- 15. Por cada cliente, mostrar el ID de cliente, nombre de contacto y numero total pedidos.
+SELECT northwind.customers.CustomerID, northwind.customers.ContactName, count(northwind.orders.OrderID) as "TotalPedidos" FROM northwind.customers, northwind.orders WHERE customers.CustomerID = orders.CustomerID group by customers.CustomerID, customers.ContactName; -- Se puede dejar únicamente agrupado por CustomerID ya que cada cliente tiene un nombre vinculado a su ID.
+
+-- 16. Por cada pedido presente en orderdetails, imprimir toda su información y además, el nombre de la categoría a la que pertenece.
+SELECT northwind.orderdetails.*, northwind.categories.CategoryName FROM northwind.orderdetails, northwind.products ,northwind.categories WHERE orderdetails.ProductID = products.ProductID and categories.CategoryID= products.CategoryID; 
+
+-- 17. Por cada pedido, mostrar el ID de pedido, dirección del cliente y dirección del empleado.
+SELECT northwind.orders.OrderID, northwind.customers.Address as "Dirección Cliente", northwind.employees.Address as "Dirección Empleado" FROM northwind.orders, northwind.customers, northwind.employees WHERE orders.CustomerID = customers.CustomerID and orders.EmployeeID = employees.EmployeeID;
+
+-- 18. Por cada producto, mostrar el ID de producto, nombre de producto y dirección del proveedor.
+SELECT northwind.products.ProductID, northwind.products.ProductName, northwind.suppliers.Address AS "Dirección proveedor" FROM northwind.products, northwind.suppliers WHERE products.SupplierID= suppliers.SupplierID;
+
+-- 19. Visualizar el nombre de la compañía y el id del cliente, fecha, precio unitario y producto del pedido.
+SELECT northwind.customers.CompanyName, northwind.orders.CustomerID, northwind.orders.OrderDate, northwind.orderdetails.UnitPrice, northwind.products.ProductName FROM northwind.customers, northwind.orders, northwind.orderdetails, northwind.products WHERE customers.CustomerID = orders.CustomerID and orders.OrderID = orderDetails.OrderID and orderdetails.ProductID = products.ProductID;
+
+-- 20. Mostrar el nombre del producto, el precio, el stock y el nombre de la categoría a la que pertenece.
+SELECT northwind.products.ProductName, northwind.products.UnitPrice, northwind.products.UnitsInStock, northwind.categories.CategoryName FROM northwind.products, northwind.categories WHERE products.CategoryID = categories.CategoryID;
+
+
+4. [[BOLETIN MULTITABLAS 3]]
+
+
+-- 21. Mostrar el nombre del producto, el precio producto, el código del proveedor y el nombre de la compañía proveedora.
+SELECT products.ProductName, products.UnitPrice, suppliers.SupplierID, suppliers.CompanyName 
+FROM products, suppliers Where products.SupplierID = suppliers.SupplierID;
+
+SELECT products.ProductName, products.UnitPrice, suppliers.SupplierID, suppliers.CompanyName 
+FROM products
+JOIN suppliers ON products.SupplierID = suppliers.SupplierID;
+
+-- 22. Mostrar el id del pedido, fecha, código del producto, precio, código del empleado y su nombre completo.
+SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.FirstName, employees.LastName) as "Nombre empleado" 
+FROM orders, orderdetails, products, employees 
+Where orders.EmployeeID = employees.EmployeeID and products.ProductID = orderdetails.ProductID and orders.OrderID = orderdetails.OrderID;
+
+SELECT orders.OrderID, orders.OrderDate, orderdetails.ProductID, orderdetails.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.FirstName, employees.LastName) as "Nombre empleado" 
+FROM orders, orderdetails, employees 
+Where orders.EmployeeID = employees.EmployeeID and orders.OrderID = orderdetails.OrderID;
+
+SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, CONCAT_WS(" ", employees.FirstName, employees.LastName) AS "Nombre empleado"
+FROM orders
+JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
+JOIN products ON products.ProductID = orderdetails.ProductID
+JOIN employees ON orders.EmployeeID = employees.EmployeeID;
+
+-- correccion clase
+SELECT orders.OrderID,OrderDate,orderdetails.ProductID,orderdetails.UnitPrice,employees.EmployeeID,concat(employees.firstName," ",employees.lastname) "NOMBRE DEL EMPLEADO" FROM northwind.orders,employees,orderdetails where orders.EmployeeID=employees.EmployeeID and orders.OrderID=orderdetails.OrderID;
+select ProductID, OrderDate, orders.OrderID, UnitPrice, employees.EmployeeID, FirstName
+from orders 
+join orderdetails on (orderdetails.OrderID = orders.OrderID)
+join employees on (orders.EmployeeID = employees.EmployeeID);
+
+
+-- 23. Calcular el stock de productos por cada categoria. Mostrar el nombre de la categoria y el stock por categoria.
+SELECT categories.CategoryName, sum(products.UnitsInStock) as "Stock por categoría" 
+FROM categories, products 
+Where categories.CategoryID = products.CategoryID GROUP BY categories.CategoryID; 
+
+SELECT categories.CategoryName, sum(products.UnitsInStock) as "Stock por categoría" 
+FROM categories
+JOIN products ON categories.CategoryID = products.CategoryID 
+GROUP BY categories.CategoryID; 
+-- Podria agrupar el anterior por CategoryName, como ya lo tenía, pero CategoryID me aseguro de que no se van a repetir porque en categoryName 
+-- 24. Obtener el nombre del cliente, nombre del proveedor, nombre del empleado y el nombre de los productos que estan en el pedido 10794.
+SELECT customers.ContactName, suppliers.ContactName, employees.FirstName, products.ProductName 
+FROM customers, suppliers, employees, products, orders, orderdetails 
+where customers.CustomerID = orders.CustomerID 
+and orders.EmployeeID = employees.EmployeeID 
+and suppliers.SupplierID = products.SupplierID 
+and products.ProductID = orderdetails.ProductID 
+and orderdetails.OrderID = orders.OrderID 
+and orders.OrderID = 10794;
+
+SELECT customers.ContactName, suppliers.ContactName, employees.FirstName, products.ProductName 
+FROM customers
+JOIN orders ON customers.CustomerID = orders.CustomerID
+JOIN employees ON orders.EmployeeID = employees.EmployeeID 
+JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
+JOIN products ON orderdetails.ProductID = products.ProductID
+JOIN suppliers ON products.SupplierID = suppliers.SupplierID 
+Where orders.OrderID = 10794;
+
+-- 25. Seleccionar el nombre de la compañía del cliente, el código de la orden de compra, la fecha de la orden de compra, código del producto, cantidad pedida del producto, nombre del producto, el nombre de la compañía proveedora y la ciudad del proveedor, usar Join.
+SELECT customers.CompanyName, orders.OrderID, orders.OrderDate, products.ProductID, orderdetails.Quantity, products.ProductName, suppliers.CompanyName, suppliers.City
+FROM customers
+JOIN orders ON customers.CustomerID = orders.CustomerID
+JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
+JOIN products ON orderdetails.ProductID = products.ProductID
+JOIN suppliers ON products.SupplierID = suppliers.SupplierID;
+
+SELECT customers.CompanyName, orders.OrderID, orders.OrderDate, products.ProductID, orderdetails.Quantity, products.ProductName, suppliers.CompanyName, suppliers.City
+FROM customers, orders, orderdetails, products, suppliers 
+where customers.CustomerID = orders.CustomerID and orders.OrderID = orderdetails.OrderID and orderdetails.ProductID = products.ProductID and products.SupplierID = suppliers.SupplierID;
+
+-- 26. Seleccionar cuantos proveedores tengo en cada país, considerando solo a los nombres de los proveedores que comienzan con la letra E hasta la letra P, además de mostrar solo los países donde tenga más de 2 proveedores.
+
+SELECT Country, COUNT(*) AS "Número de proveedores"
+FROM suppliers
+WHERE ContactName BETWEEN "E%" AND "Pz%"
+GROUP BY Country
+HAVING COUNT(*) > 2;
+
+
+-- 27. Crear una consulta que muestre el nombre de empleado y el número de empleados que cada uno de los empleados tiene a su cargo, pero solo para aquellos empleados que tienen gente a su cargo.
+SELECT e.FirstName, COUNT(sub.EmployeeID) AS "Número de subordinados"
+FROM employees AS e
+LEFT JOIN employees AS sub ON e.EmployeeID = sub.ReportsTo
+GROUP BY e.FirstName
+HAVING COUNT(sub.EmployeeID) > 0;
+
+SELECT e.FirstName, COUNT(sub.EmployeeID) AS "Número de subordinados"
+FROM employees AS e, employees AS sub
+WHERE e.EmployeeID = sub.ReportsTo
+GROUP BY e.FirstName
+HAVING COUNT(sub.EmployeeID) > 0;
+
+-- 28. Crear una consulta que muestre el nombre de empleado, el número de pedidos tramitado por cada empleado, de aquellos empleados que han tramitado mas de 15 pedidos.
+SELECT employees.FirstName, COUNT(*) AS "NÚMERO DE PEDIDOS"
+FROM employees
+JOIN orders ON employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.FirstName 
+HAVING COUNT(*) > 15;
+-- mejor agrupar por employeeID
+SELECT employees.FirstName, COUNT(orders.OrderID) AS "NÚMERO DE PEDIDOS"
+FROM employees, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.FirstName HAVING COUNT(orders.OrderID) > 15;
+
+
+-- 29. Crear una consulta que muestre el nombre del cliente, el número de pedidos que nos ha realizado el cliente, el dinero que nos ha dejado en la empresa, de todos los clientes que sean de USA y que nos han realizado mas de 5 pedidos.
+SELECT customers.CompanyName, COUNT(orders.OrderID) AS "NÚMERO DE PEDIDOS", sum(orderdetails.UnitPrice * orderdetails.Quantity) as "DINERO GASTADO"
+FROM customers
+JOIN orders ON customers.CustomerID = orders.CustomerID
+JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
+WHERE customers.Country = 'USA'
+GROUP BY customers.CompanyName
+HAVING COUNT(orders.OrderID) > 5;
+
+SELECT customers.CompanyName, COUNT(*) AS "NÚMERO DE PEDIDOS", sum(orderdetails.UnitPrice * orderdetails.Quantity) as "DINERO GASTADO"
+FROM customers, orders, orderdetails
+WHERE customers.CustomerID = orders.CustomerID AND orders.OrderID = orderdetails.OrderID
+AND customers.Country = 'USA'
+GROUP BY customers.CompanyName
+HAVING COUNT(*) > 5;
+
+-- 30. Crear una consulta que muestre el nombre del jefe y el número de empleados a su cargo de aquel jefe que mas empleados tenga a su cargo.
+
+SELECT e1.FirstName AS Jefe, COUNT(*) AS "NUM DE SUBORDINADOS"
+FROM employees e1
+LEFT JOIN employees e2 ON e1.EmployeeID = e2.ReportsTo
+GROUP BY e1.FirstName
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+SELECT e1.FirstName AS Jefe, COUNT(*) AS "NUM DE SUBORDINADOS"
+FROM employees e1, employees e2 
+WHERE e1.EmployeeID = e2.ReportsTo
+GROUP BY e1.FirstName
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- 31. Obtener el nombre del cliente y el número de pedidos del cliente que mas pedidos ha realizado en la empresa.
+SELECT customers.ContactName, COUNT(*) as "Número de pedidos"
+FROM customers
+JOIN orders ON customers.CustomerID = orders.CustomerID
+GROUP BY customers.ContactName
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+SELECT customers.ContactName, COUNT(*) as "Número de pedidos"
+FROM customers, orders
+WHERE customers.CustomerID = orders.CustomerID
+GROUP BY customers.ContactName
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- 32. Obtener el nombre del cliente y el volumen de negocio del cliente que mas volumen de negocio nos ha dejado en la empresa.
+SELECT customers.ContactName, COUNT(*) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
+FROM customers
+JOIN orders ON customers.CustomerID = orders.CustomerID
+JOIN orderdetails ON orders.OrderID = orderdetails.OrderID
+GROUP BY customers.ContactName
+ORDER BY DineroGastado DESC
+LIMIT 1;
+
+SELECT customers.CompanyName, COUNT(*) AS NumeroPedidos, sum(orderdetails.UnitPrice * orderdetails.Quantity) as DineroGastado
+FROM customers, orders, orderdetails
+WHERE customers.CustomerID = orders.CustomerID and orders.OrderID = orderdetails.OrderID
+GROUP BY customers.CompanyName
+ORDER BY DineroGastado DESC
+LIMIT 1;
+
+
+5. [[BOLETIN MULTITABLAS 4]]
+
+
+-- 1. Mostrar el nombre del producto, el precio, el stock y el nombre de la categoría a la que pertenece.
+-- Producto cartesiano
+SELECT products.ProductName, products.UnitPrice, products.UnitsInStock, categories.CategoryName 
+FROM products, categories
+WHERE products.CategoryID=categories.CategoryID; 
+
+-- JOIN: Estoy probando con USING que hasta ahora únicamente había empleado ON, aunque compruebo que los resultados salen idénticos. Solo pondré ON en el caso de que el resultado sea distinto.
+SELECT products.ProductName, products.UnitPrice, products.UnitsInStock, categories.CategoryName 
+FROM products
+JOIN categories USING (CategoryID); 
+
+-- 2. Mostrar el nombre del producto, el precio producto, el código del proveedor y el nombre de la compañía proveedora.
+-- Producto cartesiano
+SELECT products.ProductName, products.UnitPrice, suppliers.SupplierID, suppliers.CompanyName 
+FROM products, suppliers
+WHERE products.SupplierID=suppliers.SupplierID; 
+
+-- JOIN
+SELECT products.ProductName, products.UnitPrice, suppliers.SupplierID, suppliers.CompanyName 
+FROM products
+JOIN suppliers USING (SupplierID); 
+
+
+-- 3. Mostrar el número de la orden, fecha, código del producto, precio, código del empleado y su nombre completo (no ponerlo en una columna salvo que lo diga).
+
+
+-- Producto cartesiano
+SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.Firstname, employees.LastName) as "Nombre empleado"
+FROM orders, products, employees, orderdetails
+WHERE orders.EmployeeID = employees.EmployeeID and products.ProductID = orderdetails.ProductID and orderdetails.OrderID = orders.OrderID;
+
+-- JOIN
+SELECT orders.OrderID, orders.OrderDate, products.ProductID, products.UnitPrice, employees.EmployeeID, concat_ws(" ", employees.Firstname, employees.LastName) as "Nombre empleado"
+FROM orders
+JOIN employees USING (EmployeeID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID); 
+
+
+-- 4. Visualizar el nombre y el id de la compania del cliente,fecha,precio unitario y producto de la orden (él añadiría el OrderID).
+
+-- Producto cartesiano
+SELECT customers.CompanyName, customers.CustomerID, orders.OrderDate, products.UnitPrice, products.ProductName 
+FROM customers, orders, products, orderdetails
+WHERE customers.CustomerID=orders.CustomerID AND orders.OrderID=orderdetails.OrderID AND orderdetails.ProductID =products.ProductID;
+
+-- JOIN
+SELECT customers.CompanyName, customers.CustomerID, orders.OrderDate, products.UnitPrice, products.ProductName 
+FROM customers
+JOIN orders USING (CustomerID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID);
+
+-- 5. Visualizar el nombre de la categoria y el numero de productos que hay por cada categoria.
+-- Producto cartesiano
+SELECT categories.CategoryName, count(*) AS "Número de productos"
+FROM categories, products
+WHERE categories.CategoryID=products.CategoryID
+GROUP BY categories.CategoryID;
+
+-- JOIN
+SELECT categories.CategoryName, count(*) AS "Número de productos"
+FROM categories 
+JOIN products USING (CategoryID)
+GROUP BY categories.CategoryID;
+
+-- 6. Seleccionar el nombre y la cantidad completa de los 5 productos mas vendidos.
+-- Producto cartesiano: Lo he agrupado por ProductID por considerar lo comentado en clase de controlar que no se encuentren dos productos denominados igual. El ID es único.
+SELECT products.ProductName, sum(orderdetails.Quantity) AS "Cantidad completa"
+FROM products, orderdetails
+WHERE products.ProductID=orderdetails.ProductID
+GROUP BY products.ProductID -- Pero se podría por ProductName
+ORDER BY sum(orderdetails.Quantity) DESC
+LIMIT 5;
+
+-- JOIN
+SELECT products.ProductName, sum(orderdetails.Quantity) AS "Cantidad completa"
+FROM products
+JOIN orderdetails USING (ProductID)
+GROUP BY products.ProductID
+ORDER BY sum(orderdetails.Quantity) DESC
+LIMIT 5;
+
+-- 7. Obtener todas las ordenes hechas por el empleado King Robert.
+-- Producto cartesiano
+SELECT orders.* -- O si se interpreta OrderID, pues solo con OrderID
+FROM orders, employees
+WHERE orders.EmployeeID = employees.EmployeeID and concat_ws(" ", employees.LastName, employees.FirstName)= "King Robert";
+
+-- JOIN
+SELECT orders.*
+FROM orders
+JOIN employees USING (EmployeeID)
+WHERE concat_ws(" ", employees.LastName, employees.FirstName)= "King Robert";
+
+-- 8. Obtener todas las ordenes por el cliente cuya compania es "Que delicia".
+-- Producto cartesiano= ¡Ojo! si se escribe "Que delicia" tal y como sale en el enunciado, el resultado real es 0, ya que al parecer hay un carácter especial en la primera i del nombre. 
+SELECT orders.* -- u OrderID
+FROM orders, customers
+WHERE orders.CustomerID=customers.CustomerID and customers.CompanyName="Que Delicia";
+
+-- Sin embargo, si queremos realmente averiguar cuántas órdenes hay por esta compañía considerando el caracter especial, la consulta daría 9 resultados
+SELECT orders.*
+FROM orders, customers
+WHERE orders.CustomerID=customers.CustomerID and customers.CompanyName="Que Del?cia";
+
+-- y con JOIN sería
+
+SELECT orders.*
+FROM orders
+JOIN customers USING (CustomerID)
+WHERE customers.CompanyName="Que Del?cia";
+
+-- 9. Obtener todas las ordenes hechas por el empleado King Robert,Davolio Nancy y Fuller Andrew.
+-- ¡OJO! A diferencia de las consultas anteriores, aquí entiendo que sí interesa incluir en la tabla el nombre de los empleados para que se pueda conocer al detalle quiénes de ellos realizaron cada orden.
+-- Producto cartesiano
+SELECT concat_ws(" ", employees.LastName, employees.FirstName) as "Nombre de empleado", orders.* 
+FROM orders, employees
+WHERE orders.EmployeeID = employees.EmployeeID and concat_ws(" ", employees.LastName, employees.FirstName) IN  ('King Robert', 'Davolio Nancy', 'Fuller Andrew');
+-- solucion clase
+SELECT orders.OrderID, employees.FirstName FROM orders, employees WHERE orders.EmployeeID = employees.EmployeeID 
+AND ((employees.LastName = "King" and employees.FirstName = "Robert")
+OR (employees.LastName = "Davolio" and employees.FirstName = "Nancy")
+OR (employees.LastName = "Fuller" and employees.FirstName = "Andrew"));
+-- JOIN
+SELECT CONCAT_WS(" ", employees.LastName, employees.FirstName) AS "Nombre de empleado", orders.*
+FROM orders
+JOIN employees USING (EmployeeID)
+WHERE employees.LastName IN ('King', 'Davolio', 'Fuller') AND employees.FirstName IN ('Robert', 'Nancy', 'Andrew'); -- Aquí incluyo otra forma de hacer la misma criba sin emplear concat, por si resulta más clara.
+
+-- 10. Obtener todos los productos(codigo,nombre,precio,stock) de la orden 10257.
+-- Producto cartesiano -- mirar en casa de nuevo que al parecer solo se necesitan dos tablas
+
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM products, orderdetails
+WHERE products.ProductID = orderdetails.ProductID 
+AND orderdetails.OrderID=10257;
+-- JOIN
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM products
+JOIN orderdetails USING (ProductID) 
+WHERE orderdetails.OrderID=10257;
+
+
+6. [[BOLETIN MULTITABLAS 5]]
+
+
+-- 11. Obtener todos los productos(codigo,nombre,precio,stock) de las ordenes hechas desde 1997 hasta la fecha de hoy.
+SELECT products.ProductID, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM products, orderdetails, orders
+WHERE products.ProductID = orderdetails.ProductID AND orderdetails.OrderID = orders.OrderID 
+AND year(orders.OrderDate)>= 1997; -- (no haria falta)and orders.OrderDate<=curdate(); -- otra buena opción: Where year(orders.OrderDate) between 1997 and year(curdate())
+
+
+-- 12. Obtener el nombre de todas las categorias y los nombres de sus productos,precio y stock.
+SELECT categories.CategoryName, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM categories, products 
+WHERE categories.CategoryID = products.CategoryID;
+
+-- 13. Obtener el nombre de todas las categorias y los nombres de sus productos,solo los productos que su nombre no comience con la letra P.
+SELECT categories.CategoryName, products.ProductName 
+FROM categories, products 
+WHERE categories.CategoryID = products.CategoryID 
+AND products.ProductName NOT LIKE 'P%';
+
+-- 14. Calcular el stock de productos por cada categoria.Mostrar el nombre de la categoria y el stock por categoria.
+SELECT categories.CategoryName, sum(products.UnitsInStock) AS "STOCK DE PRODUCTOS"
+FROM categories, products
+WHERE categories.CategoryID = products.CategoryID
+GROUP BY categories.CategoryName; 
+
+-- 15. Obtener el Nombre del cliente,Nombre del Proveedor,Nombre del empleado y el nombre de los productos que estan en la orden 10794.
+
+SELECT customers.ContactName, suppliers.ContactName, employees.FirstName, products.ProductName
+FROM customers, suppliers, employees, products, orders, orderdetails
+WHERE customers.CustomerID= orders.CustomerID
+AND suppliers.SupplierID = products.SupplierID
+AND employees.EmployeeID = orders.EmployeeID
+AND products.ProductID = orderdetails.ProductID
+AND orders.OrderID =orderdetails.OrderID
+AND orders.OrderID = 10794;
+
+-- 16. Seleccionar el nombre de la compañía del cliente,él código de la orden de compra,la fecha de la orden de compra, código del producto, 
+-- cantidad pedida del producto,nombre del producto, el nombre de la compañía proveedora y la ciudad del proveedor.
+SELECT customers.CompanyName, orders.OrderID, orders.OrderDate, products.ProductID, products.UnitsOnOrder, products.ProductName, suppliers.CompanyName, suppliers.City
+FROM customers
+JOIN orders USING (CustomerID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN suppliers USING (SupplierID);
+
+-- 17. Seleccionar el nombre de la compañía del cliente, nombre del contacto, el código de la orden de compra, la fecha de la orden de compra, 
+-- el código del producto,cantidad pedida del producto, nombre del producto y el nombre de la compañía proveedora, usas JOIN.Solamente las 
+-- compañías proveedoras que comienzan con la letra de la A hasta la letra G,además la cantidad pedida del producto debe estar entre 23 y 187.
+
+SELECT customers.CompanyName, customers.ContactName, orders.OrderID, orders.OrderDate, products.ProductID, products.UnitsOnOrder, products.ProductName, suppliers.CompanyName
+FROM customers
+JOIN orders USING (CustomerID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN suppliers USING (SupplierID)
+WHERE suppliers.CompanyName BETWEEN ("A%") AND ("Gz%")
+AND products.UnitsOnOrder BETWEEN 23 AND 187;
+
+-- 18. Seleccionar el nombre de la compañía del cliente, nombre del contacto, el código de la orden de compra, la fecha de la orden decompra, 
+-- el código del producto, cantidad pedida del producto, nombredel producto y el nombre de la compañía proveedora, usar JOIN. Solamente las 
+-- compañías proveedoras que comienzan con laletra de la A hasta la letra G,además la cantidad pedida del productodebe estar entre 23 y 187.
+
+SELECT customers.CompanyName, customers.ContactName, orders.OrderID, orders.OrderDate, products.ProductID, products.UnitsOnOrder, products.ProductName, suppliers.CompanyName
+FROM customers
+JOIN orders USING (CustomerID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN suppliers USING (SupplierID)
+WHERE suppliers.CompanyName BETWEEN ("A%") AND ("Gz%")
+AND products.UnitsOnOrder BETWEEN 23 AND 187;
+
+-- 19. Seleccionar el nombre de la compañía del cliente, el código de la orden de compra, la fecha de la orden de compra, código del producto, 
+-- cantidad pedida del producto, nombre del producto, el nombre de la compañía proveedora y la ciudad del proveedor.
+
+SELECT customers.CompanyName, orders.OrderID, orders.OrderDate, products.ProductID, products.UnitsOnOrder, products.ProductName, suppliers.CompanyName, suppliers.City
+FROM customers, orders, products, suppliers, orderdetails
+WHERE customers.CustomerID = orders.CustomerID
+AND products.SupplierID = suppliers.SupplierID
+AND orders.OrderID = orderdetails.OrderID
+AND orderdetails.ProductID =products.ProductID;
+
+-- 20. Seleccionar el nombre de la compañía del cliente, nombre del contacto, el código de la orden de compra, la fecha de la orden de compra, 
+-- código del producto, cantidad pedida del producto, nombre del producto y el nombre de la compañía proveedora, usar Join. Solamente las 
+-- compañías proveedoras que comienzan con la letra de la A hasta la letra G, además la cantidad pedida del producto debe estar entre 18 y 190.
+SELECT customers.CompanyName, customers.ContactName, orders.OrderID, orders.OrderDate, products.ProductID, products.UnitsOnOrder, products.ProductName, suppliers.CompanyName
+FROM customers
+JOIN orders USING (CustomerID)
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN suppliers USING (SupplierID)
+WHERE suppliers.CompanyName BETWEEN ("A%") AND ("Gz%")
+AND products.UnitsOnOrder BETWEEN 18 AND 190;
+
+
+
+7. [[MIS CONSULTAS MULTITABLAS]]
+
+
+-- Selecciona el ID del cliente, el nombre de contacto del cliente, el nombre del producto, el ID del pedido, la cantidad de los detalles del pedido y su precio unitario.
+-- Muestra únicamente aquellos pedidos cuyo total (cantidad * precio unitario) sea superior a 5000.
+SELECT Customers.CustomerID, Customers.ContactName, Products.ProductName, Orders.OrderID, OrderDetails.Quantity, OrderDetails.UnitPrice
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+JOIN Products ON OrderDetails.ProductID = Products.ProductID
+WHERE (OrderDetails.Quantity * OrderDetails.UnitPrice) > 5000;
+
+SELECT Customers.CustomerID, Customers.ContactName, Products.ProductName, Orders.OrderID, OrderDetails.Quantity, OrderDetails.UnitPrice
+FROM customers, orders, orderdetails, products
+WHERE customers.CustomerID = orders.CustomerID
+AND orders.OrderID = orderDetails.OrderID
+AND orderDetails.ProductID = products.ProductID
+AND (OrderDetails.Quantity * OrderDetails.UnitPrice) > 5000;
+
+
+-- Selecciona el nombre y apellido del empleado (misma columna como "Nombre_Completo"), el nombre de contacto del cliente, el ID del pedido y la fecha del pedido. 
+-- Los resultados se ordenan por el Nombre_completo del empleado y la fecha del pedido.
+
+SELECT concat_ws(" ", employees.FirstName, Employees.LastName) as "Nombre_Completo", Customers.ContactName, Orders.OrderID, Orders.OrderDate
+FROM Employees
+JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID
+JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+ORDER BY Nombre_Completo, Orders.OrderDate;
+
+SELECT concat_ws(" ", employees.FirstName, Employees.LastName) as "Nombre_Completo", Customers.ContactName, Orders.OrderID, Orders.OrderDate
+FROM employees, orders, customers
+WHERE employees.EmployeeID = orders.EmployeeID
+AND orders.CustomerID = customers.CustomerID
+ORDER BY Nombre_Completo, Orders.OrderDate;
+
+
+
+8. [[BOLETIN CON CONSULTAS DE CLASE]]
+
+
+-- 1.Obtener el nombre de todas las categorias y los nombres de sus productos, precio, y stock cuyo nombre empiece con la letra 'J'
+SELECT categories.CategoryName, products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM categories, products
+WHERE categories.CategoryID=products.CategoryID
+AND products.ProductName LIKE "J%";
+
+-- 2.Muestra el nombre, la edad de los empleados,el nombre de producto,su precio y stock de las ordenes mayores de 10250
+SELECT employees.FirstName, timestampdiff(year,employees.BirthDate, curdate()) as "Edad_empleados", products.ProductName, products.UnitPrice, products.UnitsInStock
+FROM employees, products, orders, orderdetails
+WHERE employees.EmployeeID = orders.EmployeeID
+AND orders.OrderID = orderdetails.OrderID
+AND orderdetails.ProductID = products.ProductID
+AND orders.OrderID > 10250;
+
+-- 3.Seleccionar cuantos proveedores hay en cada pais, considerando solo a los nombres de los proveedores que comienzan con la letra 'E' hasta la 'P'
+SELECT suppliers.Country, count(*) as "Numero de proveedores"
+FROM suppliers
+WHERE suppliers.CompanyName between 'E%' and 'Pz%'
+GROUP BY Country;
+
+-- 4.Selecciona el codigo de producto, el nombre del producto, el nombre de categoria del pedido 10654
+SELECT products.ProductID, products.ProductName, categories.CategoryName
+FROM products, categories, orders, orderdetails
+WHERE products.CategoryID = categories.CategoryID
+AND orders.OrderID= orderdetails.OrderID
+AND orderdetails.ProductID = products.ProductID
+AND orders.OrderID= 10654;
+
+-- 5.Obtener el ID del pedido, la fecha del pedido, el ID del cliente, el nombre de la compañía del cliente, el ID del productoy la cantidad
+SELECT orders.OrderID, orders.OrderDate, customers.CustomerID, customers.CompanyName, products.ProductID, orderdetails.Quantity
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID= customers.CustomerID
+AND products.ProductID=orderdetails.ProductID
+AND orders.OrderID=orderdetails.OrderID;
+
+-- 6.Listar las ordenes de pedido,clientes, la cuantia por unidad y los articulos de aquellos pedidos realizados por clientes brasileños y selecciona de aquellos los productos que la cuantia por unidad se mida en 'ml'
+SELECT orders.OrderID, customers.CustomerID, products.QuantityPerUnit, products.ProductName
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID = customers.CustomerID
+AND orders.OrderID=orderdetails.OrderID
+AND orderdetails.ProductID = products.ProductID
+AND customers.Country="Brazil" and products.QuantityPerUnit like "%ml%";
+
+-- 7.Dime cuantos ¿qué? pedidos Ha Hecho cada empleado, muestarme el nombre de cliente, la ID de categoria, el nombre y ciudad del provedor asi como el titulo del empleado
+SELECT orders.OrderID, employees.EmployeeID, customers.ContactName, categories.CategoryID, suppliers.ContactName, suppliers.City, employees.Title
+FROM employees, customers, categories, suppliers, orders, products
+WHERE employees.EmployeeID = orders.EmployeeID
+AND customers.CustomerID= orders.OrderID
+AND categories.CategoryID= products.CategoryID
+AND suppliers.SupplierID = products.SupplierID;
+
+-- 8.Por cada cliente muestra el ID de cliente, el nombre de contacto y los pedidos que han realizado.
+SELECT customers.CustomerID, customers.ContactName, orders.OrderID
+FROM customers, orders
+WHERE customers.CustomerID = orders.CustomerID;
+
+-- 9.Muestrame el id del order,la fecha requerida,la via,la discontinuidad,el reorderlevel,la quantity y la quantity por unidad.Usa join y las tablas: orders,orderdetails y products.
+SELECT orders.OrderID, orders.RequiredDate, orders.ShipVia, orderdetails.Discount, products.ReorderLevel, products.QuantityPerUnit
+FROM orders
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID);
+
+-- 10.Listar las ordenes de pedido,clientes, fecha de pedido y los articulos de aquellos pedidos realizados por clientes brasileños en el mes de septiembre de cualquier año
+SELECT orders.OrderID, customers.CustomerID, orders.OrderDate, products.ProductID
+FROM orders, customers, products, orderdetails
+WHERE orders.CustomerID = customers.CustomerID
+AND products.ProductID = orderdetails.ProductID
+AND orders.OrderID = orderdetails.OrderID
+AND customers.Country = "Brazil"
+AND month(orders.OrderDate) = 9;
+
+-- 11.Selecciona el ID del cliente, el nombre de contacto del cliente, el nombre del producto, el ID del pedido, la cantidad de los detalles del pedido y su precio unitario
+-- Muestra únicamente aquellos pedidos cuyo total (cantidad * precio unitario) sea superior a 5000.
+SELECT Customers.CustomerID, Customers.ContactName, Products.ProductName, Orders.OrderID, OrderDetails.Quantity, OrderDetails.UnitPrice
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+JOIN Products ON OrderDetails.ProductID = Products.ProductID
+WHERE (OrderDetails.Quantity * OrderDetails.UnitPrice) > 5000;
+
+SELECT Customers.CustomerID, Customers.ContactName, Products.ProductName, Orders.OrderID, OrderDetails.Quantity, OrderDetails.UnitPrice
+FROM customers, orders, orderdetails, products
+WHERE customers.CustomerID = orders.CustomerID
+AND orders.OrderID = orderDetails.OrderID
+AND orderDetails.ProductID = products.ProductID
+AND (OrderDetails.Quantity * OrderDetails.UnitPrice) > 5000;
+
+-- 12.Obtener el ID del empleado, el nombre y apellido del empleado en una sola columna, el ID del pedido, la fecha del pedido, el ID del cliente,el nombre de la compañía del cliente de las órdenes hechas en 1996 en Estados Unidos
+SELECT employees.EmployeeID, concat_ws(" ", employees.FirstName, employees.LastName) as "Nombre completo", orders.OrderID, orders.OrderDate, customers.CustomerID, customers.CompanyName
+FROM employees, orders, customers
+WHERE employees.EmployeeID=orders.EmployeeID
+AND orders.CustomerID = customers.CustomerID
+AND YEAR(orders.OrderDate) =1996
+AND customers.Country = "USA";
+
+-- 13.Mostrar la descripcion de territorio, el codigo de territorio y el nombre completo + su codigo de empleado (en una sola columna separado con espacio ' ')
+-- del empleado con nombre 'Nancy'.
+
+SELECT territories.TerritoryDescription, territories.TerritoryID, concat_ws(" ", employees.FirstName, employees.LastName, employees.EmployeeID) as "Nombre y codigo de empleado"
+FROM territories, employees, employeeterritories
+WHERE territories.TerritoryID = employeeterritories.TerritoryID
+AND employeeterritories.EmployeeID = employees.EmployeeID
+AND employees.FirstName = "Nancy";
+
+-- 14.Selecciona el nombre y apellido del empleado (misma columna como "Nombre_Completo"), el nombre de contacto del cliente, el ID del pedido y la fecha del pedido
+-- Los resultados se ordenan por el Nombre_completo del empleado y la fecha del pedido.
+SELECT concat_ws(" ", employees.FirstName, Employees.LastName) as "Nombre_Completo", Customers.ContactName, Orders.OrderID, Orders.OrderDate
+FROM Employees
+JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID
+JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+ORDER BY Nombre_Completo, Orders.OrderDate;
+
+SELECT concat_ws(" ", employees.FirstName, Employees.LastName) as "Nombre_Completo", Customers.ContactName, Orders.OrderID, Orders.OrderDate
+FROM employees, orders, customers
+WHERE employees.EmployeeID = orders.EmployeeID
+AND orders.CustomerID = customers.CustomerID
+ORDER BY Nombre_Completo, Orders.OrderDate;
+
+-- 15.Selecciona el codigo de empleado, la cantidad de productos y la fecha de venta de cada pedido ordenado de más reciente a más antiguo
+
+SELECT employees.EmployeeID, count(orderdetails.ProductID) as "Cantidad de productos", orders.OrderDate
+FROM employees, orderdetails, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+AND orders.OrderID = orderdetails.OrderID
+GROUP BY employees.EmployeeID, orders.OrderDate
+ORDER BY orders.OrderDate DESC;
+
+-- 16.Mostrar el nombre de categoria, su longitud en caracteres, el nombre de producto, su longitud de caracteres y el precio unitario de estos (Redondeado abajo)
+-- de los productos cuya categoria tenga mas de 12 caracteres .Muestra solo los productos cuyo nombre de producto empiecen por 'F' y NO ACABEN en 'x'
+
+SELECT categories.CategoryName, length(categories.CategoryName) as "Caracteres nombre categoria", products.ProductName, length(products.ProductName) as "Caracteres nombre producto", floor(products.UnitPrice) as "Precio redondeado"
+FROM categories, products
+WHERE categories.CategoryID = products.CategoryID
+AND products.ProductName LIKE "F%"
+AND products.ProductName NOT LIKE "%x";
+
+
+-- 17.Muestrame el id del customer,la fecha, el precio, el id del producto,el quantity,el id de la categoria,las unidades en orden ¿PERO TAMBIÉN ORDENADAS?. Usa join
+SELECT customers.CustomerID, orders.OrderDate, products.UnitPrice, products.ProductID, orderdetails.Quantity, categories.CategoryID, products.UnitsOnOrder
+FROM orders
+JOIN orderdetails USING (OrderID)
+JOIN products USING (ProductID)
+JOIN customers USING (CustomerID)
+JOIN categories USING (CategoryID)
+ORDER BY products.UnitsOnOrder;
+
+-- 18.Muestra el nombre de empleado, y los pedidos que han realizado aquellos empleados que han realizado mas de 9 pedidos
+SELECT employees.FirstName, count(orders.OrderID) as "numero pedidos realizados"
+FROM employees, orders
+WHERE employees.EmployeeID = orders.EmployeeID
+GROUP BY employees.FirstName
+HAVING count(orders.OrderID)> 9;
+
+
+9. [[BOLETIN SUBCONSULTAS PUNTUABLE]]
+
+
+-- 1. Mostrar los clientes de la tabla orders que realizaron pedidos en el día registrado más reciente.
+
+SELECT CustomerID
+FROM orders
+WHERE date(OrderDate) = (Select date(OrderDate) FROM orders Order By OrderDate desc Limit 1);
+
+SELECT CustomerID
+FROM orders
+WHERE OrderDate = (Select OrderDate FROM orders Order By OrderDate desc Limit 1);
+
+-- SOLUCION DE CLASE
+SELECT CustomerID
+FROM orders
+WHERE orderdate =
+(select max(orderdate) FROM orders);
+
+
+-- 2. Mostrar el nombre de las empresas que realizaron compras despues de la fecha '01/01/1995'.
+SELECT CompanyName
+FROM customers
+Where CustomerID IN 
+(SELECT CustomerID From orders Where OrderDate > '1995-01-01');   
+
+-- 3. Mostrar el nombre y apellidos de los empleados que tienen como territorio 'New York'.
+
+SELECT FirstName, LastName 
+FROM employees 
+WHERE EmployeeID IN
+(SELECT EmployeeID From employeeterritories Where TerritoryID IN
+(SELECT TerritoryID FROM territories WHERE TerritoryDescription ='New York'));
+
+-- 4. Mostrar los clientes y sus pedidos que tengan un valor de peso (Freight) superior al promedio. LO ENTIENDO COMO EL IDENTIFICADOR DE ClIENTE Y
+SELECT CustomerID, OrderID
+FROM orders
+WHERE Freight > 
+(select AVG(Freight) from orders); 
+
+-- 5. Mostrar los pedidos realizados por clientes de Alemania.
+
+SELECT *
+FROM orders
+WHERE CustomerID IN
+(SELECT CustomerID FROM customers Where Country ='Germany');
+
+-- 6. Mostrar los clientes que han realizado pedidos de productos con un valor UnitsInStock inferior a 10.
+
+SELECT DISTINCT CustomerID
+FROM orders
+Where OrderID in
+(select OrderID From orderdetails Where ProductID in
+(SELECT ProductID FROM products where UnitsInStock < 10));
+
+-- 7. Mostrar los productos que han sido pedidos más de una vez.PRODUCTID Y NOMBRE DEL PRODUCTO
+SELECT ProductID, ProductName
+from products
+Where ProductID in
+(SELECT ProductID From orderdetails WHERE OrderID in 
+(SELECT OrderID FROM orderdetails group by OrderID having count(*)>1));
+
+SELECT ProductID, ProductName from products Where ProductID in
+(SELECT ProductID From orderdetails group by ProductID having count(*)>1);
+
+-- 8. Mostrar los pedidos que contienen productos que nunca han sido pedidos antes.
+-- Entiendo que se refiere a aquellos pedidos que contienen algun artículo que solo se haya pedido en una ocasión.
+
+SELECT OrderID
+FROM orderdetails
+WHERE ProductID IN 
+(SELECT ProductID FROM orderdetails GROUP BY ProductID HAVING COUNT(*) = 1);
+
+
+-- 9. Mostrar los clientes que han realizado pedidos de productos con existencia (UnitsInStock) inferior al promedio.
+
+SELECT DISTINCT CustomerID
+FROM orders
+Where OrderID in
+(select OrderID From orderdetails Where ProductID in
+(SELECT ProductID FROM products where UnitsInStock < 
+(SELECT AVG(UnitsInStock) From products)));
+
+-- 10. Mostrar los productos con existencia inferior al promedio en su categoría.
+
+SELECT *
+FROM Products
+WHERE UnitsInStock < 
+(SELECT AVG(UnitsInStock) FROM Products AS a
+WHERE products.CategoryID = a.CategoryID);
+
+Select productID from products where UnitsInStock < 
+(Select avg(UnitsInStock) from products as b group by CategoryID having b.CategoryID = products.CategoryID);
+
+
+10.[[MIS SUBCONSULTAS]]
+
+
+-- Muestra los nombres de los productos y los precios unitarios de aquellos productos suministrados por proveedores con números de teléfono que contienen '555';
+select ProductName, UnitPrice
+from products
+Where SupplierID in (Select SupplierID from suppliers where Phone like '%555%');
+
+-- Muestra el nombre y apellidos de aquellos empleados cuya región de actuación sea 'Southern'.
+
+SELECT Firstname, LastName
+FROM employees
+where EmployeeID in 
+(Select EmployeeID from employeeterritories where TerritoryID in
+(select TerritoryID from territories where RegionID in
+(SELECT RegionID from region where RegionDescription = 'Southern')));
+
+
+11.[[SUBCONSULTAS EN CASA]]
+
+
+-- 1. Ciudad que tienen menos cliente que la ciudad de buenos aires
+
+SELECT City, count(*) 
+FROM customers  
+GROUP BY city 
+HAVING count(*) < 
+(SELECT count(*) from customers Where City = "Buenos Aires");
+
+-- 2. pedidos cuyo valor de carga (Freight) está por encima de la media
+SELECT OrderID from orders where Freight > (select avg(Freight) from orders);
+
+-- 3. Productos cuya categoría empieza por la letra C.
+
+SELECT ProductName
+FROM products
+WHERE CategoryID IN
+(SELECT CategoryID From categories WHERE CategoryName LIKE "C%");
+
+
+-- 4.Productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock de los productos 
+-- de la categoría 4.
+
+SELECT ProductName, UnitsInStock FROM products Where UnitsInStock > (select UnitsInStock FROM products where CategoryID = 4 ORDER BY UnitsInStock DESC LIMIT 1);
+SELECT ProductName, UnitsInStock FROM products Where UnitsInStock > (select max(UnitsInStock) FROM products where CategoryID = 4);
+SELECT ProductName FROM products Where UnitsInStock > (select max(UnitsInStock) FROM products where CategoryID = 4);
+
+ 
+ -- 5. Escribir una consulta para recuperar el nombre de la compañía e ID de proveedor de aquellos proveedores que viven en un país que tiene más proveedores que Alemania.
+SELECT CompanyName, SupplierID 
+FROM suppliers
+WHERE Country IN 
+(SELECT Country 
+FROM suppliers 
+group by Country 
+having count(SupplierID) > 
+		(select count(SupplierID) 
+        from suppliers 
+        where Country = "Germany"));
+
+-- 6. Escribir una consulta para imprimir el nombre, apellidos, y edad de aquellos empleados que tienen una edad superior a la edad media.
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) as "edad"
+FROM employees
+Where timestampdiff(year, BirthDate, curdate()) >
+(Select avg(timestampdiff(year, BirthDate, curdate())) from employees);
+
+-- 7. Escribir una consulta para imprimir el nombre, apellidos y edad de aquellos empleados que tienen una edad superior a la edad media de aquellos empleados con el título de 'Sales Representative'.alter
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) as edad
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) >
+	(Select avg(timestampdiff(year, BirthDate, curdate())) 
+	from employees 
+	WHERE Title = 'Sales Representative');
+-- 8. Escribir una consulta para recuperar todos los datos de los empleados que tienen una edad superior a la edad de Margaret Peacock.
+SELECT *
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) >
+	(SELECT timestampdiff(year, BirthDate, curdate()) 
+    FROM employees 
+    WHERE FirstName = 'Margaret'
+    and LastName = 'Peacock');
+
+-- 9. Escribir una consulta para recuperar el ID de pedido, ID de cliente y nombre de compañía. Trabaje sin hacer joins entre orders y customers.
+SELECT OrderID, a.CustomerID, CompanyName
+FROM orders, (select CustomerID, CompanyName FROM customers) as a
+WHERE a.CustomerID = orders.CustomerID;
+
+-- 10.  Nombre de compañías de clientes que no han hecho pedidos en el 1996. No usar JOIN.
+SELECT CompanyName
+FROM customers
+WHERE CustomerID IN
+(Select CustomerID From orders Where year(OrderDate) != 1996); 
+
+SELECT CompanyName
+FROM customers
+WHERE CustomerID NOT IN
+(Select CustomerID From orders Where year(OrderDate) = 1996); -- Es la correcta, porque en esta no te pille los del 1996
+
+-- 11. Nombre de productos suministrados por proveedores de Japón. No usar JOIN.
+SELECT ProductName
+FROM products 
+wHERE SupplierID IN
+(Select SupplierID FROM suppliers Where Country = "Japan");
+
+-- 12. Hacer una subconsulta para obtener los empleados que tienen como jefe a Andrew Fuller.
+
+SELECT *
+FROM employees
+Where ReportsTo IN -- Siempre el IN sabe que algo va a dar de 1 a n, con = solo para 1;
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+SELECT *
+FROM employees
+Where ReportsTo =
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+-- 13. Repetir para mostrar los que no tienen como jefe a Andrew.
+
+SELECT *
+FROM employees
+Where ReportsTo Not IN
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller");
+
+SELECT *
+FROM employees
+Where ReportsTo !=
+(Select EmployeeID FROM employees WHERE FirstName = "Andrew" and LastName="Fuller") or ReportsTo is null; -- "or ReportsTo is null" se puede poner para eliminar a los nulos;
+
+-- 14. Recuperar los ID de productos con un
+-- precio unitario superior al precio unitario medio.
+SELECT ProductID 
+FROM products 
+WHERE UnitPrice >
+(SELECT avg(UnitPrice) FROM products);
+
+-- 15. Subconsulta para obtener los nombres de categorias
+-- con un número de productos superior al número de
+-- productos que pertenecen a la categoría 'condiments'.
+
+SELECT CategoryName 
+FROM categories
+WHERE (SELECT count(*) FROM products where products.CategoryID = categories.CategoryID) >
+(SELECT count(*) FROM products WHERE CategoryID =
+(SELECT CategoryID FROM categories WHERE CategoryName = "Condiments"));
+
+-- 16. Subconsulta para obtener los ID de aquellos
+-- empleados que tienen un número de pedidos superior
+-- a la media de pedidos por empleado.
+
+SELECT EmployeeID
+FROM orders
+GROUP BY EmployeeID
+HAVING COUNT(*) > (
+    SELECT AVG(recuento)
+    FROM (SELECT EmployeeID, COUNT(*) as recuento FROM orders GROUP BY EmployeeID) AS subconsulta);
+
+SELECT EmployeeID
+FROM orders
+GROUP BY EmployeeID
+HAVING COUNT(*) > 
+(SELECT COUNT(*)/(select COUNT(*) FROM employees) FROM orders);
+    
+-- 17: productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock
+-- de los productos de la categoría 1 y 3.
+
+SELECT *
+FROM products
+WHERE UnitsInStock >
+(SELECT max(UnitsInStock) FROM products WHERE CategoryID IN (1,3));
+
+-- 18: escribir una consulta para recuperar todos los datos de los empleados que tienen una edad inferior
+-- a la edad de Anne Dodsworth o Janet Leverling. INFERIOR A LA MAS JOVEN.
+
+SELECT *
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) <
+(SELECT min(timestampdiff(year, BirthDate, curdate())) FROM employees Where concat(FirstName,' ',Lastname) IN ('Anne Dodsworth', 'Janet Leverling'));
+
+-- 19: escribir una consulta para recuperar los paises que tiene mas proveedores que la suma
+-- de proveedores que tienen Brasil y España.
+SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT count(*) FROM suppliers WHERE Country IN ('Brazil', 'Spain'));
+
+
+SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT sum(clientes) FROM (SELECT Country, count(*) as clientes from suppliers group by Country) as b WHERE b.Country IN ('Brazil', 'Spain'));
+
+ 
+-- 20: escribir una consulta para recuperar el nombre de la compañía e ID de proveedor
+-- de aquellos proveedores que viven en un país que tiene mas proveedores que la suma
+-- de proveedores que tienen Brasil y España.
+
+Select companyname, supplierID 
+from suppliers 
+where country in 
+(Select country from suppliers group by country having count(*) > 
+(Select sum(a.suppliers) from (Select count(*) as "suppliers" from suppliers group by country having country like "brazil" or country like "spain") as a));
+
+-- intenta sacarlo con count unicamente en lugar de con sum-
+SELECT companyname, supplierID 
+from suppliers 
+where country in 
+(SELECT Country FROM suppliers GROUP BY Country Having count(*)>
+(SELECT count(*) FROM suppliers WHERE Country IN ('Brazil', 'Spain')));
+
+
+-- 21: ciudades que tienen más clientes que Madrid.
+SELECT City
+FROM customers
+GROUP BY City 
+Having count(*) >
+(SELECT count(*) FROM customers WHERE City LIKE 'Madrid');
+
+SELECT City
+FROM customers
+GROUP BY City 
+Having count(*) >
+(SELECT count(*) FROM customers WHERE City = 'Madrid');
+
+
+-- 22: ciudades que tienen más clientes que Madrid o SevillA. Hacer con MAX.
+
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT MAX(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')GROUP BY City) AS a);
+
+-- 23: ciudades que tienen más clientes que Madrid y Sevilla o Seville. Hacer con la SUMA
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla')GROUP BY City) AS a);
+
+
+-- 24: ciudades que tienen más clientes que la suma de clientes de Madrid, Sevilla o Seville y Lisboa.
+SELECT City FROM customers GROUP by City having count(*) > 
+(SELECT SUM(recuento) FROM (SELECT count(*) as recuento FROM customers Where City IN ('Madrid', 'Sevilla', 'Lisboa')GROUP BY City) AS a);
+
+SELECT City FROM customers GROUP by City having count(*) > (SELECT count(*) FROM customers Where City IN ('Madrid', 'Sevilla', 'Lisboa'));
+
+-- 25: Escribir una consulta para imprimir el nombre, apellidos y edad de aquellos empleados
+-- que tienen una edad igual o superior a la edad media.
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) FROM employees Where timestampdiff(year, BirthDate, curdate()) >=
+(Select AVG(timestampdiff(year, BirthDate, curdate())) FROM employees);
+
+-- 26: Escribir una consulta para imprimir el nombre, apellidos y edad de aquellos empleados
+-- que tienen una edad igual o superior a la edad media de los empleados con el cargo Sales Representative.
+SELECT FirstName, LastName, timestampdiff(year, BirthDate, curdate()) FROM employees Where timestampdiff(year, BirthDate, curdate()) >=
+(Select AVG(timestampdiff(year, BirthDate, curdate())) FROM employees Where employees.Title = "Sales Representative");
+
+
+-- 27: Productos cuyo valor de unidades en stock sea superior al valor mínimo de unidades en stock de los productos
+-- de la categoría 4 o superior al valor mínimo de unidades en stock de los productos
+-- de la categoría 6.
+
+Select * FROM products where UnitsInStock > 
+(SELECT min(UnitsInStock) FROM products Where CategoryID in (4,6));
+
+select * from products where UnitsInStock >
+(select min(UnitsInStock) from products where CategoryID = 4  or UnitsInStock >
+(select min(UnitsInStock) from products where CategoryID = 6));
+
+-- 28: Productos cuya categoría empieza por la letra C o D.
+
+
+select ProductName from products where CategoryID  in
+(select CategoryID from categories where CategoryName like "C%" or CategoryName like"D%");
+
+-- 29: Ciudades que tienen menos clientes (customers)
+-- que la ciudad de Buenos Aires y Munich.
+
+SELECT customers.City, count(*) FROM customers GROUP BY customers.City hAVING count(*) <
+(SELECT count(City) FROM customers Where City IN ('Buenos Aires', 'M?nchen'));
+
+
+-- 30: empleados que son más jóvenes que Margaret, Laura y Michael.
+
+SELECT *
+FROM employees
+WHERE timestampdiff(year, BirthDate, curdate()) <
+(SELECT min(timestampdiff(year, BirthDate, curdate())) FROM employees Where FirstName IN ('Margaret', 'Laura', 'Michael'));
+
+
+
+12.[[BOLETIN SUBCONSULTAS 2]]
+ 
+-- 1. Crear una consulta que muestre el nombre del cliente, el número de pedidos que nos ha realizado el cliente, 
+-- el dinero que nos ha dejado en la empresa, de todos los clientes que sean de USA y que nos han realizado mas de 5 pedidos
+SELECT customers.ContactName, count(orders.OrderID) as Pedidos, sum(orderdetails.UnitPrice*orderdetails.Quantity) as CantidadGastada
+FROM customers, orders, orderdetails
+WHERE customers.CustomerID = orders.CustomerID
+and orders.OrderID = orderdetails.OrderID
+and customers.Country = "USA"
+GROUP BY customers.ContactName
+HAVING COUNT(orders.OrderID) > 5;
+
+-- 2. Mostrar una consulta que muestre el nombre del producto, el número de unidades totales vendidas, de aquel producto 
+-- del que mas unidades haya vendido la empresa
+
+SELECT p.ProductName, sum(o.Quantity) as "UnidadesTotalesVendidas"
+FROM products p, orderdetails o
+WHERE p.ProductID = o.ProductID
+group by p.ProductName
+order by UnidadesTotalesVendidas desc Limit 1;
+
+SELECT ProductName FROM northwind.products
+WHERE productid =
+(SELECT productid FROM northwind.orderdetails GROUP BY productid ORDER BY SUM(quantity) DESC LIMIT 1);
+
+Select ProductName  from products where ProductID =
+(SELECT ProductID from products order By UnitsOnOrder desc limit 1);
+
+-- 3. Clientes que han realizado pedidos en más de un país
+SELECT CustomerID 
+from customers
+WHERE CustomerID IN
+(SELECT CustomerID from orders group by CustomerID having count(distinct Shipcountry)>1);
+
+-- 4. Empleados que han manejado pedidos de más de un cliente
+
+SELECT EmployeeID
+FROM orders
+group by EmployeeID
+Having count(distinct CustomerID) > 1; 
+
+SELECT DISTINCT EmployeeID
+FROM orders
+WHERE EmployeeID IN (SELECT EmployeeID FROM orders GROUP BY EmployeeID HAVING COUNT(DISTINCT CustomerID) > 1);
+
+
+-- 5. Pedidos que se realizaron después de la fecha límite
+SELECT OrderID
+from orders
+where OrderID in
+(Select OrderID from orders where RequiredDate< ShippedDate);
+
+
+-- 6. Clientes que han realizado pedidos en mas de una region
+SELECT CustomerID 
+from customers
+WHERE CustomerID IN
+(SELECT CustomerID FROM orders Group by CustomerID having count(Distinct Region)>1);
+
+-- 7. Mostrar que clientes tenemos registrados, que estén en las mismas ciudades de nuestros proveedores
+SELECT CustomerID
+FROM customers
+where customers.City =
+(Select suppliers.City from suppliers where suppliers.City = customers.City);
+
+
+-- 8. Mostrar el nombre de producto, precio unitario, precio promedio y la diferencia que hay entre el precio promedio y el
+-- precio del producto, para los productos que pertenecen a la categoria 6.
+
+
+SELECT ProductName, UnitPrice, (select avg(UnitPrice) from products where CategoryID = 6) as PrecioPromedio, ((select avg(UnitPrice) from products where CategoryID = 6) - UnitPrice) AS Diferencia
+FROM products
+WHERE CategoryID = 6
+GROUP BY ProductName, UnitPrice;
+
+
+13. [[MÁS SUBCONSULTAS ÚLTIMAS]]
+
+
+-- 1. Clientes con pedidos superiores al promedio de la cantidad de productos por pedido
+SELECT CustomerID, count(*)
+FROM orders
+group by CustomerID
+having count(*) > 
+(Select AVG(recuento) from (Select OrderID, count(*) as recuento from orderdetails group by OrderID) as o2);
+
+
+-- 2. Productos que tienen un precio superior al promedio de precios en su categoría
+SELECT ProductName, UnitPrice
+FROM products
+WHERE UnitPrice >
+(Select AVG(UnitPrice) from products p2 Where products.CategoryID = p2.CategoryID);
+
+
+-- 4. Clientes que han realizado pedidos en todas las regiones
+
+SELECT DISTINCT(orders.CustomerID) FROM orders where CustomerID IN
+(SELECT CustomerID FROM orders GROUP BY CustomerID HAVING COUNT(DISTINCT(ShipRegion)) in
+(SELECT COUNT(DISTINCT(ShipRegion))FROM orders));
+
+-- 5. Productos que nunca han sido pedidos
+
+Select ProductID
+From products
+Where ProductID not in
+(Select ProductID from orderdetails);
+
+-- 6. Clientes que han realizado pedidos de productos con un precio superior al promedio de todos los productos
+
+SELECT DISTINCT CustomerID
+FROM orders
+where OrderID IN
+(Select OrderID from orderdetails WHERE ProductID in
+(Select ProductID from products WHERE UnitPrice>
+(Select AVG(UnitPrice) from products)));
+
+
+-- 7. Empleados que han atendido a clientes de más de un país
+
+SELECT FirstName, LastName
+from employees
+where EmployeeID IN
+(Select EmployeeID From orders GROUP BY employeeID having count(DISTINCT CustomerID)>1);
+
+-- 8. Productos que se han vendido más de 100 veces
+Select ProductID
+FROM (select ProductID, sum(Quantity) as totalVendido from orderdetails Group by ProductID) as od
+where totalVendido> 100;
+
+Select ProductID From orderdetails Group by ProductID having sum(Quantity)> 100;
+
+-- 9. Clientes que han realizado pedidos en más de una categoría de productos
+
+SELECT distinct CustomerID, CompanyName
+from customers
+where CustomerID in
+(Select orders.CustomerID 
+from orders
+JOIN orderdetails using (orderID)
+JOIN products USING (ProductID)
+group by CustomerID
+having count(DISTINCT products.CategoryID) > 1);
+
+SELECT DISTINCT CustomerID, CompanyName
+FROM Customers
+WHERE CustomerID IN (
+    SELECT Orders.CustomerID
+    FROM Orders
+    JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+    JOIN Products ON OrderDetails.ProductID = Products.ProductID
+    GROUP BY Orders.CustomerID
+    HAVING COUNT(DISTINCT Products.CategoryID) > 1);
+
+-- 10. Empleados que han gestionado pedidos en más de un año
+
+SELECT EmployeeID, LastName, FirstName
+FROM Employees
+WHERE EmployeeID IN (
+    SELECT EmployeeID
+    FROM (
+        SELECT EmployeeID, YEAR(OrderDate) AS pedidoAnual
+        FROM Orders
+        GROUP BY EmployeeID, YEAR(OrderDate)
+    ) AS subt
+    GROUP BY EmployeeID
+    HAVING COUNT(*) > 1);
+
+
+14. [[BOLETIN SUBCONSULTAS DE ALUMNOS EN CLASE]]
+
+
+-- 1. Seleccionar el nombre de los empleados que hayan atendido pedidos para Francia
+SELECT Firstname
+FROM employees
+WHERE EmployeeID IN
+(Select EmployeeID from orders where ShipCountry = 'France');
+
+-- 2. Muestra los nombres de las categorías que tengan productos cuyos nombres comiencen por la letra C o S.
+Select CategoryName
+from categories
+where CategoryID in
+(Select CategoryID from products where ProductName Like 'C%' or ProductName like 'S%');
+
+-- 3. Seleccionar los proveedores cuyos productos se envían a USA
+Select * from suppliers where SupplierID in
+(Select SupplierID from products where ProductID in
+(Select ProductID from orderdetails where OrderID in
+(SELECT OrderID from orders where ShipCountry = 'USA')));
+
+
+-- 4. Selecciona el nombre de las compañias cuyo pedido lo atendio un empleado con ID 1 al 4
+SELECT CompanyName 
+from customers
+where CustomerID IN
+(Select CustomerID from orders where EmployeeID BETWEEN 1 and 4);
+
+-- 5. Muestra los 3 productos con las unidades más altas usando subconsulta
+
+Select ProductName
+from products
+ORDER BY UnitsInStock desc limit 3;
+
+Select ProductID, Quantity
+from orderdetails
+ORDER BY quantity desc limit 3;
+
+Select ProductName
+from products
+where ProductID in
+(Select ProductID from products) ORDER BY UnitsInStock desc limit 3;
+
+Select ProductName, ProductID from products where ProductID IN
+(Select ProductID from (Select ProductID from orderdetails group by ProductID order By sum(Quantity) desc limit 3) as top);
+
+
+
+-- 6. Ciudades que tienen menos (customers) que la ciudad de Barcelona
+Select City
+from customers
+group by city
+having count(*)<
+(Select count(*) as recuento from customers where City = 'Barcelona');
+
+-- 7. Mostrar el apellido, rango y número de departamento (address) de los trabajadores que no tengan empleados a su cargo.
+SELECT LastName, Title, Address
+from employees
+where EmployeeID not IN
+(Select ReportsTo from employees o where employees.EmployeeID = o.ReportsTo); 
+
+
+-- 8. Muestra el ID, el nombre y el precio de los productos cuyo precio sea inferior al precio promedio.
+Select ProductID, ProductName, UnitPrice
+from products
+where UnitPrice <
+(Select AVG(UnitPrice) from products);
+
+-- 9. Productos  que no han sido nunca comprados que solo tenga 4 letras y empiece por 'R'
+Select ProductName
+from products
+where char_length(ProductName)=4 and ProductName like 'R%'
+and ProductID not in
+(Select ProductID from orderdetails);
+
+-- 10. Seleccionar el nombre de los productos que hayan tenido un descuento en algún pedido
+Select ProductName 
+from products 
+where ProductID in
+(Select ProductID from orderdetails where Discount >0);
+
+
+-- 11. Selecciona los productos en el que la media de la cantidad pedida sea menor a la del producto propio y el id del producto este entre 8 y 20
+Select ProductID, ProductName
+From products
+where ProductID between 8 and 20
+and ProductID in
+(Select ProductID from orderdetails Where Quantity < (Select avg(Quantity) from orderdetails));
+
+
+Select products.productID, a.ProductID, avg(a.Quantity), products.UnitsInStock from products, 
+(Select quantity, orderdetails.productID from orderdetails) as a where a.productID = products.productID and products.productID between 8 and 20 group by products.productID having products.UnitsInStock <  avg(a.Quantity);
+
+-- 12 . Mostrar el id de territorio cuando la descripcion de region no sea "Eastern"
+
+SELECT TerritoryID from territories where RegionID in
+(Select RegionID from region where RegionDescription !='Eastern');
+
+-- 13 . Mostrar los clientes de la tabla orders que realizaron pedidos en el día registrado menos reciente
+
+select CustomerID from orders where OrderDate in (select min(OrderDate) from orders);
+
+-- 14. Obtener el nombre y la cantidad de productos de la categoría "Condiments" que tienen un precio superior al precio promedio de todos los productos
+
+SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN(
+SELECT CategoryID FROM categories WHERE CategoryName = "Condiments") AND UnitPrice > (SELECT avg(UnitPrice) FROM products);
+
+
+-- 15. Selecciona los nombres de los productos que han sido pedidos por clientes que tienen un historial de compras 
+-- superior al promedio de compras de todos los clientes
+
+select ProductName from products where ProductID in
+(select distinct(ProductID) from orderdetails where OrderID in
+(select OrderID from orders where CustomerID in 
+(Select CustomerID from orders group by CustomerID having count(*)>
+(select avg(compras) from (select CustomerID, count(*) as compras from orders group by CustomerID) as ClientesCompras))));
+
+-- 16.  Seleccionar los nombres de los productos que se han vendido en más de 5 pedidos
+Select ProductName
+from products
+where ProductID IN
+(Select ProductID from orderdetails group by ProductID HAVING count(*)>5);
+
+-- 17. Mostrar los empleados que no han realizado ninguna venta
+Select EmployeeID
+from employees
+where EmployeeID not in 
+(Select EmployeeID from orders where employees.EmployeeID = orders.EmployeeID);
+
+-- 18. Mostrar el nombre de los productos y sus cantidades disponibles en la categoría 'Seafood'
+SELECT ProductName, UnitsInStock FROM products WHERE CategoryID IN(
+SELECT CategoryID FROM categories WHERE CategoryName = "Seafood");
+
+
+-- 19. Muestra el ID de los empleados que han manejado pedidos con productos que tienen un precio unitario superior a 50
+SELECT distinct(EmployeeID)
+FROM orders
+WHERE OrderID in
+(Select OrderID from orderdetails where ProductID in
+(SELECT ProductID from products where UnitPrice>50));
+
+-- 20. Muestra el nombre y el apellido de los empleados que fueron contratados el mismo mes que la fecha en la que se pidio el pedido más reciente.
+ Select FirstName, LastName
+ from employees
+ where month(HireDate) in
+ (Select month(OrderDate) from orders Where OrderDate = 
+ (Select max(OrderDate) from orders));
+ 
+ Select FirstName, LastName
+ from employees
+ where month(HireDate) in
+ (Select month(max(OrderDate)) from orders); -- mas simple y mismo resultado
+
+-- 21. Nombre de contacto del cliente de aquellos clientes que hayan hecho hecho pedidos con un "freight" mayor a 80
+Select ContactName
+from customers
+where CustomerID in
+(Select distinct(CustomerID) from orders where Freight>80);
+
+-- 22. Obten el producto más caro de cada categoría
+
+SELECT ProductName, UnitPrice, CategoryID FROM Products WHERE (CategoryID, UnitPrice) IN 
+(SELECT CategoryID, MAX(UnitPrice) FROM Products GROUP BY CategoryID);
+
+-- 23. Recupera el nombre de los empleados que hayan realizado ventas por encima del promedio de ventas totales, junto con el monto total de sus ventas
+Select FirstName, (Select count(*) from orders where orders.EmployeeID = e.EmployeeID) as TotalVentas
+from employees e
+Where (Select count(*) from orders where orders.EmployeeID = e.EmployeeID ) >
+(Select avg(recuento) from (select count(*) as recuento from orders group by EmployeeID) as recuento);
+ 
+-- 24. Obtén los nombres de los productos y la cantidad en stock de aquellos productos que son suministrados por proveedores del Reino Unido
+Select ProductName, UnitsInStock
+from products
+where SupplierID in
+(Select SupplierID from suppliers where Country= 'UK');
+
+-- 25. Encuentra productos cuyo nivel de stock sea inferior al valor máximo de unidades en  stock de los productos de la categoría 3 o al valor 
+-- máximo de unidades en  stock de los productos de la categoría 5
+
+Select ProductName, UnitsInStock
+from products
+where UnitsInStock < (Select max(UnitsInStock) from products where CategoryID =3 or CategoryID=5);
+
+Select ProductName, UnitsInStock
+from products
+where UnitsInStock < (Select max(UnitsInStock) from products where CategoryID =3) 
+and UnitsInStock< (Select max(UnitsInStock) from products where CategoryID=5);
+
+-- 26. Selecciona los pedidos cuyos empleados pertenecen al territorio de Orlando
+Select OrderID
+from orders
+where EmployeeID in
+(Select EmployeeID from employeeterritories where TerritoryID in
+(Select TerritoryID from territories where TerritoryDescription = 'Orlando'));
+
+-- 27. Mostrar los nombres de los clientes y la cantidad de pedidos que han realizado
+
+Select c.CompanyName, (Select count(*) from orders o where o.CustomerID= c.CustomerID) as CantidadPedidos
+from customers c;
+
+-- 28. Pedidos que superen los empleados de nacionalidad Francés. Lo he entendido como Pedidos cuyo recuento de artículos sea superado por el recuento de articulos de los pedidos realizados por empleados franceses.
+SELECT * FROM Orders WHERE 
+(SELECT COUNT(*) FROM OrderDetails WHERE orderdetails.OrderID = Orders.OrderID
+) < ( SELECT COUNT(*) FROM OrderDetails WHERE OrderID IN 
+(SELECT OrderID FROM Orders WHERE EmployeeID IN 
+(SELECT EmployeeID FROM Employees WHERE Country = 'France')));
+
+-- 29. Obten la cantidad de productos con existencia menor a 10 en cada categoría
+
+SELECT (SELECT CategoryName FROM Categories WHERE CategoryID = p.CategoryID) AS CategoryName, COUNT(*) AS CantidadProductos
+FROM Products p
+WHERE UnitsInStock < 10
+GROUP BY p.CategoryID;
+
+-- 30. Seleccionar los nombres de los clientes que han realizado un pedido de un producto con un precio superior a 100
+Select CompanyName
+FROM customers
+WHERE CustomerID in
+(Select CustomerID from orders o where OrderID in
+(Select OrderID from orderdetails Where UnitPrice > 100));
+
+
+-- 31. Productos cuyo valor de unidades en stock sea superior al valor máximo de unidades en stock de los productos de la categoría 2
+Select ProductName
+from products
+where UnitsInStock >
+(Select max(UnitsInStock) from products where CategoryID=2);
+
+-- 32. Obtén el nombre de los clientes que hayan realizado pedidos con un valor total superior al promedio de los valores totales de todos los pedidos, 
+-- junto con la cantidad total de pedidos realizados por cada cliente
+
+Select c.CompanyName, (SELECT COUNT(*) FROM orders where orders.CustomerID= c.CustomerID) as pedidosXcliente
+From customers c
+Where CustomerID in
+(Select CustomerID from orders where OrderID in
+(Select OrderID from orderdetails Group by OrderID having sum(Quantity*UnitPrice) >
+(Select avg(sumatorio) from (Select SUM(Quantity*UnitPrice) AS sumatorio FROM orderdetails group by OrderID) as suma)));
+
+
+-- 33. Listado de idclientes y la cantidad de pedidos de aquellos clientes que realizaron mas de 2 pedidos y fueron atendidos por empleados de San Francisco (TerritoryDescription).
+
+Select CustomerID, COUNT(*) from orders where CustomerID in
+(Select CustomerID from orders group by CustomerID having count(*) > 2) and
+EmployeeID in (Select EmployeeID from employeeterritories where TerritoryID in
+(Select TerritoryID from territories where TerritoryDescription= 'San Francisco'))
+group by CustomerID;
+
+-- 34. Mostrar los nombres de todos los productos que pertenecen a la categoría 'Beverages' 
+
+SELECT ProductName
+from products
+where CategoryID in
+(Select CategoryID from categories where CategoryName = 'Beverages');
+
+-- 35. Encuentra los clientes que han realizado pedidos sólo en el año 1997
+
+Select CompanyName from customers where CustomerID in
+(Select CustomerID from orders where year(OrderDate)=1997)
+and CustomerID not in 
+(Select CustomerID from orders where year(OrderDate) !=1997);
+
+-- 36. Mostrar los productos con el precio más alto en cada categoría
+SELECT ProductName, CategoryID, UnitPrice FROM products a WHERE UnitPrice in
+(Select max(UnitPrice) from products b where a.CategoryID= b.CategoryID);
+
+-- 37. Mostrar los productos que tienen un precio superior al promedio de todos los productos
+SELECT ProductName FROM products WHERE UnitPrice >
+(Select AVG(UnitPrice) from products);
+
+-- 38. Muestra el nombre y apellidos de aquellos empleados cuya región de actuación sea 'Southern';
+SELECT Firstname, LastName
+FROM employees
+where EmployeeID in 
+(Select EmployeeID from employeeterritories where TerritoryID in
+(select TerritoryID from territories where RegionID in
+(SELECT RegionID from region where RegionDescription = 'Southern')));
+
+
+-- 39. Obtén los nombres de contacto de los clientes que han realizado pedidos atendidos por empleados de Estados Unidos
+
+SELECT ContactName from customers where CustomerID in
+(Select CustomerID from orders where EmployeeID in
+(Select EmployeeID from employees where Country = 'USA'));
+
+-- 40. Listado de las ordenes de pedido y clientes de aquellos pedidos realizados en el mes de Agosto, enviados por transportistas 
+-- (shipper) estadounidenses y atendidos por clientes no jubilados aun, es decir, menor de 65 años
+
+Select o.OrderID, (Select c.CompanyName from customers c where c.CustomerID= o.CustomerID) as CompanyName
+from orders o
+where month(OrderDate)=8
+and ShipCountry ='USA'
+and EmployeeID in
+(Select EmployeeID from employees where timestampdiff(year, Birthdate, curdate())< 65);
+
+Select o.OrderID, (Select c.CompanyName from customers c where c.CustomerID= o.CustomerID) as CompanyName
+from orders o
+where month(OrderDate)=8
+and ShipCountry ='USA'
+and EmployeeID in
+(Select EmployeeID from employees where timestampdiff(year, Birthdate, o.Orderdate)< 65);
+
+-- 41. Mostrar el nombre de todos los productos cuyo descuento sea menor o nulo a la media
+Select ProductName
+from products
+where ProductID in
+(Select ProductID from orderdetails where Discount is null or Discount <
+(Select AVG(Discount) from orderdetails));
+
+-- 42. Dame los nombres de los productos cuyo stock sea superior a la edad media de los empleados
+Select ProductName, UnitsInStock 
+from products
+where UnitsInStock >
+(Select avg(edad) from (Select timestampdiff(year, BirthDate, curdate()) as edad from employees) as edades);
+
+-- 43. Muestra el producto con el precio unitario más alto usando subconsulta
+Select ProductID, ProductName, UnitPrice
+From products
+where UnitPrice =
+(Select max(UnitPrice) from products);
+
+
+-- 44. Mostrar los productos que tienen un UnitPrice superior al precio promedio los productos de la categoría 'Produce'
+Select ProductID, ProductName, Unitprice
+from products
+where Unitprice >
+(Select avg(UnitPrice) from products where CategoryID in
+(Select CategoryID from categories where CategoryName='Produce'));
+
+-- 45. Muestra los nombres de los empleados que han realizado ventas a clientes ubicados en diferentes regiones a la del empleado con el mayor número de ventas
+
+SELECT FirstName FROM employees WHERE EmployeeID != 
+(SELECT EmployeeID FROM (SELECT EmployeeID, COUNT(*) AS num_ventas FROM orders GROUP BY EmployeeID ORDER BY COUNT(*) DESC LIMIT 1) AS empleadoTopVentas)
+AND EmployeeID IN (SELECT EmployeeID FROM orders WHERE ShipCountry NOT IN 
+(SELECT ShipCountry FROM (SELECT ShipCountry, COUNT(*) AS num_ventas FROM orders GROUP BY ShipCountry ORDER BY COUNT(*) DESC LIMIT 1) AS empleadoTopVentas));
+
+
+-- 46. Dime el nombre de contacto de aquellos clientes que hayan ordenado productos con un unitprice mayor a la media
+Select ContactName from customers where CustomerID in
+(Select CustomerID from orders where OrderID in
+(Select OrderID from orderdetails where ProductID in
+(Select ProductID from products where UnitPrice >
+(Select avg(UnitPrice) from products))));
+
+
+-- 47. Muestra los nombres de los productos y los precios unitarios de aquellos productos suministrados por proveedores con números de teléfono que contienen '555'
+
+select ProductName, UnitPrice
+from products
+Where SupplierID in (Select SupplierID from suppliers where Phone like '%555%');
+
+
+15. [[BOLETIN REPASO EXAMEN]]
+
+
+-- 1. selecciona los clientes que han realizado pedidos enviados por la compañia 'United Package'-- No dice nada, puedo poner ContactName nada más.
+SELECT * from customers where CustomerID in
+(Select CustomerID from orders where ShipVia =
+(Select ShipperID from shippers where CompanyName='United Package'));
+
+select ContactName from customers where CustomerID in
+(select CustomerID from orders where Shipvia in
+(select ShipperID from shippers where CompanyName like 'United Package'));
+
+-- 2. Visualizar el nombre de la compañía y el id del cliente, fecha, precio unitario y producto del pedido.
+-- Lo interpreto como solo mostrar el ProductID
+Select customers.CompanyName, customers.CustomerID, orders.OrderDate, orderdetails.UnitPrice, orderdetails.ProductID
+from customers, orders, orderdetails
+where customers.CustomerID = orders.CustomerID and
+orders.OrderID= orderdetails.OrderID;
+
+-- Si fuera a mostrar el nombre del producto sería:
+select customers.CompanyName, customers.CustomerID, orders.OrderDate, orderdetails.UnitPrice, products.ProductName 
+from customers, orders, orderdetails, products 
+where customers.CustomerID = orders.CustomerID and 
+orders.OrderID = orderdetails.OrderID 
+and orderdetails.ProductID = products.ProductID;
+
+-- 3. Muestra los empleados que tienen el mismo jefe que Michael Suyama sin mostrar a Michael
+
+Select * from employees where ReportsTo =
+(select ReportsTo from employees where FirstName='Michael' and LastName='Suyama')
+and FirstName!='Michael' and LastName!='Suyama' and ReportsTo is not null;
+
+-- Como no especifica lo que se quiere que se muestre de los empleados, se puede elegir únicamente nombre y apellidos. Más correcta la subconsulta final.
+select FirstName, LastName from employees where ReportsTo =
+(select ReportsTo from employees where concat(FirstName, ' ', LastName) = 'Michael Suyama') and EmployeeID != 
+(select EmployeeID from employees where concat(FirstName, ' ', LastName) = 'Michael Suyama');
+
+
+-- 4. Por cada empleado, imprimir el ID de empleado, nombre, apellido e ID de territorio.
+Select employees.EmployeeID, employees.FirstName, employees.LastName, employeeterritories.TerritoryID
+from employees, employeeterritories
+where employees.EmployeeID = employeeterritories.EmployeeID;
+
+
+-- 5. Mostrar los clientes que fueron  atendidos  por  el  mismo  transportista  que  atendió  al cliente de código ‘ANTON’ en el año 1998
+Select * from customers where CustomerID in
+(Select CustomerID from orders where Shipvia =
+(Select ShipVia from orders where CustomerID='ANTON' and year(OrderDate)=1998));
+
+-- De nuevo, como no especifica, puedo seleccionar únicamente el ContactName del cliente.
+select ContactName from customers where CustomerID in
+(select CustomerID from orders where ShipVia =
+(select ShipVia from orders where CustomerID like 'ANTON' and year(OrderDate) = 1998));
+
+-- 6. Por cada pedido, obtener el ID de pedido, ID de producto, ID de proveedor y el nombre de la compañía-- pero del proveedor!!!, en este orden.
+
+-- pero del proveedor!!! Aunque de lo mismo, te quedas con el de abajo.
+Select orders.OrderID, products.ProductID, products.SupplierID, customers.CompanyName
+from orders, orderdetails, products, customers
+where orders.OrderID = orderdetails.OrderID
+and orderdetails.ProductID = products.ProductID
+and customers.CustomerID = orders.CustomerID;
+
+-- esta, porque nos referimos a la compañía del suppliers, no del cliente.
+select orderdetails.OrderID, orderdetails.ProductID, products.SupplierID, suppliers.CompanyName 
+from orderdetails, products, suppliers 
+where orderdetails.ProductID = products.ProductID 
+and products.SupplierID = suppliers.SupplierID;
+
+
+-- 7. Mostrar las 3 categorias que tienen mas productos. ¡¡OJO!! lo hago bien, pero más sencillo SUBCONSULTAAAAA
+
+SELECT CategoryID FROM categories WHERE CategoryID IN 
+(SELECT CategoryID FROM (SELECT CategoryID, COUNT(*) AS TotalProductos FROM products GROUP BY CategoryID ORDER BY COUNT(*) DESC LIMIT 3) AS categorias_altas); -- en el orden correcto
+
+-- respuesta del profesor
+select CategoryID from (select CategoryID, count(*) "productos" from products group by CategoryID) as productosPorCategoria 
+order by productos desc limit 3;
+
+
+-- 8. Mostrar la información de todos los jefes y los productos que han vendido.
+
+Select Distinct employees.*, products.*
+from employees, orders, orderdetails, products
+where employees.EmployeeID = orders.EmployeeID
+and orders.OrderID = orderdetails.OrderID
+and orderdetails.ProductID = products.ProductID
+and employees.EmployeeID IN
+(Select ReportsTo from employees o where employees.EmployeeID = o.ReportsTo); -- OJO, NO HACE FALTA LA IGUALACION FINAL
+
+-- LA MÁS CORRECTA!!!
+select distinct employees.*, products.ProductName from employees, orders, orderdetails, products where 
+employees.EmployeeID = orders.EmployeeID and orders.OrderID = orderdetails.OrderID and orderdetails.ProductID = products.ProductID 
+and employees.EmployeeID in (select ReportsTo from employees);
+
+Select Distinct employees.*, products.*
+from employees, orders, orderdetails, products
+where employees.EmployeeID = orders.EmployeeID
+and orders.OrderID = orderdetails.OrderID
+and orderdetails.ProductID = products.ProductID
+and employees.EmployeeID IN
+(Select ReportsTo from employees o group by ReportsTo); -- y AQUÍ NO HACE FALTA AGRUPAR
+
+
+
+-- 9. Por cada empleado, imprimir toda su información, el nombre y apellidos de su jefe concatenados, y los pedidos que ha realizado el empleado. Mostrar en ese orden. MULTITABLA!!!!
+Select employees.*, concat_ws(" ", jefe.FirstName, jefe.LastName) as 'Jefe', orders.OrderID
+from employees, orders, employees as jefe
+where employees.EmployeeID = orders.EmployeeID
+and employees.ReportsTo= jefe.EmployeeID; -- sin pillar a los jefes, sería así Y ASÍ LO ENTIENDE EL PROFESOR TB
+
+select empleados.*, concat(jefes.FirstName," ", jefes.LastName) "Jefe", orders.OrderID from employees as empleados, employees as jefes, orders where
+empleados.ReportsTo = jefes.EmployeeID and empleados.EmployeeID = orders.EmployeeID;
+
+
+Select employees.*, (select concat_ws(" ", jefe.FirstName, jefe.LastName) from employees as jefe where employees.ReportsTo=jefe.EmployeeID) as Jefe , orders.OrderID
+from employees, orders
+where employees.EmployeeID = orders.EmployeeID; -- pillando al jefe y mostrando su columna vacia. LO DEJO POR SI PIDIERA ESTO
+
+
+
+
+-- 10. Repetir el anterior, pero en lugar de mostrar todos los pedidos, contarlos. mULTITABLA!!
+Select Distinct employees.*, (select concat_ws(" ", jefe.FirstName, jefe.LastName) from employees as jefe where employees.ReportsTo=jefe.EmployeeID) as Jefe , (Select count(*) from orders where orders.EmployeeID= employees.EmployeeID)
+from employees, orders
+where employees.EmployeeID = orders.EmployeeID; -- ESTO SOLO SI PIDIERA TODOS LOS EMPLEADOS, NO LOS QUE NO SEAN JEFES
+
+-- Esta es la solucion que da Juan Carlos
+select empleados.*, concat(jefes.FirstName," ", jefes.LastName) "Jefe", count(*) from employees as empleados, employees as jefes, orders where
+empleados.ReportsTo = jefes.EmployeeID and empleados.EmployeeID = orders.EmployeeID group by empleados.EmployeeID;
+
+-- 11. Obtén los nombres de contacto de los clientes que han realizado pedidos atendidos por empleados de Seattle
+Select customers.ContactName
+from customers
+where CustomerID in 
+(Select CustomerID from orders where employeeID in
+(Select EmployeeID from employees where City ='Seattle'));
+
+-- 12. Por cada jefe, contar el número de empleados. ES MULTITABLAAAAA!!
+Select concat_ws(" ", FirstName, LastName) as 'Jefe', (Select count(*) from employees as e where e.reportsTo=employees.EmployeeID) as "num_empleados"
+from employees
+where (Select count(*) from employees as e where e.reportsTo=employees.EmployeeID)>0; -- eSTO POR SI PIDE HACERLO COMO SUBCONSULTA
+
+-- PERO LA SOLUCIÓN VÁLIDAD PARA ÉL ES ESTAAAAAA
+select jefes.FirstName, count(*) "Numero de empleados" 
+from employees as jefes, employees as empleados 
+where jefes.EmployeeID = empleados.ReportsTo group by jefes.FirstName;
+
+
+-- 13. Mostrar los productos con el precio más alto de cada vendedor¡¡OJO!! Vendedor=Supplier, no employee.
+
+select SupplierID, ProductName  from products where UnitPrice in
+(select max(UnitPrice) from products pr where products.SupplierID = pr.SupplierID);
+
+
+
+-- 14. Por cada cliente, pedido realizado y empleado asociado, muestre los distintos productos (id de producto).
+-- ¿¿oJO!! DA EL PROFESOR UNA SOLUCIÓN CON MENOS TABLAS
+Select customers.CustomerID, orders.OrderID, employees.EmployeeID, products.ProductID
+from customers, orders, orderdetails, employees, products
+where customers.CustomerID= orders.CustomerID
+and orders.OrderID = orderdetails.OrderID
+and orderdetails.ProductID= products.ProductID
+and employees.EmployeeID= orders.EmployeeID;
+
+-- eSTA ES LA SOLUCIÓN MÁS ÓPTIMA
+select orders.CustomerID, orders.OrderID, orders.EmployeeID, orderdetails.ProductID 
+from orders, orderdetails where
+orders.OrderID = orderdetails.OrderID;
+
+-- 15. Muestra el nombre y el apellido de los empleados que fueron contratados el mismo mes que la fecha en la que se pidio el pedido más antiguo:
+-- lAS DOS SOLUCIONES IGUAL DE VÁLIDAS, PERO POR SI CONCRETA QUE LO PREFIERE DE UNA DE LAS MANERAS.
+Select FirstName, LastName
+from employees 
+where month(HireDate) in
+(Select month(Min(OrderDate)) from orders);
+
+select FirstName, LastName from employees where month(HireDate) =
+(select month(OrderDate) from orders order by OrderDate asc limit 1);
+
+
+-- 16. Obtener el nombre y la cantidad de productos de la categoría "Confections" que tienen un precio inferior al precio promedio de todos los productos de las categorias 4 y 5 
+-- En esta, mi solución es la más correcta!!!
+SELECT products.ProductName, (SELECT SUM(orderdetails.Quantity) FROM orderdetails WHERE products.ProductID = orderdetails.ProductID) AS Quantity
+FROM products
+WHERE products.CategoryID = (SELECT CategoryID FROM categories WHERE CategoryName = 'Confections')
+AND products.UnitPrice < (SELECT AVG(UnitPrice) FROM products WHERE CategoryID IN (4, 5));
+
+
+-- Esta es la del profesor, pero le falta que sean productos únicamente de la categoría pertinente.
+select ProductName, productos.Quantity from products,
+(select ProductID, Quantity from orderdetails where UnitPrice >
+(select avg(UnitPrice) from products where CategoryID in (4, 5))) as productos;
+
+
+
+-- 17. Mostrar las ciudades que tienen más clientes que Bélgica
+-- Mi solución muy correcta
+Select City
+from customers
+group by city
+having count(*) >
+(Select count(*) from customers where Country ='Belgium');
+
+-- solución de Juan Carlos. En este caso no hace falta agrupar en la subconsulta
+select City from customers group by City having count(*) >
+(select count(*) from customers where Country like "Belgium" group by Country);
+
+-- 18. Mostrar el nombre de compañia de los proveedores y el número de productos para los proveedores con mas de cuatro productos.
+
+SELECT suppliers.CompanyName, COUNT(products.ProductID) AS NumeroProductos
+FROM suppliers, products
+WHERE suppliers.SupplierID = products.SupplierID
+GROUP BY suppliers.CompanyName
+HAVING COUNT(products.ProductID) > 4;
+
+-- 19. Escribir una consulta para recuperar el ID de pedido, ID de cliente y nombre de compañía. Realice esta consulta sin usar multitablas
+
+-- La mia requiere de una subconsulta menos, pero es igual de correcta
+Select OrderID, customerID, (Select CompanyName from customers where customers.CustomerID=orders.CustomerID) as CompanyName
+from orders;
+
+-- Solución de Juan Carlos, pero defiendo la mía
+select OrderID, 
+(select CustomerID from orders as pedidos where pedidos.OrderID = orders.OrderID) "Clientes", 
+(select CompanyName from customers where orders.CustomerID = customers.CustomerID) "Compañias" from orders;
+
+
+-- 20.Por cada producto, mostrar su nombre y la descripción de la categoría a la que pertenece.
+Select products.ProductName, categories.Description
+from products, categories
+where products.CategoryID=categories.CategoryID;
+
+-- 21.Por cada pedido, imprimir el id de pedido, nombre del producto y beneficio (precio unitario x unidades del pedido).
+Select orderdetails.OrderID, products.ProductName, (orderdetails.UnitPrice*orderdetails.Quantity) as "Beneficio"
+from orderdetails, products
+where orderdetails.ProductID=products.ProductID;
+
+-- 22.Mostrar los nombres de empleados y el numero de pedidos para aquellos empleados que tienen mas de tres pedidos atendidos en el 1996.
+-- Mi solución es una de las propuestas correctas de Juan Carlos
+Select employees.FirstName, count(orders.OrderID) as "NumeroPedidos"
+from employees, orders
+where employees.EmployeeID=orders.EmployeeID
+and year(OrderDate) =1996
+group by employees.FirstName
+having count(orders.OrderID)>3;
+
+-- Pero propone otra igual de correcta
+select FirstName, (select count(*) from orders where orders.EmployeeID = employees.EmployeeID and year(orders.OrderDate) = 1996) as numPedidos 
+from employees 
+having numPedidos > 3;
+
+-- 23.Escribir una consulta para recuperar todos los datos de los empleados que tienen una edad superior a la edad de Margaret Peacock.
+Select employees.*
+from employees
+where timestampdiff(year, BirthDate, curdate()) >
+(Select timestampdiff(year, BirthDate, curdate()) from employees where concat_ws(" ",FirstName, LastName) ='Margaret Peacock');
+
+
+-- 24.Seleccionar cuantos proveedores tengo en cada país, 
+-- considerando solo a los nombres de los proveedores que comienzan con la letra C hasta la letra M, además de mostrar solo los países donde tenga más de 3 proveedores. 
+
+Select Country, count(*) as "NumeroProveedores"
+from suppliers
+where suppliers.CompanyName BETWEEN "C%" and "Mz%"
+group by Country
+having count(*)>3; -- ES UNA CONSULTA SIMPLE
+
+-- la convierto en subconsulta por adaptarme a lo que estamos "repasando" aunque sin mucho sentido
+Select Country, count(*) as "NumeroProveedores" 
+from suppliers
+where ContactName in
+(sELECT ContactName from suppliers where CompanyName BETWEEN "C%" and "Mz%")
+group by Country
+having count(*)>3;
+
+
+-- 25.Por cada compañía de envíos contar la cantidad de pedidos y mostrar sólo aquellos nombres de compañías de envío que tengan un número de pedidos por encima de la media de dichas compañías.
+
+Select shippers.CompanyName, count(*) as pedidos 
+from orders, shippers 
+where orders.ShipVia = shippers.ShipperID 
+group by ShipVia 
+having pedidos > 
+(select avg(pedidos) from (select count(*) as pedidos from orders group by ShipVia) as numPedidos);
+
