@@ -2,39 +2,25 @@
     <xs:element name="vehiculos">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="vehiculo" minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="vehiculo" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="nombre" type="xs:string" maxOccurs="unbounded"/>
                             <xs:element name="modelo" type="xs:string" />
                             <xs:element name="fabricacion">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="inicio">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="dia" type="xs:string" />
-                                                    <xs:element name="mes" type="xs:string" />
-                                                    <xs:element name="anyo" type="xs:string" />
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="fin">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="dia" type="xs:string" />
-                                                    <xs:element name="mes" type="xs:string" />
-                                                    <xs:element name="anyo" type="xs:string" />
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
+                                        <xs:element name="inicio" type="fecha"/>
+                                            
+                                        <xs:element name="fin" type="fecha"/>
+    
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="modificaciones">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="modificacion" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                        <xs:element name="modificacion" type="xs:string" maxOccurs="unbounded"/>
                                     </xs:sequence>    
                                 </xs:complexType>
                             </xs:element> 
@@ -44,4 +30,13 @@
             </xs:sequence>
     </xs:complexType>
     </xs:element>
+
+                                <xs:complexType name="fecha">
+                                    <xs:sequence>
+                                        <xs:element name="dia" type="xs:gDay" /> <!-- Es el tipo más correcto, pero si el validador no lo reconociera, se podría combiar por "xs:int"-->
+                                        <xs:element name="mes" type="xs:gMonth" /> <!-- Es el tipo más correcto, pero si el validador no lo reconociera, se podría combiar por "xs:string"-->
+                                        <xs:element name="anyo" type="xs:gYear" /> <!-- Es el tipo más correcto, pero si el validador no lo reconociera, se podría combiar por "xs:int"-->
+                                    </xs:sequence>
+                                </xs:complexType>
+
 </xs:schema>

@@ -24,12 +24,12 @@
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="apellido" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
-                                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="2" />
+                                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-            <xs:element name="editorial" type="mieditorial" minOccurs="1" maxOccurs="2" />
-            <xs:element name="precio" type="tipo-precio" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="editorial" type="mieditorial" minOccurs="1" maxOccurs="1" />
+            <xs:element name="precio" type="tipo-precio"/>
         </xs:sequence>
         <xs:attribute name="año" type="añoLibro"/>
         <xs:attribute name="isbn" type="patron"/>
@@ -46,12 +46,25 @@
       contiene.
  -->
 
-    <xs:simpleType name="patron">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{3}-\d{10}"/>
-            
-        </xs:restriction>
-    </xs:simpleType>
+
+ <xs:simpleType name="patron">
+    
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="\d{3}-\d{10}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value=""/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    
+</xs:simpleType>
+    
+
  <!-- 
      la siguiente viene debido a que se pedia en el examen que solo podian estar estas tres editoriales unicamente y las he ido enumerando. 
  -->

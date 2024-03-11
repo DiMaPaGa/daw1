@@ -8,33 +8,43 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="calle" type= "xs:string" />
-                            <xs:element name="numero">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:integer">
-                                        <xs:pattern value="\d{1,5}"/>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
+                            <xs:element name="numero" type="codigo"/>
+                            
+                            
                             <xs:element name="ciudad" type= "xs:string" />
                             <xs:element name="provincia" type= "xs:string" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="telefono">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:integer">
-                            <xs:totalDigits value="9"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
+                <xs:element name="telefono" type="miTelefono"/>
+                    
             </xs:sequence>                
-            <xs:attribute name="dni" use="required">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="\d{8}[A-Z]"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
+            <xs:attribute name="dni" use="required" type="codDNI"/>
+            
         </xs:complexType> 
     </xs:element>
+
+
+    
+                                <xs:simpleType name="codigo">
+                                    <xs:restriction base="xs:integer">
+                                        <xs:pattern value="\d{1,5}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+
+                                <xs:simpleType name="miTelefono">
+                                    <xs:restriction base="xs:integer">
+                                        <xs:totalDigits value="9"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+
+                                <xs:simpleType name="codDNI">
+                                    <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d{8}[A-Z]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+
+
+
+                            
 </xs:schema>

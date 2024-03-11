@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- biblioteca es de tipo sequence porque es una sucesión de etiquetas Libro--> 
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" type="tipoLibro" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="url" type="xs:anyURI"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Creo el "tipoLibro", que también es elemento complejo de tipo sequence-->
+    <xs:complexType name="tipoLibro">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="autor" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="apellido" type="xs:string" maxOccurs="unbounded"/>
+                        <xs:element name="nombre" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="editorial" type="miEditorial"/>
+            <xs:element name="precio" type="miPrecio"/>
+        </xs:sequence>
+        <xs:attribute name="año" type="anyoLibro" use="required"/>
+        <xs:attribute name="isbn" type="patron"/>
+    </xs:complexType>
+
+    <!-- Creo la restriccion para el atributo año del libro, dado que no es una fecha tal cual -->
+    <xs:simpleType name="anyoLibro">
+        <xs:restriction base="xs:gYear"/>
+    </xs:simpleType>
+
+    <!-- Creo la restriccion "patron" para el atributo isbn, dado que cumple con unas características particulares. 
+    Sin embargo, hay que tener en cuenta que a veces aparece y otras no (por eso no se indica use=required).
+    Hay ocasiones en las que aparece VACIO, como pasa con el último libro.
+    Así pues, tenemos que marcar esta distinción. Para elLo, existe "xs:union", que permite combinar múltiples tipos de datos en uno solo, 
+    lo que permite que un valor válido para el atributo isbn sea cualquiera de los tipos especificados en la unión. 
+    Esto incluye tanto valores de ISBN válidos como valores vacíos, lo cual es lo que se necesita en este caso. -->
+
+    <xs:simpleType name="patron">
+    
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="\d{3}-\d{10}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value=""/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    
+    </xs:simpleType>
+
+    <!-- 
+     la siguiente viene debido a que se pedia en el examen que solo podian estar estas tres editoriales y las he ido enumerando. 
+ -->
+    <xs:simpleType name="miEditorial">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Addison-Wesley"/>
+            <xs:enumeration value="RA-MA S.A. Editorial y Publicaciones"/>
+            <xs:enumeration value="Morgan Kaufmann editorials"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 
+    Y por ultimo la restriccion relativa al precio indicado con formato decimal de dos digitos.  
+    -->
+    <xs:simpleType name="miPrecio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    
+</xs:schema>

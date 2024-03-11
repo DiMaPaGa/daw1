@@ -280,3 +280,5 @@ where orders.ShipVia = shippers.ShipperID
 group by ShipVia 
 having pedidos > 
 (select avg(pedidos) from (select count(*) as pedidos from orders group by ShipVia) as numPedidos);
+
+

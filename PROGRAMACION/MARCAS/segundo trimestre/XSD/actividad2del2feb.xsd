@@ -4,7 +4,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="datos_empresa" type="datos_empresas"/>
-                <xs:element name="datos_clientes" type="datos_clientes"/>
+                <xs:element name="datos_clientes" type="datos_cliente"/>
                 <xs:element name="datos_factura" type="datos_factura"/>
             </xs:sequence>
             <xs:attribute name="n_fac" use="required">
@@ -140,4 +140,3 @@
     </xs:complexType>
 </xs:schema>
     
-

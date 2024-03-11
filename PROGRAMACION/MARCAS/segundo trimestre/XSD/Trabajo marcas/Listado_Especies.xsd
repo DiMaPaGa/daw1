@@ -29,7 +29,7 @@
                                             </xs:simpleType>
                                         </xs:element>
                                         <xs:element type="xs:anyURI" name="photo"/> <!-- Las fotos, al estar en formato URL las he limitado a que siga el formato de un enlace-->
-                                        <xs:element type="xs:byte" name="numberOfPhotos"/>
+                                        <xs:element type="xs:byte" name="numberOfPhotos"/> <!-- Se incorpora Byte en lugar de integer porque el dato que se incorpora en esta etiqueta siemopre se encuentra entre 0 y 255 (tamaño del Byte)-->
                                         <xs:element type="xs:string" name="shortDescription"/>
                                         <xs:element name="description"> <!-- En la descripciones aparecen saltos de línea mostrados como <br/> por lo que es un elemento mixto-->
                                             <xs:complexType mixed="true">

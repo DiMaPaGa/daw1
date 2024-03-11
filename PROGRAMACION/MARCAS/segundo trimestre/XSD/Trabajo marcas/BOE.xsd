@@ -33,8 +33,8 @@
                         </xs:simpleContent>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="urlHtm" type="xs:string"/>
-                <xs:element name="urlXml" type="xs:string"/>
+                <xs:element name="urlHtm" type="xs:anyURI"/>
+                <xs:element name="urlXml" type="xs:anyURI"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:string" use="required"/>
         </xs:complexType>
