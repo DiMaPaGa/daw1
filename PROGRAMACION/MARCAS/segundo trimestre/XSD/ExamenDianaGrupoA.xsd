@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+    <!-- Los XML schemas son documentos XML, por lo que todo esquema debe empezar con una declaración XML-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <!--En la segunda línea, ya declaramos el elemento esquema. 
+        Me decanto por el prefijo "xs", aunque también podría haber utilizado "xsd" -->
+
+        <!-- CONSIDERACIONES PREVIAS:
+            1.- Parto de la base de que el valor por defecto de minOccurs y maxOccurs es "1", 
+                por lo que emplearé estos atributos únicamente en aquellos elementos donde se requiera 
+                mostrar valores distintos a los predeterminados.
+            2. Del mismo modo, en los atributos, su "uso" por defecto es opcional, por lo que tampoco
+               lo mencionaré en el caso de que se produzca este suceso.
+            -->
+
+        <!--Para empezar, nos encontramos con una etiqueta general "sedes", ComplexType que en modo "Secuencia" 
+        integra el elementos "sede", que a su vez se encuentran compuestos por 1 cabecera y 1 tabla. -->
+
+    <xs:element name="sedes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sede">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="cabecera"></xs:element>
+                            <xs:element ref="tabla"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <!--Creo el contenido complejo "cabecera" en sequence porque siempre aparece en el mismo orden.-->
+
+
+    <xs:complexType name="cabecera">
+        <xs:sequence>
+            <xs:element type="xs:string" name="titulo"/>
+                <xs:element name="descripcion">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="fecha" type="fechaFormato" use="required"/> 
+                                    <!--Para el atributo, abajo creo formato para el tipo "fecha" e indico que 
+                                        su uso es requerido-->
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            <xs:element type="xs:string" name="autor"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Genero tipo definido propio para las fechas en formato dd/mm/yyyy. Como quiero ordenarlo en el formato que
+    aparece en el XML lo creo de base string pero controlando la cantidad de números que hay en día, mes y año-->
+
+    <xs:simpleType name="fechaFormato">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}/\d{2}/\d{4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Ahora, creo el contenido complejo "tabla" en sequence que está compuesta de oficinas.-->
+
+
+    <xs:complexType name="tabla">
+        <xs:sequence>
+            <xs:element name="oficina" maxOccurs="unbounded"> <!--Podrían existir de 1 a muchas oficinas -->
+                <xs:complexType>          
+                    <xs:choice maxOccurs="unbounded"> <!--Puede elegirse entre los tres tipos distintos de oficinas-->
+                        <xs:element name="central" type="tipoOficina"/> <!--Creo aparte el "tipoOficina para hacer el código más sencillo de leer"-->
+                        <xs:element name="sucursal1" type="tipoOficina"/>
+                        <xs:element name="sucursal2" type="tipoOficina"/>
+                    </xs:choice>
+                    <xs:attribute type="xs:string" name="localizacion" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!--Finalmente, creo el tipo complejo "tipoOficina" que se empleará en todos los distintos tipos de oficinas a elegir en el choice.-->
+
+    <xs:complexType name="tipoOficina">
+        <xs:sequence>
+            <xs:element name="semestre" maxOccurs="unbounded" minOccurs="1"> 
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:integer" name="informes_validados">
+                            <xs:simpleType> 
+                                <xs:restriction base="xs:integer"> <!--Creo esta restriccion para indicar los valores entre los que se puede integrar los valores 
+                                                                    de los informes validados-->
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="999"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+
+                        <xs:element type="xs:string" name="id_primer_informe">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[A-Z]{3}\-[0-9]{4}"></xs:pattern> <!--Creo un pattern propio para id del informe
+                                                                                        ya que todos cumplen el mismo criterio:
+                                                                                        3 letras, un guion(-) y 4 dígitos. Este lo he 
+                                                                                        creado dentro para que se vea que sé crearlos
+                                                                                        en linea y aparte-->
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute type="xs:byte" name="id" use="required"> <!--Atributo Byte al ser solo "1" o "2", creo su restriccin-->
+                        <xs:simpleType>
+                            <xs:restriction base="xs:byte">
+                                <xs:enumeration value="1"/>
+                                <xs:enumeration value="2"/>  
+                            </xs:restriction>  
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+                                                    
+
+
+</xs:schema>
+            
