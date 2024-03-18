@@ -111,7 +111,8 @@ GROUP BY customers.ContactName
 HAVING COUNT(distinct orders.OrderID) > 15;
 
 -- Este es el correcto
-select customers.contactname, count(orders.orderid) from customers,orders where (customers.customerid = orders.customerid) group by customers.contactname having count(orders.orderid) > 15;
+select customers.contactname, count(orders.orderid) from customers,orders 
+where (customers.customerid = orders.customerid) group by customers.contactname having count(orders.orderid) > 15;
 
 -- 13. Mostrar por cada empleado, el nombre del empleado y el nombre de su jefe.
 Select employees.FirstName as "Nombre de empleado", jefe.FirstName as 'Jefe'
