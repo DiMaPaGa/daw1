@@ -45,5 +45,17 @@ CREATE TABLE MovieTheaters (
 
 -- `Description` longtext,texto más largo que varchar
  -- `Picture` longblob, conjunto de bytes sobre tdo imágenes
+ -- auto increment genera campo automáticamente
+ -- insertin to: insertar valores
+ 
+ INSERT INTO `Categories` (`CategoryName`,`Description`,`Picture`) VALUES 
+ ('Beverages','Soft drinks, coffees, teas, beers, and ales',NULL),
+ ('Condiments','Sweet and savory sauces, relishes, spreads, and seasonings',NULL),
+ ('Confections','Desserts, candies, and sweet breads',NULL),
+ ('Dairy Products','Cheeses',NULL),
+ ('Grains/Cereals','Breads, crackers, pasta, and cereal',NULL),
+ ('Meat/Poultry','Prepared meats',NULL),
+ ('Produce','Dried fruit and bean curd',NULL),
+ ('Seafood','Seaweed and fish',NULL);
 
 

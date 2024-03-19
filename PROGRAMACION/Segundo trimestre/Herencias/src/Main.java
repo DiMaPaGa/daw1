@@ -42,6 +42,10 @@ public class Main {
             System.out.println(listaPersonas[i]);
         }
 
+        //clase abstracta: clase padre con unos atributos y métodos que no nos sirven para instanciar, únicamente para heredar.
+        // Los métodos de una clase abstracta no tienen código, sino unicamente las firmas de los métodos.
+
+
 
 
 
