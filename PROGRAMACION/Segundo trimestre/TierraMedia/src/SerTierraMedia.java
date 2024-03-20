@@ -1,12 +1,15 @@
 public abstract class SerTierraMedia {
 
-protected String nombre;
+protected String nombre; //public o protected
 protected String apellido;
-
 protected String apodo;
 
-public abstract void hablar(String habla);
+public void hablar(String habla){
 
-public abstract void moverse (String movimiento);
+};
+
+public  void moverse (String movimiento){
+
+};
 
 }

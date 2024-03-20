@@ -1,13 +1,5 @@
-public class Hobbit extends SerTierraMedia{
-    @Override
-    public void hablar(String habla) {
+public class Hobbit extends Hombre{
 
-    }
-
-    @Override
-    public void moverse(String movimiento) {
-
-    }
 
     public void fumarPipa() {
 

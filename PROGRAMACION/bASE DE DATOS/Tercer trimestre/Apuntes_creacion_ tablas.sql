@@ -57,5 +57,48 @@ CREATE TABLE MovieTheaters (
  ('Meat/Poultry','Prepared meats',NULL),
  ('Produce','Dried fruit and bean curd',NULL),
  ('Seafood','Seaweed and fish',NULL);
+ 
+ ALTER TABLE nombre
+ -- ADD -- añadir MODIFY (MODIFICA), rENAME TO (RENOMBRAR)
+ -- new_column_name  column_definition
+ -- [FIRST | AFTER COLUMN__NAME]
+ 
+ 
+ -- Para insertar
+INSERT INTO customers (CustomerID, CompanyName, City, Country)
+VALUES ("DIA", "Vedruna", "Sevilla", "España");
+
+INSERT INTO employees SET EmployeeID=0, FirstName= "Moises", LastName="Pastrana";
+
+CREATE TABLE `CategoriesPrueba` (
+  `CategoryID` int(11) NOT NULL AUTO_INCREMENT,
+  `CategoryName` varchar(15) NOT NULL,
+  `Description` longtext,
+  `Picture` longblob,
+  PRIMARY KEY (`CategoryID`),
+  KEY `Categories_CategoryName` (`CategoryName`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+INSERT INTO CategoriesPrueba 
+Select * from categories
+where CategoryID >=3 and CategoryID <=6;
+
+Insert into customers (CustomerID, CompanyName, City, Country)
+select SupplierID, CompanyName, City, Country from suppliers;
+
+REPLACE INTO employees(eMPLOYEEid, lASTnAME, Firstname)
+values (30, "Garcia", "Diana");
+
+DELETE from northwindprueba.categoriesprueba where Description like 'Cheeses';
+
+UPDATE northwindPrueba.products
+SET unitsinStock= unitsinStock + 10
+where CategoryID=2;
+
+INSERT INTO employees (EmployeeID, LastName, FirstName)
+VALUES (0, "Pascual", "Diana");
+
+INSERT INTO employees SET EmployeeID=0, FirstName= "Moises", LastName="Pastrana";
+
 
 
