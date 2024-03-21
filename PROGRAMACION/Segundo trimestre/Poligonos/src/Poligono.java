@@ -1,18 +1,19 @@
 public abstract class Poligono {
 
-    public int vertices;
+    protected int vertices;
 
-    public Poligono(){
-
+    public Poligono(int vertices){
+        setVertices(vertices);
 
     }
 
     public int getVertices() {
+
         return vertices;
     }
 
     public void setVertices(int vertices) {
-        if (vertices>0){
+        if (vertices >= 3){
         this.vertices = vertices;
         }
     }
